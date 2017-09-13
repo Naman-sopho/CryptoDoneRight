@@ -1,0 +1,71 @@
+@media screen
+{
+	body {
+		font-family: CiscoSans, Arial, sans-serif;
+		font-weight: 100;
+ 	}
+
+	h4 {
+		text-decoration: underline;
+	}
+
+	#header {
+		border: 2px solid #000;
+		border-width: 0px 0px 2px 0px;
+		padding: 0 1vw;
+	}
+
+	.breadcrumb, .alert {
+		margin-bottom: 0;
+	}
+
+	#topic, #relatedArticles {
+		padding: 0 3vw;
+	}
+	.description {
+		text-align: justify;
+		margin-top:2vw;
+	}
+
+	.infoBlocks {
+		padding:1vw 5vw 2vw 5vw;
+		text-align: center;
+	}
+
+	.logos {
+		width: 4vw;
+		margin-bottom:1vw;
+	}
+
+	.blockNotes {
+		text-align:left;
+		margin-top:2vw;
+	}
+
+	#relatedArticles {
+		margin:2vw 0;
+	}
+
+
+	#footer {
+		margin-top: 2em;
+		margin-bottom: 1em;
+		padding-top: 1em;
+		border: 2px solid #000;
+		border-width: 2px 0px 0px 0px;
+	}
+	.topicimage img {
+		display: block;
+		width: 250px;
+		float: right;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.news {
+		clear: both;
+	}
+	.timestamp {
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+}

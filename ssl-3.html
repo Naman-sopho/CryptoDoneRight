@@ -20,31 +20,34 @@
          <li class="breadcrumb-item"><a href="#">Home</a></li>
          <li class="breadcrumb-item"><a href="#">Articles</a></li>
          <li class="breadcrumb-item"><a href="#">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item active">TLS 1.2</li>
+         <li class="breadcrumb-item active">SSL 3.0</li>
        </ol>
+    </div>
+    <div class="alert alert-danger">
+      <strong>Warning!</strong> This technology is <strong>obsolete</strong>! <a href="tls-1-2.html">Try this instead</a>
     </div>
     <div class="container-fluid">
       <div class="row">
         <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
           <div class="title">
-            <h2><span>TLS 1.2</span></h2>
+            <h2><span>SSL 3.0</span></h2>
           </div>
           <div class="timestamp">
             <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
           </div>
           <div class="description">
             <p>
-              TLS was released in response to the Internet community’s demands for a
-standardized protocol. The IETF provided a venue for the new protocol to be openly
-discussed, and encouraged developers to provide their input to the protocol.
-The Transport Layer Security (TLS) protocol was released in January 1999 to
-create a standard for private communications. The protocol "allows client/server
-applications to communicate in a way that is designed to prevent eavesdropping,
-tampering or message forgery." (Dierks, 1)
-According to the protocol's creators, the goals of the TLS protocol are
-cryptographic security, interoperability, extensibility, and relative efficiency. (Dierks, 4)
-These goals are achieved through implementation of the TLS protocol on two levels:
-the TLS Record protocol and the TLS Handshake protocol
+              SSL is the secure communications protocol of choice for a large part of the internet community. There are many applications of SSL in existence, since it is
+capable of securing any transmission over TCP. Secure HTTP, or HTTPS, is a familiar
+application of SSL in e-commerce or password transactions. (Viega, 10)
+According to the Internet Draft of the SSL Protocol, the point of the protocol “is to
+provide privacy and reliability between two communicating applications.” (Freier, 3.)
+The protocol release further explains that three points combine to provide connection
+security. These points are:
+· Privacy - connection through encryption
+· Identity authentication – identification through certificates, and
+· Reliability –dependable maintenance of a secure connection through
+message integrity checking.
              </p>
           </div>
         </div>
@@ -70,7 +73,7 @@ the TLS Record protocol and the TLS Handshake protocol
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
           <img class="logos" src="images/itLogo.png" />
           <div>
-            <a class="btn btn-warning" href="tls-1-2-implementation.html">IT QUICKSTART</a>
+            <a class="btn btn-warning" href="ssl-3-implementation.html">IT QUICKSTART</a>
 
             <div class="blockNotes">
               <h4>Implemenation Notes</h4>

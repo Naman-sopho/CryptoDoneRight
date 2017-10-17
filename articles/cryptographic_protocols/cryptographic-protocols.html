@@ -18,18 +18,17 @@
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="#">Home</a></li>
-         <li class="breadcrumb-item"><a href="#">Articles</a></li>
-         <li class="breadcrumb-item"><a href="crytpographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item active">Basics</li>
+         <li class="breadcrumb-item"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item active"><a href="#">Cryptographic Protocols</a></li>
        </ol>
     </div>
     <div class="container-fluid">
-      <h1>Cryptographic Protocol Basics</h1>
+      <h1>Cryptographic Protocols</h1>
       <div class="panel-group">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse1">Certificates or PKI </a>
+              <a data-toggle="collapse" href="#collapse1"><a href="basics.html">Basics</a></a>
             </h4>
           </div>
         </div>
@@ -39,53 +38,38 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse2">Hashing (MD5, SHAtypes, ...)</a>
+              <a data-toggle="collapse" href="#collapse2">SSL</a>
             </h4>
           </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item"><a href="ssl-1.html">SSL 1.0</a></li>
+              <li class="list-group-item"><a href="ssl-2.html">SSL 2.0</a></li>
+              <li class="list-group-item"><a href="ssl-3.html">SSL 3.0</a></li>
+            </ul>
+          </div>
         </div>
+        
+        
       </div>
 
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" href="#collapse3">Networking</a>
+                <a data-toggle="collapse" href="#collapse3">TLS</a>
               </h4>
             </div>
-          </div>
-        </div>
-
-          <div class="panel-group">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse4">H-MAC</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel-group">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse5">Cipher Suites</a>
-                </h4>
-              </div>
-              <div id="collapse5" class="panel-collapse collapse">
-                <ul class="list-group">
-                  <li class="list-group-item">DH</li>
-                  <li class="list-group-item">Ephemeral DH</li>
-                  <li class="list-group-item">Elliptic DH</li>
-                  <li class="list-group-item">EEDH</li>
-                  <li class="list-group-item">RSA</li>
-                  <li class="list-group-item">Fortezza/DLS</li>
-                </ul>
-
-              </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <ul class="list-group">
+                <li class="list-group-item"><a href="tls-1.html">TLS 1.0</a></li>
+                <li class="list-group-item"><a href="tls-1-1.html">TLS 1.1</a></li>
+                <li class="list-group-item"><a href="tls-1-2.html">TLS 1.2</a></li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
 
       <footer class="footer">
         <p><span>© 2017 Important legal stuff and/or links to usage restrictions etc.</span></p>

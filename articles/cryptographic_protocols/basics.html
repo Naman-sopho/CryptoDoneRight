@@ -18,7 +18,7 @@
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="#">Home</a></li>
-         <li class="breadcrumb-item"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item"><a href="crytpographic-protocols.html">Cryptographic Protocols</a></li>
          <li class="breadcrumb-item active">Basics</li>
        </ol>
@@ -61,6 +61,24 @@
                 <h4 class="panel-title">
                   <a data-toggle="collapse" href="#collapse4">H-MAC</a>
                 </h4>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse">
+                <h3>MAC and H-MAC</h3>
+                <p>
+                  Message authentication is a procedure that allows communicating parties to verify that received messages are authentic. The two important aspects are verifying that the contents of the message have not been altered and that the source is authentic. The Message Authentication Code (MAC) is a widely used technique for performing message authentication.
+                  MAC algorithms involve the use of a secret key to generate a small block of data, known as a "message authentication code," that is appended to the message. This technique assumes that two communicating parties, say A and B, share K as a secret key. When A has a message to send to B, it calculates the message authentication code as a function of the message and the key. The message and code are transmitted to the intended recipient. The recipient performs the same calculation on the received message, using the same secret key, to generate a new message authentication code. The received code is compared to the calculated code. If you assume that only the receiver and the sender know the identity of the secret key, and if the received code matches the calculated code, then:
+                </p>
+                <p>
+                  1. The receiver is assured that the message has not been altered. If an attacker alters the message but does not alter the code, then the receiver's calculation of the code will differ from the received code. Because the attacker is assumed not to know the secret key, the attacker cannot alter the code to correspond to the alterations in the message.
+                </p>
+                <p>
+                  2. The receiver is assured that the message is from the alleged sender. Because no one else knows the secret key, no one else could prepare a message with the proper code.
+                </p>
+                <p>
+                  3. If the message includes a sequence number (such as is used with X.25, HDLC, and TCP), then the receiver can be assured of the proper sequence, because an attacker cannot successfully alter the sequence number.
+                </p>
+                
+                <img src="../../images/hmac-diagram.png" />
               </div>
             </div>
           </div>

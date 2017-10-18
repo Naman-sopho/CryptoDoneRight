@@ -36,6 +36,11 @@ h4 {
 .infoBlocks {
 	padding:1vw 5vw 2vw 5vw;
 	text-align: center;
+	position:relative;
+}
+.bottomTab {
+	position:absolute;
+	bottom: 0vw;
 }
 
 .logos {
@@ -79,4 +84,7 @@ h4 {
 .panel {
 	box-shadow:0 2px 5px rgba(0,0,0,.15);
 	margin-top:2vw;
+}
+.panel h3,p,img {
+	margin:2vw;
 }

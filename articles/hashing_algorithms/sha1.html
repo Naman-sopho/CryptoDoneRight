@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Mockup-1</title>
+    <title>Mockup-SHA1</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,6 +23,7 @@
     </div>
     <div class="alert alert-danger">
       <strong>Warning!</strong> This technology is <strong>obsolete</strong>! <a href="sha3.html">Try this instead</a>
+      <a href="#"><img class="brokenInfo button-hover" src="../../images/brokenIcon.png"></a>
     </div>
 
 
@@ -30,9 +31,9 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
+        <div id="topic" class="col-md-6 col-sm-6 col-xs-6">
           <div class="title">
-            <h2><span>SHA-1 Hashing Algorithm</span></h2>
+            <h2>SHA-1 Hashing Algorithm</h2>
           </div>
           <div class="timestamp">
             <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
@@ -46,124 +47,41 @@
                United States <acronym title="National Institute of Standards and Technology"> NIST</acronym>. SHA-1 produces a 160-bit (20-byte) hash value known as a message digest. A SHA-1 hash value is typically
                rendered as a hexadecimal number, 40 digits long.
              </p>
-             
-             
-             <p>
-               <strong>Cryptographic Hash Functions<br /></strong>
-               The ideal hash function has three main properties:
-               <ol>
-                 <li><strong>Consistent:</strong> hash(X) always yield same result.</li>
-                 <li><strong>One-Way:</strong> Given Y, hard to find X such that hash(X) = Y</li>
-                 <li><strong>Collision Resistant:</strong> It is extremely unlikely that two slightly different messages will have the same hash.</li>
-               </ol>
-             </p>
-             
-             <p>
-               <strong>What is a collision?<br /></strong>
-               A collision or clash occurs when two different inputs to a function, typically one used to compress large data items into a smaller or fixed size, produce the same output, called (depending on the application) a hash value, checksum, fingerprint, or digest.
-             </p>
-             <p>
-               Recently, SHA-1 was “SHAttered” or broken and an attack was developed wherein it is now pratically possible to craft two colliding PDF files and obtain a SHA-1 digital signature on the first PDF file which can also be abused as a valid signature on the second PDF file. Even though SHA-1 is broken, Do NOT Panic.
-             </p>
-             <p>
-               Here is an example: By crafting the two colliding PDF files as two rental agreements with different rent, it is possible to trick someone to create a valid signature for a high-rent contract by having him or her sign a low-rent contract. 
-               <br />
-               <a href="https://shattered.io/">Read More</a>
-             </p>
           </div>
         </div>
 
 
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+        <div class="col-md-3 col-sm-3 col-xs-3 infoBlocks">
           <img class="logos" src="../../images/devLogo.png" />
           <div>
             <button class="btn btn-warning">DEV QUICKSTART</button>
 
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li>Move away from SHA-1 as soon as possible.</li>
-                <li>Consider Hardened SHA-1</li>
-                <li>HMAC-SHA1 is still considered safe.</li>
-                <li>dh-group14-sha1 is also still considered safe.</li>
-                <li>Identify assets that are most critical and focus on moving those out to something more stronger and reliable.</li>
-                <li>Start by phasing out infrastructure where hashing is done for integrity check or digital signature.  </li>
-              </ul>
-              
-              <p>
-                <strong>Do not panic!<br /></strong>
-                  Fun Fact!<br />
-                  The SHAttered attack required over 9,223,372,036,854,775,808 SHA1 computations. This took the equivalent processing power as 6,500 years of single-CPU computations and 110 years of single-GPU computations.
-                <p>
-                  The attackers must be an extremely well-funded. The attack is not within the reach of anyone, but is within the reach of major organizations and nation-states.
-                  Given the computational expense of carrying out such a collision, it is obvious that executing such an attack is sensible for only someone who has vested a great amount of interest and also has the computational powers (monetary) required.
-                </p>
-                <p>
-                  But, the SHAttered attack is 100,000 faster than the brute force attack that relies on the birthday paradox. The brute force attack would require 12,000,000 GPU years to complete, and it is therefore impractical. 
-                  <br />
-                  <a href="../../articles/cryptographic_protocols/basics.html">Read more</a>
-                </p>
-              </p>
             </div>
           </div>
         </div>
 
 
 
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+        <div class="col-md-3 col-sm-3 col-xs-3 infoBlocks">
           <img class="logos" src="../../images/itLogo.png" />
           <div>
             <button class="btn btn-warning">IT QUICKSTART</button>
 
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li><span>Panic</span></li>
-                <li><span>Use SHA-1 for <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashes for File Verification">file validation</a></span></li>
-              </ul>
-              
-              <p>
-                The “SHAttered” attack technique doesn't allow an attacker to generate a collision with an existing file. For example, it's not possible to use this method to generate a malicious executable file which matches the signature of an existing legitimate executable. However, it would be possible for an attacker to generate two executable files which have the same SHA-1 hash but perform different actions when they run. Once Google releases the code behind the attack, anyone will be able to create pairs of PDF files that hash to the same SHA-1 sum, with two distinct images and certain preconditions.
-                Based on such on the above information, one would be able to analyze when and where SHA-1 is OK.
-                <p>
-                  <strong>When/Where is SHA-1 OK?<br /></strong>
-                  Checking the hash of an executable or file that we know is trusted (from trusted site)
-                  No known flaws in SHA-1 as a key derivation function which is how dh-group14-sha1 is being used. 
-                  Similarly, HMAC-SHA1 is believed to be (still) safe as long as SHA1 is pseudorandom. 
-                  The specific construct of HMAC-SHA1 is still considered safe to use (assuming a secret key) due to the security proof for HMAC which does not rely on collision resistance of the underlying PRF.
-                </p>
-                <p>
-                  The Logjam Attack research released in 2015 noted some key exchange algorithms were subject to an attack and should be disabled. In particular, they encouraged all system administrators to disable support for the diffie-hellman-group1-sha1 key exchange algorithm. But, dh-group14-sha1 is still considered safe.
-                </p>
-              </p>
             </div>
 
           </div>
         </div>
+        
       </div>
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
           <p>
-	           It's pretty difficult to create a create a SHA-1 collision right
-	           now, so don't panic. You should start using <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashes for File Verification">another algorithm for
-	           file verification</a> as soon as posible. SHA-1 collisions
-	           present very little increase in risk for password storage,
-	           however you should <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Properly Storing Passwords">move
-	           to a better hashing algorithm for passwords</a> as soon as possible.
-             
-             <ul>
-               <li><a href="http://schneier.com/essay-074.html">Cryptanalysis of MD5 and SHA: Time for a New Standard</a></li>
-               <li><a href="http://searchsecurity.techtarget.com/tip/SHA-1-collision-How-the-attack-completely-breaks-the-hash-function">SHA-1 Collision: How the Attack Completely Breaks the Hash Function</a></li>
-             </ul>
+	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 	        </p>
-          <p>
-            <ul>
-              <li><a href="https://marc-stevens.nl/research/papers/C13-S.pdf">Counter Cryptanalysis</a></li>
-              <li><a href="https://shattered.io/static/shattered.pdf">The First Collision for Full SHA-1</a></li>
-            </ul>
-          </p>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
@@ -176,9 +94,9 @@
         </div>
       </div>
 
+      <div class="footerfix"></div>
 
-      <footer class="footer">
-        <p><span>© 2017 Important legal stuff and/or links to usage restrictions etc.</span></p>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
       </footer>
     </div>
 

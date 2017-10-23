@@ -5,9 +5,9 @@
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <link rel="stylesheet" href="../css/style-mockup1.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -17,18 +17,25 @@
 
     <div class="breadcrumbs">
       <ol class="breadcrumb">
-         <li class="breadcrumb-item"><a href="#">Home</a></li>
-         <li class="breadcrumb-item active"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level active"><a href="#">Articles</a></li>
        </ol>
     </div>
-    <div class="container-fluid">
+    <div class="row container-fluid">
       <h1>Articles</h1>
       <div class="panel-group">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse1"><a href="cryptographic_protocols/cryptographic-protocols.html">Cryptographic Protocols</a></a>
+              <a data-toggle="collapse" href="#collapse1">Cryptographic Protocols</a>
             </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="cryptographic_protocols/cryptographic-protocols.html">Protocol List</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -37,8 +44,15 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse2"><a href="hashing_algorithms/example_index.html">Hashing Algorithms</a></a>
+              <a data-toggle="collapse" href="#collapse2">Hashing Algorithms</a>
             </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="hashing_algorithms/example_index.html">Algorithms List</a>
+              </li>
+            </ul>
           </div>
         </div>
         
@@ -63,8 +77,8 @@
         </div>
       </div>
 
-      <footer class="footer">
-        <p><span>© 2017 Important legal stuff and/or links to usage restrictions etc.</span></p>
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
       </footer>
   </body>
 </html>

@@ -25,6 +25,10 @@
       <strong>Warning!</strong> This technology is <strong>obsolete</strong>! <a href="sha3.html">Try this instead</a>
       <a href="sha1-broken.html"><img class="brokenInfo button-hover" src="../../images/brokenIcon.png"></a>
     </div>
+    <div class="alert alert-success">
+      <strong>Migration Plan:</strong> Moving from SHA-1 to SHA-2
+      <a href="sha1-migration.html">Read more</a>
+    </div>
 
 
 
@@ -100,7 +104,31 @@
           </div>
           
           
-          
+          <p>
+            <strong>How do I know if I am using SHA-1 in my IT systems or infrastructure?</strong><br />
+            As described in the migration page, it is essential to gather and create a comprehensive list or an inventory of every unique devices, OS or application in your infrastructure.
+            <ol>
+              <li>
+                Identify the systems that use certificates.If certificates are in use, you must check if SHA-1 signature is in use for those certificates or not. You can check by visiting the site in your browser and viewing the certificate that the browser received. The details of how to do that can vary from browser to browser, but generally if you click or right-click on the lock icon, there should be an option to view the certificate details. In the list of certificate fields, look for one called "Certificate Signature Algorithm". (For StackOverflow's certificate, its value is "PKCS #1 SHA-1 With RSA Encryption".)
+              </li>
+              <li>
+                If your infrastructure has a web server, you can use the following site and see if you are using the SHA-1 or some other certificate. The site is <a href="https://shachecker.com/">https://shachecker.com/</a> or <a href="https://shaaaaaaaaaaaaa.com/">https://shaaaaaaaaaaaaa.com/</a>.
+              </li>
+              <li>
+                Here, is a quick command in a linux system that you can run to know if you are using the correct SHA-1 certificate. 
+<xmp>
+openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \
+| openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"
+
+</xmp>
+                or 
+<xmp>
+openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null
+| openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"
+</xmp>
+              </li>
+            </ol>
+          </p>
           <p>
             <strong>Where is a SHA used or When is SHA used?</strong><br />
             SHA is primarily being used for the following purposes:

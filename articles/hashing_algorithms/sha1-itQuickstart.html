@@ -23,24 +23,96 @@
        </ol>
     </div>
 
-
+    <a class="scrollerIcon" href="#relatedArticles">Scroll To Related Articles</a>
 
     <div class="container-fluid">
       <div class="row" style="text-align:center;">
         <div class="center-block">
+          <div class="level0redirect">
+            <h3>
+              Requisite Concepts:
+            </h3>
+            
+            <ul>
+              <li>What is a certificate?</li>
+              <li>What is a certificate chain?</li>
+              <li>
+                What does mean to establish trust relationship with something?
+              </li>
+              <li>
+                What is a root, intermediate or self-signed certificate?
+              </li>
+              <li>
+                What is a CA or Certificate Authority?
+              </li>
+            </ul>
+            
+            <p>
+              If you are wondering about some of these questions, click <a href="../cryptographic_protocols/basics.html">here</a>.
+              <br />
+              If you are wondering about SHA-2, click <a href="sha2.html">here</a>.
+            </p>
+          </div>
+          
+          
           <div style="margin-top:2vw;">
-            <h3>Implementation Notes:</h3>
+            <h3>IT Administrator's Quickstart</h3>
           </div>
 
           <p>
+            As per Microsoft's SHA-1 deprecation policy, Windows users don't need to do anything in response to this new technical requirement. XP Service Pack 3 (SP3) and later versions support SHA-2 SSL certificates. Server 2003 SP2 and later versions add SHA-2 functionality to SSL certificates by applying hotfixes (KB968730 and KB938397).
+          </p>
+          <p>
+            <span class="green">Web administrators must request new certificates to replace SHA-1 SSL and code-signing certificates that expire after January 1, 2017.</span> As of this writing, that would probably affect only public SHA-1 certificates that were purchased with a long expiration date (three years or more) or long-duration certificates issued by internal SHA-1 CAs. Most third-party CAs will rekey their certificates for free, so you simply need to contact the CA to request a rekeyed certificate that uses the SHA-2 algorithm.
+          </p>
+          <p>
+            When ordering new SSL certificates, you should confirm with the CA that they're being issued with the SHA-2 algorithm. New certificates with expiration dates after January 1, 2017, can only use SHA-2. Code-signing certificates with expiration dates after December 31, 2015, must also use SHA-2.
+          </p>
+          <p>
+            Note that the algorithm used in SHA-2 certificates is actually encoded to use SHA-256, SHA-384, or SHA-512. All of these are SHA-2 algorithms; the SHA number (e.g., 256) specifies the number of bits in the hash. The larger the hash, the more secure the certificate but possibly with less compatibility.
+          </p>
+          <p>
+            <span class="green">It's important that the certificate chain be encrypted with SHA-2 certificates. (A certificate chain consists of all the certificates needed to certify the end certificate.)</span> This means that any intermediate certificates must also use SHA-2 after January 1, 2017. Typically, your CA will provide the intermediate and root CA certificates when they provide the SHA-2 certificate. Sometimes they provide a link for you to download the certificate chain. It's important that you update this chain with SHA-2 certificates. Otherwise, Windows might not trust your new SHA-2 certificate.
+          </p>
+          <p>
+            Root certificates are a different story. These can actually be SHA-1 certificates because Windows implicitly trusts these certificates since the OS trusts the root certificate public key directly. A root certificate is self-signed and isn't signed by another entity that has been given authority.
+          </p>
+          <p>
+            For the same reason, any self-signed certificate can use the SHA-1 algorithm. For example, Microsoft Exchange Server generates self-signed SHA-1 certificates during installation. These certificates are exempt from the new SHA-2 policy since they aren't chained to a CA. I expect, however, that future releases of Exchange will use SHA-2 in self-signed certificates.
+          </p>
+          
+          <br />
+          <h3>What About My Enterprise CAs</h3>
+          <p>
+            If your organization has its own internal CA PKI, you'll want to ensure that it's generating SHA-2 certificates. How this is done depends on whether the CA is running Windows Server 2008 R2 or later and if your CA has subordinate CAs.
+          </p>
+          <p>
+            If you have a Server 2008 R2 or later single-root CA without subordinates, you should update the CA to use SHA-2. Doing so will ensure that subsequent certificates generated will use the SHA-2 algorithm. To check which hash algorithm is being used, you can right-click the CA and go to the General tab. If SHA-1 is listed, you can run the following certutil command to configure the CA to use the SHA-256 algorithm:
+            <xmp>
+            certutil -setreg ca\csp\CNGHashAlgorithm SHA256
+            </xmp>
+          </p>
+          <p>
+            You must restart the CertSvc service to apply the change. Now when you view the CA properties, you'll see that the hash algorithm is SHA-256. All future certificates issued by this CA will use SHA-256, but keep in mind that existing certificates will still be using SHA-1. You need to renew any SHA-1 certificates issued by this CA to upgrade them to SHA-2 certificates.
+          </p>
+          <p>
+            <span class="red">If your CA is older than Server 2008 R2, you can't upgrade the CA to use SHA-2. You'll need to rebuild it with a newer version.</span> If your organization's internal CA is multi-tiered with one or more subordinate CAs, you'll need to reconfigure them to use SHA-2. This is done using the same certutil command just given on each subordinate or issuing CA. Keep in mind that if you use subordinate CAs, you're not required to update the root CA to SHA-2 since that certificate is at the top of the certificate chain, but it won't cause any problems if you do. You still need to renew any SHA-1 certificates issued by the subordinate CAs to upgrade them to SHA-2 certificates.
+          </p>
+          
+          <br />
+          <h3>Take Action Now</h3>
+          <p>
+            Administrators and website operators should identify all the SSL certificates used in their organizations and take action, as follows:
             <ul>
-              <li>Move away from SHA-1 as soon as possible.
+              <li>
+                SHA-1 SSL certificates expiring before January 1, 2017, will need to be replaced with a SHA-2 equivalent certificate.
               </li>
-              <li>Consider Hardened SHA-1</li>
-              <li>HMAC-SHA1 is still considered safe.</li>
-              <li>dh-group14-sha1 is also still considered safe.</li>
-              <li>Identify assets that are most critical and focus on moving those out to something more strong and reliable like SHA-2.</li>
-              <li>Start by phasing out infrastructure where SHA-1 hashing is done for integrity check or digital signature.</li>
+              <li>
+                SHA-1 SSL certificates expiring after January 1, 2017, should be replaced with a SHA-2 certificate at the earliest convenience.
+              </li>
+              <li>
+                Any SHA-2 certificate chained to an SHA-1 intermediate certificate should be replaced with another one chained to an SHA-2 intermediate certificate.
+              </li>
             </ul>
           </p>
         </div>
@@ -52,9 +124,27 @@
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
           <ul>
-	           <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
-">History of Hash Functions</a></li>
-             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+	           <li>
+               <a href="https://technet.microsoft.com/en-us/library/security/2880823.aspx">Microsoft Security Advisory 2880823</a>This website discusses the deprecation policy for the SHA-1 hashing algorithm for the Microsoft Root Certificate Program.
+             </li>
+             <li>
+               <a href="https://technet.microsoft.com/en-us/library/dn771627.aspx">Migrating a Certification Authority Key from a Cryptographic Service Provider (CSP) to a Key Storage Provider (KSP).</a>The section "How to migrate a CA from a CSP to a KSP and optionally, from SHA-1 to SHA-2" in this TechNet web page provides detailed instructions for upgrading a CA to use SHA-2.
+             </li>
+             <li>
+               <a href="https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html">Gradually sunsetting SHA-1</a>. This Google Online Security Blog post explains how the transition to SHA-2 affects Chrome and details Google's rollout schedule.
+             </li>
+             <li>
+               <a href="https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility">SHA-256 Compatibility</a>. This GlobalSign web page lists OS, browser, server, and signing support for SHA-256 certificates.
+             </li>
+             <li>
+               <a href="https://www.digicert.com/sha1-sunset/">DigiCert SHA-1 Sunset Tool</a>This free web application tests public websites for SHA-1 certificates that expire after January 1, 2016.
+             </li>
+             <li>
+               <a href="https://www.digicert.com/cert-inspector.htm">DigiCert Certificate Inspector</a>This tool discovers and analyzes all certificates in an enterprise. It's free, even if you don't have a DigiCert account.
+             </li>
+             <li>
+               <a href="https://www.ssllabs.com/ssltest/index.html">Qualys SSL Labs' SSL Server Test</a>This free online service analyzes the configuration of any SSL web server on the public Internet.
+             </li>
 	        </ul>
         </div>
 

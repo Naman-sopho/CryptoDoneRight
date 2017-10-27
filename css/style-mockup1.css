@@ -166,3 +166,25 @@ xmp {
 	width:100%;
 	margin: 2vw auto;
 }
+
+.green {
+	color: green;
+	font-weight:bold;
+}
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+.scrollerIcon {
+	position:fixed;
+	right:2vw;
+	top:10vw;
+	padding:10px;
+	border:1px solid #26537A;
+	transition: background-color 0.5s ease;
+}
+.scrollerIcon:hover {
+	background-color: #26537A;
+	color:white;
+}

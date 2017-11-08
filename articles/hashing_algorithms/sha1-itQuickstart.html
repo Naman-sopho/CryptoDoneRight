@@ -23,39 +23,52 @@
        </ol>
     </div>
 
-    <a class="scrollerIcon" href="#relatedArticles">Scroll To Related Articles</a>
+    <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#requisiteConcepts"><li>
+          Requisite Concepts
+        </li></a>
+        <a href="#quickstart"><li>
+          Quickstart
+        </li></a>
+        <a href="#enterprise"><li>
+          Enterprise CAs
+        </li></a>
+        <a href="#action"><li>
+          Taking Action
+        </li></a>
+        <a href="#relatedArticles"><li>
+          Related Articles & Further Reading
+        </li></a>
+      </ul>
+    </div>
 
     <div class="container-fluid">
       <div class="row" style="text-align:center;">
         <div class="center-block">
           <div class="level0redirect">
-            <h3>
+            <h3 id="requisiteConcepts">
               Requisite Concepts:
             </h3>
             
             <ul>
-              <li>What is a certificate?</li>
-              <li>What is a certificate chain?</li>
-              <li>
+              <a href="../cryptographic_protocols/basics.html"><li>What is a certificate?</li></a>
+              <a href="../cryptographic_protocols/basics.html"><li>What is a certificate chain?</li></a>
+              <a href="../cryptographic_protocols/basics.html"><li>
                 What does mean to establish trust relationship with something?
-              </li>
-              <li>
+              </li></a>
+              <a href="../cryptographic_protocols/basics.html"><li>
                 What is a root, intermediate or self-signed certificate?
-              </li>
-              <li>
+              </li></a>
+              <a href="../cryptographic_protocols/basics.html"><li>
                 What is a CA or Certificate Authority?
-              </li>
+              </li></a>
             </ul>
-            
-            <p>
-              If you are wondering about some of these questions, click <a href="../cryptographic_protocols/basics.html">here</a>.
-              <br />
-              If you are wondering about SHA-2, click <a href="sha2.html">here</a>.
-            </p>
           </div>
           
           
-          <div style="margin-top:2vw;">
+          <div id="quickstart" style="margin-top:2vw;">
             <h3>IT Administrator's Quickstart</h3>
           </div>
 
@@ -82,7 +95,7 @@
           </p>
           
           <br />
-          <h3>What About My Enterprise CAs</h3>
+          <h3 id="enterprise">What About My Enterprise CAs</h3>
           <p>
             If your organization has its own internal CA PKI, you'll want to ensure that it's generating SHA-2 certificates. How this is done depends on whether the CA is running Windows Server 2008 R2 or later and if your CA has subordinate CAs.
           </p>
@@ -100,7 +113,7 @@
           </p>
           
           <br />
-          <h3>Take Action Now</h3>
+          <h3 id="action">Take Action Now</h3>
           <p>
             Administrators and website operators should identify all the SSL certificates used in their organizations and take action, as follows:
             <ul>

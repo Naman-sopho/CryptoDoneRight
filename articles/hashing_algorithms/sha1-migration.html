@@ -22,29 +22,49 @@
          <li class="breadcrumb-item level1 active">SHA-1 Migration</li>
        </ol>
     </div>
+    
+    
+    <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#requisiteConcepts"><li>
+          Requisite Concepts
+        </li></a>
+        <a href="#migration"><li>
+          Migration Plan
+        </li></a>
+        <a href="#models"><li>
+          Migration Models
+        </li></a>
+        <a href="#why"><li>
+          Why SHA-3?
+        </li></a>
+        <a href="#relatedArticles"><li>
+          Related Articles & Further Reading
+        </li></a>
+      </ul>
+    </div>
+    
+    
 
     <div class="container-fluid">
       <div class="row" style="text-align:center;">
         <div class="center-block">
           <div class="level0redirect">
-            <h3>
+            <h3 id="requisiteConcepts">
               Requisite Concepts:
             </h3>
             
             <ul>
-              <li>What is a certificate?</li>
-              <li>What is PKI? Where are certificate used and why?</li>
+              <a href="../cryptographic_protocols/basics.html"><li>What is a certificate?</li></a>
+              <a href="../cryptographic_protocols/basics.html"><li>What is PKI? Where are certificate used and why?</li></a>
             </ul>
-            
-            <p>
-              If you are wondering about some of these questions, click <a href="../cryptographic_protocols/basics.html">here</a>.
-            </p>
           </div>
         
           
           
           <br />
-          <h2>PKI SHA-1 to SHA-2 Migration Plan</h2>
+          <h2 id="migration">PKI SHA-1 to SHA-2 Migration Plan</h2>
           
           <p>
             Every company with an internal PKI not already using SHA-2 will need to create a SHA-2 PKI or migrate their existing SHA-1 PKI to SHA-2 (at some point in time). A SHA-2 migration plan includes:
@@ -90,7 +110,7 @@
           </p>
           
           <br />
-          <h3>PKI Migration Models</h3>
+          <h3 id="models">PKI Migration Models</h3>
           <p>
             Here are the following PKI component scenarios for implementing SHA-2 (for these examples, assuming a 2-tier PKI — offline root, online enterprise issuing CAs — each of which can be a new PKI component or migrated:
             <ul>
@@ -138,7 +158,7 @@
           <p>
             Public CAs have already moved from SHA-1 to SHA-2 for any certificate lifetimes past Jan. 1, 2017, so you should concentrate your efforts on servers and applications with public digital certificates that haven’t already moved. After that issue is resolved, start looking at your internal PKIs and relying parties. Migrating from SHA-1 to SHA-2 isn’t hard technically, but it’s a massive logistical change with tons of repercussions and requires lots of testing.
           </p>
-          <h3>SHA-3 is here, but should you use it?</h3>
+          <h3 id="why">SHA-3 is here, but should you use it?</h3>
           <p>
             Although no significant cryptographic weakness has been found in SHA-2, it's considered algorithmically related to SHA-1. Most experts believe its lifecycle will be similar to that of SHA-1. NIST already approved in August 2015 a replacement cryptographic hash algorithm standard it called SHA-3. SHA-3 does not share the same mathematical properties as SHA-1 and SHA-2, and thus should be resistant to cryptographic attack longer than SHA-2.
           </p>

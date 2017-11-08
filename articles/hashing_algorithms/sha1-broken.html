@@ -22,27 +22,40 @@
          <li class="breadcrumb-item level1 active">SHA-1 Broken</li>
        </ol>
     </div>
-
+    
+    <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#requisiteConcepts"><li>
+          Requisite Concepts
+        </li></a>
+        <a href="#collisions"><li>
+          Understanding Collisions
+        </li></a>
+        <a href="#relatedArticles"><li>
+          Further Reading & Related Concepts
+        </li></a>
+      </ul>
+    </div>
+  
+    
     <div class="container-fluid">
       <div class="row" style="text-align:center;">
+        <a href="sha3.html"><div class="alert alert-success">
+          <strong>Try the most current technology instead</strong> 
+        </div></a>
         <div class="center-block">
           <div class="level0redirect">
-            <h3>
+            <h3 id="requisiteConcepts">
               Requisite Concepts:
             </h3>
             
             <ul>
-              <li>What is a Hash and a Hashing Algorithm?</li>
-              <li>What is SHA1?</li>
-              <li>Where is SHA1 used?</li>
-              <li>Some basic DOs and DONTs when considering SHA1?</li>
+              <a href="example_index.html"><li>What is a Hash and a Hashing Algorithm?</li></a>
+              <a href="sha1.html"><li>What is SHA1?</li></a>
+              <a href="sha1.html"><li>Where is SHA1 used?</li></a>
+              <a href="sha1.html"><li>Some basic DOs and DONTs when considering SHA1?</li></a>
             </ul>
-            
-            <p>
-              If you are wondering about some of these questions, click <a href="sha1.html">here</a>.
-              <br />
-              If you are looking for a general implementation QuickStart guide, click <a href="sha1-devQuickstart.html">here</a>.
-            </p>
           </div>
         
           
@@ -57,7 +70,7 @@
           </p>
           
           <br />
-          <h3>Understanding Collisions</h3>
+          <h3 id="collisions">Understanding Collisions</h3>
           <p>
             A collision or clash occurs when two different inputs to a function, typically one used to compress large data items into a smaller or fixed size, produce the same output, called (depending on the application) a hash value, checksum, fingerprint, or digest.
             <br />

@@ -18,13 +18,19 @@ h4 {
 	text-decoration: underline;
 }
 
-xmp {
+pre {
+	padding:1vw;
+	text-align: left;
+}
+code {
 	text-align:left;
+	background-color:#F1F1F1;
 }
 
 .row {
-	width:75vw;
+	width:70vw;
 	margin:0 auto;
+	position:relative;
 }
 
 #header {
@@ -41,15 +47,19 @@ xmp {
 	margin-bottom: 0;
 }
 .alert {
-	width:75vw;
+	width:70%;
 	margin:1vw auto;
+	opacity:0.9;
 }
-.alert-danger {
-	position:relative;
+.alert:hover {
+	opacity:1;
 }
+
+
 .brokenInfo {
 	position:absolute;
-	right:2vw;
+	top: 1vw;
+	right:0vw;
 	margin:0;
 	padding:0;
 	height:2vw;
@@ -60,6 +70,7 @@ xmp {
 }
 
 .container-fluid {
+	position:relative;
 }
 
 #topic, #relatedArticles {
@@ -92,7 +103,6 @@ xmp {
 }
 
 #relatedArticles {
-
 }
 
 .footerfix{height:7em;}
@@ -103,7 +113,7 @@ xmp {
 	width:100%;
 	border: 2px solid #000;
 	border-width: 2px 0px 0px 0px;
-	padding:1vw;
+	padding:2vw;
 }
 .topicimage img {
 	display: block;
@@ -176,15 +186,18 @@ xmp {
 	font-weight: bold;
 }
 
-.scrollerIcon {
-	position:fixed;
-	right:2vw;
-	top:10vw;
-	padding:10px;
-	border:1px solid #26537A;
-	transition: background-color 0.5s ease;
+#contentScroller {
+	position: fixed;
+	top: 10vw;
+	left: 2vw;
+	border-left:7px solid black;
+	padding:0.25vw 1vw;
+	text-align:left;
+	font-size:1vw;
+	width:13vw;
+	z-index:1000;
 }
-.scrollerIcon:hover {
-	background-color: #26537A;
-	color:white;
+#contentScroller ul {
+  list-style: none;
+  padding: 0;
 }

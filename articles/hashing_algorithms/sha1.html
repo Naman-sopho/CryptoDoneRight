@@ -28,7 +28,7 @@
       <strong>Migration Plan:</strong> Moving from SHA-1 to SHA-2
     </div></a>
      <a href="sha1-itQuickstart.html"><div class="alert alert-warning">
-      Click to judge how much do you have for migration.
+      Click to judge how much <strong>time</strong> do you have for migration.
     </div></a>
     
     <div id="contentScroller">
@@ -145,7 +145,7 @@
                 Here, is a quick command in a linux system that you can run to know if you are using the correct SHA-1 certificate.<br /><br />
                 <pre>
                   <code>
-openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
+$openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
                 </pre>
                 
                 <br /><br />
@@ -154,7 +154,7 @@ openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | opens
                 
                 <pre>
                   <code>
-openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
+$openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
                 </pre>
               </li>
             </ol>

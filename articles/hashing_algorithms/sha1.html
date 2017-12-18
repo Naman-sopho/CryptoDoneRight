@@ -115,7 +115,104 @@
 
       <hr />
       <br />
-
+	    
+      <div class="row" style="text-align:center;">
+        <div class="center-block">
+          <h2 id="requisiteConcepts">General Information:</h3>
+          
+          <div class="level0redirect">
+            <h3>
+              Requisite Concepts:
+            </h3>
+            
+            <ul>
+              <a href="example_index.html"><li>What is a Hash?</li></a>
+              <a href="example_index.html"><li>What is a Hashing Algorithm?</li></a>
+            </ul>
+          </div>
+          
+          
+          <p id="identification">
+            <strong>How do I know if I am using SHA-1 in my IT systems or infrastructure?</strong><br />
+            As described in the migration page, it is essential to gather and create a comprehensive list or an inventory of every unique devices, OS or application in your infrastructure.
+            <ol>
+              <li>
+                Identify the systems that use certificates.If certificates are in use, you must check if SHA-1 signature is in use for those certificates or not. You can check by visiting the site in your browser and viewing the certificate that the browser received. The details of how to do that can vary from browser to browser, but generally if you click or right-click on the lock icon, there should be an option to view the certificate details. In the list of certificate fields, look for one called "Certificate Signature Algorithm". (For StackOverflow's certificate, its value is "PKCS #1 SHA-1 With RSA Encryption".)
+              </li>
+              <li>
+                If your infrastructure has a web server, you can use the following site and see if you are using the SHA-1 or some other certificate. The site is <a href="https://shachecker.com/">https://shachecker.com/</a> or <a href="https://shaaaaaaaaaaaaa.com/">https://shaaaaaaaaaaaaa.com/</a>.
+              </li>
+              <li>
+                Here, is a quick command in a linux system that you can run to know if you are using the correct SHA-1 certificate.<br /><br />
+                <pre>
+                  <code>
+$openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
+                </pre>
+                
+                <br /><br />
+                or 
+                <br /><br />
+                
+                <pre>
+                  <code>
+$openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
+                </pre>
+              </li>
+            </ol>
+          </p>
+          <p id="when">
+            <strong>When is SHA used?</strong><br />
+            SHA is primarily being used for the following purposes:
+            <ol>
+              <li>
+                Cryptography:- SHA-1 forms part of several widely used security applications and protocols, including TLS and SSL, PGP, SSH, S/MIME, and IPsec.
+              </li>
+              <li>
+                Data Integrity:- This means a hash or SHA-1 helps to identify revisions, and to detect data corruption or tampering. In other words, it is a consistency check. It ensures if some data is, if checked at a later time or after transit, then the received data is consistent and not tampered with.
+              </li>
+              <li>
+                Password Storage:- Described in the above example
+              </li>
+            </ol>
+          </p>
+          <p>
+            One real-world example where SHA-1 may be used is when you're entering your password into a website's login page. Though it happens in the background without your knowledge, it may be the method a website uses to securely verify that your password is authentic.
+          </p>
+          <p>
+            In this example, imagine you're trying to login to a website you often visit. Each time you request to log on, you're required to enter in your username and password. 
+          </p>
+          <p>
+            If the website uses the SHA-1 cryptographic hash function, it means your password is turned into a checksum after you enter it in. That checksum is then compared with the checksum that's stored on the website. If the two match, you're granted access; if they don't, you're told the password is incorrect.
+          </p>
+          <p>
+            Another example where the SHA-1 hash function may be used is for file verification. Some websites will provide the SHA-1 checksum of the file on the download page so that when you download the file, you can check the checksum for yourself to ensure that the downloaded file is the same as the one you intended to downloaded.
+          </p>
+          <p id="why">
+            <strong>Why was there a need for SHA1?</strong>
+            NIST (National Institute for Standards and Technology, USA) was apparently not confident in the security of MD5 and proposed in 1993 a strengthened version of it called SHA (Secure Hash Algorithm) with a 160-bit result; it is now frequently called SHA-0. In 1995, NIST discovered a certificational weakness in SHA-0, which resulted in a new release of the standard published under the name SHA-1. In 2002, NIST published three new hash functions with longer hash results that are commonly called SHA-2: SHA- 256, SHA-384 and SHA-512.
+          </p>
+          <p id="where">
+            <strong>Protocols Used In:</strong>
+            <ul>
+              <li>Transport Layer Security (TLS)</li>
+              <li>Secure Sockets Layer (SSL)</li>
+              <li>Pretty Good Privacy (PGP)</li>
+              <li>Secure Shell (SSH)</li>
+              <li>Secure/Multipurpose Internet Mail Extensions (S/MIME)</li>
+              <li>Internet Protocol Security (IPSec)</li>
+            </ul>
+          </p>
+          <p id="whenToUse">
+            <strong>When and Where is SHA-1 Ok?</strong>
+            Checking the hash of an executable or file that we know is trusted (from trusted site).
+            No known flaws in SHA-1 as a key derivation function which is how dh-group14-sha1 is being used.  
+            Similarly, HMAC-SHA1 is believed to be (still) safe as long as SHA1 is pseudorandom.   
+            The specific construct of HMAC-SHA1 is still considered safe to use (assuming a secret key) due to the security proof for HMAC which does not rely on collision resistance of the underlying PRF.
+          </p>
+        </div>
+      </div>
+	    
+	    
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>

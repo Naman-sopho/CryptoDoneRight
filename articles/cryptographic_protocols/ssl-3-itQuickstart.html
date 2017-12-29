@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SSL 3.0 demo</title>
+    <title>SSL v3.0 IT Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,25 +25,100 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-        <h2>Quickstart Guide</h2>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <h3>For IT Professionals</h3>
-          <p>
-            <strong>Apache Servers</strong><br />
-          Misconfigured Apache Servers are one of the most major concerns and opens up a very easy attack surface for individuals with malicious intent.<br />
-          Please follow of few of these simple configuration mistakes in terms of SSL:
-          </p>
+	  <p>
+			  <strong>Note:- </strong> <br />
+			  It is important to understand that the fixes for both the vulnerabilities is to ensure that any services or devices that you own/control and accepts SSL connections should not do so on SSLv3.0. 
+			  Please bear this in mind for whatever fix maybe applicable.
+			  Click <a href="ssl-3-working.html"><b>here</b></a> for basic understanding of the SSL packet flow.
+			  <br /> <br />
+			  <strong>Web Servers: </strong> <br />
+			  Completely disable SSL3.0 on the server. The recommendation is to move to TLSv1.2.
+<ul>
+<li><u>Nginx Web Server</u> <br/> <br/>
+To disable SSLv3 in the Nginx web server, you can use the ssl_protocols directive. This will be located in the server or http blocks in your configuration.
+For instance, <b>on Ubuntu</b>, you can either add this globally to /etc/nginx/nginx.conf inside of the httpblock, or to each server block in the /etc/nginx/sites-enabled directory.
+<pre>
+<code>$sudo nano /etc/nginx/nginx.conf </code>
+</pre>
+To disable SSLv3, your ssl_protocols directive should be set like this:
+<pre>
+<code>
+...
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+...
+</code>
+</pre> 
+You should restart the server after you have made the above modification:
+<pre>
+<code>sudo service nginx restart </code>
+</pre> 
+</li>
+<br />
 
-          <img src="../../images/ssl-3-img1.jpg" />
-          <img src="../../images/ssl-3-img2.jpg" />
-          <img src="../../images/ssl-3-img3.jpg" />
+<li><u>Apache Web Server</u> <br/> <br />
+To disable SSLv3 on the Apache web server, you will have to adjust the SSLProtocol directive provided by the mod_ssl module.
+This directive can be set either at the server level or in a virtual host configuration. Depending on your distribution's Apache configuration, the SSL configuration may be located in a separate file that is sourced.
+<br /> <br />
+<b>On Ubuntu</b>, the server-wide specification for servers can be adjusted by editing the /etc/apache2/mods-available/ssl.conf file. If mod_ssl is enabled, a symbolic link will connect this file to the mods-enabledsubdirectory:
+
+<pre>
+<code>$sudo nano /etc/apache2/mods-available/ssl.conf </code>
+</pre>
+<br/>
+<b>On CentOS</b>, you can can adjust this in the SSL configuration file located here (if SSL is enabled):
+<pre>
+<code>$sudo nano /etc/httpd/conf.d/ssl.conf</code> 
+</pre>
+
+Inside you can find the SSLProtocol directive. If this is not available, create it. Modify this to explicitly remove support for SSLv3:
+<pre>
+<code>
+...
+SSLProtocol all -SSLv3 -SSLv2
+...
+</code>
+</pre>
+<br /> 
+Save and close the file. Restart the service to enable your changes.
+</br>
+<b>On Ubuntu</b>, you can type:
+<pre>
+<code>
+$sudo service apache2 restart 
+</code>
+</pre>
+<b>On CentOS</b>, this would be:
+<pre>
+<code>$sudo service httpd restart</code>
+</pre>
+</li>
+
+</ul>
+			  <br /> <br />
+			  <strong> Browsers </strong> <br />
+			  Upgrade browser (client) to the latest version or if for whatever reason you need to use an older version be sure to disable SSL 2.0 and SSL 3.0 Protocols. Most up to date browsers/servers use TLS_FALLBACK_SCSV. If a client requests a TLS protocol version which is lower than the highest supported by the server (and client), the server will identify intentional downgrade fallback and will drop the connection.
+			  
+			  <br />
+			  <ul>
+				  Here is a list of some common browsers and if whether the mitigations (no support for SSLv3.0) are completed.
+				  
+			   <li>Google Chrome: Complete (Legacy support for older SSL versions is implemented since version 33, fallback to SSL 3.0 is disabled since version 39, SSL 3.0 itself is disabled by default since version 40. Support of SSL 3.0 itself was dropped since version 44.)</li>
+				<li>Mozilla Firefox: Complete (Legacy support for older SSL versions itself is dropped since version 39. SSL 3.0 itself is disabled by default and fallback to SSL 3.0 are disabled since version 34, support for legacy SSL versions are implemented since version 35. In ESR, SSL 3.0 itself is disabled by default and legacy support for SSL is implemented since ESR 31.3.)
+			   </li>
+			   <li>Internet Explorer: Partial (Only in version 11, SSL 3.0 is disabled by default since April 2015. Version 10 and older are still vulnerable against POODLE.)
+				</li>
+				<li>Opera: Complete (Legacy support for SSL is implemented since version 20, "anti-POODLE record splitting", which is effective only with client-side implementation, is implemented since version 25, SSL 3.0 itself is disabled by default since version 27. Support of SSL 3.0 itself will be dropped since version 31.)
+				</li>
+				<li>Safari: Complete (Only on OS X 10.8 and later and iOS 8, CBC ciphers during fallback to SSL 3.0 is denied, but this means it will use RC4, which is not recommended as well. Support of SSL 3.0 itself is dropped on OS X 10.11 and later and iOS 9.)
+				</li>
+			</ul> 
+			<br /> <br />
+			<strong> VPN: </strong> <br />
+			  VPN connections can be made using SSL. Care must be taken that any VPN gateways (that accept the connection from VPN clients) do not have SSLv3.0 configured. There cannot be any support for legacy protocols and all VPN connections should be based on TLSv1.2.
+			  
+		</p>
+			  
         </div>
-          
-
-          
-
-
-        
       </div>
 
 
@@ -73,13 +148,3 @@
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-

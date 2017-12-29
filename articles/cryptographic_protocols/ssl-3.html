@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Mockup-1</title>
+    <title>SSL v3.0</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,9 +23,11 @@
          <li class="breadcrumb-item level0 active">SSL 3.0</li>
        </ol>
     </div>
-    <div class="alert alert-danger">
-      <strong>Warning!</strong> This technology is <strong>obsolete</strong>! <a href="tls-1-2.html">Try this instead</a>
-    </div>
+	
+	<a href="ssl-3-broken.html"><div class="alert alert-danger">
+      <strong>Warning!</strong> This technology is <strong>obsolete</strong>!
+    </div></a>
+	
     <div class="container-fluid">
       
       <div class="row">
@@ -38,63 +40,53 @@
           </div>
           <div class="description">
             <p>
-              SSL is the secure communications protocol of choice for a large part of the internet community. There are many applications of SSL in existence, since it is
-capable of securing any transmission over TCP. Secure HTTP, or HTTPS, is a familiar
-application of SSL in e-commerce or password transactions. (Viega, 10)
-According to the Internet Draft of the SSL Protocol, the point of the protocol “is to
-provide privacy and reliability between two communicating applications.” (Freier, 3.)
-The protocol release further explains that three points combine to provide connection
-security. These points are:
-· Privacy - connection through encryption
-· Identity authentication – identification through certificates, and
-· Reliability –dependable maintenance of a secure connection through
-message integrity checking.
-             </p>
+             SSL stands for Secure Sockets Layer and was originally created by Netscape. 
+			 It is used for providing confidentiality, authenticity and integrity by establishing an encrypted link between a server and a client. 
+			 This link ensures that all data passed between the web server and browsers remain private and integral. 
+			 SSLv2 and SSLv3 are the 2 versions of this protocol (SSLv1 was never publicly released). After SSLv3, SSL was renamed to TLS. 
+			 Those protocols are standardized and described by RFCs.  
           </div>
         </div>
 
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/devLogo.png" />
-          <div>
-            <button class="btn btn-warning">DEV QUICKSTART</button>
-
+		<br />		<br />		<br />		<br />
+		<a href="ssl-3-devQuickstart.html" class="btn btn-warning"> <img class="logos" src="../../images/devLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li><span>Begin to <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashing Algorithm Best Practices">move away</a> from SHA-1</span></li>
-                <li><span>Remain Calm</span></li>
-              </ul>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <br />
             </div>
-            <img class="logos" style="margin-right:1vw" src="../../images/historyIcon.png" />
-            <a class="btn btn-warning" href="#">HISTORY</a>
+			<!--
+			<br /> <br />
+			<a class="btn btn-warning" href="#"> <img class="logos" style="margin-right:6vw" src="../../images/historyIcon.png" />
+            HISTORY</a>
+			<p>
+			A quick history of SSL.
+			</p>
+			-->
           </div>
-        </div>
-
+        
 
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/itLogo.png" />
-          <div>
-            <a class="btn btn-warning" href="ssl-3-itQuickstart.html">IT QUICKSTART</a>
-
+		<br />		<br />		<br />		<br />
+		<a href="ssl-3-itQuickstart.html" class="btn btn-warning"> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li><span>Panic</span></li>
-                <li><span>Use SHA-1 for <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashes for File Verification">file validation</a></span></li>
-              </ul>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <br />
             </div>
-            <img class="logos" style="margin-right:1vw" src="../../images/workingIcon.png" />
-            <a class="btn btn-warning" href="ssl-3-working.html">WORKING</a>
+			<!--
+			<br /><br />
+			<a class="btn btn-warning" href="ssl-3-working.html"> <img class="logos" style="margin-right:5vw" src="../../images/workingIcon.png" />
+            WORKING</a>
+			<p>
+			Basic SSL Packet Flow.
+			</p>
+			-->
           </div>
         </div>
       </div>

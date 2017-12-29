@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSLv3 Broken</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="ssl-3.html">SSL 3.0</a></li>
+         <li class="breadcrumb-item level1 active">SSLv3 Broken</li>
+       </ol>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row" style="text-align:center;">
+        <a href="tls-1-2.html"><div class="alert alert-success">
+          <strong>Try the most current technology instead</strong> 
+        </div></a>
+      </div>
+	  
+	<div class="center-block">
+	  <br />
+<p>
+<strong> Introduction </strong> <br />
+SSL v3.0 is getting very old and recent developments, such as the POODLE vulnerability have shown that SSL v3.0 is now completely insecure (especially for web sites using it).  Even before the POODLE was set loose, the US Government had already mandated that SSL v3 not be used for sensitive government communications or for HIPAA-compliant communications. If that was not enough … POODLE certainly was.  In fact, as a result of POODLE, SSL v3 is being disabled on web sites all over the world and for many other services as well.
+SSL v3.0 is effectively “dead” as a useful security protocol.
+Places that still allow its use for web hosting as placing their “secure web sites” at risk; 
+Organizations that allow SSLv3 use to persist should take steps to remove that support at the soonest update maintenance window.
+</p>
+      <p>
+<strong>What is Poodle?</strong> <br />
+The Padding Oracle On Downgraded Legacy Encryption (POODLE) attack was published in October 2014 and takes advantage of two factors. The first is the fact that some servers/clients still support SSL 3.0 for interoperability and compatibility with legacy systems, and the second factor is a vulnerability that exists in SSL v3.0 which is related to Block Padding. These two vulnerabilities could be combined together to steal information. 
+<br /> <br />
+
+Additionally, a vulnerability called Beast was also found in SSLv3.0
+<br /> <br />
+<strong>What is Beast?</strong> <br />
+The Browser Exploit Against SSL/TLS attack was published in September 2011 and affects SSLv3.0 (and TLS 1.0). An attacker can “decrypt” data exchanged between two parties by taking advantage of a vulnerability in the implementation of the Cipher Block Chaining (CBC) mode in SSLv3.0 which allows them to perform chosen plaintext attack.
+<br /> <br />	
+<strong> Note: </strong> <br />
+Although SSLv3.0 is an older version of the protocol which is mainly obsolete, many pieces of software still fall back on SSLv3 if better encryption options are not available. More importantly, it is possible for an attacker to force SSLv3 connections if it is an available alternative for both participants attempting a connection.
+      </p>
+      </div>
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://en.wikipedia.org/wiki/Collision_attack">Collision Wikipedia</a></li>
+             <li><a href="https://shattered.io/">Shattered.io from Google</a></li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+      <div class="footerfix"></div>
+
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

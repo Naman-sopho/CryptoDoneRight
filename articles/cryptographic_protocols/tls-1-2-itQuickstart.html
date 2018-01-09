@@ -22,7 +22,15 @@
          <li class="breadcrumb-item level1 active">TLS 1.2 IT Quickstart</li>
        </ol>
     </div>
-
+	
+	<div class="alert alert-success">
+      The <strong>Recommended</strong> Cipher Suites is listed in this page.
+    </div>
+	
+	<a href="#ROBOT"><div class="alert alert-danger">
+      <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
+    </div> </a>
+	
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 	  
@@ -205,10 +213,49 @@ To verify:
 		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
 		
 		<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
+		 
+		 </p>
+		 <p id=ROBOT>
+		 <br /> <br /> <br />
+		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
+		<br /> <br />
+		
+		<h4> ROBOT Attack: What is it and how to avoid it? </h4>
+		A recent vulnerability was found with the way TLS uses RSA keys for <a href="ssl-3-working.html"> encryption </a> that would 
+		let an attacker decrypt any data that is sent over a TLS session. 
+		This defeats the purpose of confidentiality and should therefore be treated as a <span class="red">serious </span> issue. <br /> <br />
+
+		Several product manufacturers have provided <span class="green"> patches </span> to the problem here: <br />
+		
+		<a href= https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches >https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches </a>
+		<br /> <br />
+		<span class="yellow"><strong>NOTE:</strong> The above list will be updated as more patches are available. </span> <br /> <br />
+
+		In addition to patching servers, the recommendations from researchers now state that RSA encryption should be disabled from SSL/TLS cipher suites. This means all cipher suites that start with TLS_RSA should be disabled, for example:
+		<br /> <br />
+		TLS_RSA_WITH_AES_128_GCM_SHA256
+		<br /> <br />
+		Please note that the above is different from a cipher suite that uses both ECDHE and RSA. For example:
+		<br /> <br />
+		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+		<br /> <br />
+		The above cipher suite is not vulnerable to the ROBOT attack. This is because of ECDHE keys being used as encryption keys and RSA being used for signature verification. 
+		<br /> <br />
+		<span class="green"> Action Taken to protect against a ROBOT attack. </span> <br /> <br />
+		In summary, administrators can perform the following to protect their servers:
+		<br />
+		<ul>
+		<li>Perform the ROBOT test on the server to discover if you have a vulnerability.</li>
+		<li>Contact your server vendor to determine if the server is vulnerable and if there are any patches.</li>
+		<li>If your server vendor does not have a patch, you may consider disabling TLS_RSA cipher suites.</li>
+		<li>Even if the ROBOT vulnerability is mitigated, you may consider disabling TLS_RSA cipher suites as they
+		appear to be high risk and do not support perfect forward secrecy.</li>
+		</ul>
+		
+		<span class="green"><strong> NOTE: </strong> <u>NO</u> action is required for SSL/TLS certificates as the certificate private key is not exposed by this vulnerability. </span>
+
 		 </p>
         </div>
-
-
         
       </div>
 

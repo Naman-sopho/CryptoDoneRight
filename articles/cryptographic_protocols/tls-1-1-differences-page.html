@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disclaimer- TLSv1.1</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="tls-1-1.html">TLS 1.1</a></li>
+         <li class="breadcrumb-item level1 active">Disclaimer TLSv1.1 and TLSv1.2 differences</li>
+       </ol>
+    </div>
+	  
+	<div class="center-block">
+	  <br />
+      <p>
+		There is no "real" security issue in TLS 1.1 that TLS 1.2 fixes. However, there are changes and improvements, which can be argued to qualify as "fixing". Mainly: <br />
+<ul>
+<li>The PRF in TLS 1.1 is based on a combination of MD5 and SHA-1. Both MD5 and SHA-1 are, as cryptographic hash functions, broken. However, the way in which they are broken does not break the PRF of TLS 1.1. There is no known weakness in the PRF of TLS 1.1 (nor, for that matter, in the PRF of SSL 3.0 and TLS 1.0) (nor, for that matter, the PRF of SSL 3.0 and TLS 1.0). Nevertheless, MD5 and SHA-1 are "bad press". TLS 1.2 replaces both with SHA-256 (well, actually it could be any other hash function, but in practice it is SHA-256).
+</li>
+<li>TLS 1.2 allows the use of authenticated encryption modes like GCM. This can replace the more traditional CBC encryption mode, which has historically been a source of many flaws. Properly implemented CBC encryption is still fine; however, it appears that properly implementing CBC encryption is easier said than done. Getting GCM right seems a more readily achievable goal.
+</li>
+<li>TLS 1.2 mandates support for TLS_RSA_WITH_AES_128_CBC_SHA whereas TLS 1.1 required only TLS_RSA_WITH_3DES_EDE_CBC_SHA. Thus, if you use TLS 1.2 then you have a "guarantee" that AES encryption will be available. (This is not in fact completely true: the guarantee holds only as long as no "application specific profile" mandates otherwise. Also, you will get AES only if both client and server support it, and if they both support it, then it is available, regardless of whether TLS 1.1 or 1.2 is used.)
+</li>
+To summarize, there is no real flaw in TLS 1.1 that needed fixing and would make a switch to TLS 1.2 mandatory or even recommended. But there is no reason either to stick to TLS 1.1 if implementation know TLS 1.2. The main drive for TLS 1.2 adoption is the usual pavlovian craving for anything new and shiny.
+      </ul>
+	  </p>
+      </div>
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	          <li><a href="https://blog.cryptographyengineering.com/2016/03/01/attack-of-week-drown/">DROWN attack</a></li>
+			  <li><a href="https://tools.ietf.org/html/rfc7457">RFC with all attacks against TLS and DTLS</a></li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+      <div class="footerfix"></div>
+
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

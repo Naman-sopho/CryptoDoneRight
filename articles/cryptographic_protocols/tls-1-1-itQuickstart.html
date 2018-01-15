@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TLS1.1 IT Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="tls-1-1.html">TLS 1.1</a></li>
+         <li class="breadcrumb-item level1 active">TLS 1.1 IT Quickstart</li>
+       </ol>
+    </div>
+	<!--
+	<div class="alert alert-success">
+      The <strong>Recommended</strong> Cipher Suites is listed in this page.
+    </div>
+	
+	<a href="#ROBOT"><div class="alert alert-danger">
+      <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
+    </div> </a>
+	-->
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
+		<h3> Introduction </h3>
+		<div class="col-md-12 col-sm-12 col-xs-12">
+		  <p id="GeneralTLSInfo">
+		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is <span class="green">recommended</span> for security. 
+<br /> <br /><span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
+
+<ul>
+<strong>Webservers: </strong> <br />
+Enabling TLSv1.1 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
+<br /><br />
+<u>Apache: </u> <br/>
+To add TLSs1.1 you just need to add in your ‘https virtual host’ configuration:
+<pre>
+<code>...
+SSLProtocol -all +TLSv1.1
+...</code>
+</pre>
+ 
+Explanation: <br />
+-all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
++TLSv1.1 is adding TLS 1.1<br /> <br />
+
+For more browser compatibility you can use:- <br />
+<pre>
+<code>...
+SSLProtocol -all +TLSv1 +TLSv1.1 +TLSv1.2
+...</code>
+</pre>
+
+<u> Nginx: </u> <br />
+By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
+<pre>
+<code>...
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+...</code>
+</pre> <br /> <br />
+
+Similar to the Apache config above, you will get TLSv1.0+ support and no SSL. You can check the config and restart.
+<pre>
+<code>
+$sudo nginx -t
+$sudo service nginx restart
+</code>
+</pre>
+
+To enforce TLSv1.1:
+
+<pre>
+<code>...
+ssl_protocols TLSv1.1
+...</code>
+</pre> <br /> <br />
+
+<u>Tomcat </u> <br />
+The configuration file for Tomcat should be in <br />
+TOMCAT_HOME/conf/server.xml
+<br /> <br />
+
+Tomcat 5 & 6 (Prior to 6.0.38 <br /> <br />
+Within the server.xml find the sslProtocols entry and make sure only TLS protocols are specified: <br />
+
+<pre>
+<code>sslProtocols = "TLSv1.1"</code>
+</pre>
+
+Tomcat 6 & 7 (6.0.3.8 and newer) <br /> <br />
+Within the server.xml file, find the sslEnabledProtocols entry and make sure only TLS protocols are specified: <br />
+<pre>
+<code>sslEnabledProtocols = "TLSv1.1"</code>
+</pre>
+
+Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
+
+<strong>Browsers: </strong> <br />
+
+Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well. 
+Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.1 are accepted.
+<br />
+To enable TLS 1.1 protocols on web browsers, see the list below. <br /> <br />
+<ul>
+ 
+<li>
+<u>Microsoft Internet Explorer</u> <br />
+<ul>
+<li>Open Internet Explorer</li>
+<li>From the menu bar, click Tools >  Internet Options > Advanced tab</li>
+<li>Scroll down to Security category, manually check the option box for Use TLS 1.1 </li>
+<li>Click OK</li>
+<li>Close your browser and restart Internet Explorer</li>
+</ul>
+</li> <br />
+
+<li>
+<u>Google Chrome</u> <br />
+<ul>
+<li>Open Google Chrome </li>
+<li>Click Alt F and select Settings </li>
+<li>Scroll down and select Show advanced settings... </li>
+<li>Scroll down to the Network section and click on Change proxy settings... </li>
+<li>Select the Advanced tab </li>
+<li>Scroll down to Security category, manually check the option box for Use TLS 1.1 </li>
+<li>Click OK </li>
+<li>Close your browser and restart Google Chrome </li>
+</ul>
+</li> <br />
+
+<li>
+<u>Mozilla Firefox </u> <br />
+<ul>
+<li>Open Firefox</li>
+<li>In the address bar, type about:config and press Enter </li>
+<li>In the Search field, enter tls. Find and double-click the entry for security.tls.version.min</li>
+<li>Set the integer value to 3 to force protocol of TLS 1.3 </li>
+<li>Click OK</li>
+<li>Close your browser and restart Mozilla Firefox</li>
+</ul>
+</li> <br />
+
+<li>
+<u>Opera </u> <br />
+<ul>
+<li>Open Opera</li>
+<li>Click Ctrl plus F12</li>
+<li>Scroll down to the Network section and click on Change proxy settings...</li>
+<li>Select the Advanced tab</li>
+<li>Scroll down to Security category, manually check the option box Use TLS 1.1</li>
+<li>Click OK</li>
+<li>Close and restart Opera</li>
+</ul>
+</li> <br />
+ 
+<li>
+<u>Apple Safari </u> <br />
+There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.
+</li> <br />
+
+</ul>
+</ul>
+  </p>
+    </div>
+     </div>
+      </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
+            <li>
+              <a href="https://tools.ietf.org/html/rfc4346">TLSv1.1 RFC</a>
+            </li>
+             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
+">Enabling TLSv1.2 on Microsoft machines</a></li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

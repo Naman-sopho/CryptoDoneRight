@@ -1,11 +1,13 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>TLS 1.1 Dev Quickstart</title>
+    <title>TLS 1.1</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -16,173 +18,93 @@
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item level"><a href="#">Home</a></li>
-         <li class="breadcrumb-item level"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0"><a href="tls-1-1.html">TLS 1.1</a></li>
-         <li class="breadcrumb-item level1 active">TLS 1.1 Dev Quickstart</li>
+         <li class="breadcrumb-item level0 active">TLS 1.1</li>
        </ol>
     </div>
 
-    <div class="container-fluid">
-      <div class="row" style="padding: 2vw;">
-	  
-	 <div class="alert alert-warning">
-      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
-    </div>
-	
-	<a href="flaw-categories.html"><div class="alert alert-warning">
-      <strong>MUST READ</strong> Click here to understand about possible land mines.
+    <a href="tls-1-1-differences-page.html"> <div class="alert alert-warning">
+      This is the <strong>Safe</strong> but not Recommended. Please click here to find out more.
+    </div> </a>
+	<a href="tls-1-2.html"><div class="alert alert-danger">
+      Please click here to go the <strong>latest</strong> version.
     </div></a>
-	
-<h2>Introduction</h2>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <p>
-What is OpenSSL? <br /> <br />
-
-OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
-<br /> <br />
-The library includes tools for generating RSA private keys and Certificate Signing Requests (CSRs), checksums, managing certificates and performing encryption/decryption. OpenSSL is written in C, but wrappers are available for a wide variety of computer languages.
-<br /> <br />
-Note that OpenSSL is not the only available crypto library. For a list of different libraries and a comparision between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.
-<br /> <br />
-OpenSSL version 1.0.1 released on March 14, 2012 was the first OpenSSL Library to support TLSv1.1. This can be specifically viewed in the openssl <a href="https://www.openssl.org/news/changelog.html#x51">changelog </a>. 
-But OpenSSL does not officially support the release anymore. Version 1.0.2 (released on 22nd January, 2015) is an LTS release and is scheduled to be supported till the end of year 2019. OpenSSL defines LTS support as follows:
-<ul>
-<li>LTS releases will be supported for at least five years and we will specify one at least every four years. Non-LTS releases will be supported for at least two years.</li>
-<li>During the final year of support, we do not commit to anything other than security fixes. Before that, bug and security fixes will be applied as appropriate.</li>
-</ul>
-
-<br /> <br />
-These are the official list of what is included in OpenSSL version 1.0.2: <br /> <br />
-<ul>
-<li>Suite B support for TLS 1.2 and DTLS 1.2</li>
-<li>Support for DTLS 1.2</li>
-<li>TLS automatic elliptic curve (EC) curve selection.</li>
-<li>API to set TLS supported signature algorithms and curves</li>
-<li>SSL_CONF configuration API.</li>
-<li>TLS Brainpool support.</li>
-<li>ALPN support.</li>
-<li>CMS support for RSA-PSS, RSA-OAEP, ECDH and X9.42 DH.</li>
-</ul> <br />
-Note: The latest major release for OpenSSL is 1.1.0 (released on 25th August, 2016). 
-<br /><br />
-How do I find out what OpenSSL version I’m running?
-<br /><br />
-Use the version option.
-<br /><br />
-<pre>
-<code>$ openssl version
-OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
-</code>
-<br /> <br />
-You can get much more information with the version -a option.
-<pre>
-<code>$ openssl version -a
-OpenSSL 1.0.1e-fips 11 Feb 2013
-built on: Thu Jul 23 19:06:35 UTC 2015
-platform: linux-x86_64
-options:  bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int)
-          idea(int) blowfish(idx)
-compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
--DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -DTERMIO
--Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions
--fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic
--Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT
--DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM
--DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
--DWHIRLPOOL_ASM -DGHASH_ASM
-OPENSSLDIR: "/etc/pki/tls"
-engines:  rdrand dynamic</pre>
-</code>
-<br /> <br />
-<h3>How to upgrade OpenSSL? </h3>
-<span class="red">Please be careful while upgrading OpenSSL. Do not simply upgrade the package without thinking about the implications it might have on exisiting features of your application or operating system. </span> <br />A lot of application and Operating Sytem vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of libraries like OpenSSL to ensure that no exisiting functionality is affected. Usually, these vendors release their own updates called backported packages. The security team backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
-
-<br /> <br />
-Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
-CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
-RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
-
-Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
-CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
-RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br />
+	  
+    <div class="container-fluid">
+      <div class="row">
+        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
+          <div class="title">
+            <h2><span>TLS 1.1</span></h2>
+          </div>
+          <div class="timestamp">
+            <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
+          </div>
+          <div class="description">
+		  
+		  <p>
+		  TLSv1.1 is a revision to the TLSv1. and was released in April of 2006. 
+		  Just like previous revisions to TLS, this revision aims at improving the security of the protocol by improving the encryption and hashing standards. 
+		  One of the major change was to place in corrections/fixes to prevent a certain type of attack called Cipher block chaining (CBC) attacks.
+		  </p>
+		  <!--
+            <p>
+             TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
+	     TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
+	     SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
+             </p>
+			 -->
+          </div>
+        </div>
 
 
-<h2>Basic Implementation/Usage of Libraries</h2>
-<h3>Python</h3>
-There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
-<br /> <br />
-To check which openssl version you are using execute the following within Python:
-<pre>
-<code>import ssl
-print ssl.OPENSSL_VERSION</pre>
-</code>
-<br />
-
-<h4>ssl library</h4>
-Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
-
-<pre>
-<code>def handshake(sock):
-# this will trigger the handshake
-# if sock is already connected
-new_sock = ssl.wrap_socket(sock,
-        ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
-        ssl_version=ssl.PROTOCOL_TLSv1,
-		...
-		...
-        )
-return new_sock</pre>
-</code>
-
-For TLSv1.2, a small change in the above would be to have
-
-<pre>
-<code>ssl_version=ssl.PROTOCOL_TLSv1_1</pre>
-</code>
-
-<h4>pyopenssl library</h4>
-
-<h3>C/C++</h3>
-</p>
-</div>
-
-
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="tls-1-1-devQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/devLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
         
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="tls-1-1-itQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        </div>
       </div>
+
 
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-        <h3>Further Reading</h3>
-          <p>
-	          <ul>
-			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL Library</a></li>
-			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
-			  </ul>
-	        </p>
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
+">History of Hash Functions</a></li>
+            <li>
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+	        </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
-          <p>
-	          <ul>
-			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL Library</a></li>
-			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
-			  </ul>
-	        </p>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
         </div>
       </div>
-
-
-      <div class="footerfix"></div>
-      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
-      </footer>
-    </div>
-
-  </body>
-</html>

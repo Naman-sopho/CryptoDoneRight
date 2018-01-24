@@ -50,7 +50,24 @@
           <div style="margin-top:2vw;">
             <h3 id="quickstart">Developer's Quickstart:</h3>
           </div>
-
+		<p id="where">
+            <strong>Protocols Used In:</strong>
+            <ul>
+              <li>Transport Layer Security (TLS)</li>
+              <li>Secure Sockets Layer (SSL)</li>
+              <li>Pretty Good Privacy (PGP)</li>
+              <li>Secure Shell (SSH)</li>
+              <li>Secure/Multipurpose Internet Mail Extensions (S/MIME)</li>
+              <li>Internet Protocol Security (IPSec)</li>
+            </ul>
+          </p>
+		  <p id="whenToUse">
+            <strong>When and Where is SHA-1 Ok?</strong>
+            Checking the hash of an executable or file that we know is trusted (from trusted site).
+            No known flaws in SHA-1 as a key derivation function which is how dh-group14-sha1 is being used.  
+            Similarly, HMAC-SHA1 is believed to be (still) safe as long as SHA1 is pseudorandom.   
+            The specific construct of HMAC-SHA1 is still considered safe to use (assuming a secret key) due to the security proof for HMAC which does not rely on collision resistance of the underlying PRF.
+          </p>
           <p>
             <strong>Simple Basic issues when doing web development and having or storing passwords using SHA-1.</strong><br />
             If you're a web developer, you've probably had to make a user account system. The most important aspect of a user account system is how user passwords are protected. User account databases are hacked frequently, so you absolutely must do something to protect your users' passwords if your website is ever breached. The best way to protect passwords is to employ salted password hashing. This page will explain why it's done the way it is.

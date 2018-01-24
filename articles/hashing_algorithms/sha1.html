@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Mockup-SHA1</title>
+    <title>SHA1</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -65,7 +65,7 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div id="topic" class="col-md-6 col-sm-6 col-xs-6">
+        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
           <div class="title">
             <h2>SHA-1 Hashing Algorithm</h2>
           </div>
@@ -74,45 +74,39 @@
           </div>
           <div class="description">
             <p>
-               SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function
-               designed by the United States National Security Agency and is a
-               U.S. <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Federal Information Processing Standards">
-               Federal Information Processing Standard</a> published by the
-               United States <acronym title="National Institute of Standards and Technology"> NIST</acronym>. SHA-1 produces a 160-bit (20-byte) hash value known as a message digest. A SHA-1 hash value is typically
-               rendered as a hexadecimal number, 40 digits long.
+SHA-1 is only one of the four algorithms in the Secure Hash Algorithm (SHA) family. Usage of this algorithm with an input value 
+provides a 160 bit hexadecimal value with hash properties (cannot be reversed to find the original value ). This method is used to maintain integrity of data as 
+different input values always create different hash values and therefore making a duplication of hash difficult. SHA-1 was an improvement over a previous 
+hashing algorithm called <a href="md5.html">MD5</a>.
              </p>
           </div>
         </div>
 
 
-        <div class="col-md-3 col-sm-3 col-xs-3 infoBlocks">
-          <img class="logos" src="../../images/devLogo.png" />
-          <div>
-            <a href="sha1-devQuickstart.html" class="btn btn-warning">DEV QUICKSTART</a>
-            <p>
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="sha1-devQuickstart.html" class="btn btn-warning "> <img class="logos" src="../../images/devLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
               Are you a developer? Get started with crucial implementation details above.
             </p>
             <div class="blockNotes">
             </div>
           </div>
-        </div>
-
-
-
-        <div class="col-md-3 col-sm-3 col-xs-3 infoBlocks">
-          <img class="logos" src="../../images/itLogo.png" />
-          <div>
-            <a href="sha1-itQuickstart.html" class="btn btn-warning">IT QUICKSTART</a>
-            <p>
+        
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="sha1-itQuickstart.html" class="btn btn-warning "> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
               Are you an IT administrator? Get started with best practice setup details above.
             </p>
             <div class="blockNotes">
             </div>
-
           </div>
-        </div>
       </div>
 
+	<!--
       <hr />
       <br />
       <div class="row" style="text-align:center;">
@@ -210,7 +204,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
           </p>
         </div>
       </div>
-
+      -->
 
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">

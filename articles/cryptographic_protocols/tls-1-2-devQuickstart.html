@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>TLS1.2 IT Quickstart</title>
+    <title>TLS 1.2 Dev Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,267 +19,138 @@
          <li class="breadcrumb-item level"><a href="#">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
          <li class="breadcrumb-item level0"><a href="tls-1-2.html">TLS 1.2</a></li>
-         <li class="breadcrumb-item level1 active">TLS 1.2 IT Quickstart</li>
+         <li class="breadcrumb-item level1 active">TLS 1.2 Dev Quickstart</li>
        </ol>
     </div>
-	
-	<div class="alert alert-success">
-      The <strong>Recommended</strong> Cipher Suites is listed in this page.
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
+	<div class="alert alert-warning">
+      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
     </div>
-	
-	<a href="#ROBOT"><div class="alert alert-danger">
-      <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
-    </div> </a>
-	
 	<a href="flaw-categories.html"><div class="alert alert-warning">
       <strong>MUST READ</strong> Click here to understand about possible land mines.
     </div></a>
 	
-    <div class="container-fluid">
-      <div class="row" style="padding: 2vw;">
-	  
-		<h3> Introduction </h3>
-		<div class="col-md-12 col-sm-12 col-xs-12">
-		  <p id="GeneralTLSInfo">
-		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2 based on configuration and other observations. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
-<br /> <br /><span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
-
-<ul>
-<strong>Webservers: </strong> <br />
-Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
-<br /><br />
-<u>Apache: </u> <br/>
-To add TLSs1.2 you just need to add in your ‘https virtual host’ configuration:
-<pre>
-<code>...
-SSLProtocol -all +TLSv1.2
-...</code>
-</pre>
- 
-Explanation: <br />
--all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
-+TLSv1.2 is adding TLS 1.2<br /> <br />
-
-For more browser compatibility you can use:- <br />
-<pre>
-<code>...
-SSLProtocol -all +TLSv1 +TLSv1.1 +TLSv1.2
-...</code>
-</pre>
-
-<u> Nginx: </u> <br />
-By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
-<pre>
-<code>...
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-...</code>
-</pre> <br /> <br />
-
-Similar to the Apache config above, you will get TLSv1.0+ support and no SSL. You can check the config and restart.
-<pre>
-<code>
-$sudo nginx -t
-$sudo service nginx restart
-</code>
-</pre>
-
-To enforce TLSv1.2:
-
-<pre>
-<code>...
-ssl_protocols TLSv1.2
-...</code>
-</pre>
-
-<u>Tomcat </u> <br />
-The configuration file for Tomcat should be in <br />
-TOMCAT_HOME/conf/server.xml
-<br /> <br />
-
-Tomcat 5 & 6 (Prior to 6.0.38 <br /> <br />
-Within the server.xml find the sslProtocols entry and make sure only TLS protocols are specified: <br />
-
-<pre>
-<code>sslProtocols = "TLSv1.2"</code>
-</pre>
-
-Tomcat 6 & 7 (6.0.3.8 and newer) <br /> <br />
-Within the server.xml file, find the sslEnabledProtocols entry and make sure only TLS protocols are specified: <br />
-<pre>
-<code>sslEnabledProtocols = "TLSv1.2"</code>
-</pre>
-
-Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
-
-<strong>Browsers: </strong> <br /> <br />
-
-Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well. 
-Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.2 are accepted.
-<br />
-To enable TLS 1.2 protocols on web browsers, see the list below. <br /> <br />
-<ul>
- 
-<li>
-<u>Microsoft Internet Explorer</u> <br />
-<ul>
-<li>Open Internet Explorer</li>
-<li>From the menu bar, click Tools >  Internet Options > Advanced tab</li>
-<li>Scroll down to Security category, manually check the option box for Use TLS 1.2 </li>
-<li>Click OK</li>
-<li>Close your browser and restart Internet Explorer</li>
-</ul>
-</li> <br />
-
-<li>
-<u>Google Chrome</u> <br />
-<ul>
-<li>Open Google Chrome </li>
-<li>Click Alt F and select Settings </li>
-<li>Scroll down and select Show advanced settings... </li>
-<li>Scroll down to the Network section and click on Change proxy settings... </li>
-<li>Select the Advanced tab </li>
-<li>Scroll down to Security category, manually check the option box for Use TLS 1.2 </li>
-<li>Click OK </li>
-<li>Close your browser and restart Google Chrome </li>
-</ul>
-</li> <br />
-
-<li>
-<u>Mozilla Firefox </u> <br />
-<ul>
-<li>Open Firefox</li>
-<li>In the address bar, type about:config and press Enter </li>
-<li>In the Search field, enter tls. Find and double-click the entry for security.tls.version.min</li>
-<li>Set the integer value to 3 to force protocol of TLS 1.3 </li>
-<li>Click OK</li>
-<li>Close your browser and restart Mozilla Firefox</li>
-</ul>
-</li> <br />
-
-<li>
-<u>Opera </u> <br />
-<ul>
-<li>Open Opera</li>
-<li>Click Ctrl plus F12</li>
-<li>Scroll down to the Network section and click on Change proxy settings...</li>
-<li>Select the Advanced tab</li>
-<li>Scroll down to Security category, manually check the option box Use TLS 1.2</li>
-<li>Click OK</li>
-<li>Close and restart Opera</li>
-</ul>
-</li> <br />
- 
-<li>
-<u>Apple Safari </u> <br />
-There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.
-</li> <br />
-
-</ul>
-
-<strong>VPN: </strong> <br />
-The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart from configuration, patches provided by the software company should be installed with immediate priority. 
-<br /> <br />
-To verify:
-<a href="https://www.ssllabs.com/ssltest/index.html">https://www.ssllabs.com/ssltest/index.html</a>
-</ul>
-		  </p>
-		</div>
-        <h3>General Recommendations for TLS</h3>
+        <h2>Introduction</h2>
         <div class="col-md-12 col-sm-12 col-xs-12">
-		  <p id="GeneralTLSInfoDebra">
-		  <strong>Generic TLS Definition</strong> </br>
-         TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
-	     TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
-	     SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
-		 <br /> <br />
-		 
-		<strong>Use:</strong> TLS v1.1 and 1.2 <br />
-		<strong>Avoid:</strong> TLSv1.0 or lower or SSLv3 or lower <br /><br />
-		<strong>TLS Recommended Ciphers:</strong><br />
-		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br /><br />
-		
-		<strong>Avoid the following ciphers:</strong> <br />
-		TLS_DHE_RSA_WITH_AES_128_CBC_SHA <br />
-		TLS_DHE_RSA_WITH_AES_256_CBC_SHA <br />
-		TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
-		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
-		
-		<strong>Note:</strong> The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange.  If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack.  This setting may have to be set in the openssl code.  There is not a configurable option external to the openssl module.  Apache allows for configuring the dh parameters via their management interface.
-		The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy:<br />
-		TLS_RSA_WITH_AES_128_CBC_SHA<br />
-		TLS_RSA_WITH_AES_256_CBC_SHA<br />
-		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
-		TLS_RSA_WITH_AES_256_CBC_ SHA256<br /><br />
-		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys.
-		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
-		<li>Use X.509v3 certificates for mutual authentication for server to server authentication.</li>
-		<li>Use: secp256r1, secp384r1, secp521r1</li>
-		<li>Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0</li>
-		<li>For most websites, using RSA keys stronger than 2048 bits and ECDSA keys stronger than 256 bits is a waste of CPU resources and might impair user experience. Similarly, increasing the strength of the ephemeral key exchange beyond 256 bits for ECDHE has little benefit.</li>
-		<li>Avoid: OpenSSL v1.0.0 and below EOL, v1.0.1 EOL 12/31/16  <a href="https://www.openssl.org/policies/releasestrat.html"> Release Notes </a></li>
-		
-		More info on why not to use DH and ECDH curves:
-		The DH and ECDH curves should not be used because they do not provide perfect forward secrecy. 
-		The reason is that only Diffie Hellman in ephemeral mode uses “one time use” private keys.  
-		DH and ECDH use values based on the stored certificates.  
-		Chris McNab’s Network Security Assessment book warns “When using DH in a static mode, dh_g, dh_p, dh_Ys, and rand_s are fixed and do not provide forward secrecy.”  
-		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
-		
-		<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
-		 
-		 </p>
-		 <p id=ROBOT>
-		 <br /> <br /> <br />
-		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
-		<br /> <br />
-		
-		<h4> ROBOT Attack: What is it and how to avoid it? </h4>
-		A recent vulnerability was found with the way TLS uses RSA keys for <a href="ssl-3-working.html"> encryption </a> that would 
-		let an attacker decrypt any data that is sent over a TLS session. 
-		This defeats the purpose of confidentiality and should therefore be treated as a <span class="red">serious </span> issue. <br /> <br />
+          <p>
 
-		Several product manufacturers have provided <span class="green"> patches </span> to the problem here: <br />
-		
-		<a href= https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches >https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches </a>
-		<br /> <br />
-		<span class="yellow"><strong>NOTE:</strong> The above list will be updated as more patches are available. </span> <br /> <br />
+<b>NOTE:- </b> <u>OpenSSL is not the only available crypto library. For a list of different libraries and a comparision 
+between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>. We will describing OpenSSL since this is currently the most widely used 
+implementation. </u>
+<br /> <br />
 
-		In addition to patching servers, the recommendations from researchers now state that RSA encryption should be disabled from SSL/TLS cipher suites. This means all cipher suites that start with TLS_RSA should be disabled, for example:
-		<br /> <br />
-		TLS_RSA_WITH_AES_128_GCM_SHA256
-		<br /> <br />
-		Please note that the above is different from a cipher suite that uses both ECDHE and RSA. For example:
-		<br /> <br />
-		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-		<br /> <br />
-		The above cipher suite is not vulnerable to the ROBOT attack. This is because of ECDHE keys being used as encryption keys and RSA being used for signature verification. 
-		<br /> <br />
-		<span class="green"> Action Taken to protect against a ROBOT attack. </span> <br /> <br />
-		In summary, administrators can perform the following to protect their servers:
-		<br />
-		<ul>
-		<li>Perform the ROBOT test on the server to discover if you have a vulnerability.</li>
-		<li>Contact your server vendor to determine if the server is vulnerable and if there are any patches.</li>
-		<li>If your server vendor does not have a patch, you may consider disabling TLS_RSA cipher suites.</li>
-		<li>Even if the ROBOT vulnerability is mitigated, you may consider disabling TLS_RSA cipher suites as they
-		appear to be high risk and do not support perfect forward secrecy.</li>
-		</ul>
-		
-		<span class="green"><strong> NOTE: </strong> <u>NO</u> action is required for SSL/TLS certificates as the certificate private key is not exposed by this vulnerability. </span>
+What is OpenSSL? <br /> <br />
 
-		 </p>
+OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
+<br /> <br />
+The library includes tools for generating RSA private keys and Certificate Signing Requests (CSRs), checksums, managing certificates and performing encryption/decryption. OpenSSL is written in C, but wrappers are available for a wide variety of computer languages.
+<br /> <br />
+OpenSSL version 1.0.1 released on March 14, 2012 was the first OpenSSL Library to support TLSv1.2. But OpenSSL does not officially support the release anymore. Version 1.0.2 (released on 22nd January, 2015) is an LTS release and is scheduled to be supported till the end of year 2019. OpenSSL defines LTS support as follows:
+
+<ul>
+<li>LTS releases will be supported for at least five years and we will specify one at least every four years. Non-LTS releases will be supported for at least two years.</li>
+<li>During the final year of support, we do not commit to anything other than security fixes. Before that, bug and security fixes will be applied as appropriate.</li>
+</ul>
+
+<br /> <br />
+These are the official list of what is included in OpenSSL version 1.0.2: <br /> <br />
+<ul>
+<li>Suite B support for TLS 1.2 and DTLS 1.2</li>
+<li>Support for DTLS 1.2</li>
+<li>TLS automatic elliptic curve (EC) curve selection.</li>
+<li>API to set TLS supported signature algorithms and curves</li>
+<li>SSL_CONF configuration API.</li>
+<li>TLS Brainpool support.</li>
+<li>ALPN support.</li>
+<li>CMS support for RSA-PSS, RSA-OAEP, ECDH and X9.42 DH.</li>
+</ul> <br />
+Note: The latest major release for OpenSSL is 1.1.0 (released on 25th August, 2016). 
+<br /><br />
+How do I find out what OpenSSL version I’m running?
+<br /><br />
+Use the version option.
+<br /><br />
+<pre>
+<code>$ openssl version
+OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
+</code>
+<br /> <br />
+You can get much more information with the version -a option.
+<pre>
+<code>$ openssl version -a
+OpenSSL 1.0.1e-fips 11 Feb 2013
+built on: Thu Jul 23 19:06:35 UTC 2015
+platform: linux-x86_64
+options:  bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int)
+          idea(int) blowfish(idx)
+compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
+-DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -DTERMIO
+-Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions
+-fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic
+-Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT
+-DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM
+-DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
+-DWHIRLPOOL_ASM -DGHASH_ASM
+OPENSSLDIR: "/etc/pki/tls"
+engines:  rdrand dynamic</pre>
+</code>
+<br /> <br />
+<h3>How to upgrade OpenSSL? </h3>
+<span class="red">Please be careful while upgrading OpenSSL. Do not simply upgrade the package without thinking about the implications it might have on exisiting features of your application or operating system. </span> <br />A lot of application and Operating Sytem vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of libraries like OpenSSL to ensure that no exisiting functionality is affected. Usually, these vendors release their own updates called backported packages. The security team backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
+
+<br /> <br />
+Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
+CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
+RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
+
+Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
+CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
+RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
+
+
+<h2>Basic Implementation/Usage of Libraries</h2>
+<h3>Python</h3>
+There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
+<br /> <br />
+To check which openssl version you are using execute the following within Python:
+<pre>
+<code>import ssl
+print ssl.OPENSSL_VERSION</pre>
+</code>
+<br />
+
+<h4>ssl library</h4>
+Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
+
+<pre>
+<code>def handshake(sock):
+# this will trigger the handshake
+# if sock is already connected
+new_sock = ssl.wrap_socket(sock,
+        ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
+        ssl_version=ssl.PROTOCOL_TLSv1,
+		...
+		...
+        )
+return new_sock</pre>
+</code>
+
+For TLSv1.2, a small change in the above would be to have
+
+<pre>
+<code>ssl_version=ssl.PROTOCOL_TLSv1_2</pre>
+</code>
+
+<h4>pyopenssl library</h4>
+
+<h3>C/C++</h3>
+          </p>
         </div>
+
+
         
       </div>
 
@@ -287,23 +158,22 @@ To verify:
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <ul>
-	           <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
-            <li>
-              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
-            </li>
-             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
-">Enabling TLSv1.2 on Microsoft machines</a></li>
-	        </ul>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
-          <ul>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
-      	  </ul>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
         </div>
       </div>
 

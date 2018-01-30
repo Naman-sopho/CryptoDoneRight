@@ -26,11 +26,11 @@
 	<div class="center-block">
 	  <br />
       <p>
-		<h3>Generic Categories of Flaws</h3>
+		<h3>Generic Steps for Understanding Flaws</h3>
 		
 There are three major categories that one would need to consider while deciding a standard or version (example choosing between the different TLS versions.)
 <br /> <br />
-<strong>Protocol</strong>
+<strong>STEP 1:- Protocol</strong>
 <br /> <br />
 Most of the technologies that are mentioned in this knowledge base are officially defined in documents called RFCs (Request for Comments).
 These are open documents that are made available by the IETF, Requests for comment (RFCs) cover many aspects of these protocols in a technical fashion. 
@@ -47,7 +47,7 @@ TLS the SSL/TLS protocol suite allows for protocol version negotiation (being re
 when a secure connection attempt fails, servers will fall back to older protocols such as SSL 3.0. An attacker who can trigger a connection failure can then force the use of SSL 
 3.0 and attempt the new attack.
 <br /> <br />
-<strong>Implementation</strong>
+<strong>STEP 2:- Implementation</strong>
 <br /> <br />
 While protocol's official definitions make up RFCs, implementation of the definition is left to the whoever choses to use the protocol. And if an implementor introduces 
 bugs in the way the protocol was written in code, it can be termed as an "Implementation Flaw". Specifically, in software development, a lot of network protocols come as 
@@ -61,7 +61,7 @@ of the users and the actual content. This allows attackers to eavesdrop on commu
 <br /> <br />
 It should also be noted that bugs such as Heartbleed do not indicate that one should roll out their own crypto! 
 <br /> <br />
-<strong>Configuration</strong>
+<strong>STEP 3:- Configuration</strong>
 <br /> <br />
 A lot of protocols provide configruable options in their official definitions (RFCs). These options affect the way the protocol functions post deployment. 
 It is important to be aware of the pros and cons including security implications of different configurable parameters. If a protocol is configured with an option that is 

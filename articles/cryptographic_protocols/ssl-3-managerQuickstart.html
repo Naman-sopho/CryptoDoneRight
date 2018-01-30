@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSL v3.0 Manager Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="ssl-3.html">SSL 3.0</a></li>
+         <li class="breadcrumb-item level1 active">SSL 3.0 Manager Quickstart Tab</li>
+       </ol>
+    </div>
+
+<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#protocol"><li>
+          Protocol
+        </li></a>
+        <a href="#implementation"><li>
+          Implementation
+        </li></a>
+        <a href="#configuration"><li>
+          Configuration
+        </li></a>
+        <a href="#relatedArticles"><li>
+          Related Articles & Further Reading
+        </li></a>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
+	  <h3>Management QuickStart</h3> 
+SSL is one of the most popular technology that aims at, mainly through cryptography, securing communication between different networks. SSL provides a way for two parties to establish a session and transfer data over the session while ensuring privacy, confidentiality and integrity. All secure communications on the internet at this moment use this same technology (HTTPS). Some of the popular software applications that use SSL are VPNs and Web Browsers. For example, in client-server environment, an SSL link ensures that all data passed between the web server and browsers remain private and integral. SSLv2 and SSLv3 are the 2 versions of this protocol (SSLv1 was never publicly released). After SSLv3, SSL was renamed to TLS. Those protocols are standardized and described by RFCs.
+<br /> <br />
+
+<p id=protocol>
+<h4>Protocol: </h4>
+SSLv3 is not safe. It has a few critical vulnerabilities and is rightly being decommissioned by a lot of popular vendors and product manufacturers. There have been major flaws found with SSLv3 protocol such as Poodle and Beast (LINK HERE). There were other factors too apart from the vulnerabilities that led to SSLv3 being marked as an obsolete technology. Since this is a flaw in the official definition and standardization of the protocol, the only option to fix this issue is to upgrade the version of SSL (now being called TLS) being used. Note that upgrading the protocol does not result in any difference in what SSL was intended to do (secure communication), an upgrade to the protocol simply means that the technology is patched for flaws that could compromise the security of the product using it. 
+<br /> <br />
+<h5>Checklist: </h5>
+<input type="checkbox"> Disable SSLv3 on all systems. Should be used in no capacity whatsoever.</input> <br />
+<input type="checkbox"> Upgrade to TLSv1.2 is recommended. TLSv1.1 can also be considered for a temporary basis. Have the appropriate teams (Ex: IT and Development) clearly informed and prepared for an upgrade. 
+</input> <br />
+<input type="checkbox"> Connectivity to these systems using SSLv3 could be affected because of the upgrade. Ensure proper migration plan to avoid implications like unnecessary downtime. 
+</input> <br />
+<input type="checkbox"> Run an audit to make sure that the upgrade was successful. 
+</input> <br />
+<input type="checkbox"> In any case if an upgrade is not possible, it is recommended in the interest of security to turn off all SSL connectivity to the system (Ex: remote access VPNs, web page hosting over HTTPS).  
+</input> <br />
+<br /> <br />
+</p>
+
+<p id=implementation>
+<h4>Implementation: </h4>
+
+Note: Only think about Implementation if you are in a situation where legacy hardware or software cannot be upgraded to support at least TLSv1.1
+<br /> <br />
+A lot of vendors who support SSLv3 should provide software patches that should help prevent protocol vulnerabilities. If any of these patches are present and can be implemented on a system that runs SSLv3, they should be done immediately. This would require extensive research of specific products and therefore there is no documentation on this site (except examples under IT or Dev Quickstart). General practices for good patch management should be followed. For example, the patches should be verified for genuineness and the patch should specifically solve problems with SSLv3. It should also be noted that patches will only work if both sides of a connection (client and server) have been patched. 
+ <br /> <br />
+<h5>Checklist: </h5>
+<input type="checkbox"> List down hardware or software that cannot be upgraded. </input> <br />
+<input type="checkbox"> Gather the respective teams responsible for administration and management of these devices or technology. </input> <br />
+<input type="checkbox"> Teams should be tasked with finding the patches and devising a plan to implement them ASAP. </input> <br />
+<input type="checkbox"> Consider any sort of verification process to audit these patches. </input> <br />
+<input type="checkbox"> Devise a long term plan to replace the hardware or software to support TLSv1.1 at the least. </input> <br />
+<br /> <br />
+</p>
+
+<p id=configuration>
+<h4>Configuration: </h4>
+
+SSLv3 and its successors offer a few options with configuration. Some of these are Cipher Suites, Key lengths, Hash Functions used by your CA to sign your keys. Keep in mind that the security of your system is only as strong as the weakest link in the chain. For example, a strong cipher alone does not guarantee good security. The keys and the certificates are just as important, as well as the hash functions and keys used by the Certification Authority (CA) to sign your keys. The parameters for these settings depend on the version of SSL/TLS that is being used and therefore great care must be taken in choosing the best combination of the above settings. 
+<br /> <br />
+<h5>Checklist: </h5>
+<input type="checkbox"> Gather teams that are responsible for configuring SSLv3. Teams who take care of Cipher Suits, Key lengths, Hash Functions used by your CA to sign your keys, are very important.
+</input> <br />
+<input type="checkbox"> Have team research the best set of parameters to be configured to provide maximum security with SSLv3. These details can be found on this site under IT and Dev Quickstarts.
+</input> <br />
+<input type="checkbox"> Keep in mind interoperability with different devices that support SSLv3. The configurational changes should match on both the ends of any SSLv3 connections.
+</input> <br />
+<input type="checkbox"> Changes in configuration can be done on the fly on a lot of products. Take steps to ensure unnecessary downtime. 
+</input> <br />
+<input type="checkbox"> If there are no changes possible on any devices, there are no alternatives to fixing security problems with SSLv3.
+</input> <br />
+</p>				  
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <p>
+	          <ul>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+	        </p>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <p>
+	          <ul>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+	        </p>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -23,26 +23,48 @@
        </ol>
     </div>
 
-    <div class="container-fluid">
-      <div class="row" style="padding: 2vw;">
-	  
-	<div class="alert alert-warning">
-      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
+<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#nocryptoroll"><li>
+          TLSv1.2 Implementation
+        </li></a>
+		<a href="#tls12patch"><li>
+          Upgrade/Patch-Management
+        </li></a>
+		<a href="#usagelibrary"><li>
+          Usage-of-Library-Examples
+		 </li></a>
+      </ul>
     </div>
+	
+	<!--	<div class="alert alert-warning">
+      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
+    </div>-->
 	<a href="flaw-categories.html"><div class="alert alert-warning">
       <strong>MUST READ</strong> Click here to understand about possible land mines.
     </div></a>
-	
-        <h2>Introduction</h2>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <p>
 
-<b>NOTE:- </b> <u>OpenSSL is not the only available crypto library. For a list of different libraries and a comparision 
-between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>. We will describing OpenSSL since this is currently the most widely used 
-implementation. </u>
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
+<p id="nocryptoroll">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+		
+        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> TLS 1.2 Implementation</h2>	  
+
+<font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
+
+It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used. 
+These libraries offer better stability as they are usually a product of several years of experience in implementing cryptography by an active development community who are 
+dedicated towards efforts in implementation. It is therefore considered to be reliable and robust. <br /> <br />
+
+
+<font size="3"><strong>Examples:</strong></font>
+Openssl is one such library which popular and therefore is used as an example for this concept.
+OpenSSL is not the only available crypto library. For a list of different libraries and a comparision 
+between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.
 <br /> <br />
-
-What is OpenSSL? <br /> <br />
 
 OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
 <br /> <br />
@@ -69,7 +91,7 @@ These are the official list of what is included in OpenSSL version 1.0.2: <br />
 </ul> <br />
 Note: The latest major release for OpenSSL is 1.1.0 (released on 25th August, 2016). 
 <br /><br />
-How do I find out what OpenSSL version I’m running?
+<u>Find out which openssl version you are using</u>:
 <br /><br />
 Use the version option.
 <br /><br />
@@ -98,21 +120,18 @@ OPENSSLDIR: "/etc/pki/tls"
 engines:  rdrand dynamic</pre>
 </code>
 <br /> <br />
-<h3>How to upgrade OpenSSL? </h3>
-<span class="red">Please be careful while upgrading OpenSSL. Do not simply upgrade the package without thinking about the implications it might have on exisiting features of your application or operating system. </span> <br />A lot of application and Operating Sytem vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of libraries like OpenSSL to ensure that no exisiting functionality is affected. Usually, these vendors release their own updates called backported packages. The security team backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
 
+</p>
+
+
+<p id="usagelibrary">
+<h2>Usage of Cryptography in Programming Languages</h2>
+
+<font size="4"><strong>Concept:</strong></font> It is again advised to not roll out your own cryptography while developing software. There are popular libraries in almost all programming 
+languages that can readily be used to perform cryptographic operations.
 <br /> <br />
-Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
-CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
-RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
-
-Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
-CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
-RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
-
-
-<h2>Basic Implementation/Usage of Libraries</h2>
-<h3>Python</h3>
+<font size="4"><strong>Examples:</strong></font> <br />
+<strong>Python </strong> <br />
 There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
 <br /> <br />
 To check which openssl version you are using execute the following within Python:
@@ -122,7 +141,7 @@ print ssl.OPENSSL_VERSION</pre>
 </code>
 <br />
 
-<h4>ssl library</h4>
+<u>ssl library</u> <br /> <br />
 Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
 
 <pre>
@@ -144,14 +163,33 @@ For TLSv1.2, a small change in the above would be to have
 <code>ssl_version=ssl.PROTOCOL_TLSv1_2</pre>
 </code>
 
-<h4>pyopenssl library</h4>
+<u>pyopenssl library</u> <br /> <br />
 
-<h3>C/C++</h3>
+<strong>C/C++</strong>
           </p>
-        </div>
+		  
+		  
+		  
+<p id="tls12patch">
+<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
+<font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
+<br />
+A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of 
+libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team 
+backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
 
-        
+<br /> <br />
+Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
+CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
+RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
+
+Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
+CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
+RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
+</p>
+
+ </div>    
       </div>
 
 

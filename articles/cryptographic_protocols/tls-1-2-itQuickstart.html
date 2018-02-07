@@ -23,6 +23,21 @@
        </ol>
     </div>
 	
+	<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#GeneralTLSInfo"><li>
+          TLSv1.2 Configuration
+        </li></a>
+        <a href="#GeneralTLSInfoDebra"><li>
+          General Recommendations for TLS
+		 </li></a>
+		<a href="#patch"><li>
+          Upgrade/Patch Management
+        </li></a>
+      </ul>
+    </div>
+	
 	<div class="alert alert-success">
       The <strong>Recommended</strong> Cipher Suites is listed in this page.
     </div>
@@ -35,16 +50,28 @@
       <strong>MUST READ</strong> Click here to understand about possible land mines.
     </div></a>
 	
-    <div class="container-fluid">
-      <div class="row" style="padding: 2vw;">
-	  
-		<h3> Introduction </h3>
-		<div class="col-md-12 col-sm-12 col-xs-12">
-		  <p id="GeneralTLSInfo">
-		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2 based on configuration and other observations. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
-<br /> <br /><span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
+<div class="container-fluid">
+<div class="row" style="padding: 2vw;">
+<div class="col-md-12 col-sm-12 col-xs-12">
+		
+<p id="GeneralTLSInfo">
+
+<h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> TLS 1.2 Configuration </h2>
+		  
+<font size="4"><strong>Concept:</strong></font> TLSv1.2 as a protocol is, as of now, safe. But, if configured incorrectly, your device can still be vulnerable. In this section, using a certain few examples
+explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
+<br /> <br />
+
+<span class="red">Note: Enabling TLSv1.2 on your device is the first step that is to be taken towards ensuring security. However, recent vulnerabilities discovered in certain options provided by the 
+protocol mandate that the configuration of TLSv1.2 also follows certain guidelines.These recommendations have been mentioned in the later part of this section under <a href="#GeneralTLSInfoDebra">General Recommendations of TLS </a>.
+</span>
+
+<br /> <br />
+<font size="3"><strong>Examples:</strong></font>
+<br />We have categorized the examples into three sections:- Webservers, Browsers and VPN.
 
 <ul>
+
 <strong>Webservers: </strong> <br />
 Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
 <br /><br />
@@ -182,19 +209,15 @@ The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart 
 To verify:
 <a href="https://www.ssllabs.com/ssltest/index.html">https://www.ssllabs.com/ssltest/index.html</a>
 </ul>
-		  </p>
-		</div>
-        <h3>General Recommendations for TLS</h3>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-		  <p id="GeneralTLSInfoDebra">
-		  <strong>Generic TLS Definition</strong> </br>
-         TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
-	     TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
-	     SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
+</p>
+
+<p id="GeneralTLSInfoDebra">
+<font size="4"><strong>General Recommendations for TLS</strong></font> <br /> <br />
+A configurable option that most product vendors provide with SSL/TLS is called the Cipher Suite. The cipher suite decides the key exchange, signature, encryption and hashing 
+algorithm used with SSL/TLS. There are various options with all the above mentioned parameters and some of them have been marked as unsafe due to vulnerabilities found in recent 
+times. Special care must be taken to ensure that TLSv1.2 is configured correctly and below are the recommended cipher suites. 
 		 <br /> <br />
 		 
-		<strong>Use:</strong> TLS v1.1 and 1.2 <br />
-		<strong>Avoid:</strong> TLSv1.0 or lower or SSLv3 or lower <br /><br />
 		<strong>TLS Recommended Ciphers:</strong><br />
 		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_ECDSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
@@ -215,13 +238,16 @@ To verify:
 		TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
 		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
 		
-		<strong>Note:</strong> The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange.  If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack.  This setting may have to be set in the openssl code.  There is not a configurable option external to the openssl module.  Apache allows for configuring the dh parameters via their management interface.
-		The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy:<br />
+		<strong>Note:</strong> 
+		The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack ((((((LINK TO ATTACK PAGE)))))). This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface. The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to ROBOT Attack ((((((LINK TO ATTACK PAGE)))))).
+		
 		TLS_RSA_WITH_AES_128_CBC_SHA<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA<br />
 		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
 		TLS_RSA_WITH_AES_256_CBC_ SHA256<br /><br />
-		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys.
+		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
+		<strong> More recommendations: </strong> <br />
+
 		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
 		<li>Use X.509v3 certificates for mutual authentication for server to server authentication.</li>
 		<li>Use: secp256r1, secp384r1, secp521r1</li>
@@ -236,11 +262,11 @@ To verify:
 		Chris McNab’s Network Security Assessment book warns “When using DH in a static mode, dh_g, dh_p, dh_Ys, and rand_s are fixed and do not provide forward secrecy.”  
 		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
 		
-		<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
-		 
-		 </p>
-		 <p id=ROBOT>
-		 <br /> <br /> <br />
+		<!--<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
+		 -->
+</p>
+<p id=ROBOT>
+		 <br /> 
 		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
 		<br /> <br />
 		
@@ -278,11 +304,21 @@ To verify:
 		
 		<span class="green"><strong> NOTE: </strong> <u>NO</u> action is required for SSL/TLS certificates as the certificate private key is not exposed by this vulnerability. </span>
 
-		 </p>
-        </div>
+	</p>
         
-      </div>
+		
+<p id=patch>
+	<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+		
+	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using TLSv1.2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of TLSv1.2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts. 
 
+	<br /> <br /> <strong> Note: </strong>
+Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.
+
+	</p>
+      </div>
+	  </div>
+    </div>
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
@@ -314,7 +350,7 @@ To verify:
       <div class="footerfix"></div>
       <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
       </footer>
-    </div>
+
 
   </body>
 </html>

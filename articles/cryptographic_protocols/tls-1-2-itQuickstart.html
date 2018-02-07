@@ -57,7 +57,19 @@
 <p id="GeneralTLSInfo">
 
 <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> TLS 1.2 Configuration </h2>
-		  
+
+<font size="4"><strong>What to expect:</strong></font><br /> <br />
+For TLSv1.2, the following configuration settings will provide the best possible security (mitigation of all known vulnerabilties):
+<ul>
+<li>Enabling TLSv1.2 - First step is to ensure that your devices are configured for accepting and establishing TLSv1.2 connections. For security reason, it also needs to be further ensured that older versions of SSL/TLS are disabled. Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0
+</li>
+<li>Cipher Suites: A configurable option that most product vendors provide with SSL/TLS is called the Cipher Suite. The cipher suite decides the key exchange, signature, encryption and hashing algorithm used with SSL/TLS. There are various options with all the above mentioned parameters and some of them have been marked as unsafe due to vulnerabilities found in recent times. Special care must be taken to ensure that TLSv1.2 is configured correctly and below are the recommended cipher suites. The recommendations are based on a recent attack called a ROBOT attacks <a href="tls-1-2-vuln.html">Learn more</a>.</li>
+<li>DH Parameters: Diffie Helman Key Exchange protocol is a popular protocol option for exchanging keys between a server and a client in a secure fashion. SSL/TLS provides options to use DH but it should be ensured that the right kind of keys are configured for the protocol. The recommendations are based on the LogJam attack<a href="tls-1-2-vuln.html#logjam">Learn more</a>.</li>
+<li>Type of Certificates: Certificates form the basis of authentication in SSL/TLS. Using certificates the client can authenticate the server and vice versa (although client side authentication using certificates is optional). </li>
+<li>Key type and Size: Apart from DH keys, there are other keys that are used for digital signature purposes. Choosing the right kind of keys is important. 
+</li> <br />
+For the above settings, there have been examples mentioned below.
+</ul> <br /> <br />
 <font size="4"><strong>Concept:</strong></font> TLSv1.2 as a protocol is, as of now, safe. But, if configured incorrectly, your device can still be vulnerable. In this section, using a certain few examples
 explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
 <br /> <br />
@@ -67,12 +79,12 @@ protocol mandate that the configuration of TLSv1.2 also follows certain guidelin
 </span>
 
 <br /> <br />
-<font size="3"><strong>Examples:</strong></font>
-<br />We have categorized the examples into three sections:- Webservers, Browsers and VPN.
-
+<font size="3"><strong>Examples for Enabling TLSv1.2:</strong></font> <br />
+<br />We have categorized the examples into three sections:- Webservers, Browsers and VPN. <br />
+<br />
 <ul>
 
-<strong>Webservers: </strong> <br />
+<strong>Webservers: </strong> <br /> <br />
 Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
 <br /><br />
 <u>Apache: </u> <br/>
@@ -212,11 +224,8 @@ To verify:
 </p>
 
 <p id="GeneralTLSInfoDebra">
-<font size="4"><strong>General Recommendations for TLS</strong></font> <br /> <br />
-A configurable option that most product vendors provide with SSL/TLS is called the Cipher Suite. The cipher suite decides the key exchange, signature, encryption and hashing 
-algorithm used with SSL/TLS. There are various options with all the above mentioned parameters and some of them have been marked as unsafe due to vulnerabilities found in recent 
-times. Special care must be taken to ensure that TLSv1.2 is configured correctly and below are the recommended cipher suites. 
-		 <br /> <br />
+<font size="3"><strong>Examples for configuring Recommended Cipher Suites</strong></font> <br /> <br />
+
 		 
 		<strong>TLS Recommended Ciphers:</strong><br />
 		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
@@ -247,14 +256,14 @@ times. Special care must be taken to ensure that TLSv1.2 is configured correctly
 		TLS_RSA_WITH_AES_256_CBC_ SHA256<br /><br />
 		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
 		<strong> More recommendations: </strong> <br />
-
+		<ul>
 		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
 		<li>Use X.509v3 certificates for mutual authentication for server to server authentication.</li>
 		<li>Use: secp256r1, secp384r1, secp521r1</li>
 		<li>Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0</li>
 		<li>For most websites, using RSA keys stronger than 2048 bits and ECDSA keys stronger than 256 bits is a waste of CPU resources and might impair user experience. Similarly, increasing the strength of the ephemeral key exchange beyond 256 bits for ECDHE has little benefit.</li>
 		<li>Avoid: OpenSSL v1.0.0 and below EOL, v1.0.1 EOL 12/31/16  <a href="https://www.openssl.org/policies/releasestrat.html"> Release Notes </a></li>
-		
+		</ul>
 		More info on why not to use DH and ECDH curves:
 		The DH and ECDH curves should not be used because they do not provide perfect forward secrecy. 
 		The reason is that only Diffie Hellman in ephemeral mode uses “one time use” private keys.  
@@ -265,46 +274,15 @@ times. Special care must be taken to ensure that TLSv1.2 is configured correctly
 		<!--<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
 		 -->
 </p>
+<!--
 <p id=ROBOT>
 		 <br /> 
 		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
 		<br /> <br />
-		
-		<h4> ROBOT Attack: What is it and how to avoid it? </h4>
-		A recent vulnerability was found with the way TLS uses RSA keys for <a href="ssl-3-working.html"> encryption </a> that would 
-		let an attacker decrypt any data that is sent over a TLS session. 
-		This defeats the purpose of confidentiality and should therefore be treated as a <span class="red">serious </span> issue. <br /> <br />
-
-		Several product manufacturers have provided <span class="green"> patches </span> to the problem here: <br />
-		
-		<a href= https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches >https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches </a>
-		<br /> <br />
-		<span class="yellow"><strong>NOTE:</strong> The above list will be updated as more patches are available. </span> <br /> <br />
-
-		In addition to patching servers, the recommendations from researchers now state that RSA encryption should be disabled from SSL/TLS cipher suites. This means all cipher suites that start with TLS_RSA should be disabled, for example:
-		<br /> <br />
-		TLS_RSA_WITH_AES_128_GCM_SHA256
-		<br /> <br />
-		Please note that the above is different from a cipher suite that uses both ECDHE and RSA. For example:
-		<br /> <br />
-		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-		<br /> <br />
-		The above cipher suite is not vulnerable to the ROBOT attack. This is because of ECDHE keys being used as encryption keys and RSA being used for signature verification. 
-		<br /> <br />
-		<span class="green"> Action Taken to protect against a ROBOT attack. </span> <br /> <br />
-		In summary, administrators can perform the following to protect their servers:
-		<br />
-		<ul>
-		<li>Perform the ROBOT test on the server to discover if you have a vulnerability.</li>
-		<li>Contact your server vendor to determine if the server is vulnerable and if there are any patches.</li>
-		<li>If your server vendor does not have a patch, you may consider disabling TLS_RSA cipher suites.</li>
-		<li>Even if the ROBOT vulnerability is mitigated, you may consider disabling TLS_RSA cipher suites as they
-		appear to be high risk and do not support perfect forward secrecy.</li>
-		</ul>
-		
-		<span class="green"><strong> NOTE: </strong> <u>NO</u> action is required for SSL/TLS certificates as the certificate private key is not exposed by this vulnerability. </span>
+	
 
 	</p>
+	-->
         
 		
 <p id=patch>

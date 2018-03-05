@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Index</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level0 active">Encryption</li>
+       </ol>
+    </div>
+
+    <div class="row container-fluid">
+      <h1>Encryption Algorithms</h1>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1"><a href="aes.html">AES</a></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1"><a href=#>DES</a></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1"><a href=#>3DES</a></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1"><a href=#>RSA</a></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <p>more to be added...</p>
+    </div>
+      
+      <hr />
+      <br />
+      <div class="row" style="text-align:center;">
+        <div class="center-block">
+          <h3>General Information:</h3>
+
+          <p>
+            <strong>Different modes of Encryption: </strong> <br />
+            The two different flavors of encryption are block ciphers and stream ciphers. On a high level: A typical stream cipher encrypts plaintext one byte at a time and a block cipher operates on one block at a time. The block may be of size one byte or more or less. That means we can also encrypt a block of one byte by help of a stream cipher as a stream. For more information, visit here: https://crypto.stackexchange.com/questions/5333/difference-between-stream-cipher-and-block-cipher
+            <br /> <br />
+            Examples of Stream Cipher: RC4 <br />
+            Examples of Block Cipher: AES, DES, RSA <br /> <br />
+
+            <strong>Key Size: </strong><br />
+            All the encryption algorithms can operate in different key sizes.  A cipher is no stronger than its key length: if there are too few keys, an attacker can enumerate all possible keys. These different key sizes have different impacts on hardware/software and therefore an ideal sweet spot is choosing the right key length that offers enough security and provides good performance. Usually, the longer the key size the better the security but there are possible exceptions (for example, AES). <br /> <br />
+
+            <strong>Key Lifetimes: </strong><br />
+            There are lifetimes associated with the keys that encryption algorithms generate (lifetime as a concept can be associated with any key generation protocol or algorithm). Although certain encryption algorithms have been proven to be secure, it is considered to be good practise to refresh keys from time to time (consider lifetime of a key to be inversely proportional to sensitivity of the data encrypted). <br /> <br />
+
+
+            <strong>Mode of Operation: </strong><br />
+            Block ciphers should not be used as described in their original definitions. This is inherently weak since an adversary can build up a dictionary of different plain texts and their corresponding ciphertexts and use them to decipher an encrypted message. Besides the weakness in using encryption algorithms directly, there is also an added limitation where direct use cannot work on variable length of messages (the length of a message should be a multiple of the cipher block size in length). <br /> <br />
+
+            There are therefore a few modes of operation: <br />
+            Galois/Counter Mode (GCM) <br />
+            Cipher Block Chaining (CBC) <br />
+            Electronic Code Book (ECB) <br />
+            Cipher Feedback (CFB) <br />
+            Output Feedback (OFB) <br />
+            Counter (CTR) <br /> <br />
+
+            Explaining the above modes in detail is beyond the scope of this website. CTR and GCM are  <br /> <br />
+
+            GCM and CBC modes internally work quite differently; they both involve a block cipher and an exclusive-or, but they use them in different ways. It is also important to understand that GCM is considered a authenticated encryption algorithm where authentication and encryption are combined. This is unlike the other modes described above which only do encryption. <br /> <br />
+ 
+            <strong>What to choose? </strong><br />
+            Please note that there are no hard and fast rules here. These are recommendations. <br /> <br />
+
+            Recommended Encryption Algorithm: AES, RSA or 3DES <br /> <br />
+
+            <strong>Key Size:  </strong><br />
+            NSA rates 128-bit AES as good enough for SECRET traffic; 256-bit AES is good enough for TOP-SECRET traffic. <br />
+            3DES, in general, provides 168bits (three 56-bits DES Keys) and this is secure. <br />
+            For RSA, NIST recommends 2048-bit keys for RSA. An RSA key length of 3072 bits should be used if security is required beyond 2030. <br /> <br />
+
+            <strong>Lifetime: </strong>Anything from 24hrs - 30 days (based on the sensitivity of the data). <br /> <br />
+
+            <strong>Mode of Operation: </strong>CTR or GCM. Note that if someone is using RSA, they need not be worried about mode of operation but rather mode of padding. For more information, visit here.
+          </p>
+          
+        </div>
+      </div>
+      
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Cryptographic Hash Functions</a></li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Lookup_table">Lookup Tables</a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Dictionary_attack">Dictionary Attack</a></li>
+             <li>
+               <a href="https://en.wikipedia.org/wiki/Rainbow_table">Rainbow Tables</a>
+             </li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

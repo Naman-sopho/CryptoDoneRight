@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3DES</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
+         <li class="breadcrumb-item level0 active">3DES</li>
+       </ol>
+    </div>
+	
+	<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="3des-devQuickstart.html"><li>
+          Developer's QuickStart
+        </li></a>
+        <a href="3des-itQuickstart.html"><li>
+          IT  Admin's QuickStart
+		 </li></a>
+		<a href="3des-managerQuickstart.html"><li>
+          Manager's QuickStart
+        </li></a>
+      </ul>
+    </div>
+
+ 
+    <a href="aes.html"><div class="alert alert-danger">
+      This is the <strong>NOT the Recommended </strong> Standard.
+    </div></a>
+    <!--
+	<a href="https://tools.ietf.org/html/draft-ietf-tls-tls13-11"><div class="alert alert-success">
+      TLSv1.3 is expected to come out soon. There is no current ETA, click here for the initial draft.
+    </div></a>
+  -->
+	<div class="alert alert-danger">
+      <strong>There are serious security implications if not configured properly!</strong>
+    </div>
+  
+	  
+    <div class="container-fluid">
+      <div class="row">
+        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
+          <div class="title">
+            <h2><span>3DES</span></h2>
+          </div>
+          <div class="timestamp">
+            <p><span>Last Updated Sat, 3 Feb 2018 2:02:01 -0400</span></p>
+          </div>
+          <div class="description">
+		  
+		  <p>
+         3DES is an encryption algorithm that evolved from previous flavors of the same algorithm (DES which was first published in 1975). 3DES is being phased out slowly as there are new vulnerabilities that make the protocol significantly weaker. Although 3DES might be widely deployed still, it is because there are certain settings which when applied along with DES can provide good security. But considering the fact that there are newer protocols such as AES, there are no reasons to stick to 3DES apart from backward compatibility or legacy support.<br /> <br />
+
+         <!--
+         <strong>Attacks: </strong> <br />
+         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
+
+         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available. -->
+		  </p>
+		  <!--
+            <p>
+             TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
+	     TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
+	     SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
+             </p>
+			 -->
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="3des-devQuickstart.html" class="btn btn-warning "> <img class="logos" src="../../images/NewDevLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="3des-itQuickstart.html" class="btn btn-warning "> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+		  
+		<div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
+		<br />		<br />		<br />		<br />
+		<a href="3des-managerQuickstart.html" class="btn btn-warning"> <img class="logos" src="../../images/manager.png" />
+            MANAGER QUICKSTART</a>
+			<p>
+              Are you a Manager? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        <p>
+        <strong>Attacks: </strong> <br />
+          <u>Meet in the Middle Attack</u>:This particular attack can occur with specific settings in which DES could operate (keying option 1). <br />
+          <u>Sweet 32</u>: This is a major attack that renders 3DES weak and compromises the security entirely. But like mentioned before, there are ways to mitigate and still use 3DES. OpenSSL does not include 3DES per default since version 1.1.0 (August 2016), and considers it a "weak cipher".  
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
+">History of Hash Functions</a></li>
+            <li>
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>

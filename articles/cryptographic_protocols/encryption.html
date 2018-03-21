@@ -25,7 +25,31 @@
        </ol>
     </div>
 
-    <div class="row container-fluid">
+    <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="aes.html"><li>
+          AES
+        </li></a>
+        <a href="#"><li>
+          DES
+     </li></a>
+    <a href="3des.html"><li>
+          3DES
+        </li></a>
+    <a href="#modesofencryption"><li>
+          Modes-of-Encryption
+        </li></a>
+    <a href="#modesofoperation"><li>
+          Modes-of-Operation
+        </li></a>
+    <a href="#choose"><li>
+          What-to-choose?
+        </li></a>
+      </ul>
+    </div>
+
+    <div class="row container-fluid ">
       <h1>Encryption Algorithms</h1>
       <div class="panel-group">
         <div class="panel panel-default">
@@ -57,7 +81,7 @@
         </div>
       </div>
 
-      <div class="panel-group">
+      <!--<div class="panel-group">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
@@ -65,7 +89,7 @@
             </h4>
           </div>
         </div>
-      </div>
+      </div>-->
 
       <p>more to be added...</p>
     </div>
@@ -76,21 +100,24 @@
         <div class="center-block">
           <h3>General Information:</h3>
 
-          <p>
-            <strong>Different modes of Encryption: </strong> <br />
+          <p id="modesofencryption" >
+            <strong style="font-size:1vw;">Different modes of Encryption: </strong> <br />
             The two different flavors of encryption are block ciphers and stream ciphers. On a high level: A typical stream cipher encrypts plaintext one byte at a time and a block cipher operates on one block at a time. The block may be of size one byte or more or less. That means we can also encrypt a block of one byte by help of a stream cipher as a stream. For more information, visit here: https://crypto.stackexchange.com/questions/5333/difference-between-stream-cipher-and-block-cipher
             <br /> <br />
             Examples of Stream Cipher: RC4 <br />
             Examples of Block Cipher: AES, DES, RSA <br /> <br />
+          </p>
 
+          <p id="keyspecs">
             <strong>Key Size: </strong><br />
             All the encryption algorithms can operate in different key sizes.  A cipher is no stronger than its key length: if there are too few keys, an attacker can enumerate all possible keys. These different key sizes have different impacts on hardware/software and therefore an ideal sweet spot is choosing the right key length that offers enough security and provides good performance. Usually, the longer the key size the better the security but there are possible exceptions (for example, AES). <br /> <br />
 
             <strong>Key Lifetimes: </strong><br />
             There are lifetimes associated with the keys that encryption algorithms generate (lifetime as a concept can be associated with any key generation protocol or algorithm). Although certain encryption algorithms have been proven to be secure, it is considered to be good practise to refresh keys from time to time (consider lifetime of a key to be inversely proportional to sensitivity of the data encrypted). <br /> <br />
+          </p>
 
-
-            <strong>Mode of Operation: </strong><br />
+          <p id="modesofoperation">
+            <strong style="font-size:1vw;">Mode of Operation: </strong><br />
             Block ciphers should not be used as described in their original definitions. This is inherently weak since an adversary can build up a dictionary of different plain texts and their corresponding ciphertexts and use them to decipher an encrypted message. Besides the weakness in using encryption algorithms directly, there is also an added limitation where direct use cannot work on variable length of messages (the length of a message should be a multiple of the cipher block size in length). <br /> <br />
 
             There are therefore a few modes of operation: <br />
@@ -101,11 +128,14 @@
             Output Feedback (OFB) <br />
             Counter (CTR) <br /> <br />
 
+            <span class="red">We strongly recommend to go through the <a href="encryption-modes.html">following document</a> to understand the below operations in greater detail. This will help in futher understanding the strengths and weakenesses of different modes.</span> <br /> <br />
+
             Explaining the above modes in detail is beyond the scope of this website. CTR and GCM are  <br /> <br />
 
             GCM and CBC modes internally work quite differently; they both involve a block cipher and an exclusive-or, but they use them in different ways. It is also important to understand that GCM is considered a authenticated encryption algorithm where authentication and encryption are combined. This is unlike the other modes described above which only do encryption. <br /> <br />
- 
-            <strong>What to choose? </strong><br />
+          </p>
+          <p id="choose">
+            <strong style="font-size:1vw;">What to choose? </strong><br />
             Please note that there are no hard and fast rules here. These are recommendations. <br /> <br />
 
             Recommended Encryption Algorithm: AES, RSA or 3DES <br /> <br />

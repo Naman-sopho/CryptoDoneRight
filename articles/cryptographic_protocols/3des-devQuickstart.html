@@ -101,6 +101,8 @@ engines:  rdrand dynamic
  </code>
 </pre>
 
+<br /> <br />
+<span class="red">Please note that OpenSSL 1.0.2k has removed 3DES support. There are still ways you can re-enable 3DES (<a href="https://www.openssl.org/blog/blog/2016/08/24/sweet32/">Re-enable 3DES</a>), but considering the security implications, this should be done only if absolutely necessary. </span>
 </p>
 
 
@@ -111,40 +113,12 @@ engines:  rdrand dynamic
 languages that can readily be used to perform cryptographic operations.
 <br /> <br />
 <font size="4"><strong>Examples:</strong></font> <br />
-<strong>Python: </strong> <br />
+<strong>C/C++: </strong> <br />
 
-pyDes can be used for both, DES and 3DES. Sample usage: <br />
+There are multiple options for libraries that support 3DES in C/C++.  <br /> <br />
 
-<pre>
-  <code>
-    from pyDes import *
-
-    data = "Please encrypt my data"
-    k = des("DESCRYPT", CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5)
-    d = k.encrypt(data)
-    print "Encrypted: %r" % d
-    print "Decrypted: %r" % k.decrypt(d)
-    assert k.decrypt(d, padmode=PAD_PKCS5) == data
-    An alternative is the Chillkat Python Encryption Library which supports a lot of encryption algorithms (including DES & 3DES), but it is not free. Sample usage:
-
-    crypt.put_CryptAlgorithm("des")
-    crypt.put_CipherMode("cbc")
-    crypt.put_KeyLength(64)
-    crypt.put_PaddingScheme(0)
-    crypt.put_EncodingMode("hex")
-    ivHex = "0001020304050607"
-    crypt.SetEncodedIV(ivHex,"hex")
-    keyHex = "0001020304050607"
-    crypt.SetEncodedKey(keyHex,"hex")
-    encStr = crypt.encryptStringENC("The quick brown fox jumps over the lazy dog.")
-    print encStr
-    decStr = crypt.decryptStringENC(encStr)
-    print decStr
-
-  </code>
-</pre>
-
-
+Using OpenSSL: <a href="http://www.firmcodes.com/triple-des-cbc-mode-encryption-example-c-programming-openssl/">http://www.firmcodes.com/triple-des-cbc-mode-encryption-example-c-programming-openssl/ </a><br />
+Using Crypto++ Library: <a href="https://www.cryptopp.com/wiki/TripleDES">https://www.cryptopp.com/wiki/TripleDES</a><br />
           </p>
 
  </div>    

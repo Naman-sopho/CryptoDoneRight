@@ -45,10 +45,10 @@
 
   <!--<a href="sshv2.html"><div class="alert alert-danger">
       This is a vulnerable version. <strong>USE SSHv2 instead.</strong>
-    </div> </a>
-  <div class="alert alert-warning">
-      SSH should be preferred over telnet for remote console access.
-    </div>-->
+    </div> </a>-->
+  <a href="https://learningnetwork.cisco.com/blogs/network-sheriff/2008/09/22/sshv1-or-sshv2-whats-the-big-deal"><div class="alert alert-warning">
+      SSHv1 vs. SSH2. What's the big deal?
+    </div></a>
     
     <div class="container-fluid">
       <div class="row">
@@ -62,7 +62,8 @@
           <div class="description">
       
       <p>
-      SSH, also known as Secure Socket Shell, is a network protocol that provides administrators with a secure way to access a remote computer. SSH also refers to the suite of utilities that implement the protocol. Secure Shell provides strong authentication and secure encrypted data communications between two computers connecting over an insecure network such as the Internet. SSH is widely used by network administrators for managing systems and applications remotely, allowing them to log in to another computer over a network, execute commands and move files from one computer to another.
+      SSH (Secure SHell) protocol provides a secure connection to a device over a TCP based (port 22) network. It could be used for performing remote logins, remote command execution, and secure file copying across a network (SFTP). SSHv2 is an improvement over SSHv1 in many aspects of security and performance. It has to be noted that SSHv2 cannot work with SSHv1. Better security, for example, comes through Diffie-Hellman key exchange and strong integrity checking via message authentication codes. https://en.wikipedia.org /wiki/SecureShell#Keymanagement. <br /> <br />
+      There are no issues of concern with this protocol. It is the recommended protocol for remote access.
       </p>
       <!--
             <p>
@@ -77,7 +78,7 @@
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
     <br /><br /><br />
-    <a href="#" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
+    <a href="sshv2-devQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
             DEV QUICKSTART</a>
       <p>
               Are you a developer? Get started with crucial implementation details above.
@@ -90,7 +91,7 @@
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
     <br /><br /><br />
-    <a href="#" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
+    <a href="sshv2-itQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
             IT QUICKSTART</a>
       <p>
               Are you an IT administrator? Get started with best practice setup details above.
@@ -114,9 +115,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-          <p>
-          <strong>Attacks: </strong> <br />
-           Implementations of SSH version 1.5, including OpenSSH up to version 2.3.0, AppGate, and ssh-1 up to version 1.2.31, in certain configurations, allow a remote attacker to decrypt and/or alter traffic via a "Bleichenbacher attack" on PKCS#1 version 1.5.
+          <!--<strong>Attacks: </strong> <br />
+           Implementations of SSH version 1.5, including OpenSSH up to version 2.3.0, AppGate, and ssh-1 up to version 1.2.31, in certain configurations, allow a remote attacker to decrypt and/or alter traffic via a "Bleichenbacher attack" on PKCS#1 version 1.5.-->
           </div>
         </div>
      </div>

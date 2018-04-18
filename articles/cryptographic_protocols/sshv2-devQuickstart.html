@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSHv2 Dev Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="sshv2.html">SSHv2</a></li>
+         <li class="breadcrumb-item level1 active">SSHv2 Dev Quickstart</li>
+       </ol>
+    </div>
+
+<!--<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#nocryptoroll"><li>
+          TLSv1.2 Implementation
+        </li></a>
+		<a href="#tls12patch"><li>
+          Upgrade/Patch-Management
+        </li></a>
+		<a href="#usagelibrary"><li>
+          Usage-of-Library-Examples
+		 </li></a>
+      </ul>
+    </div>-->
+	
+	<!--	<div class="alert alert-warning">
+      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
+    </div>-->
+	<a href="flaw-categories.html"><div class="alert alert-warning">
+      <strong>MUST READ</strong> Click here to understand about possible land mines.
+    </div></a>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
+<p id="nocryptoroll">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+		
+        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> SSHv2 Implementation</h2>	  
+
+<font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
+
+It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used. 
+These libraries offer better stability as they are usually a product of several years of experience in implementing cryptography by an active development community who are 
+dedicated towards efforts in implementation. It is therefore considered to be reliable and robust. <br /> <br />
+
+
+<font size="3"><strong>Examples:</strong></font>
+OpenSSH is one such library which popular and therefore is used as an example for this concept. OpenSSH is not the only available crypto library but is widely used and is therefore recommended. <br />
+For a quick overview of comparison between some of the other libraries available, visit here  <a href="https://en.wikipedia.org/wiki/Comparison_of_SSH_servers">https://en.wikipedia.org/wiki/Comparison_of_SSH_servers </a> <br /> <br />
+
+Please note that OpenSSH has removed support for all older SSH protocols since version 7.6. All the release notes of their latest releases can be found here: https://www.openssh.com/. The older SSH 1 protocol comes in two major sub-variants: protocol 1.3 and protocol 1.5. Support for both has been removed from OpenSSH as of the 7.6 release.
+<br /> <br />
+
+How to check for the OpenSSH version: <br /> <br />
+Not all vendors will let you find out about this information using commands. It is usually documented otherwise. But, for most Linux environments the command is: <br />
+<pre>
+  <code>
+# ssh -v
+  </code>
+  </pre>
+
+Here is an excellent resource to find details about how OpenSSH can be built and used: https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch04_03.htm
+<br /> <br />
+Implementing SSH in Python: <br />
+Python has its own set of libraries which act as wrappers around either other libraries such as libSSH in C which in turn could be wrappers for OpenSSH. Two of the most popular choices are: ssh2-python and Paramiko. Both of these libraries do the same thing but there are claims about better performance with ssh2-python. For a detailed study of comparison, visit here: https://parallel-ssh.org/post/ssh2-python/ <br /> <br />
+
+Here is documentation for implementing both the libraries: <br />
+https://prezi.com/zjpqutpygshm/paramiko-in-5-minutes-sshv2-in-python/ <br />
+https://github.com/ParallelSSH/ssh2-python <br />
+https://parallel-ssh.org/ <br /> <br />
+
+Implementing SSH in C++: <br />
+https://www.libssh.org
+
+</p>	  
+		  
+<p id="tls12patch">
+<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+
+<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using SSHv2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of SSHv2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts.  <br />
+<br />
+Note: Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.
+</p>
+
+ </div>    
+      </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

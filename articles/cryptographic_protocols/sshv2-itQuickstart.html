@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSHv2 IT Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="#">Home</a></li>
+         <li class="breadcrumb-item level"><a href="#">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="sshv2.html">SSHv2</a></li>
+         <li class="breadcrumb-item level1 active">SSHv2 IT Quickstart</li>
+       </ol>
+    </div>
+	
+	<!--<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#GeneralTLSInfo"><li>
+          TLSv1.2 Configuration
+        </li></a>
+        <a href="#GeneralTLSInfoDebra"><li>
+          General Recommendations for TLS
+		 </li></a>
+		<a href="#patch"><li>
+          Upgrade/Patch Management
+        </li></a>
+      </ul>
+    </div>
+	
+	<div class="alert alert-success">
+      The <strong>Recommended</strong> Cipher Suites is listed in this page.
+    </div>
+	
+	<a href="#ROBOT"><div class="alert alert-danger">
+      <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
+    </div> </a>
+	
+	<a href="flaw-categories.html"><div class="alert alert-warning">
+      <strong>MUST READ</strong> Click here to understand about possible land mines.
+    </div></a>-->
+	
+<div class="container-fluid">
+<div class="row" style="padding: 2vw;">
+<div class="col-md-12 col-sm-12 col-xs-12">
+    
+<p id="GeneralTLSInfo">
+
+<h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> SSHv2 Configuration </h2>
+
+<font size="4"><strong>What to expect:</strong></font><br /> <br />
+SSHv2 is client-server protocol that relies on the following concepts: <br /> <br />
+
+Authentication Scheme: SSHv2 provides a few options when it comes to authentication (client authenticating the server and itself). Different authentication schemes could be appropriate for different setups so there are no specific recommendations here. We encourage that you go through the following document to understand the different authentication options: <a href="https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_usr_ssh/configuration/15-sy/sec-usr-ssh-15-sy-book/sec-ssh-config-auth.pdf">https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_usr_ssh/configuration/15-sy/sec-usr-ssh-15-sy-book/sec-ssh-config-auth.pdf </a> <br /> <br />
+
+Setting up keys: SSH protocol uses cryptographic keys in order to secure communication between the server and the client. These keys could be of type RSA, DSA or ECDSA for example. Note that OpenSSH, one of the most popular libraries used by vendors to implement SSH, has removed support for DSA keys because of security concerns.  <br /> <br />
+
+CipherSuites and KeyExchange Algorithm: These are the settings that determine which encryption algorithm and message integrity algorithm will be used for securing data. Also the key-exchange protocol (DH or ECDH) will be negotiated betweeen the client and the server. <br /> <br />
+
+Setting up communication: SSH by default listens on TCP port 22. This can however be changed with almost any vendor. <br /> <br />
+
+Concept: SSHv2 is a secure protocol but there are components that the protocol uses that could provide the weakness. Below are a few highly recommended steps that are to be taken with any SSH setup to provide maximum security. <br /> <br />
+
+Choose the form of SSH Authentication. https://www.secureblackbox.com/kb/articles/SSH-Authetication-methods.rst <br />
+Ensure that key pairs generated are large ( > 2048bit for RSA ) <br />
+Secure ciphersuites and key-exchange protocol. This is in almost all cases dependent on the library that the product uses. For example, https://security.stackexchange.com/questions/25662/openssh-default-preferred-ciphers-hash-etc-for-ssh2 <br />
+Change the default SSH passwords. Ensure characters meet minimum requirements.  <br />
+Use a whitelist to permit or deny users. <br />
+Disable privilege escalation. Deny root/super user access.  <br />
+Filter incoming SSH connections based on IP addresses.  <br />
+Log information about the sessions.  <br />
+Set an idle timeout value and login timeout value.  <br /> <br />
+
+All the above features are product specific. These are common security measures taken and documentation for implementing the above features should be easily available. Here are a few examples: <br /> <br />
+
+Secure SSH Server on Linux: <a href="https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file">https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file </a><br />
+Secure SSH configuration on Cisco devices: <a href="https://www.cisco.com/c/en/us/tech/security-vpn/secure-shell-ssh/tech-configuration-examples-list.html">https://www.cisco.com/c/en/us/tech/security-vpn/secure-shell-ssh/tech-configuration-examples-list.html </a><br /> <br />
+Looking for a SSH client? There are a lot of options, some of them are: https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
+
+</p>
+  </p>
+      </div>
+    </div>
+    </div>
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+             <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
+            <li>
+              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
+            </li>
+             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
+">Enabling TLSv1.2 on Microsoft machines</a></li>
+          </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+             <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
+            <li>
+              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
+            </li>
+             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
+">Enabling TLSv1.2 on Microsoft machines</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+
+
+  </body>
+</html>

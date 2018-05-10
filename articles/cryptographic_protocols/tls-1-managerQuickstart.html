@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>TLS 1.0 Manager Quickstart</title>
+    <title>TLSvv1.0 Manager Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -18,8 +18,8 @@
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0"><a href="tls-1.html">TLS 1.2</a></li>
-         <li class="breadcrumb-item level1 active">TLS 1.0 Manager Quickstart Tab</li>
+         <li class="breadcrumb-item level0"><a href="ssl-3.html">TLS 1.0</a></li>
+         <li class="breadcrumb-item level1 active">TLSv1.0 Manager Quickstart Tab</li>
        </ol>
     </div>
 
@@ -44,14 +44,22 @@
       <div class="row" style="padding: 2vw;">
 	  
 	  <h3>Management QuickStart</h3> 
-TLSv1.2 is the most popular version of TLS for all the right reasons. This protocol is what protects most of the internet today! TLS like SSL provides a way for two parties to establish a session and transfer data over the session while ensuring privacy, confidentiality, and integrity. TLSv1.2 is the recommended version of TLS. This is because there are no flaws in the protocol found and also, this version of TLS provides support for latest configuration which provides maximum security. Also to keep in mind is TLSv1.3 is due to be out soon. A newer protocol would mean better security and performance overall. Details on this site will be updated as and when it is out. <br /> <br />
+SSL/TLS is one of the most popular technology that aims at, mainly through cryptography, securing communication between different networks. SSL provides a way for two parties to establish a session and transfer data over the session while ensuring privacy, confidentiality and integrity. All secure communications on the internet at this moment use this same technology (HTTPS). Some of the popular software applications that use SSL are VPNs and Web Browsers. For example, in client-server environment, an SSL link ensures that all data passed between the web server and browsers remain private and integral. SSLv2 and TLSv1 are the 2 versions of this protocol (SSLv1 was never publicly released). After TLSv1, SSL was renamed to TLS. Those protocols are standardized and described by RFCs.
+<br /> <br />
 
 <p id=protocol>
-<h4><img src="../../images/prot.png" style="width:80px;height:80px;" /> Protocol: </h4>
-TLSv1.2 is the latest version of TLS. TLS has gained real popularity over the last few years considering the weaknesses that were exposed in previous iterations. If any assistance is needed with an upgrade to this protocol please refer to the pages dedicated to the respective protocols. Considering the state of TLSv1.2 at this moment, there are no recommendations with respect to the protocol. <br /> <br />
+<h4> <img src="../../images/prot.png" style="width:80px;height:80px;" /> Protocol: </h4>
+TLSv1 is not safe. It has a few critical vulnerabilities and is rightly being decommissioned by a lot of popular vendors and product manufacturers. There have been major flaws found with TLSV1 protocol such as <a href="https://blog.qualys.com/ssllabs/2013/09/10/is-beast-still-a-threat">Beast</a>. There were other factors too apart from the vulnerabilities that led to TLSv1 being marked as an obsolete technology. Since this is a flaw in the official definition and standardization of the protocol, the only option to fix this issue is to upgrade the version of SSL (now being called TLS) being used. Note that upgrading the protocol does not result in any difference in what SSL was intended to do (secure communication), an upgrade to the protocol simply means that the technology is patched for flaws that could compromise the security of the product using it. 
+<br /> <br />
 <h5>High-level Action Plan: </h5>
-<input type="checkbox">  Ensure TLSv1.2 is functional across all systems. Tools to check whether TLSv1.2 is functioning has been mentioned in Dev and IT Quickstarts.</input> <br />
-<input type="checkbox"> If the older versions of SSL/TLS are not required (consider backward compatibility), they can be disabled to ensure that the only SSL/TLS connections made to any system from anywhere are TLSv1.2 based. Also, both sides of any SSL/TLS connection should support TLSv1.2. 
+<input type="checkbox"> Disable TLSv1 on all systems. Should be used in no capability whatsoever.</input> <br />
+<input type="checkbox"> Upgrade to TLSv1.2 is recommended. TLSv1.1 can also be considered for a temporary basis. Have the appropriate teams (Ex: IT and Development) clearly informed and prepared for an upgrade. 
+</input> <br />
+<input type="checkbox"> Connectivity to these systems using TLSv1 could be affected because of the upgrade. Ensure proper migration plan to avoid implications like unnecessary downtime. 
+</input> <br />
+<input type="checkbox"> Run an audit to make sure that the upgrade was successful. 
+</input> <br />
+<input type="checkbox"> In any case if an upgrade is not possible, it is recommended in the interest of security to turn off all SSL connectivity to the system (Ex: remote access VPNs, web page hosting over HTTPS).  
 </input> <br />
 <br /> <br />
 </p>
@@ -59,25 +67,34 @@ TLSv1.2 is the latest version of TLS. TLS has gained real popularity over the la
 <p id=implementation>
 <h4> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> Implementation: </h4>
 
-Considering the popularity of TLSv1.2, it would be quite unlikely for any product to not have any support for it. Whether it be a product managed by the IT team or the Development team, there are enough resources/examples on their respective quickstarts on this site to ensure support for TLSv1.2. There is no other particular action that needs to be taken by management apart from ensuring that teams are taking the right steps in implementing and expanding TLSv1.2.<br /> <br />
+Note: Only think about Implementation if you are in a situation where legacy hardware or software cannot be upgraded to support at least TLSv1.1
+<br /> <br />
+A lot of vendors who support TLSv1 should provide software patches that should help prevent protocol vulnerabilities. If any of these patches are present and can be implemented on a system that runs TLSv1, they should be done immediately. This would require extensive research of specific products and therefore there is no documentation on this site (except examples under IT or Dev Quickstart). General practices for good patch management should be followed. For example, the patches should be verified for genuineness and the patch should specifically solve problems with TLSv1. It should also be noted that patches will only work if both sides of a connection (client and server) have been patched. 
+ <br /> <br />
 <h5>High-level Action Plan: </h5>
-<input type="checkbox"> Both the IT and Development team should take the appropriate steps to use the right set of extensions/patches/libraries/software to support TLSv1.2. It is important that the respective teams understand the risks associated with any performing blind upgrades to any technology. Such risks have been mentioned in the Quickstarts as well. </input> <br />
-<input type="checkbox"> Again, if the older versions of SSL/TLS are not required (consider backward compatibility), they can be disabled to ensure that the only SSL/TLS connections made to any system from anywhere is TLSv1.2. Also, both sides of any SSL/TLS connection should support TLSv1.2. </input> <br />
+<input type="checkbox"> List down hardware or software that cannot be upgraded. </input> <br />
+<input type="checkbox"> Gather the respective teams responsible for administration and management of these devices or technology. </input> <br />
+<input type="checkbox"> Teams should be tasked with finding the patches and devising a plan to implement them ASAP. </input> <br />
+<input type="checkbox"> Consider any sort of verification process to audit these patches. </input> <br />
+<input type="checkbox"> Devise a long term plan to replace the hardware or software to support TLSv1.1 at the least. </input> <br />
 <br /> <br />
 </p>
 
 <p id=configuration>
 <h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> Configuration: </h4>
 
-An important component to TLS (and all other versions of SSL/TLS) are the configuration parameters. Security of TLSv1.2 greatly relies on deploying it with the right settings. While TLS still provides room for certain weak settings to be configured, great care must be taken to ensure that the best settings that provide the best up-to-date security are configured. Some of these are Cipher Suites, Key lengths, Hash Functions used by your CA to sign your keys. Keep in mind that the security of your system is only as strong as the weakest link in the chain. For example, a strong cipher alone does not guarantee good security. The keys and the certificates are just as important, as well as the hash functions and keys used by the Certification Authority (CA) to sign your keys. The parameters for these settings depend on the version of SSL/TLS that is being used and therefore great care must be taken in choosing the best combination of the above settings. <br /> <br />
+TLSvv1.2 offer a few options with configuration. Some of these are Cipher Suites, Key lengths, Hash Functions used by your CA to sign your keys. Keep in mind that the security of your system is only as strong as the weakest link in the chain. For example, a strong cipher alone does not guarantee good security. The keys and the certificates are just as important, as well as the hash functions and keys used by the Certification Authority (CA) to sign your keys. The parameters for these settings depend on the version of SSL/TLS that is being used and therefore great care must be taken in choosing the best combination of the above settings. 
+<br /> <br />
 <h5>High-level Action Plan: </h5>
-<input type="checkbox"> Gather teams that are responsible for configuring SSLv3. Teams who take care of Cipher Suits, Key lengths, Hash Functions used by your CA to sign your keys, are very important.
+<input type="checkbox"> Gather teams that are responsible for configuring TLSv1.2. Teams who take care of Cipher Suits, Key lengths, Hash Functions used by your CA to sign your keys, are very important.
 </input> <br />
-<input type="checkbox"> Have team research the best set of parameters to be configured to provide maximum security with SSLv3. These details can be found on this site under IT and Dev Quickstarts.
+<input type="checkbox"> Have team research the best set of parameters to be configured to provide maximum security with TLSv1.2. These details can be found on this site under IT and Dev Quickstarts.
 </input> <br />
-<input type="checkbox"> Keep in mind interoperability with different devices that support SSLv3. The configurational changes should match on both the ends of any SSLv3 connections.
+<input type="checkbox"> Keep in mind interoperability with different devices that support TLSv1. The configurational changes should match on both the ends of any TLSv1.2 connections.
 </input> <br />
 <input type="checkbox"> Changes in configuration can be done on the fly on a lot of products. Take steps to ensure unnecessary downtime. 
+</input> <br />
+<input type="checkbox"> If there are no changes possible on any devices, there are no alternatives to fixing security problems with TLSv1.
 </input> <br />
 </p>				  
         </div>
@@ -114,13 +131,4 @@ An important component to TLS (and all other versions of SSL/TLS) are the config
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
 

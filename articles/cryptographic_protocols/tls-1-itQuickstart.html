@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>TLS1.0 IT Quickstart</title>
+    <title>TLS v3.0 IT Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -18,309 +18,137 @@
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0"><a href="tls-1.html">TLS 1.2</a></li>
-         <li class="breadcrumb-item level1 active">TLS 1.0 IT Quickstart</li>
+         <li class="breadcrumb-item level0"><a href="tls-1.html">TLSv1.0</a></li>
+         <li class="breadcrumb-item level1 active">TLSv1.0 IT Quickstart Tab</li>
        </ol>
     </div>
-	
-	<div id="contentScroller">
-      <strong style="font-size:2vw;">Content</strong>
-      <ul>
-        <a href="#GeneralTLSInfo"><li>
-          TLSv1.2 Configuration
-        </li></a>
-        <a href="#GeneralTLSInfoDebra"><li>
-          General Recommendations for TLS
-		 </li></a>
-		<a href="#patch"><li>
-          Upgrade/Patch Management
-        </li></a>
-      </ul>
-    </div>
-	
-	<div class="alert alert-success">
-      The <strong>Recommended</strong> Cipher Suites is listed in this page.
-    </div>
-	
-	<a href="#ROBOT"><div class="alert alert-danger">
-      <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
-    </div> </a>
-	
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	  
 	<a href="flaw-categories.html"><div class="alert alert-warning">
-      <strong>MUST READ</strong> Click here to understand about possible land mines.
+      <strong>Recommended Reading: </strong> Understanding Different Types of Problems in Crypto
     </div></a>
-	
-<div class="container-fluid">
-<div class="row" style="padding: 2vw;">
-<div class="col-md-12 col-sm-12 col-xs-12">
-		
-<p id="GeneralTLSInfo">
-
-<h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> TLS 1.2 Configuration </h2>
-
-<font size="4"><strong>What to expect:</strong></font><br /> <br />
-For TLSv1.2, the following configuration settings will provide the best possible security (mitigation of all known vulnerabilties):
+	<p id=patch>
+	 <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+	  
+			  <font size="4"><strong>Concept:</strong></font>
+			  It is important to understand that the fixes for both the vulnerabilities is to ensure that any services or devices that you own/control and accepts TLS connections should not do so on TLSv1.0. 
+			  Please bear this in mind for whatever fix maybe applicable.
+			  Click <a href="TLS-3-working.html"><b>here</b></a> for basic understanding of the TLS packet flow.
+			  <br /> <br />
+			  <strong>Web Servers: </strong> <br />
+			  Completely disable TLS1.0 on the server. The recommendation is to move to TLSv1.2. 
 <ul>
-<li>Enabling TLSv1.2 - First step is to ensure that your devices are configured for accepting and establishing TLSv1.2 connections. For security reason, it also needs to be further ensured that older versions of SSL/TLS are disabled. Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0
-</li>
-<li>Cipher Suites: A configurable option that most product vendors provide with SSL/TLS is called the Cipher Suite. The cipher suite decides the key exchange, signature, encryption and hashing algorithm used with SSL/TLS. There are various options with all the above mentioned parameters and some of them have been marked as unsafe due to vulnerabilities found in recent times. Special care must be taken to ensure that TLSv1.2 is configured correctly and below are the recommended cipher suites. The recommendations are based on a recent attack called a ROBOT attacks <a href="tls-1-2-vuln.html">Learn more</a>.</li>
-<li>DH Parameters: Diffie Helman Key Exchange protocol is a popular protocol option for exchanging keys between a server and a client in a secure fashion. SSL/TLS provides options to use DH but it should be ensured that the right kind of keys are configured for the protocol. The recommendations are based on the LogJam attack<a href="tls-1-2-vuln.html#logjam">Learn more</a>.</li>
-<li>Type of Certificates: Certificates form the basis of authentication in SSL/TLS. Using certificates the client can authenticate the server and vice versa (although client side authentication using certificates is optional). </li>
-<li>Key type and Size: Apart from DH keys, there are other keys that are used for digital signature purposes. Choosing the right kind of keys is important. 
-</li> <br />
-For the above settings, there have been examples mentioned below.
-</ul> <br /> <br />
-<font size="4"><strong>Concept:</strong></font> TLSv1.2 as a protocol is, as of now, safe. But, if configured incorrectly, your device can still be vulnerable. In this section, using a certain few examples
-explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
-<br /> <br />
-
-<span class="red">Note: Enabling TLSv1.2 on your device is the first step that is to be taken towards ensuring security. However, recent vulnerabilities discovered in certain options provided by the 
-protocol mandate that the configuration of TLSv1.2 also follows certain guidelines.These recommendations have been mentioned in the later part of this section under <a href="#GeneralTLSInfoDebra">General Recommendations of TLS </a>.
-</span>
-
-<br /> <br />
-<font size="3"><strong>Examples for Enabling TLSv1.2:</strong></font> <br />
-<br />We have categorized the examples into three sections:- Webservers, Browsers and VPN. <br />
-<br />
-<ul>
-
-<strong>Webservers: </strong> <br /> <br />
-Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
-<br /><br />
-<u>Apache: </u> <br/>
-To add TLSs1.2 you just need to add in your ‘https virtual host’ configuration:
+<li><u>Nginx Web Server</u> <br/> <br/>
+To disable TLSv1.0 in the Nginx web server, you can use the SSL_protocols directive. This will be located in the server or http blocks in your configuration.
+For instance, <b>on Ubuntu</b>, you can either add this globally to /etc/nginx/nginx.conf inside of the httpblock, or to each server block in the /etc/nginx/sites-enabled directory.
 <pre>
-<code>...
-SSLProtocol -all +TLSv1.2
-...</code>
+<code>$sudo nano /etc/nginx/nginx.conf </code>
 </pre>
- 
-Explanation: <br />
--all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
-+TLSv1.2 is adding TLS 1.2<br /> <br />
-
-For more browser compatibility you can use:- <br />
-<pre>
-<code>...
-SSLProtocol -all +TLSv1 +TLSv1.1 +TLSv1.2
-...</code>
-</pre>
-
-<u> Nginx: </u> <br />
-By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
-<pre>
-<code>...
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-...</code>
-</pre> <br /> <br />
-
-Similar to the Apache config above, you will get TLSv1.0+ support and no SSL. You can check the config and restart.
+To disable TLSv1.0, your TLS_protocols directive should be set like this:
 <pre>
 <code>
-$sudo nginx -t
-$sudo service nginx restart
+...
+TLS_protocols TLSv1.1 TLSv1.2;
+...
+</code>
+</pre> 
+You should restart the server after you have made the above modification:
+<pre>
+<code>sudo service nginx restart </code>
+</pre> 
+</li>
+<br />
+
+<li><u>Apache Web Server</u> <br/> <br />
+To disable TLSv1.0 on the Apache web server, you will have to adjust the TLSProtocol directive provided by the mod_TLS module.
+This directive can be set either at the server level or in a virtual host configuration. Depending on your distribution's Apache configuration, the TLS configuration may be located in a separate file that is sourced.
+<br /> <br />
+<b>On Ubuntu</b>, the server-wide specification for servers can be adjusted by editing the /etc/apache2/mods-available/TLS.conf file. If mod_TLS is enabled, a symbolic link will connect this file to the mods-enabledsubdirectory:
+
+<pre>
+<code>$sudo nano /etc/apache2/mods-available/ssl.conf </code>
+</pre>
+<br/>
+<b>On CentOS</b>, you can can adjust this in the TLS configuration file located here (if TLS is enabled):
+<pre>
+<code>$sudo nano /etc/httpd/conf.d/ssl.conf</code> 
+</pre>
+
+Inside you can find the TLSProtocol directive. If this is not available, create it. Modify this to explicitly remove support for TLSv3:
+<pre>
+<code>
+...
+SSLProtocol all -SSLv3 -SSLv2
+...
 </code>
 </pre>
-
-To enforce TLSv1.2:
-
+<br /> 
+Save and close the file. Restart the service to enable your changes.
+</br>
+<b>On Ubuntu</b>, you can type:
 <pre>
-<code>...
-ssl_protocols TLSv1.2
-...</code>
+<code>
+$sudo service apache2 restart 
+</code>
 </pre>
-
-<u>Tomcat </u> <br />
-The configuration file for Tomcat should be in <br />
-TOMCAT_HOME/conf/server.xml
-<br /> <br />
-
-Tomcat 5 & 6 (Prior to 6.0.38 <br /> <br />
-Within the server.xml find the sslProtocols entry and make sure only TLS protocols are specified: <br />
-
+<b>On CentOS</b>, this would be:
 <pre>
-<code>sslProtocols = "TLSv1.2"</code>
+<code>$sudo service httpd restart</code>
 </pre>
-
-Tomcat 6 & 7 (6.0.3.8 and newer) <br /> <br />
-Within the server.xml file, find the sslEnabledProtocols entry and make sure only TLS protocols are specified: <br />
-<pre>
-<code>sslEnabledProtocols = "TLSv1.2"</code>
-</pre>
-
-Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
-
-<strong>Browsers: </strong> <br /> <br />
-
-Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well. 
-Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.2 are accepted.
-<br />
-To enable TLS 1.2 protocols on web browsers, see the list below. <br /> <br />
-<ul>
- 
-<li>
-<u>Microsoft Internet Explorer</u> <br />
-<ul>
-<li>Open Internet Explorer</li>
-<li>From the menu bar, click Tools >  Internet Options > Advanced tab</li>
-<li>Scroll down to Security category, manually check the option box for Use TLS 1.2 </li>
-<li>Click OK</li>
-<li>Close your browser and restart Internet Explorer</li>
-</ul>
-</li> <br />
-
-<li>
-<u>Google Chrome</u> <br />
-<ul>
-<li>Open Google Chrome </li>
-<li>Click Alt F and select Settings </li>
-<li>Scroll down and select Show advanced settings... </li>
-<li>Scroll down to the Network section and click on Change proxy settings... </li>
-<li>Select the Advanced tab </li>
-<li>Scroll down to Security category, manually check the option box for Use TLS 1.2 </li>
-<li>Click OK </li>
-<li>Close your browser and restart Google Chrome </li>
-</ul>
-</li> <br />
-
-<li>
-<u>Mozilla Firefox </u> <br />
-<ul>
-<li>Open Firefox</li>
-<li>In the address bar, type about:config and press Enter </li>
-<li>In the Search field, enter tls. Find and double-click the entry for security.tls.version.min</li>
-<li>Set the integer value to 3 to force protocol of TLS 1.3 </li>
-<li>Click OK</li>
-<li>Close your browser and restart Mozilla Firefox</li>
-</ul>
-</li> <br />
-
-<li>
-<u>Opera </u> <br />
-<ul>
-<li>Open Opera</li>
-<li>Click Ctrl plus F12</li>
-<li>Scroll down to the Network section and click on Change proxy settings...</li>
-<li>Select the Advanced tab</li>
-<li>Scroll down to Security category, manually check the option box Use TLS 1.2</li>
-<li>Click OK</li>
-<li>Close and restart Opera</li>
-</ul>
-</li> <br />
- 
-<li>
-<u>Apple Safari </u> <br />
-There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.
-</li> <br />
+</li>
 
 </ul>
+			  <br /> <br />
+			  <strong> Browsers </strong> <br />
+			  Upgrade browser (client) to the latest version or if for whatever reason you need to use an older version be sure to disable TLS 2.0 and TLS 3.0 Protocols. Most up to date browsers/servers use TLS_FALLBACK_SCSV. If a client requests a TLS protocol version which is lower than the highest supported by the server (and client), the server will identify intentional downgrade fallback and will drop the connection.
+			  
+			  <br /></br />
+			  
+			  Here is a list of some common browsers and if whether the mitigations (no support for TLSv3.0) are completed. <br /><br />
+			<ul>  
+			    <li><b>Google Chrome:</b> On the browser address bar, visit chrome://flags and under "Minimum SSL/TLS version supported.", change from "Default" to "TLS 1.1".)</li>
+				<li><b>Mozilla Firefox:</b> In the addresa bard, type "about:config" and hit enter. Post this, in the "Search" field, enter "tls". Find and double-click the entry for "security.tls.version.min" and set the interger value to "2" to force a minimum protocol of TLSv1.1 (entering "3" would force TLSv1.2). Do not forget to clear your cache post this change. 
+			   </li>
+			   <li><b>Internet Explorer:</b> Left click the gear icon on the top-left of the browser window. Select "Internet Options" from the dropdown menu. Next, click the “Advanced” tab,  scroll down and deselect “SSL 3.0” and “TLS 1.0”. Finally, click OK (you may need to refresh your browser post these changes).
+				</li>
+				<li><b>Opera:</b> Start by clicking on <b>Ctrl + F12</b>. Scroll down to the Network section and click on <b>Change proxy settings...</b>. Post this, select the "Advanced" tab and scroll down to <b>Security</b> category and manually check the option box for <b>Use TLS 1.1 </b> and <b>Use TLS 1.2.</b>
+				</li>
+				<li><b> Safari:</b> There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.
 
-<strong>VPN: </strong> <br />
-The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart from configuration, patches provided by the software company should be installed with immediate priority. 
-<br /> <br />
-To verify:
-<a href="https://www.ssllabs.com/ssltest/index.html">https://www.ssllabs.com/ssltest/index.html</a>
-</ul>
-</p>
 
-<p id="GeneralTLSInfoDebra">
-<font size="3"><strong>Examples for configuring Recommended Cipher Suites</strong></font> <br /> <br />
-
-		 
-		<strong>TLS Recommended Ciphers:</strong><br />
-		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br /><br />
-		
-		<strong>Avoid the following ciphers:</strong> <br />
-		TLS_DHE_RSA_WITH_AES_128_CBC_SHA <br />
-		TLS_DHE_RSA_WITH_AES_256_CBC_SHA <br />
-		TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
-		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
-		
-		<strong>Note:</strong> 
-		The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack ((((((LINK TO ATTACK PAGE)))))). This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface. The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to ROBOT Attack ((((((LINK TO ATTACK PAGE)))))).
-		
-		TLS_RSA_WITH_AES_128_CBC_SHA<br />
-		TLS_RSA_WITH_AES_256_CBC_SHA<br />
-		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
-		TLS_RSA_WITH_AES_256_CBC_ SHA256<br /><br />
-		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
-		<strong> More recommendations: </strong> <br />
-		<ul>
-		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
-		<li>Use X.509v3 certificates for mutual authentication for server to server authentication.</li>
-		<li>Use: secp256r1, secp384r1, secp521r1</li>
-		<li>Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0</li>
-		<li>For most websites, using RSA keys stronger than 2048 bits and ECDSA keys stronger than 256 bits is a waste of CPU resources and might impair user experience. Similarly, increasing the strength of the ephemeral key exchange beyond 256 bits for ECDHE has little benefit.</li>
-		<li>Avoid: OpenSSL v1.0.0 and below EOL, v1.0.1 EOL 12/31/16  <a href="https://www.openssl.org/policies/releasestrat.html"> Release Notes </a></li>
-		</ul>
-		More info on why not to use DH and ECDH curves:
-		The DH and ECDH curves should not be used because they do not provide perfect forward secrecy. 
-		The reason is that only Diffie Hellman in ephemeral mode uses “one time use” private keys.  
-		DH and ECDH use values based on the stored certificates.  
-		Chris McNab’s Network Security Assessment book warns “When using DH in a static mode, dh_g, dh_p, dh_Ys, and rand_s are fixed and do not provide forward secrecy.”  
-		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
-		
-		<!--<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
-		 -->
-</p>
-<!--
-<p id=ROBOT>
-		 <br /> 
-		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
-		<br /> <br />
-	
-
-	</p>
-	-->
-        
-		
-<p id=patch>
-	<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
-		
-	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using TLSv1.2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of TLSv1.2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts. 
-
-	<br /> <br /> <strong> Note: </strong>
-Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.
-
-	</p>
+				</li>
+			</ul> 
+			<br /> <br />
+			<strong> VPN: </strong> <br />
+			  VPN connections can be made using TLS. Care must be taken that any VPN gateways (that accept the connection from VPN clients) do not have TLSv3.0 configured. There cannot be any support for legacy protocols and all VPN connections should be based on TLSv1.2.
+			  
+		</p>
+			  
+        </div>
       </div>
-	  </div>
-    </div>
+
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <ul>
-	           <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
-            <li>
-              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
-            </li>
-             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
-">Enabling TLSv1.2 on Microsoft machines</a></li>
-	        </ul>
+          <p>
+	          <ul>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-TLS-and-tls/>Book:- Understanding TLS, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of TLS, TLS and DTLS</a></li>
+			  </ul>
+	        </p>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
-          <ul>
-	           <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
-            <li>
-              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
-            </li>
-             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
-">Enabling TLSv1.2 on Microsoft machines</a></li>
-	        </ul>
+          <p>
+	          <ul>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-TLS-and-tls/>Book:- Understanding TLS, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of TLS, TLS and DTLS</a></li>
+			  </ul>
+	        </p>
         </div>
       </div>
 
@@ -328,7 +156,7 @@ Keep an eye out for this section as it will be kept up-to-date with any major pa
       <div class="footerfix"></div>
       <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
       </footer>
-
+    </div>
 
   </body>
 </html>

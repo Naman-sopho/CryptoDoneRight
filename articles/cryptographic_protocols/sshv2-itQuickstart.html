@@ -5,12 +5,122 @@
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body background="..\..\images\test9.jpg">
     <div id="header">
-      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="black">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="black">Cryptographic Algorithms</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="black">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="black">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">                       
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="black">About</font></a></li>
+                <li><a href="contact.html"><font color="black">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     </div>
 
     <div class="breadcrumbs">
@@ -69,7 +179,7 @@ CipherSuites and KeyExchange Algorithm: These are the settings that determine wh
 
 Setting up communication: SSH by default listens on TCP port 22. This can however be changed with almost any vendor. <br /> <br />
 
-	<strong> Concept: </strong> SSHv2 is a secure protocol but there are components that the protocol uses that could provide the weakness. Below are a few highly recommended steps that are to be taken with any SSH setup to provide maximum security. <br /> <br />
+Concept: SSHv2 is a secure protocol but there are components that the protocol uses that could provide the weakness. Below are a few highly recommended steps that are to be taken with any SSH setup to provide maximum security. <br /> <br />
 
 Choose the form of SSH Authentication. https://www.secureblackbox.com/kb/articles/SSH-Authetication-methods.rst <br />
 Ensure that key pairs generated are large ( > 2048bit for RSA ) <br />
@@ -86,99 +196,6 @@ All the above features are product specific. These are common security measures 
 Secure SSH Server on Linux: <a href="https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file">https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file </a><br />
 Secure SSH configuration on Cisco devices: <a href="https://www.cisco.com/c/en/us/tech/security-vpn/secure-shell-ssh/tech-configuration-examples-list.html">https://www.cisco.com/c/en/us/tech/security-vpn/secure-shell-ssh/tech-configuration-examples-list.html </a><br /> <br />
 Looking for a SSH client? There are a lot of options, some of them are: https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
-	
-	<h2> Hardened SSH Server Config </h2>
-	<p> <pre>
-  <code>
-# TCP port to bind to
-# Change to a high/odd port if this server is exposed to the internet directly
-Port 22
-
-# Bind to all interfaces (change to specific interface if needed)
-ListenAddress 0.0.0.0
-
-# Force SSHv2 Protocol
-Protocol 2
-
-# HostKeys for protocol version 2
-HostKey /etc/ssh/ssh_host_rsa_key
-HostKey /etc/ssh/ssh_host_dsa_key
-HostKey /etc/ssh/ssh_host_ecdsa_key
-
-# Use kernel sandbox mechanisms where possible in unprivileged processes
-# Systrace on OpenBSD, Seccomp on Linux, seatbelt on MacOSX/Darwin, rlimit elsewhere.
-UsePrivilegeSeparation sandbox
-
-# Deny all other users besides the following
-AllowUsers tristor
-
-# Client timeout (5 minutes)
-ClientAliveInterval 300
-ClientAliveCountMax 0
-
-# Compression (only after authentication)
-Compression delayed
-
-# Logging
-SyslogFacility AUTH
-LogLevel INFO
-
-# Authentication must happen within 30 seconds
-LoginGraceTime 30
-
-# Disable root SSH access
-PermitRootLogin no
-PermitEmptyPasswords no
-
-# Check user folder permissions before allowing access
-StrictModes yes
-
-# Public key authentication + Password authentication
-# Two-Factor Authentication in OpenSSH v6.2+
-RSAAuthentication yes
-PubkeyAuthentication yes
-PasswordAuthentication yes
-AuthenticationMethods publickey,password
-
-# Change this depending on where your authorized_keys file is
-# This is set as a workaround when using encrypted home directories
-# Link: https://joscor.com/2013/05/putty-server-refused-our-key/
-#AuthorizedKeysFile /etc/ssh/keys/%u/authorized_keys
-
-#These are the most secure of the available ciphers and MACs
-# SHA-256 included for compat with PuTTY-WinCrypt clients
-Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
-MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
-
-# Key Exchange algorithms (Elliptic Curve Diffie-Hellman)
-# DH-SHA-256 included for compat with PuTTY-WinCrypt clients
-KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
-
-# Don’t read the user’s ~/.rhosts and ~/.shosts files
-IgnoreRhosts yes
-
-# Disable unused authentication schemes
-RhostsRSAAuthentication no
-HostbasedAuthentication no
-ChallengeResponseAuthentication no
-KerberosAuthentication no
-GSSAPIAuthentication no
-# This may need to be enabled for things like Google Authenticator/YubiOTP
-UsePAM no
-
-# X11 support
-X11Forwarding no
-
-# Don’t show Message of the Day
-PrintMotd no
-
-# TCPKeepAlive (non-tunneled, disabled)
-TCPKeepAlive no
-
-# Allow client to pass locale environment variables
-AcceptEnv LANG LC_*
-</code>
-</pre>
 
 </p>
   </p>

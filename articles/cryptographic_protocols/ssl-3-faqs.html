@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SSHv2</title>
+    <title>SSLv3 FAQ</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,7 +33,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body background="..\..\images\test8.jpg">
+  <body background="..\..\images\test9.jpg">
     <div id="header">
       <header id="fh5co-header-section">
         <div class="container">
@@ -128,130 +128,125 @@
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0 active">SSHv2</li>
+         <li class="breadcrumb-item level0"><a href="ssl-3.html">SSL 3.0</a></li>
+         <li class="breadcrumb-item level1 active">SSLv3 FAQs</li>
        </ol>
     </div>
-  
-  <div id="testtitle">
-        <strong style="font-size:3vw;">SSHv2</strong>
-  </div>
 
-  <div id="contentScroller">
-      <strong style="font-size:2vw;">Content</strong>
-      <ul>
-        <a href="#"><li>
-          Developer's QuickStart
-        </li></a>
-        <a href="#"><li>
-          IT  Admin's QuickStart
-     </li></a>
-    <a href="#"><li>
-          Manager's QuickStart
-        </li></a>
-      </ul>
-    </div>
-
-  <!--<a href="sshv2.html"><div class="alert alert-danger">
-      This is a vulnerable version. <strong>USE SSHv2 instead.</strong>
-    </div> </a>-->
-  <a href="https://learningnetwork.cisco.com/blogs/network-sheriff/2008/09/22/sshv1-or-sshv2-whats-the-big-deal"><div class="alert alert-warning">
-      SSHv1 vs. SSH2. What's the big deal?
-    </div></a>
-    
     <div class="container-fluid">
-      <div class="row">
-        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
-          <!--<div class="title">
-            <h2><span>SSHv1</span></h2>
-          </div>-->
-          <div class="timestamp">
-            <p><span>Last Updated Sat, 3 Feb 2018 2:02:01 -0400</span></p>
-          </div>
-          <div class="description">
-      
-      <p>
-      SSH (Secure SHell) protocol provides a secure connection to a device over a TCP based (port 22) network. It could be used for performing remote logins, remote command execution, and secure file copying across a network (SFTP). SSHv2 is an improvement over SSHv1 in many aspects of security and performance. It has to be noted that SSHv2 cannot work with SSHv1. Better security, for example, comes through Diffie-Hellman key exchange and strong integrity checking via message authentication codes. https://en.wikipedia.org /wiki/SecureShell#Keymanagement. <br /> <br />
-      There are no issues of concern with this protocol. It is the recommended protocol for remote access.
-      </p>
-      <!--
-            <p>
-             TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
-       TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
-       SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
-             </p>
-       -->
-          </div>
-        </div>
+      <div class="row" style="padding: 2vw;">
+        <center><h2>SSLv3 FAQs</h2></center>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p>
+              <strong>What's wrong with SSLv3? </strong><br />
+              Multiple vulnerabilities have been found in SSLv3. Details can be found <a href="ssl-3-vuln.html">here</a>. <br /> <br />
+              <strong>Are only servers or also clients affected?</strong> <br />
+              The vulnerability exists if both the server and client accepts SSLv3 (even if both are capable of TLSv1/TLSv1.1/TLS1.2 due to a downgrade attack). <br /> <br />
 
+              As a server admin you should disable SSLv3 now for the security of your users. <br /> <br />
 
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-    <br /><br /><br />
-    <a href="sshv2-devQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
-            DEV QUICKSTART</a>
-      <p>
-              Are you a developer? Get started with crucial implementation details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-        
+              As a user, you should disable SSLv3 in your browser now to secure yourself when visiting websites which still support SSLv3. <br /> <br />
 
+             <strong>Is this OpenSSL/GnuTLS/browser specific?</strong> <br />
+              No. It's a protocol (design) bug, not an implementation bug. This means you can't really patch it (unless you're changing the design of the old SSLv3). <br /> <br />
 
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-    <br /><br /><br />
-    <a href="sshv2-itQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
-            IT QUICKSTART</a>
-      <p>
-              Are you an IT administrator? Get started with best practice setup details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-      
-    <div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
-    <br />  <br />  <br />  <br />
-    <a href="#" class="btn btn-success "> <img class="logos" src="../../images/manager.png" />
-            MANAGER QUICKSTART</a>
-      <p>
-              Are you a Manager? Get started with best practice setup details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-       </div>
+              And yes, there's a new OpenSSL security release, but read below (But I really really need SSLv3 support... for reason X,Y,Z!) on why you'd better focus on disabling SSLv3 altogether. <br /> <br />
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-          <!--<strong>Attacks: </strong> <br />
-           Implementations of SSH version 1.5, including OpenSSH up to version 2.3.0, AppGate, and ssh-1 up to version 1.2.31, in certain configurations, allow a remote attacker to decrypt and/or alter traffic via a "Bleichenbacher attack" on PKCS#1 version 1.5.-->
-          </div>
-        </div>
-     </div>
+              <strong>Can I kill SSLv3 on the network (firewall) level?</strong> <br />
+              Well, yes, probably. I put this in a separate blog post for further thoughts and work. We may have some magic iptables rule you can use! <br /> <br />
 
+              <strong>Is it relevant for HTTPS only or also for IMAP/SMTP/OpenVPN and other protocols with SSL support?</strong> <br />
+              The current attack vector, as shown by the researchers, works with controlling the plaintext sent to the server using Javascript being run on the victim's machine. This vector does not apply to non-HTTPS scenarios without using a browser. <br /> <br />
+
+              Also, normally an SSL client doesn't allow the session to be downgraded to SSLv3 (having TLSv1+ seen in the handshake capabilities), but browsers want to be very backward compatible and they do. The combination with controlling plaintext and the specific way a HTTP header is built up makes it exploitable. <br /> <br />
+
+              Conclusion: disable SSLv3 for HTTPS now, disable SSLv3 for other services in your next service window. <br /> <br />
+
+              <strong>What's the impact? Do I need to revoke and regenerate my server certificate? (As with Heartbleed)</strong> <br />
+              No, you don't need to rotate your certificates for this. The vulnerability exposes plaintext recovery from the session data, it does not provide access to any secrets (neither the session key or certificate key). <br /> <br />
+
+              An attacker is most likely only capable of stealing the plaintext headers like session cookies in order to perform session hijacking. An additional constraint is the need for a full (active) MitM attack. <br /> <br />
+
+              <strong>Is there anything else I can do to improve my SSL configuration in general?</strong> <br />
+              As a user, besides disabling SSLv3 in your browser, not really. Well, just always install the latest security updates. <br /> <br />
+
+              For servers, follow Mozilla's TLS server guide. And test with Qualys' SSL Labs test. It's really not that hard to get an A+ rating on your site. Just update your packages and implement the recommendations from the guide of Mozilla. <br /> <br />
+
+              <strong>But I really really need SSLv3 support... for reason X,Y,Z! Now what?</strong> <br />
+              Well, there's a patch that circumvents the downgrade attack of TLSv1 capable clients, called the SSLv3 Fallback Protection. It will improve the security of TLSv1+ too, by the way (downgrade attack is harder/impossible). It's offered as a backport from a more recent OpenSSL version in the Ubuntu Security advisory usn-2385-1. <br /> <br />
+
+              Big catch: Both clients and servers need this patch in order to work. So, in my opinion while you're updating both clients and servers you should just upgrade to TLSv1+ anyway. <br /> <br />
+
+              However, please, please, just retire SSLv3 in your network for now. Put effort in upgrading security standards and just ditch SSLv3. <br /> <br />
+
+              <strong>I heard about SCSV support to eliminate the protocol downgrade attack. Do I need it?</strong> <br />
+              Only if you really need SSLv3 for some odd reason, but it improves security in TLSv1+ too, so yes, I'd recommend you to install it. Ubuntu provides an update for this feature in usn-2385-1. You'll receive it through your regular security updates in your package manager. <br /> <br />
+
+              Testing vulnerability for privately hosted sites (e.g. intranet/offline). <br />
+              Your servers are vulnerable simply if they support SSLv3. Several options here: <br /> <br />
+
+              With OpenSSL s_client:
+              <pre>
+                <code>
+              openssl s_client -connect *server*:*port* -ssl3
+               </code>
+              </pre>
+
+              If the connection succeeds, sslv3 is enabled. If it fails, it is disabled. When it fails you should see something like: <br /> <br />
+
+              <pre>
+                <code>
+              error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure
+                </code>
+              </pre>
+              <br />Using nmap: <br />
+
+              <pre>
+                <code>
+              nmap --script ssl-enum-ciphers -p 443 myhostname.tld
+                </code>
+              </pre>
+              <br /> It should output 'SSLv3: No supported ciphers found'. Adjust for your hostname/port. <br />
+
+              Using cipherscan. Clone/download the binary and execute it: <br />
+
+              <pre>
+                <code>
+              ./cipherscan myhostname.tld
+            </code>
+          </pre>
+              It should not list anything with SSLv3 under the 'protocols' column. <br />
+
+          Reference: <a href="Reference: https://askubuntu.com/questions/537196/how-do-i-patch-workaround-sslv3-poodle-vulnerability-cve-2014-3566">https://askubuntu.com/questions/537196/how-do-i-patch-workaround-sslv3-poodle-vulnerability-cve-2014-3566</a>
+
+          </p>
       </div>
-
+    </div>
 
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <ul>
-             <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
-">History of Hash Functions</a></li>
-            <li>
-              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
-            </li>
-             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
-          </ul>
+          <p>
+	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	        </p>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
           <ul>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
-          </ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
         </div>
       </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AES CBC</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background="..\..\images\test8.jpg">
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="black">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="black">Cryptographic Algorithms</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="black">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\aes.html" class="fh5co-sub-ddown">AES</a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="black">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">                       
+                          <li><a href="#" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="black">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="black">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!--<div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
+         <li class="breadcrumb-item level0 active">AES</li>
+       </ol>
+    </div>-->
+
+	<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="aes-cbc-devQuickstart.html"><li>
+          Developer's QuickStart
+        </li></a>
+        <a href="aes-cbc-itQuickstart.html"><li>
+          IT  Admin's QuickStart
+		 </li></a>
+		<a href="aes-cbc-managerQuickstart.html"><li>
+          Manager's QuickStart
+        </li></a>
+      </ul>
+    </div>
+
+  <div id="testtitle">
+        <strong style="font-size:3vw;">AES CBC</strong>
+  </div>
+
+    <div class="alert alert-success">
+      This is the <strong>currently the Recommended </strong> Standard.
+    </div>
+    <!--
+	<a href="https://tools.ietf.org/html/draft-ietf-tls-tls13-11"><div class="alert alert-success">
+      TLSv1.3 is expected to come out soon. There is no current ETA, click here for the initial draft.
+    </div></a>
+	<a href="tls-1-2-itQuickstart.html#ROBOT"><div class="alert alert-danger">
+      <strong>TLSv1.2 is secure only when it is configured properly!</strong>
+    </div></a>
+  -->
+    <a href="flaw-categories.html"><div class="alert alert-warning">
+      Configuration is vital. A misconfigured safe protocol is <strong>ultimately</strong> unsafe.
+    </div></a>
+	  
+    <div class="container-fluid">
+      <div class="row">
+        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
+          <!--<div class="title">
+            <h2><span>AES</span></h2>
+          </div> -->
+          <div class="timestamp">
+            <p><span>Last Updated Wed, 9 May 2018 9:02:01 -0400</span></p>
+          </div>
+          <div class="description">
+		  
+		  <p>
+         Advanced Encryption Standard is an encryption scheme established by U.S National Institute of Standards and Technology. <br /> <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <br />
+
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
+
+         <!--
+         <strong>Attacks: </strong> <br />
+         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
+
+         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available. -->
+		  </p>
+		  <!--
+            <p>
+             TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.  
+	     TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.  
+	     SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
+             </p>
+			 -->
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="aes-cbc-devQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br /><br /><br />
+		<a href="aes-cbc-itQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+		  
+		<div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
+		<br />		<br />		<br />		<br />
+		<a href="aes-cbc-managerQuickstart.html" class="btn btn-success"> <img class="logos" src="../../images/manager.png" />
+            MANAGER QUICKSTART</a>
+			<p>
+              Are you a Manager? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        <p>
+        <!--<strong>Attacks: </strong> <br />
+         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
+
+         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available.-->
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+	           <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
+">History of Hash Functions</a></li>
+            <li>
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+	        </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>

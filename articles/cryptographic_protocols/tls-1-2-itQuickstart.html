@@ -5,12 +5,122 @@
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body background="..\..\images\test9.jpg">
     <div id="header">
-      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="black">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="black">Cryptographic Algorithms</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="black">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="black">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">                       
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="black">About</font></a></li>
+                <li><a href="contact.html"><font color="black">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     </div>
 
     <div class="breadcrumbs">
@@ -47,7 +157,7 @@
     </div> </a>
 	
 	<a href="flaw-categories.html"><div class="alert alert-warning">
-      <strong>RECOMMENDEDED READING:</strong> Background Reading: Understanding Different Types of Problems in Crypto
+      <strong>Background Reading: </strong> Understanding Different Types of Problems in Crypto
     </div></a>
 	
 <div class="container-fluid">
@@ -221,12 +331,25 @@ The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart 
 To verify:
 <a href="https://www.ssllabs.com/ssltest/index.html">https://www.ssllabs.com/ssltest/index.html</a>
 </ul>
-</p>
 
 
-<li>Confuguring TLSv1.2 - After ensuring that your device is ready to accept TLSv1.2 connections. The next step is to ensure that TLSv1.2 connections are setup with the best configuration in order to provide best security. It can be argued that we are using TLSv1.2, so why are we "reconfiguring" TLSv1.2 again.  It has to be noted that the first step was only to setup TLSv1.2, the First step is to ensure that your devices are configured for accepting and establishing TLSv1.2 connections. For security reason, it also needs to be</li>
+
+<span class="red"> Note: Configuring TLSv1.2 - After ensuring that your device is ready to accept TLSv1.2 connections. The next step is to ensure that TLSv1.2 connections are hardened in order to provide best security. A common misconception is why are we "reconfiguring" TLSv1.2 while it's already setup. It has to be noted that the first step was only to setup TLSv1.2, the first step is to ensure that your devices are configured to accept and establish TLSv1.2 connections. For security reasons, it also needs to be ensured that the encryption, key exchange and hashing methods are tweaked for maintaining confidentiality and integrity. </span> <br /><br />
+
+<u>Guide to reading cipher from configuration files: </u><br /> <br /> 
+One of the most popular formats look like this: <br /> 
+
+<pre>
+<code>...
+ECDH+AESGCM:ECDH+AES256
+...</code>
+</pre>
+<br />
+The above example shows two cipher suites separated by a ':'. The first cipher 'ECDH+AESGCM' specifies ECDH as the signature algorithm for TLS while the AESGCM specifies the encryption scheme with its mode of operation. The second cipher, ECDH:AES256 specifies ECDH being used as the signature scheme and AES256 talks about the encryption algorithm. The mode of operation will be whatever is the system default. <br /> <br />
+</ul>
+ 
 <p id="GeneralTLSInfoDebra">
-<font size="3"><strong>Examples for configuring Recommended Cipher Suites</strong></font> <br /> <br />
+<font size="3"><strong>Recommended Cipher Suites</strong></font> <br /> <br />
 
 		 
 		<strong>TLS Recommended Ciphers:</strong><br />
@@ -250,14 +373,14 @@ To verify:
 		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
 		
 		<strong>Note:</strong> 
-		The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack ((((((LINK TO ATTACK PAGE)))))). This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface. The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to ROBOT Attack ((((((LINK TO ATTACK PAGE)))))).
+		The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the <a href="ssl-3-vuln.html">Logjam</a> attack . This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface. The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to <a href="ssl-3-vuln.html">ROBOT Attack</a>.
 		
 		TLS_RSA_WITH_AES_128_CBC_SHA<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA<br />
 		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
-		TLS_RSA_WITH_AES_256_CBC_ SHA256<br /><br />
+		TLS_RSA_WITH_AES_256_CBC_SHA256<br /><br />
 		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
-		<strong> More recommendations: </strong> <br />
+		<!-- <strong> More recommendations: </strong> <br />
 		<ul>
 		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
 		<li>Use X.509v3 certificates for mutual authentication for server to server authentication.</li>
@@ -265,7 +388,7 @@ To verify:
 		<li>Server and Client must reject any connections offering SSL 1.0, SSL 2.0, SSL 3.0, TLS 1.0</li>
 		<li>For most websites, using RSA keys stronger than 2048 bits and ECDSA keys stronger than 256 bits is a waste of CPU resources and might impair user experience. Similarly, increasing the strength of the ephemeral key exchange beyond 256 bits for ECDHE has little benefit.</li>
 		<li>Avoid: OpenSSL v1.0.0 and below EOL, v1.0.1 EOL 12/31/16  <a href="https://www.openssl.org/policies/releasestrat.html"> Release Notes </a></li>
-		</ul>
+		</ul> -->
 		More info on why not to use DH and ECDH curves:
 		The DH and ECDH curves should not be used because they do not provide perfect forward secrecy. 
 		The reason is that only Diffie Hellman in ephemeral mode uses “one time use” private keys.  

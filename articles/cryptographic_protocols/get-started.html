@@ -131,8 +131,8 @@
 <div id="contentScroller">
       <strong style="font-size:2vw;">Content</strong>
       <ul>
-        <a href="#vision"><li>
-          Our Vision
+        <a href="#getting started"><li>
+          Getting Started
         </li></a>
     		<a href="#values"><li>
           Our Values
@@ -156,103 +156,56 @@
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 	       
-         <img src="../../images/mission-vision-values-graphic.png" style="width:300px;height:300px;" class="center" />
+        <img src="../../images/Getting-started.png" style="width:600px;height:200px;" class="center" />
 
-        <p id="vision">
-        <h3> Our Vision: </h3>
-        To help improve the overall understanding of how cryptography is deployed, implemented, maintained and configured in different environments. 
-        </p>
+        <p id="getting started">
+        
+        <b><h3>Are you an IT professional, software engineer, a manager or just a crypto enthusiast? Looking to use cryptography but nor sure how? </h3></b>
 
-        <p id="values">
-        <h3>Our Values: </h3>
-        <strong>1. Security: </strong> <br />
-        Security is only as strong as your weakest link. Security is complicated and of paramount importance for any organization and there are very little room for errors. Security needs to be a part of everyone's responsibility. Now more than ever, earning customer's satisfaction translates to un-complicated and foolproof security.  <br /> <br />
+        <strong> Cryptodoneright </strong> serves as a structured knowlege base that guides you through the various protocols, algorithms and utilities that come under the umbrella of cryptography. The website is divided into the following categories: <br /><br />
+        
+        <li> <strong> Cryptographic Protocols: </strong> These are well defined protocols (RFCs) to establish a secure channel between two endpoints in a network. </li>
 
-        <strong>2. Cryptography Has its weaknesses too: </strong> <br />
-        Like anything else in this world, cryptography is not perfect. There are multiple reasons why this is the case. But there are still various flavours of cryptographic algorithms that are proven to be secure against a wide range of attacks. Through this knowledge base, we aim to ensure that any professional who wants to implement cryptography is up-to-date and is aware of which flavors to avoid, which configuration to setup, how to move to stronger cryptography etc.  <br /> <br />
+        <li> <strong> Hashing Algorithms: </strong> These are  mathematical algorithms that help in mainitaining the integrity of a piece of data. If a piece of data has been tampered with, hashing allows you to identify it but not remidiate it. Hashing Algorithms are also one-way functions, meaning if you hash a piece of data, you cannot reverse the hash to obtain the plain text. </li>
 
-        <strong>3. Change is the only constant: </strong><br />
-        Security is adaptive and is based on context. Different organizational values lead to different security measures. Cryptography in particluar is an ever-changing landscape. Security (including cryptography) can never be achieved by a one-time setup. Like a well oiled machines, it needs to be maintained and tweaked from time to time. <br /> <br />  
+        <li> <strong> Encryption Algorithms: </strong> Again, mathematical algorithms that help in maintaing the secrecy of data by keeping it private to everyone except the owner of a decryption key. </li>
 
-        <h4>Methods:</h4> <br />
-        <strong>1. Demystifying Cryptography:</strong> <br />
-        Cryptography is a complicated subject. What makes it complicated are the plethora of options (in terms of configuration and deploying) that exist to achieve security. Everday use of cryptography for the majority of professionals does not necissitate understanding the intricate details of the various flavors available. Through cryptodoneright, we aim to deliver content to our audience in the a clear and coherent fashion. <br /> <br />
+        <li> <strong> Utilities: </strong> These function in a similar way as cryptographic protocols but are used as utilties to connect to remote machines for control over a secure channel.
+        </li> <br />
 
-        <strong>2. Organized, easy-to-navigate Content:</strong> <br />
-        One way to further complicate cryprography is poor, unorganized documentation. cryptodoneright aims to set a standard template around which content will be published. After a few click around, you should find the website very easy to navigate through and search.  <br /> <br />
+        <strong> Every Category (drop-down) is sub-dividied into two categories: </strong><br /><br />
 
-        <strong>3. Community Driven: </strong> <br />
-        The website will be using a centralized databased where anyone can come in and contribute content. The content will automatically render according to the standard templates to maintain the overall feel of the website consistent. <br />
-        </p>
+        <img src="../../images/drop_down.png" style="width:200px;height:200px;" class="center" />
 
-        <p id="Mission">
-        <h3>Our Mission: </h3>
-        Ultimately, we are looking to move towards to create a comprehensive database that aims to educate the working population to the complexities and intricacies of "Security" in a simple and easy manner.
-        </p>
 
-        <p id="faq">
-        <h3>FAQ: </h3>
-        <strong>3.1. What is cryptology? Cryptography? Plaintext? Ciphertext? Encryption? Key? </strong> <br /> <br />
+        <li><strong>Introduction: </strong></li>
+        An Introduction page that walks through a basic set of FAQs to help establish the fundamentals of each of the parent categories. If you are new to cryptography, we strongly recommend going through the Introductions atleast once. Every page also has a footer section dedicated for "Further Reading" and "References". These sections contain links to external documentation that dive deeper into the concepts presented on a page. <br />
 
-          The story begins: When Julius Caesar sent messages to his trusted acquaintances, he didn't trust the messengers. So he replaced every A
-          by a D, every B by a E, and so on through the alphabet. Only someone who knew the ``shift by 3'' rule could decipher his messages. <br /> <br />
+        <img src="../../images/Introductions.png" style="width:500px;height:500px;" class="center" />
 
-          A cryptosystem or cipher system is a method of disguising messages so that only certain people can see through the disguise. Cryptography is
-          the art of creating and using cryptosystems. Cryptanalysis is the art of breaking cryptosystems---seeing through the disguise even when
-          you're not supposed to be able to. Cryptology is the study of both cryptography and cryptanalysis. <br /> <br />
 
-          The original message is called a plaintext. The disguised message is called a ciphertext. Encryption means any procedure to convert
-          plaintext into ciphertext. Decryption means any procedure to convert ciphertext into plaintext. <br /> <br />
+        <li><strong>Protocols/Algorithms:</strong></li>
+        All the other options under a category are the different algorithms/protocols. All of these options have their own set of strenghts and weaknesses (and in certain case only strengths or weaknesses). Once you click on any protocol/alogrithm's page, you'll see this:
 
-          A cryptosystem is usually a whole collection of algorithms. The algorithms are labelled; the labels are called keys. For instance,
-          Caesar probably used ``shift by n'' encryption for several different values of n. It's natural to say that n is the key here. <br /> <br />
 
-          The people who are supposed to be able to see through the disguise are called recipients. Other people are enemies, opponents, interlopers,
-          eavesdroppers, or third parties. <br /> <br />
+        <img src="../../images/landing_page.png" style="width:900px;height:600px;" class="center" /> <br /><br />
 
-        <strong>3.2. What are some properties satisfied by every strong cryptosystem? </strong><br /> <br />
+        <strong>01.BANNERS</strong><br />
+        Help deliver the important messages concerning the protocol/algorithm. These could link to detailed articles explaining the reasoning behing the banners. <br />
 
-          The security of a strong system resides with the secrecy of the key rather than with the supposed secrecy of the algorithm. <br /> <br />
+        <strong>02. INTRODUCTION & ATTACKS</strong><br />
+        A short description about the topic explaining its position in the world of cryptography, history and its vulnerabilities/attacks.<br />
 
-          A strong cryptosystem has a large keyspace, as mentioned above. It has a reasonably large unicity distance; see question 8.8. <br /> <br />
+        <strong>03.QUICKSTARTS</strong><br />
+        QuickStarts are designed to help different professionals learn and deploy different protocols or techniques using a Concept and an Example.. <br /><br />
 
-          A strong cryptosystem will certainly produce ciphertext which appears random to all standard statistical tests (see, for example, [CAE90]). <br /> <br />
-            
-          A strong cryptosystem will resist all known previous attacks. A system which has never been subjected to scrutiny is suspect. <br /> <br />
+        Let's talk about QuickStarts a little further. All of our Quickstarts are divided into three sections: <br /><br />
+  
+        <li> Protocol </li>
+        <li> Implementation </li>
+        <li> Configuration. </li><br />
 
-          If a system passes all the tests mentioned above, is it necessarily strong? Certainly not. Many weak cryptosystems looked good at first.
-          However, sometimes it is possible to show that a cryptosystem is strong by mathematical proof. ``If Joe can break this system, then
-          he can also solve the well-known difficult problem of factoring integers.'' See part 6. Failing that, it's a crap shoot. <br /> <br />
-
-        <strong>3.3. If a cryptosystem is theoretically unbreakable, then is it guaranteed analysis-proof in practice? </strong><br /> <br />
-
-          Cryptanalytic methods include what is known as ``practical cryptanalysis'': the enemy doesn't have to just stare at your ciphertext until he figures out the plaintext. For instance, he might assume ``cribs''---stretches of probable plaintext. If the crib is correct then he might be able to deduce the key and then decipher the rest of the message. Or he might exploit ``isologs''---the same plaintext enciphered in several cryptosystems or several keys. Thus he might obtain solutions even when cryptanalytic theory says he doesn't have a chance. <br /> <br />
-
-          Sometimes, cryptosystems malfunction or are misused. The one-time pad, for example, loses all security if it is used more than once! Even
-          chosen-plaintext attacks, where the enemy somehow feeds plaintext into the encryptor until he can deduce the key, have been employed. See
-          [KAH67]. <br /> <br />
-          
-        <strong>3.4. Why are many people still using cryptosystems that are relatively easy to break? </strong><br /> <br />
-
-          Some don't know any better. Often amateurs think they can design secure systems, and are not aware of what an expert cryptanalyst could do. And sometimes there is insufficient motivation for anybody to invest the work needed to crack a system. <br /> <br />
-
-        <strong>3.5. What are the basic types of cryptanalytic `attacks'? </strong><br /> <br />
-
-          A standard cryptanalytic attack is to know some plaintext matching a given piece of ciphertext and try to determine the key which maps one 
-          to the other.  This plaintext can be known because it is standard (a standard greeting, a known header or trailer, ...) or because it is
-          guessed.  If text is guessed to be in a message, its position is probably not known, but a message is usually short enough that the cryptanalyst
-          can assume the known plaintext is in each possible position and do attacks for each case in parallel.  In this case, the known plaintext can
-          be something so common that it is almost guaranteed to be in a message. <br /> <br />
-
-          A strong encryption algorithm will be unbreakable not only under known plaintext (assuming the enemy knows all the plaintext for a given
-          ciphertext) but also under "adaptive chosen plaintext" -- an attack making life much easier for the cryptanalyst.  In this attack, the enemy
-          gets to choose what plaintext to use and gets to do this over and over, choosing the plaintext for round N+1 only after analyzing the result of
-          round N. <br /> <br />
-
-          For example, as far as we know, DES is reasonably strong even under an adaptive chosen plaintext attack (the attack Biham and Shamir used).  Of
-          course, we do not have access to the secrets of government cryptanalytic services.  Still, it is the working assumption that DES is reasonably
-          strong under known plaintext and triple-DES is very strong under all attacks.
-        </p>
+These three sections hold special value in the world of cryptography. All vulnerabilties found in the world of cryptography are either 1. Flaws in the protocol, 2. Implementation 3. Configuration. We recommend that everyone understand the clear differences between these and use the document that we have created - https://cryptodoneright.org/ciscodemo/articles/cryptographic_protocols/flaw-categories.html
       </div>    
     </div>
 

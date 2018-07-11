@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SSH/SSHv2 FAQs</title>
+    <title>TLS/TLSv1.2 FAQ</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -128,8 +128,8 @@
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0"><a href="sshv2.html">SSHv2</a></li>
-         <li class="breadcrumb-item level1 active">SSHv2 FAQs</li>
+         <li class="breadcrumb-item level0"><a href="tls-1-2.html">TLS 1.2</a></li>
+         <li class="breadcrumb-item level1 active">TLS 1.2 FAQs</li>
        </ol>
     </div>
 
@@ -140,42 +140,62 @@
           <p>
            <img src="../../images/faqs.jpg" style="width:500px;height:100px;" class="center" />   
 
-            <center><h2>SSH/SSHv2 FAQs</h2></center>
+            <center><h2>TLS/TLSv1.2 FAQs</h2></center>
             <br /> <br />
+            <strong>#1. What exactly is TLS anyway? </strong> <br /> <br />
 
-            <strong> #1. What's the difference between versions 1 and 2 of the SSH protocol? </strong> <br /> <br />
+            TLS stands for “Transport Layer Security.” It is the security protocol that allows computers to communicate over the internet securely, without the transmissions being vulnerable to anyone they aren’t intended for. Without TLS, you wouldn’t be able to use your credit card on eCommerce sites or log into your bank account online.   <br /> <br />
 
-            <img src="../../images/sshv1-sshv2-diff.PNG" style="width:1200px;height:650px;" class="center" />
+            <strong>#2. Why Is TLS 1.2 necessary? </strong><br /> <br />
 
-            <strong> #2. How do I install my public key file on the remote host the first time? </strong> <br /> 
-                Connect by password authentication and use your terminal program's copy and paste feature. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>] <br /><br />
+            Due to several weaknesses found in TLS 1.0, many websites and internet services are now starting to require the use of TLS1.2.  The latest PCI compliance standards require that any site accepting credit card payments use TLS 1.2 after June 30th, 2018*.  Even though you have some time before it is required for PCI compliance, several internet services are moving to require the support of TLS 1.2 as early as next year.  Services such as PayPal, Authorize.net, Stripe, UPS, FedEx and many others already support TLS 1.2 and have indicated that they will eventually refuse TLS 1.0 connections.  The dates for when they will refuse TLS 1.0 connections are not clear, but your safest action is to upgrade to TLS 1.2 sooner than later. <br /> <br />
 
-            <strong> #3. I put my SSH public key file mykey.pub into my remote SSH directory, but public-key authentication doesn't work. </strong> <br />
-                The public key must be referenced in your remote authorization file. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>]<br /><br />
-                
-            <strong> #4. Public-key authentication isn't working. </strong> <br />
-                Use ssh -v, and check your keys, files, and permissions. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>]<br /><br />
+            <strong>#3. What are the consequences if I don’t upgrade to TLS 1.2? </strong><br /> <br />
 
-            <strong> #5. Password authentication isn't working. </strong> <br />
-                Use ssh -v. There are a variety of possible causes. [<a heref="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-48295.html">Section 12.2.2.2, "Password authentication"</a>] <br /><br />
+            First and foremost, your customer’s data is at risk.  In the event of a data breach, consequences for not being PCI compliant can include fines and your merchant bank can terminate your ability to process credit cards. <br /> <br />
 
-            <strong> #6. Trusted-host authentication isn't working (SSH1 RhostsRSA, SSH2 hostbased). </strong> <br />
-                Use ssh -v. Check your four control files, hostnames, and setuid status of the SSH client program or ssh-signer2. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-54149.html">Section 12.2.2.3, "Trusted-host authentication"</a>] <br /><br />
+            Second, crucial functions on your website will stop working overtime as the services your website uses require TLS 1.2.  This means that your payment processing and real-time shipping rates could stop working at some point over the next year if you don’t address it. <br /> <br />
 
-            <strong> #7. How do I authenticate without typing a password or passphrase? </strong> <br />
-                ssh-agent, unencrypted keys, trusted-host authentication, or Kerberos. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-48779.html">Section 12.2.2.1, "General authentication problems"</a>] <br /><br />
+            <strong>#4. How can I tell if my site is vulnerable? </strong><br /> <br />
 
-            <strong> #8. How do I secure FTP with port forwarding? </strong> <br />
-                Forward a local port to port 21 on the FTP server for the control connection; the data connection is much harder. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-14145.html">Section 12.2.5.6, "Port forwarding"</a>] <br /><br />
+            If you use a hosted eCommerce solution like Weebly® or Shopify®, you are most likely already protected.  However, if you use a third party or a custom-built eCommerce solution, then you will need to verify that you are protected. <br /> <br />
 
-            <strong> #9. X forw g isn't working. </strong> <br />
-                Don't set your remote DISPLAY variable manually. (And there are other things to check.) [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-14145.html">Section 12.2.5.6, "Port forwarding"</a>]<br /><br />
+            Some examples of third party eCommerce solutions are AspDotNetStorefront, Magento, ZenCart, and Episerver, among many others.  These eCommerce solutions are typically either self-hosted or hosted by the implementer that created or is responsible for the application. If you are responsible for an eCommerce application, check out the flowchart in our eBook to determine if you are using outdated encryption. <br /> <br />
 
-            <strong> #10. Why don't wildcards or shell variables work on the scp command line? </strong> <br />
-                Your local shell expands them before scp runs. Escape the special characters. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-65366.html">Section 12.2.5.4, "scp"</a>] <br /><br />
+            <strong>#5. I updated our SSL certificate. Isn’t that good enough? </strong><br /> <br />
 
-            <strong> #11. A feature of ssh or scp isn't working, but I'm sure I'm using it correctly. </strong> <br />
-                Use ssh -v. Also the system configuration may be overriding your settings.<br /><br />
+            No.  Your SSL certificate is only handled incoming traffic to your web server, it doesn’t address calls your web server is making to other services. <br /> <br />
+
+            <strong>#6. What do I need to do to ensure that my site is compliant? </strong><br /> <br />
+
+            Unfortunately, this is not a simple answer. There are several variables and a number of systems and software platforms involved. Every business has a different configuration, and there is no easy set of step-by-step instructions that will work in all cases.  <br /> <br />
+
+            At a high level, you will need to ensure that the following platforms and connections are compatible with TLS 1.2: <br /> <br />
+                <ul>
+                <li>Web Server</li>
+                <li>Internet Information Services (IIS)</li>
+                <li>.NET Framework</li>
+                <li>eCommerce Application</li>
+              </ul>
+              <br />
+            You may also need to look at the compatibility of the browsers you support for your users as well as any web services involved in your payment and fulfillment process. Our “Understanding TLS 1.2” eBook goes into greater detail on these systems, including a technical walk-through of a security upgrade. <br /> <br />
+
+            <strong>#7. Will we have to update our eCommerce software platform? Or is there a way to patch what I have today? </strong><br /> <br />
+
+            It depends on your eCommerce software platform.  The great news is that for AspDotNetStorefront users we have a pre-built solution for you that you can use without needing to upgrade.  Contact us to learn more. <br /> <br />
+
+            Ultimately, updating to the latest security protocols protects you, your users, and your reputation.  <br /> <br />
+
+            <strong> #8. What browsers/versions will provide the option for TLS 1.2?  </strong><br />
+            These browser versions will support the option to use TLS 1.2, regardless of what operating system 
+            they  are  used  on.    Below  is  a  list  of  the  browsers  and  versions  that  are usually certified  for  use  on most third-party softwares and support TLS 1.2.  <br /> <br />
+
+            Browser Versions <br />
+            ------------------------------------ <br />
+            Internet Explorer 8, 9, 10 & 11  <br />
+            Chrome 42, 43 & 44 <br />
+            Firefox 34, 35 &36 <br />
+            Safari 7 & 8  <br />
 
           </p>
       </div>

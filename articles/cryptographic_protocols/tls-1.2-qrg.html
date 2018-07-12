@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TLSv1.2 Quick Reference Guide</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background="..\..\images\test9.jpg">
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="black">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="black">Cryptographic Algorithms</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="black">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="black">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">                       
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="black">About</font></a></li>
+                <li><a href="contact.html"><font color="black">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="tls-1-2.html">TLS 1.2</a></li>
+         <li class="breadcrumb-item level1 active">TLS 1.2 FAQs</li>
+       </ol>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+        
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p>
+           <img src="../../images/qrg.jpg" style="width:400px;height:100px;" class="center" />   
+
+            <center><h2>TLS/TLSv1.2 Quick Reference Guide</h2></center>
+            <br /> <br />
+            <strong>1. What is the recommended TLS version currently ? (Date:- 7/11/2018)</strong> <br />
+            Answer:- TLS 1.2 <br /> <br />
+
+            <strong>2. Are you developer? If yes, you might be thinking:- " I need to use a security feature in my application? :thinking: Why don't I just code my own? Shouldn't be too hard. What could go wrong?" </strong> <br /> <br />
+
+            Answer:- Never roll your own crypto! NEVER!!!! <br />
+            It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used.  <br /><br />
+
+            <strong>3. What is the library that I can use to use TLS 1.2 for my application?</strong><br />
+            Answer:- OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols. <br /><br />
+
+            <strong>4. What version of OpenSSL implements TLS 1.2 ?</strong> <br />
+            Answer:- OpenSSL version 1.0.1 released on March 14, 2012 was the first OpenSSL Library to support TLSv1.2. <br /><br />
+
+            <strong>5. What is the latest release of OpenSSL ?</strong> <br />
+            Answer:- The latest major release for OpenSSL is 1.1.0 (released on 25th August, 2016).  <br /> <br />
+
+            <strong>6. How do I find out what OpenSSL version that you are using ? </strong> <br />
+            Answer:- <br />
+            Use the command below:- <br />
+            $ openssl version <br /> <br />
+
+            For more information use:- <br />
+            $ openssl version -a <br />
+
+            <strong>7. What are the examples of some Libraries in Python that I can use?</strong> <br />
+            Answer:- <br />
+            ssl library <br />
+            pyopenssl library <br /> <br />
+
+            are some of the examples. There are many more. <br /> <br />
+
+            <strong>8."Oh I see a openssl upgrade. Must be just like a normal Windows upgrade. Let me quickly do it. No harm in a simple upgrade. Right?" Should I upgrade?</strong> <br />
+            Answer:- <br />
+            Think Again!!! <br />
+            Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. <br /><br />
+
+            <strong>9. What are the recommended Ciphers that I can configure in TLS 1.2?</strong> <br />
+            Answer:- <br />
+            TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_ECDSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289 <br />
+            TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_ECDSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289 <br />
+            TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289 <br /> <br />
+
+
+            <strong>10. What are the Cihper suites that I should avoid ?</strong> <br />
+            Answer:- <br />
+            TLS_DHE_RSA_WITH_AES_128_CBC_SHA <br />
+            TLS_DHE_RSA_WITH_AES_256_CBC_SHA <br />
+            TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
+            TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256  <br /> <br />
+
+            <strong>11. Why are the Cihper Suites in question 10. NOT safe?</strong> <br />
+            Answer:- <br />
+            The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the logjam attack. <br />
+
+          </p>
+      </div>
+    </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <p>
+	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	        </p>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

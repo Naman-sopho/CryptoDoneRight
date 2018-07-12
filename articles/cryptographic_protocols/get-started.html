@@ -145,7 +145,20 @@
          </li></a>
       </ul>
     </div>
-	
+    <style>
+    figure {
+    display: block;
+    border: 1px gray;
+    align-content: center;
+    }
+    figure img {
+    vertical-align: text-bottom;
+    }
+    figure figcaption {
+    
+    text-align: center;
+    }
+	  </style>
 	<!--	<div class="alert alert-warning">
       Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
     </div>
@@ -156,15 +169,25 @@
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 	       
-        <img src="../../images/Getting-started.png" style="width:600px;height:200px;" class="center" />
+        <img src="../../images/Get-Started-Icon.jpg" style="width:400px;height:200px;" class="center" />
 
         <p id="getting started">
         
-        <b><h3>Are you an IT professional, software engineer, a manager or just a crypto enthusiast? Looking to use cryptography but nor sure how? </h3></b>
+        <b><h3>Are you an IT professional, software engineer, a manager or just a beginner in crypto? Looking to use cryptography but nor sure how? </h3></b>
 
-        <strong> Cryptodoneright </strong> serves as a structured knowlege base that guides you through the various protocols, algorithms and utilities that come under the umbrella of cryptography. The website is divided into the following categories: <br /><br />
+        <strong> Cryptodoneright </strong> serves as a knowlege base that guides you through the various protocols, algorithms and utilities that come under the umbrella of cryptography. The misson of this knowledge base is to help improve the overall understanding of how cryptography is deployed, implemented, maintained and configured in the most secure fashion. Crytpography can be a burden of information if consumed without any guidance and understanding of basics. All of the subject's complications do not have to be understood by a developer, an IT Engineer or a Manager to use it efficiently. Crytpodoneright aims to solve this problem by keeping the information brief and to the point while providing options to learn further about a topic. This presents a totally amenable learning process where you could either cover a topic in brief or in detail. <br /><br />
+
+
+        Additionally, every page also has a footer section dedicated for "Further Reading" and "Related Articles". These sections contain links to external documentation that dive deeper into the concepts presented on a page. <br /><br />
+
+        <figure>
+        <img src="../../images/references_footer.png" style="width:100%;height:20%;" class="center" alt="missing" />
+        <figcaption>Fig.1 - There is always more to learn at the footer section!</figcaption>
+        </figure> <br /><br />
+
+        In order to faciliate ease of navigation, the website is divided into the three broad categories. The <strong> top level hierarchy </strong>starts here:<br /><br />
         
-        <li> <strong> Cryptographic Protocols: </strong> These are well defined protocols (RFCs) to establish a secure channel between two endpoints in a network. </li>
+        <li> <strong> Cryptographic Protocols: </strong> These are well defined protocols (RFCs) to establish a secure channel between two endpoints in a computer network.  </li>
 
         <li> <strong> Hashing Algorithms: </strong> These are  mathematical algorithms that help in mainitaining the integrity of a piece of data. If a piece of data has been tampered with, hashing allows you to identify it but not remidiate it. Hashing Algorithms are also one-way functions, meaning if you hash a piece of data, you cannot reverse the hash to obtain the plain text. </li>
 
@@ -173,22 +196,32 @@
         <li> <strong> Utilities: </strong> These function in a similar way as cryptographic protocols but are used as utilties to connect to remote machines for control over a secure channel.
         </li> <br />
 
-        <strong> Every Category (drop-down) is sub-dividied into two categories: </strong><br /><br />
-
-        <img src="../../images/drop_down.png" style="width:200px;height:200px;" class="center" />
-
+        <strong> You'll find these categories on the home bar of the wesbite. These expand to drop down menus. For example, under Encryption: </strong><br /><br />
+        
+        <figure>
+        <img src="../../images/drop_down.png" style="width:150px;height:200px;" class="center" alt="missing" />
+        <figcaption>Fig.1 - Encryption's Drop Down Menu</figcaption>
+        </figure>
 
         <li><strong>Introduction: </strong></li>
-        An Introduction page that walks through a basic set of FAQs to help establish the fundamentals of each of the parent categories. If you are new to cryptography, we strongly recommend going through the Introductions atleast once. Every page also has a footer section dedicated for "Further Reading" and "References". These sections contain links to external documentation that dive deeper into the concepts presented on a page. <br />
+        An Introduction page that walks through a basic set of FAQs to help establish the fundamentals of each of the parent categories. If you are new to cryptography, we strongly recommend going through the Introductions atleast once. . <br />
 
-        <img src="../../images/Introductions.png" style="width:500px;height:500px;" class="center" />
+
+        <figure>
+        <img src="../../images/Introductions.png" style="width:500px;height:500px;" class="center" alt="missing" />
+        <figcaption>Fig.2 - Landing page of Encryption</figcaption>
+        </figure>
+
 
 
         <li><strong>Protocols/Algorithms:</strong></li>
-        All the other options under a category are the different algorithms/protocols. All of these options have their own set of strenghts and weaknesses (and in certain case only strengths or weaknesses). Once you click on any protocol/alogrithm's page, you'll see this:
+        All the other options under a category are the different algorithms/protocols under the parent category. So for example, in Encryption, the knowledge base currently covers AES, DES and 3DES. All of these options have their own set of strenghts and weaknesses (and in certain case only strengths or weaknesses). In the case of AES, you'll notice that the menu further expands to a couple of options. These options, for the unfamiliar, serve as 
+        Visiting any of these options will lead to the a landing page that looks like this:
 
-
-        <img src="../../images/landing_page.png" style="width:900px;height:600px;" class="center" /> <br /><br />
+        <figure>
+        <img src="../../images/landing_page.png" style="width:700px;height:500px;" class="center" alt="missing" />
+        <figcaption>Fig.3 - Landing page of AES CTR</figcaption>
+        </figure> <br /><br />
 
         <strong>01.BANNERS</strong><br />
         Help deliver the important messages concerning the protocol/algorithm. These could link to detailed articles explaining the reasoning behing the banners. <br />
@@ -199,13 +232,21 @@
         <strong>03.QUICKSTARTS</strong><br />
         QuickStarts are designed to help different professionals learn and deploy different protocols or techniques using a Concept and an Example.. <br /><br />
 
-        Let's talk about QuickStarts a little further. All of our Quickstarts are divided into three sections: <br /><br />
+        Let's talk about <strong> QuickStarts </strong> a little further. All of our Quickstarts are structured around <strong> three further categories:</strong>: <br /><br />
   
         <li> Protocol </li>
         <li> Implementation </li>
         <li> Configuration. </li><br />
 
-These three sections hold special value in the world of cryptography. All vulnerabilties found in the world of cryptography are either 1. Flaws in the protocol, 2. Implementation 3. Configuration. We recommend that everyone understand the clear differences between these and use the document that we have created - https://cryptodoneright.org/ciscodemo/articles/cryptographic_protocols/flaw-categories.html
+These three sections hold special value in the world of cryptography. All vulnerabilties found in the world of cryptography are either 1. Flaws in the protocol, 2. Implementation 3. Configuration. We cannot recommend it enough that everyone understand the clear differences between these and use the <a href=https://cryptodoneright.org/ciscodemo/articles/cryptographic_protocols/flaw-categories.html>document that we have created. </a> <br /><br />
+
+Our Quickstarts present concepts surrounding the above sections. This helps in establishing a clear distinction between different vulnerabilties in cryptography which in turn greatly benifits the approach that you could take to solve your requirment. <br /><br />
+
+And for someone looking for <strong> quick references, every landing page has a link to a "To go" section which presents all of the must know information about a protocol/algorithm in a clear and concise fashion for you to go. </strong> <br /><br /> 
+
+And, that's it! Happy learning and please shoot us an email if you have any questions or feedback.
+
+
       </div>    
     </div>
 

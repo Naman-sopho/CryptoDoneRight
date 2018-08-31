@@ -317,11 +317,23 @@
             </div>
             <div id="collapse6" class="panel-collapse collapse">
 			<p>
-			<strong> Disclaimer </strong> <br />
-			As we all know <a href="ssl-3.html">SSLv3.0</a> is vulnerable to POODLE and DROWN. <br /> <br />
+			
 			<span class="red">Certificates are not the same as protocols </span> <br />
-			Before anyone starts worrying that they need to replace their existing SSL Certificates with TLS Certificates, it’s important to note that 
-			certificates are not dependent on protocols. That is, you don’t need to use a TLS Certificate vs. an SSL Certificate. While many vendors tend to use 
+			To understand the importance of ceritificates, it is easier to first understand the concept of Public Key Cryptography (where we can own a “private key”, which we keep secret, and a “public key”, which we can share).  There are two common things we can do with public keys:
+			<ul>
+			<li>
+Anyone with the public key can encrypt the message; only we can decrypt that; that’s because the private key is what is needed to decrypt and we’re the only one that knows that.
+</li>
+<li>
+We can ‘sign’ a message with our private key; anyone with the public key can verify that we signed it.  No one else can ‘sign’ a message that will verify with our public key, because you need our private key to sign, and we’re the only one that knows that.
+</li>
+</ul>
+<p>
+So, “if someone gets a public key, how does he know it’s ours”?  After all, an attacker can claim to be us, and give out his own public key, how does (say) a web browser know that he’s actually giving his credit card into to amazon.com and not hackers-r-us.com?
+The answer is a certificate, a certificate is a cryptographical binding between an identity (e.g. amazon.com) and a key.  It includes a listing of the identity, and a listing of the public key, signed by a Certificate Authority.  Everyone knows the public key of the Certificate Authority.  Hence, if you get a certificate, you can verify the signature (with the Certificate Authority’s public key); if that validates, you know (because you trust the Certificate Authority) that the public key is owned by the listed identity.  Then, if the listed identity is who you expect to be talking to, then you can use the public key knowing who has the private key. <br /><br />
+ 
+ 
+		    <strong>NOTE: </strong>It’s important to note that certificates are not dependent on protocols. That is, you don’t need to use a TLS Certificate vs. an SSL Certificate. While many vendors tend to use 
 			the phrase “SSL/TLS Certificate”, it may be more accurate to call them “Certificates for use with SSL and TLS", since the protocols are determined by 
 			your server configuration, not the certificates themselves.
 

@@ -158,35 +158,36 @@
 
             <strong>#4. How can I tell if my site is vulnerable? </strong><br /> <br />
 
-            If you use a hosted eCommerce solution like Weebly® or Shopify®, you are most likely already protected.  However, if you use a third party or a custom-built eCommerce solution, then you will need to verify that you are protected. <br /> <br />
+            The easiest and one of the simplest way to test the security of your site or web server is to run your website through the online ssl tester. The link for this SSL web server tester is <a href="https://www.ssllabs.com/ssltest/"> here </a>.
 
-            Some examples of third party eCommerce solutions are AspDotNetStorefront, Magento, ZenCart, and Episerver, among many others.  These eCommerce solutions are typically either self-hosted or hosted by the implementer that created or is responsible for the application. If you are responsible for an eCommerce application, check out the flowchart in our eBook to determine if you are using outdated encryption. <br /> <br />
+            SSL Labs by Qualys is a collection of documents, tools and thoughts related to SSL. It's an attempt to better understand how SSL is deployed, and an attempt to make it better.
 
             <strong>#5. I updated our SSL certificate. Isn’t that good enough? </strong><br /> <br />
 
-            No.  Your SSL certificate is only handled incoming traffic to your web server, it doesn’t address calls your web server is making to other services. <br /> <br />
+            No. To put it simply, your SSL certificate  is literally step 1 of "50" to ensure that your webserver is hardened. There are a lot of configuration that needs to be done on your server to ensure that all aspects of server is closed to any sort of attacks. I would suggest also revisiting the page about "PIC" model to get a feel of what I am aiming at over here. <br /> <br />
+
+            There are multiple configurations in most web servers which are weak by default. They use weak protocols such as SSLv2 or SSLv3. They support broken cipher suites such as RC4 etc. Security features such as HSTS, OCSP stapling are disabled by default. <br /> <br />
+
+            In short, carefully vetting each and every aspect of configuration must be done meticulously to ensure that there are no holes that a potential adversary can use as an advantage to squirm their way into the server.
 
             <strong>#6. What do I need to do to ensure that my site is compliant? </strong><br /> <br />
 
             Unfortunately, this is not a simple answer. There are several variables and a number of systems and software platforms involved. Every business has a different configuration, and there is no easy set of step-by-step instructions that will work in all cases.  <br /> <br />
 
+            Below is a simple example:
             At a high level, you will need to ensure that the following platforms and connections are compatible with TLS 1.2: <br /> <br />
                 <ul>
                 <li>Web Server</li>
                 <li>Internet Information Services (IIS)</li>
                 <li>.NET Framework</li>
-                <li>eCommerce Application</li>
+                <li> Maybe some eCommerce Application</li>
               </ul>
               <br />
-            You may also need to look at the compatibility of the browsers you support for your users as well as any web services involved in your payment and fulfillment process. Our “Understanding TLS 1.2” eBook goes into greater detail on these systems, including a technical walk-through of a security upgrade. <br /> <br />
+            You may also need to look at the compatibility of the browsers you support for your users as well as any web services involved in your payment and fulfillment process. <br />
 
-            <strong>#7. Will we have to update our eCommerce software platform? Or is there a way to patch what I have today? </strong><br /> <br />
+            Another good practice is run your website through a bunch of tests in the SSL Labs site and ensure that your grade is A and above. <br /> <br />
 
-            It depends on your eCommerce software platform.  The great news is that for AspDotNetStorefront users we have a pre-built solution for you that you can use without needing to upgrade.  Contact us to learn more. <br /> <br />
-
-            Ultimately, updating to the latest security protocols protects you, your users, and your reputation.  <br /> <br />
-
-            <strong> #8. What browsers/versions will provide the option for TLS 1.2?  </strong><br />
+            <strong> #7. What browsers/versions will provide the option for TLS 1.2?  </strong><br />
             These browser versions will support the option to use TLS 1.2, regardless of what operating system 
             they  are  used  on.    Below  is  a  list  of  the  browsers  and  versions  that  are usually certified  for  use  on most third-party softwares and support TLS 1.2.  <br /> <br />
 

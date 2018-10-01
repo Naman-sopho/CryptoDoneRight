@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AES FAQ</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background="..\..\images\test9.jpg">
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="black">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="black">Cryptographic Algorithms</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="black">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="black">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">                       
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="black">About</font></a></li>
+                <li><a href="contact.html"><font color="black">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="example_index.html">Hashing Algorithms</a></li>
+		 <li class="breadcrumb-item level"><a href="sha2.html">SHA2</a></li>
+         <li class="breadcrumb-item level0 active">SHA2 FAQ</li>
+       </ol>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+        
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p>
+           <img src="../../images/faqs.jpg" style="width:500px;height:100px;" class="center" />   
+
+            <center><h2>SHA2 FAQs</h2></center>
+            <br /> <br />
+            <strong>What is SHA-2?</strong> <br /> <br />
+
+            SHA stands for “secure hash algorithm” and it is an algorithm that is used to generate SSL certificates. SSL Certificates are used by web browsers to verify the authenticity of a webserver.<br />
+
+			Currently most SSL certificates rely on the SHA-1 algorithm for validation. The SHA-1 algorithm was initially introduced 20 years ago and is targeted for use by computers from that time. Modern computing will soon advance to the point where the SHA-1 algorithm will become insecure. <br />
+
+To avoid any potential security issues that might arise from using an old algorithm, companies such as Microsoft and Google announced that they will be deprecating the use of SHA-1 and will start using a new and more secure algorithm, named SHA-2.<br /> <br />
+
+            <strong>Where is SHA2 being used? </strong><br /> <br />
+			Some of the most common applications of any hashing algorithm are:<br />
+			<ul>
+			<li>Cryptographic Signature</li>
+			<li>Commitment Schemes</li>
+			<li>Generate MACs</li>
+			<li>Key Derivation Function</li>
+			</ul><br />
+
+			Further descriptions of the above applications are mentioned here: <a href="https://cryptodoneright.org/ciscodemo/articles/hashing_algorithms/example_index.html"> https://cryptodoneright.org/ciscodemo/articles/hashing_algorithms/example_index.html </a><br />
+
+			SHA2 is a very common algorithm being used by the industry. It has good security properties and is easy to compute too. Without question, it's way better than SHA-1, and any critical SHA-1 enabled certificates, applications, and hardware devices using SHA-1 should be moved to SHA-2.<br /><br />
+			
+            <strong>What will happen if my site has a SHA-1 SSL certificate?</strong><br /> <br />
+
+			Customers using the Chrome browser to access secure websites may experience negative visual security indicators if the SHA-1 certificates are valid beyond December 31, 2015. If they are on Windows, they will not be able to access sites with SHA-1 certificates after January 1, 2017.<br /><br />
+			
+			<ul>
+
+			<li>Starting December 2014 (Chrome version 39+), customers using Chrome version 39 or higher and SHA-1 certificates that expire between June 1st, 2016 and December 31st, 2016 will see a yellow triangle in their Google Chrome browser (“secure but with minor errors”).</li>
+			<li>Customers using Chrome version 40 with SHA-1 certificates that expire on or after 1 January 2017 will be treated as “neutral, lacking security”.</li>
+			<li>Customers using Chrome version 41 with SHA-1 certificates that expire any time between January 1st, 2016 and December 31st, 2016 will be treated as “secure, but with minor errors”.</li>
+			<li>Customers using Chrome 41 with SHA-1 certificates expiring after January 1st, 2017will be treated as “affirmatively insecure”.</li>
+			<li>As of January 1 2017, Microsoft will stop trusting SHA-1 SSL certificates.</li></ul><br /><br />
+	
+            <strong>How to migrate my certificate/PKI infrastructure from SHA1 to SHA2? </strong><br /> <br />
+
+			Very detailed instructions to migrate have been presented here: <a href="https://www.csoonline.com/article/2879073/encryption/all-you-need-to-know-about-the-move-from-sha1-to-sha2-encryption.html">https://www.csoonline.com/article/2879073/encryption/all-you-need-to-know-about-the-move-from-sha1-to-sha2-encryption.html</a>   <br /> <br />
+
+            <strong>If SHA3 is here, why am I not moving to it?</strong><br /> <br />
+
+            Although no significant cryptographic weakness has been found in SHA-2, it's considered algorithmically related to SHA-1. Most experts believe its lifecycle will be similar to that of SHA-1. NIST already approved in August 2015 a replacement cryptographic hash algorithm standard it called SHA-3. SHA-3 does not share the same mathematical properties as SHA-1 and SHA-2, and thus should be resistant to cryptographic attack longer than SHA-2.<br /><br />
+
+			Unfortunately, anyone thinking of delaying their SHA-2 migration in hopes of moving directly to SHA-3 will be greatly disappointed. Widespread adoption of SHA-3 is probably many years away, whereas SHA-2 is required now. If you moved to SHA-3 now, most, if not all, of your cryptographic-relying applications and devices would probably error out!<br /><br /> 
+
+            <strong>How to tell if I'm using SHA1?</strong><br /> <br />
+
+			There are various ways you can tell if your application or device is using SHA1. Here are some general techniques:<br />
+			<ol>
+			<li> If you are using a device to serve as your VPN gateway, you should be able to look into the configuration of the VPN and check if SHA1 is enabled. </li>
+			<li> If you are using an application, it is most convinient to ensure that the documentation of the application specifically mentions support for SHA2 and above only. It is likely that applications will still support SHA1 for backward compatibility but it is recommended that SHA1 be disabled unless absoultely required. </li>
+			<li> If there is software that is utilizing SHA1, here are some libraries for popular programming languages which support SHA1. Keep a look out for these and check if SHA1 is being utlized:<br />
+				<ul>
+				<li>Python: <a href="https://docs.python.org/2/library/hashlib.html#module-hashlib">Lib/hashlib.py</a></li>
+				<li>Java: <a href="https://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html#sha1Hex(java.lang.String)">Class DigestUtils </a><br />
+				<a href="https://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/MessageDigestAlgorithms.html">Class MessageDigestAlgorithms</a></li>
+				<li>C++: <a href="https://www.cryptopp.com/">Crypto++</a></li></ul>
+			</li>
+			</ol>
+			<br /> <br />
+
+          </p>
+      </div>
+    </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <p>
+	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	        </p>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

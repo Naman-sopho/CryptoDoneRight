@@ -179,11 +179,46 @@ For the above settings, there have been examples mentioned below.
 <ul>
 
 <strong>Webservers: </strong> <br /> <br />
-Enabling SHA2 in Webservers is usually a matter of tweaking configuration. Providing the option to tweak VPN settings should contain an option to change the cipher suite or more specifically the hash algorithm.  
+Enabling SHA2 in Webservers is usually a matter of tweaking configuration. Providing the option to tweak VPN settings should contain an option to change the cipher suite or more specifically the hash algorithm. These are the list of Servers that support and do not support SHA2.<br /><br /> 
+
+<strong>Servers – support SHA-256</strong><br />
+Apache server and OpenSSL 0.9.8o+<br />
+Apache 2.0.63+ , OpenSSL 1.1.x<br />
+OpenSSL based servers - OpenSSL 0.9.8o+<br />
+Windows Server 2003+ with patch 938397<br />
+Windows Server 2003+ or XP client with patch 968730<br />
+Windows Server 2008+<br />
+Java based servers - 1.4.2+<br />
+Cisco ACE module software version A4(1.0)<br />
+Citrix Receiver models:<br />
+  <ul>
+  <li>Mac 11.8.2</li>
+  <li>Windows 4.1 (std)</li>
+  <li>Windows 3.4 (ent)</li>
+  <li>Windows 8/RT (1.4)</li>
+  </ul>
+Oracle WebLogic v10.3.1+ see bug8422724<br />
+Oracle Wallet Manager 11.2.0.3+<br />
+IBM HTTP Server 8.5 (with Lotus Domino  9+)<br />
+Juniper Secure Access -  SA 6.4R5, 6.5R3, and 7.0R1 and later releases.<br />
+Websphere application Server v8.0.0.4<br /><br />
+
+<strong>Servers which reportedly DO NOT support SHA-256 in their entirety</strong><br />
+
+Juniper SBR<br />
+IBM Domino<br />
+<a href="https://www.citrix.com/content/dam/citrix/en_us/documents/data-sheet/citrix-workspace-app-feature-matrix.pdf?accessmode=direct">Citrix Receiver models</a><br />
+Linux 13.0<br />
+IOS 5.8.3<br />
+Android 3.4.13<br />
+Playbook 1.0<br />
+Blackberry 2.2 / BlackBerry 1.0 Tech Preview<br />
+Cisco ACE module software versions A2 and A3<br />
+[Source: https://knowledge.digicert.com/solution/SO25586.html] 
 <br /><br />
 <li>
 <u>Apache: </u> <br/>
-To add TLSs1.2 you just need to make sure that your SSLCipherSuite has the following cipher in your ‘https virtual host’ configuration:
+To add SHA2 you just need to make sure that your SSLCipherSuite has the following cipher in your ‘https virtual host’ configuration:
 <pre>
 <code>
 # Many ciphers defined here require a modern version (1.0.1+) of OpenSSL. Some

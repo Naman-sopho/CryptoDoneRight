@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SHA-2 demo</title>
+    <title>SHA2</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,7 +33,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body background="..\..\images\test8.jpg">
+  <body background="..\..\images\test9.jpg">
     <div id="header">
       <header id="fh5co-header-section">
         <div class="container">
@@ -128,17 +128,34 @@
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="example_index.html">Hashing Algorithms</a></li>
-         <li class="breadcrumb-item level0 active">SHA-2</li>
+         <li class="breadcrumb-item level0 active">SHA2</li>
        </ol>
     </div>
-    <div id="testtitle">
-        <strong style="font-size:3vw;">SHA-2</strong>
+
+  <div id="testtitle">
+        <strong style="font-size:3vw;">SHA2</strong>
   </div>
-      <div class="alert alert-warning">
-      <strong>Under Construction!</strong>
+    <a href="sha3.html"><div class="alert alert-danger">
+      <strong> This is among the recommended standards for hashing.</strong>
+    </div></a>
+    
+  <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#"><li>
+          Developer's QuickStart
+        </li></a>
+        <a href="#"><li>
+          IT  Admin's QuickStart
+     </li></a>
+    <a href="#"><li>
+          Manager's QuickStart
+        </li></a>
+	<a href="sha2-faq.html"><li>
+		  SHA2 FAQ
+	    </li></a>
+      </ul>
     </div>
-
-
 
 
 
@@ -146,57 +163,68 @@
       <div class="row">
         <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
           <!--<div class="title">
-            <h2><span>SHA-2 Hashing Algorithm</span></h2>
+            <h2>SHA2 Hashing Algorithm</h2>
           </div>-->
           <div class="timestamp">
-            <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
+            <p><span>Last Updated Mon, 1 Oct 2018 19:12:00 -0400</span></p>
           </div>
           <div class="description">
             <p>
-               SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA).[3] Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed "hash" (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data's integrity.
-             </p>
+			SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA). Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed "hash" (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data's integrity. 
+			<br /><br />
+			Why SHA2?<br /><br />
+			At this time, SHA-1 is acceptable. However, with the continual increase in computing power the security of SHA-1 will become a concern in the future. DigiCert recommends that you accelerate SHA-2 deployment where possible and prepare to migrate fully to SHA2.
+			</p>
           </div>
         </div>
 
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/devLogo.png" />
-          <div>
-            <button class="btn btn-warning">DEV QUICKSTART</button>
-
+		<br /><br /><br />
+		<a href="sha2-dev-qs.html" class="btn btn-success"> <img class="logos" src="../../images/devLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
             </div>
           </div>
-        </div>
-
-
-
+        
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/itLogo.png" />
-          <div>
-            <button class="btn btn-warning">IT QUICKSTART</button>
-
+		<br /><br /><br />
+		<a href="#" class="btn btn-success"> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
             </div>
-
           </div>
-        </div>
+
+          <div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
+			<br /><br /><br />
+		<a href="#" class="btn btn-success"> <img class="logos" src="../../images/manager.png"/>
+            MANAGER QUICKSTART</a>
+			<p>
+              Are you a Manager? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+
       </div>
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <p>
-	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	        </p>
+          <ul>
+	           <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
+">History of Hash Functions</a></li>
+            <li>
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+	        </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
@@ -208,7 +236,6 @@
       	  </ul>
         </div>
       </div>
-
 
       <div class="footerfix"></div>
       <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.

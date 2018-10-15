@@ -299,7 +299,7 @@ To enable TLS 1.2 protocols on web browsers, see the list below. <br /> <br />
 <li>Open Firefox</li>
 <li>In the address bar, type about:config and press Enter </li>
 <li>In the Search field, enter tls. Find and double-click the entry for security.tls.version.min</li>
-<li>Set the integer value to 3 to force protocol of TLS 1.3 </li>
+<li>Set the integer value to 3 to force protocol of TLS 1.2 </li>
 <li>Click OK</li>
 <li>Close your browser and restart Mozilla Firefox</li>
 </ul>
@@ -354,16 +354,12 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 		 
 		<strong>TLS Recommended Ciphers:</strong><br />
 		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br />
 		TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_ECDSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_GCM_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
-		TLS_ECDHE_RSA_WITH_AES_192_CBC_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br /><br />
 		
 		<strong>Avoid the following ciphers:</strong> <br />
@@ -372,14 +368,18 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 		TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
 		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
 		
-		<strong>Note:</strong> 
-		The above DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the <a href="ssl-3-vuln.html">Logjam</a> attack . This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface. The following ciphers should be supported, but aren’t recommended for best practices. The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to <a href="ssl-3-vuln.html">ROBOT Attack</a>.
+		The following ciphers <strong>may be supported, but aren’t recommended for best practices.</strong> The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to <a href="https://robotattack.org/"> ROBOT Attack.</a> <br /><br />
 		
 		TLS_RSA_WITH_AES_128_CBC_SHA<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA<br />
 		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA256<br /><br />
+		
 		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
+		
+		<strong>Note:</strong> <br />
+
+
 		<!-- <strong> More recommendations: </strong> <br />
 		<ul>
 		<li>Setup DH parameters to enable ephemeral DH 2048 cipher suites</li>
@@ -389,11 +389,8 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 		<li>For most websites, using RSA keys stronger than 2048 bits and ECDSA keys stronger than 256 bits is a waste of CPU resources and might impair user experience. Similarly, increasing the strength of the ephemeral key exchange beyond 256 bits for ECDHE has little benefit.</li>
 		<li>Avoid: OpenSSL v1.0.0 and below EOL, v1.0.1 EOL 12/31/16  <a href="https://www.openssl.org/policies/releasestrat.html"> Release Notes </a></li>
 		</ul> -->
-		More info on why not to use DH and ECDH curves:
-		The DH and ECDH curves should not be used because they do not provide perfect forward secrecy. 
-		The reason is that only Diffie Hellman in ephemeral mode uses “one time use” private keys.  
-		DH and ECDH use values based on the stored certificates.  
-		Chris McNab’s Network Security Assessment book warns “When using DH in a static mode, dh_g, dh_p, dh_Ys, and rand_s are fixed and do not provide forward secrecy.”  
+		<strong>More info on why not to use DHE and use ECDHE instead:</strong>
+		The DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the <a href="ssl-3-vuln.html">Logjam</a> attack  This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface but extreme care should be taken in order to avoid unecessary implications by tweaking such settings. In order to keep things simple and safe, use ECDHE. There are other benefits which have been well described <a href="https://security.stackexchange.com/questions/14731/what-is-ecdhe-rsa">here</a>.
 		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
 		
 		<!--<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>

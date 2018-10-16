@@ -143,9 +143,15 @@
           </div>
           <div id="collapse2" class="panel-collapse collapse">
 		  <p>
-			Hashing is generating a value or values from a string of text using a mathematical function.
+			<strong>Hashing is generating a value or values from a string of text using a mathematical function.
 
-			Hashing is one way to enable security during the process of message transmission when the message is intended for a particular recipient only. A formula generates the hash, which helps to protect the security of the transmission against tampering.</p>
+			Hashing is one way to enable security during the process of message transmission when the message is intended for a particular recipient only. A formula generates the hash, which helps to protect the security of the transmission against tampering. </strong><br /><br />
+			<strong><u>Common applications:</u><strong><br />
+			<ul>
+			<li> <a href="../hashing_algorithms/example_index.html"> Cryptographical Signatures </a></li>
+			<li> <a href="../hashing_algorithms/example_index.html"> Commitment Schemes </a></li>
+			<li> <a href="../hashing_algorithms/example_index.html"> Generating Message Authentication Codes </a></li>
+			</ul></p>
             <ul class="list-group">
               <li class="list-group-item"><a href="../hashing_algorithms/example_index.html">Algorithms List</a></li>
             </ul>
@@ -163,8 +169,8 @@
           <div id="collapse4" class="panel-collapse collapse">
             <h3>MAC and H-MAC</h3>
             <p>
-              Message authentication is a procedure that allows communicating parties to verify that received messages are authentic. The two important aspects are verifying that the contents of the message have not been altered and that the source is authentic. The Message Authentication Code (MAC) is a widely used technique for performing message authentication.
-              MAC algorithms involve the use of a secret key to generate a small block of data, known as a "message authentication code," that is appended to the message. This technique assumes that two communicating parties, say A and B, share K as a secret key. When A has a message to send to B, it calculates the message authentication code as a function of the message and the key. The message and code are transmitted to the intended recipient. The recipient performs the same calculation on the received message, using the same secret key, to generate a new message authentication code. The received code is compared to the calculated code. If you assume that only the receiver and the sender know the identity of the secret key, and if the received code matches the calculated code, then:
+              Message authentication is a procedure that allows communicating parties to verify that received messages are authentic. The two important aspects are verifying that the contents of the message have not been altered and that the source is authentic. The Message Authentication Code (MAC) is a widely used technique for performing message authentication. And yes, it sounds very similar to Hashing but has separate applications: <a href="https://stackoverflow.com/questions/2836100/what-is-the-difference-between-a-hash-and-mac-message-authentication-code"> Read more. </a><br /><br />
+              HMAC algorithms (Hashing based MAC algorithms) involve the use of a secret key to generate a small block of data, known as a "message authentication code," that is appended to the message. This technique assumes that two communicating parties, say A and B, share K as a secret key. When A has a message to send to B, it calculates the message authentication code as a function of the message and the key. The message and code are transmitted to the intended recipient. The recipient performs the same calculation on the received message, using the same secret key, to generate a new message authentication code. The received code is compared to the calculated code. If you assume that only the receiver and the sender know the identity of the secret key, and if the received code matches the calculated code, then:
             </p>
             <p>
               1. The receiver is assured that the message has not been altered. If an attacker alters the message but does not alter the code, then the receiver's calculation of the code will differ from the received code. Because the attacker is assumed not to know the secret key, the attacker cannot alter the code to correspond to the alterations in the message.
@@ -177,9 +183,17 @@
             </p>
             <p>
 			The below image illustrates briefly the steps involved in creating a SHA256-HMAC. 
-            <img src="../../images/hmac-diagram.png" />< br/><br />
+            <img src="../../images/hmac-diagram.png" /><br /><br />
 			
-			<strong> NOTE: </strong> HMAC is only one of the few available options for generating MACs. Although other algorithms such as KMAC and CMAC exist, HMAC remains to be one of the popular choices. Descriptions about the other algorithms are currently beyond the scope of this basic page. 
+			<strong> NOTE: </strong> HMAC is only one of the few available options for generating MACs. Although other algorithms such as KMAC and CMAC exist, HMAC remains to be one of the popular choices. Descriptions about the other algorithms are currently beyond the scope of this basic page.<br /><br />
+			
+			<strong><u>Common application:</u></strong>
+			
+			
+			<ul>
+			<li> <a href="../cryptographic_protocols/tls-1-2.html"> Message authentication in VPN Technologies (SSL/TLS,IPSEC) </a></li>
+			</ul></p>
+			
 			
           </div>
         </div>
@@ -342,7 +356,12 @@ The answer is a certificate, a certificate is a cryptographical binding between 
 			your server configuration, not the certificates themselves.
 
 			It’s likely you will continue to see certificates referred to as SSL Certificates because at this point that’s the term more people are familiar 
-			with, but we’re beginning to see increased usage of the term TLS across the industry. SSL/TLS is a common compromise until more people become familiar with TLS.
+			with, but we’re beginning to see increased usage of the term TLS across the industry. SSL/TLS is a common compromise until more people become familiar with TLS.<br /><br />
+			
+			<strong><u>Common application:</u></strong>
+			<ul>
+			<li><a href="../cryptographic_protocols/tls-1-2.html">SSL/TLS</a></li>
+			</ul>
 			</p>
 			<ul class="list-group">
               <li class="list-group-item"><a href="../cryptographic_protocols/pki.html">Click here to read more about Certificates</a></li>
@@ -361,7 +380,14 @@ The answer is a certificate, a certificate is a cryptographical binding between 
           </div>
           <div id="collapse7" class="panel-collapse collapse">
 			<p>
-			Encryption is the method by which plaintext or any other type of data is converted from a readable form to an encoded version that can only be decoded by another entity if they have access to a decryption key. Encryption is one of the most important methods for providing data security, especially for end-to-end protection of data transmitted across networks.
+			Encryption is the method by which plaintext or any other type of data is converted from a readable form to an encoded version that can only be decoded by another entity if they have access to a decryption key. Encryption is one of the most important methods for providing data security, especially for end-to-end protection of data transmitted across networks.<br /><br />
+			
+			<strong>Common application:</strong>
+			<ul>
+			<li>Encrypt data-in-transit. For example, Message Confidentiality in SSL/TLS</li>
+			<li>Encryption of data-at-rest. For example, disk encryption</li>
+			</ul>
+			<li>
 			</p>
             <ul class="list-group">
               <li class="list-group-item"><a href="../cryptographic_protocols/encryption.html">Algorithms List</a></li>

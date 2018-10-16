@@ -33,7 +33,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body background="..\..\images\test9.jpg">
+  <body background="..\..\images\test9.jpg"> <!-- background="..\..\images\test9.jpg" -->
     <div id="header">
       <header id="fh5co-header-section">
         <div class="container">
@@ -123,6 +123,34 @@
       </header>
     </div>
 
+      <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <br />
+      <ul>
+        <a href="#trust"><li>
+          Trust
+            </li></a><br />
+        <a href="#partyncert"><li>
+          Trusted Party and Certificates
+            </li></a><br />
+        <a href="#chain"><li>
+              Chain of Trust
+            </li></a><br />
+        <a href="#findsig"><li>
+              Find my Signature
+            </li></a><br />
+        <a href="#mutual"><li>
+              Mutual Authentication using Certificates
+            </li></a><br />
+        <a href="#definitions"><li>
+              Defintions
+            </li></a><br />
+        <a href="#links"><li>
+              Good Links
+            </li></a>
+      </ul>
+    </div>
+
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
@@ -145,7 +173,10 @@
 
 
 Introduction to PKI or Public Key Infrastructure in a Simpler and a more practical standpoint. <br /> <br />
+<ul>
 
+<li>
+<p id="trust">
 <h3> Trust </h3>
 Let's first take a look at what is the meaning of "Trust". <br /> <br />
 
@@ -159,9 +190,10 @@ Bob asks Charlie if Alice is trustworthy. Charlie replies "Ya, I know her, she c
 
 Great! Now that a Alice and Bob both have confirmation from a trusted party, viz, Charlie, they can now trust each other.<br /><br />
 
+<blockquote>
 A ----------DOESNT TRUST----------------B <br /><br />
 
-AIM :- A ---------- TRUSTS ------------B <br /><br /><br />
+AIM :- A ----------- TRUSTS -------------B <br /><br /><br />
 
 Since, <br />
 
@@ -172,11 +204,17 @@ B ---------------TRUSTS ----------------C <br /> <br />
 so <br />
 
 A -------------- TRUSTS ----------------B <br /><br />
-
+</blockquote>
+<br /><br />
 This is a simple analogy of how a "trust relationship" is established.<br /><br />
 
 Lets extrapolate the above example to include a few more technical terms. <br /><br />
 
+</p>
+</li>
+
+<li>
+<p id="partyncert">
 <h3>Trusted Party and Certificates </h3>
 Charlie is the certificate authority or the "Trusted Party". Charlie generates certificates(analogously ID cards) for Alice and Bob. 
 The certificate has the information of Alice (such as Name, Date of Birth, Expiry of the card etc.) and it is also signed by Charlie. Simiarly, even Bob will recieve a certificate of his own signed by Charlie. Now, this step is done before the actual communication exchange between the Alice and Bob. Charlie also has his own certificate which is also given to both Alice and Bob. <br />
@@ -221,6 +259,11 @@ Signed(Hash(Alice's information))
 
 This above process is done for everyone who asks for a certificate. This is analogous to the creation of an ID card (such as a driver's license) by a trusted government agency.<br /><br />
 
+</p>
+</li>
+
+<li>
+<p id="chain">
 <h3> Trusted Chain or Chain of Trust </h3>
 Before we go on to explain how your web browser will negotiate a "trust relationship" with the web server www.google.com using certificates, let me quickly touch upon a topic of the "Trusted Chain" or "Chain of trust". If you remember I mentioned about the Subordinate CAs existing. These subordinate CA's are child CA's that a Root CA have given privileges to also distribute certificates. The hierarchy is as seen below:<br /><br /><br />
 
@@ -236,6 +279,26 @@ A Root CA, the entity that is at the top of chain will have the "Issued by" and 
 
 Now this is what is a chain of trust. Every server will validate this chain, if the chain is broken or if there is any missing entity, the authentication of that certificate will fail.<br /><br />
 
+</p>
+</li>
+
+<li>
+<p id="findsig">
+<h3> How do I know the Signature that I am using in my certificate? </h3>
+  <ul> 
+    <li>
+      Go to the Details Tab.
+      <img src="../../images/cert-8.png" class="center" /> 
+    </li>
+    <li>
+      Find and click on Fields: "Signature algorithm" or "Signature has algorithm"
+      <img src="../../images/cert-9.png" class="center" /> 
+    </li>
+  </ul>
+  </p>
+
+<li>
+<p id="mutual">
 <h3> Mutual Authentication using Certifications </h3>
 Now, lets explore what happens if your web browser talks to www.google.com.<br /><br />
 <ul>
@@ -245,6 +308,11 @@ Now, lets explore what happens if your web browser talks to www.google.com.<br /
 </ul>
 Now, they have authenticated each other and are ready for a secure communications. Note: this is a simplified version of a protocol. This process is typically coupled with a lot of other messages and information .<br /><br />
 
+</p>
+</li>
+
+<li>
+<p id="definitions">
 <h3> Definitions </h3>
 Here are a few formal definitions:<br /><br />
 <b>CA (Certificate Authority)</b> - A Certificate Authority is an authority that issues public key certificates and provides identification to the bearer.
@@ -254,8 +322,11 @@ Subordinate CA (Certificate Authority) - A Subordinate CA is a certificate autho
 <b>Digital Signatures</b> - A digital signature is generated by the hashing of a digital certificate. The hash is then encrypted using the CA`s private key. This encrypted hashcode string is then appended to the public certificate as a digital signature.<br /><br />
 As only the CA`s public key can decrypt the digital signature, authenticity is  provided to the users public certificate.<br />
 
+</p>
+</li>
 
-
+<li>
+<p id="links">
 <h3> Good Links </h3>
 Recommended viewing for further strengthening above concepts<br /><br />
 
@@ -266,8 +337,10 @@ This above video is an excellent illustration of the need for the digital certif
 This video is an 18 minute video, but the explanation of the concepts is amazing since it includes the encryption and why different encryption schemes are needed and how they came about. This is definitely a must watch. <br /> <br />
 
 <a href= "https://www.fir3net.com/Security/Concepts-and-Terminology/pki-chain-of-trust.html"> https://www.fir3net.com/Security/Concepts-and-Terminology/pki-chain-of-trust.html </a>
+</p>
+</li>
 
-
+</ul>
           </p>
       </div>
     </div>

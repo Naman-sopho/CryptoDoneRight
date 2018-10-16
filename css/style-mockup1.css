@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	font-family: CiscoSans, Arial, sans-serif;
+	font-family: 14px normal helvetica, sans-serif;
 	font-weight: 100;
 	min-height: 100%;
 	position:relative;
@@ -25,6 +25,14 @@ pre {
 code {
 	text-align:left;
 	background-color:#F1F1F1;
+}
+blockquote {
+font: 14px normal helvetica, sans-serif;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 50px;
+padding-left: 15px;
+border-left: 3px solid #619644;
 }
 
 .row {
@@ -226,7 +234,7 @@ code {
   position: relative;
   float: left;
   width: 100%;
-  /*background-image: url('../images/top.jpg');*/
+  background-image: url('../images/top.jpg');
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
   font-size: 16px;

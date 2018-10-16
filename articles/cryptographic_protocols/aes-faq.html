@@ -144,31 +144,32 @@
 
             <center><h2>AES FAQs</h2></center>
             <br /> <br />
-			<ul>
-			<a href="#whataes"><li>
-			What is AES and why is it used?
-			</li></a>
-			<a href="#commonapplications"><li>
-			What are some common applications?
-			</li></a>
-			<a href="#useaes"><li>
-			How will I use AES?
-			</li></a>
-			<a href="#aesmodesofoperation"><li>
-			What are "Modes of Operation" and why are they important?
-			</li></a>
-			<a href="#aeskeysizes"><li>
-			Why are there different key sizes?
-			</li></a>
-			<a href="#aesattacks"><li>
-			What kind of attacks are possible on AES?
-			</li></a>
-			<a href="#aesadvantages"><li>
-			Advantages of using AES over other encryption algorithms?			
-			</li></a>
-			</ul>
-			
-			</div>
+            <blockquote>
+        			<ul>
+        			<a href="#whataes"><li>
+        			What is AES and why is it used?
+        			</li></a>
+        			<a href="#commonapplications"><li>
+        			What are some common applications?
+        			</li></a>
+        			<a href="#useaes"><li>
+        			How will I use AES?
+        			</li></a>
+        			<a href="#aesmodesofoperation"><li>
+        			What are "Modes of Operation" and why are they important?
+        			</li></a>
+        			<a href="#aeskeysizes"><li>
+        			Why are there different key sizes?
+        			</li></a>
+        			<a href="#aesattacks"><li>
+        			What kind of attacks are possible on AES?
+        			</li></a>
+        			<a href="#aesadvantages"><li>
+        			Advantages of using AES over other encryption algorithms?			
+        			</li></a>
+        			</ul>
+              </blockquote>
+		 <br /> <br />
 			<p id="whataes">
             <strong>What is AES and why is it used?</strong> <br /> <br />
 
@@ -249,8 +250,27 @@
               ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS;
             </blockquote>
       </p>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script type="text/javascript">
+                      // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
 
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                } 
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
           </p>
+        </div>
       </div>
     </div>
 

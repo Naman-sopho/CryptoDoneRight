@@ -236,6 +236,20 @@
             AES is a well known computationally and memory effective. Modern CPUs even have specific opcodes to speed up AES computation. 
 			Utilizing AES should not prove to be of any burden to an average computer. AES libraries have been developed for Raspberry Pis as well:<a href="http://spaniakos.github.io/AES/"> <http://spaniakos.github.io/AES/> </a>
 			</p>
+
+      <p id="sslconfig">
+            <strong> How do I configure my server such that they use AES? </strong><br />
+            AES in itself is not sufficient to be used for anything in particular since it is a symmetric key encryption. All symmetric key encryptions are weak to the key distribution problem. So, AES is used in conjuction with other crpytopgraphic primitives which is called a CipherSuite. Most server's are configured with these CipherSuites. Below are a few examples of how to configure with these CipherSuites:
+
+            <blockquote>
+              <strong>Apache</strong> <br />
+              SSLCipherSuite ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
+              <br /><br />
+              <strong>NGINX</strong> <br />
+              ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS;
+            </blockquote>
+      </p>
+
           </p>
       </div>
     </div>
@@ -244,9 +258,11 @@
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <p>
-	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	        </p>
+          <ul>
+            <li><a href="https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/">OpenSSL Server Hardening Apache Servers</a></li>
+<!--             <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li> -->
+          </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">

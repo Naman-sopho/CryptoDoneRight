@@ -3733,8 +3733,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #D3D3D3 /*#337ab7;*/;
+  border-color: #A9A9A9 /*#2e6da4;*/;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -5584,9 +5584,9 @@ a.thumbnail.active {
 }
 
 .alert-danger {
-  background-color: #f2dede;
+  background-color: #ff0000 /*#f2dede;*/;
   border-color: #ebccd1;
-  color: #a94442;
+  color: #000000 /*#a94442;*/;
 }
 .alert-danger hr {
   border-top-color: #e4b9c0;

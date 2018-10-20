@@ -98,7 +98,7 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  /*background: rgba(0, 0, 0, 0.8);*/
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .fh5co-overlay {
@@ -109,8 +109,8 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  /*background: rgba(66, 64, 64, 0.9);
-  background: rgba(0, 0, 0, 0.8);*/
+  background: rgba(66, 64, 64, 0.9);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .fh5co-cover {

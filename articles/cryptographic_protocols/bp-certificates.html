@@ -190,7 +190,32 @@
         For most web sites or servers, <span class="green">security provided by 2,048-bit RSA keys is sufficient.</span> The RSA public key algorithm is widely supported, which makes keys of this type a safe default choice. <br /><br />
 
         Ideally, <span class="red">a larger key size doesnt scale very well and are noticeably more slower.</span> If better security than a 2048-bit key is needed, it is <span class="green">recommended to use <a href= "https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA keys (Elliptic Curve Digital Signature Algorithm)</a> </span> since the trade-off of performance vs security is better. <br /><br />
-        </li>
+		
+		The utility "openssl" is used to generate the key and CSR. This utility comes with the OpenSSL package and is usually installed under /usr/local/ssl/bin.
+		If the utility was installed elsewhere, these instructions will need to be adjusted accordingly.<br /><br />
+ 
+		Type the following command at the prompt:<br/>
+
+		<ul>
+		<li>
+		Linux / Unix servers:
+		<pre>
+		<code>
+		openssl genrsa -des3 -out <private-key-file-name.key> 2048 </code>
+		</pre>
+		</li>
+		<li>
+		Windows servers:<br />
+		<pre>
+		<code>
+		openssl genrsa -out <private-key-file-name.key>  2048
+		</code>
+        </li></ul><br /><br />
+
+		The above command generates a 2048 bit RSA private key and stores it in the file privatekey.key. <br /><br />
+		<blockquote>
+		<b>NOTE</b>: When prompted for a pass phrase, enter a secure pass phrase and remember it, as this pass phrase protects the private key.  If the pass phrase is ever lost a new private key & CSR must be generated and the certifiate reissued.
+		</blockquote>
         </p>
 
         <p id="protect">

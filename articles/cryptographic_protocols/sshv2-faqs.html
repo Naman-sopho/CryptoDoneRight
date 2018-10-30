@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -135,48 +135,72 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-        
+
         <div class="col-md-12 col-sm-12 col-xs-12">
           <p>
-           <img src="../../images/faqs.jpg" style="width:500px;height:100px;" class="center" />   
+           <img src="../../images/faqs.jpg" style="width:500px;height:100px;" class="center" />
 
             <center><h2>SSH/SSHv2 FAQs</h2></center>
             <br /> <br />
 
             <strong> #1. What's the difference between versions 1 and 2 of the SSH protocol? </strong> <br /> <br />
 
+            SSH2 added a number of new features to provide a stronger, more comprehensive product. These features include:<br />
+            <ul>
+              <li> Encryption ciphers, such as 3DES and AES. </li>
+              <li> The use of sound cryptographic Message Authentication Code (MAC) algorithms for integrity checking. </li>
+              <li> Support for public key certificates. </li>
+            </ul><a href="https://learningnetwork.cisco.com/blogs/network-sheriff/2008/09/22/sshv1-or-sshv2-whats-the-big-deal">The above points were taken from a Cisco blog post that covers other basics about SSHv2.</a> <br /><br />
+            Here is an image that highlights some of the high level technical differences:<br />
             <img src="../../images/sshv1-sshv2-diff.PNG" style="width:1200px;height:650px;" class="center" />
 
-            <strong> #2. How do I install my public key file on the remote host the first time? </strong> <br /> 
-                Connect by password authentication and use your terminal program's copy and paste feature. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>] <br /><br />
+            <strong> #2. Are there any performance tradeoffs with SSHv2?</strong><br />
+            In short, in most cases, no. SSHv2 has been around for a while and is considered to be the norm in remote management. (SSHv2 has other applications too). We sugeest going through the following links to get a better understanding: <br />
+            <a href="https://superuser.com/questions/1108165/what-is-the-overhead-of-ssh-compared-to-telnet">What is the overhead of SSH compared to Telnet?</a><br />
+            <a href="https://support.cerberusftp.com/hc/en-us/articles/203333215-Why-is-SSH2-SFTP-so-much-slower-than-FTP-and-FTPS-">Why is SSH2-SFTP so much slower than FTP and FTPS</a><br /><br />
 
-            <strong> #3. I put my SSH public key file mykey.pub into my remote SSH directory, but public-key authentication doesn't work. </strong> <br />
+            <strong> #3. What are the configurational settings to change in order to secure SSHv2?</strong> <br />
+            Here is summary of best practices as mentioned by <a href="https://csrc.nist.gov/csrc/media/publications/nistir/7966/final/documents/nistir_7966_draft.pdf">NIST</a><br />
+            <img src="../../images/SSH_bp.png" style="width:500px;height:650px;" class="center" /><br />
+
+            There are good set of documents that guides you through implementing some of the above steps. Here are some of them:<br />
+            <ul>
+              <li><a href="https://medium.com/@jasonrigden/hardening-ssh-1bcb99cd4cef">Hardening SSH - Linux</a></li>
+              <li><a href="https://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html">Cisco Guide to Harden Cisco IOS Device</a></li>
+            </ul><br /><br />
+
+            <strong><u> Common Unix Troubleshooting Questions: </u></strong><br /><br />
+            <strong> #1. How do I install my public key file on the remote host the first time? </strong> <br />
+                Connect by password authentication and use your terminal program's copy and paste feature. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>] <br /><br /><br />
+
+            <strong> #2. I put my SSH public key file mykey.pub into my remote SSH directory, but public-key authentication doesn't work. </strong> <br />
                 The public key must be referenced in your remote authorization file. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>]<br /><br />
-                
-            <strong> #4. Public-key authentication isn't working. </strong> <br />
+
+            <strong> #3. Public-key authentication isn't working. </strong> <br />
                 Use ssh -v, and check your keys, files, and permissions. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-70984.html">Section 12.2.2.4, "Public-key authentication"</a>]<br /><br />
 
-            <strong> #5. Password authentication isn't working. </strong> <br />
+            <strong> #4. Password authentication isn't working. </strong> <br />
                 Use ssh -v. There are a variety of possible causes. [<a heref="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-48295.html">Section 12.2.2.2, "Password authentication"</a>] <br /><br />
 
-            <strong> #6. Trusted-host authentication isn't working (SSH1 RhostsRSA, SSH2 hostbased). </strong> <br />
+            <strong> #5. Trusted-host authentication isn't working (SSH1 RhostsRSA, SSH2 hostbased). </strong> <br />
                 Use ssh -v. Check your four control files, hostnames, and setuid status of the SSH client program or ssh-signer2. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-54149.html">Section 12.2.2.3, "Trusted-host authentication"</a>] <br /><br />
 
-            <strong> #7. How do I authenticate without typing a password or passphrase? </strong> <br />
+            <strong> #6. How do I authenticate without typing a password or passphrase? </strong> <br />
                 ssh-agent, unencrypted keys, trusted-host authentication, or Kerberos. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-48779.html">Section 12.2.2.1, "General authentication problems"</a>] <br /><br />
 
-            <strong> #8. How do I secure FTP with port forwarding? </strong> <br />
+            <strong> #7. How do I secure FTP with port forwarding? </strong> <br />
                 Forward a local port to port 21 on the FTP server for the control connection; the data connection is much harder. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-14145.html">Section 12.2.5.6, "Port forwarding"</a>] <br /><br />
 
-            <strong> #9. X forw g isn't working. </strong> <br />
+            <strong> #8. X forw g isn't working. </strong> <br />
                 Don't set your remote DISPLAY variable manually. (And there are other things to check.) [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-14145.html">Section 12.2.5.6, "Port forwarding"</a>]<br /><br />
 
-            <strong> #10. Why don't wildcards or shell variables work on the scp command line? </strong> <br />
+            <strong> #9. Why don't wildcards or shell variables work on the scp command line? </strong> <br />
                 Your local shell expands them before scp runs. Escape the special characters. [<a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_02.htm#ch12-65366.html">Section 12.2.5.4, "scp"</a>] <br /><br />
 
-            <strong> #11. A feature of ssh or scp isn't working, but I'm sure I'm using it correctly. </strong> <br />
+            <strong> #10. A feature of ssh or scp isn't working, but I'm sure I'm using it correctly. </strong> <br />
                 Use ssh -v. Also the system configuration may be overriding your settings.<br /><br />
 
+            Find more here: <a href="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch12_01.htm">Troubleshooting and FAQ (From SSH: The Secure Shell The Definitve Guide)</a><br /><br />
           </p>
       </div>
     </div>

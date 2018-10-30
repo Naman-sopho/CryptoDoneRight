@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -103,7 +103,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -145,7 +145,7 @@
 		 </li></a>
       </ul>
     </div>-->
-	
+
 	<!--	<div class="alert alert-warning">
       Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
     </div>-->
@@ -155,16 +155,37 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-	  
+
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
-		
-        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> SSHv2 Implementation</h2>	  
+
+        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> SSHv2 Implementation</h2>
+
+        <font size="4"><strong>What to expect:</strong></font><br /> <br />
+        SSHv2 is client-server protocol that relies on the following concepts. When the requirement is to set up SSH for an application or system, here are the key terms that are to be expected: <br /> <br />
+
+        Here are the basic steps involved in a SSH handshake:<br />
+        <ul>
+          <li>Negotiating the version of the protocol to use.</li>
+          <li>Negotiating cryptographic algorithms and other options to use.</li>
+          <li>Negotiating a one-time session key for encrypting the rest of the session.</li>
+          <li>Authenticating the server host using its host key.</li>
+          <li>Authenticating the user using a password, public key authentication, or other means.</li>
+        </ul><br /><br />
+
+        <b><u>Authentication Scheme:</u></b> SSHv2 provides a few options when it comes to authentication (client authenticating the server and itself). Different authentication schemes could be appropriate for different setups. But a general recommendation IS TO AVOID PASSWORD as SSH keys are long and complex, far more than any password could be and keys don't get transmitted to the remote system (except key forwarding, natch) which passwords need to be. <a href="https://www.ssh.com/ssh/key/">https://www.ssh.com/ssh/key/</a>. The details of this method depend on the public-key algorithm chosen. In essence, the client sends a message to the server that contains the client's public key, with the message signed by the client's private key. When the server receives this message, it checks to see whether the supplied key is acceptable for authentication and, if so, it checks to see whether the signature is correct. <br /> <br />
+
+        <b><u>Setting up keys:</u></b> SSH protocol uses cryptographic keys in order to secure communication between the server and the client. These keys could be of type RSA, DSA or ECDSA for example. Note that OpenSSH, one of the most popular libraries used by vendors to implement SSH, has removed support for DSA keys because of security concerns.  <br /> <br />
+
+        <b><u>CipherSuites and KeyExchange Algorithm:</u></b> These are the settings that determine which encryption algorithm and message integrity algorithm will be used for securing data. Also the key-exchange protocol (DH or ECDH) will be negotiated betweeen the client and the server. <br /> <br />
+
+        <b><u>Setting up communication:</u></b> SSH by default listens on TCP port 22. This can however be changed with almost any vendor. <br /> <br />
+
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 
-It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used. 
-These libraries offer better stability as they are usually a product of several years of experience in implementing cryptography by an active development community who are 
+It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used.
+These libraries offer better stability as they are usually a product of several years of experience in implementing cryptography by an active development community who are
 dedicated towards efforts in implementation. It is therefore considered to be reliable and robust. <br /> <br />
 
 
@@ -185,28 +206,72 @@ Not all vendors will let you find out about this information using commands. It 
 
 Here is an excellent resource to find details about how OpenSSH can be built and used: https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch04_03.htm
 <br /> <br />
-Implementing SSH in Python: <br />
-Python has its own set of libraries which act as wrappers around either other libraries such as libSSH in C which in turn could be wrappers for OpenSSH. Two of the most popular choices are: ssh2-python and Paramiko. Both of these libraries do the same thing but there are claims about better performance with ssh2-python. For a detailed study of comparison, visit here: https://parallel-ssh.org/post/ssh2-python/ <br /> <br />
+<strong><u>Implementing SSH in Python:</u></strong> <br />
+Python has its own set of libraries which act as wrappers around either other libraries such as libSSH in C which in turn could be wrappers for OpenSSH, a popular example being ssh2-python. There are other libraries such as Paramiko. Both of these libraries do the same thing but there are claims about better performance with ssh2-python. For a detailed study of comparison, visit here: https://parallel-ssh.org/post/ssh2-python/ <br /> <br />
 
 Here is documentation for implementing both the libraries: <br />
-https://prezi.com/zjpqutpygshm/paramiko-in-5-minutes-sshv2-in-python/ <br />
-https://github.com/ParallelSSH/ssh2-python <br />
-https://parallel-ssh.org/ <br /> <br />
+<a href="https://prezi.com/zjpqutpygshm/paramiko-in-5-minutes-sshv2-in-python/">SSHv2 using Paramiko</a> <br />
+<a href="https://github.com/ParallelSSH/ssh2-python">SSHv2 using ParallelSSH</a> <br />
+<a href="https://parallel-ssh.org/">Documentation on Parallel SSH</a> <br /> <br /><br />
 
-Implementing SSH in C++: <br />
-https://www.libssh.org
+Some of the less common libraries are:<br />
+<a href="https://twistedmatrix.com/trac/wiki/TwistedConch">TwistedConch</a><br />
+<a href="http://docs.fabfile.org/">Fabric</a><br /><br />
 
-</p>	  
-		  
+<strong><u>Implementing SSH in C/C++: </u></strong><br />
+LibSSH is a popular choice for setting up SSHv2 server or client in C/C++. For more information, visit their official page: <a href="https://www.libssh.org">https://www.libssh.org</a>. For a set of working examples, refer to their <a href="http://api.libssh.org/stable/libssh_tutorial.html"> Tutorial Page </a>.<br /><br />
+
+<strong><u>Implementing SSH in Java: </u></strong><br />
+<a href="http://www.jcraft.com/jsch/">The Java Secure Channel (JSCH)</a> is a very popular library to implement an SSH client, open source and has a BSD style license. Here is a good set of examples to get you started with intergrating a SSH client in your Java application.
+<a href="http://mina.apache.org/sshd-project/index.html">The Apache Mina project</a> can be used to create SSH servers (as well as clients) in your JAVA application. A simple lookup of "Apache Mina exmaples" will give you a bunch of examples.<br /><br />
+
+<strong><u>Implementing SSH in Perl</u></strong><br />
+<ul>
+<li>Net::SSH2: a wrapper module for libssh2.</li>
+<li>Net::SSH::Perl: a full SSH/SFTP implementation in pure Perl. Unfortunately this module is not being maintained any more and has several open bugs. Also, installing it can be a daunting task due to some of its dependencies.</li>
+<li>Net::OpenSSH: a wrapper for OpenSSH binaries and other handy programs (scp, rsync, sshfs). It uses OpenSSH multiplexing feature in order to reuse connections.</li>
+<li>Net::OpenSSH::Parallel a module build on top of Net::OpenSSH that allows to transfer files and run programs on several machines in parallel efficiently.</li>
+<li>SSH::Batch another module build on top of Net::OpenSSH that allows to run programs on several hosts in parallel.</li>
+<li>Net::SSH::Expect: this module uses Expect to drive interactive shell sessions run on top of SSH.</li>
+<li>Net::SSH: a simple wrapper around any SSH client. It does not support password authentication and is very slow as it establishes a new SSH connection for every remote program invoked.</li>
+<li>Net::SCP and Net::SCP::Expect: modules wrapping the scp program. Note that Net::SSH2, Net::SSH::Perl and Net::OpenSSH already support file transfers via scp natively.</li>
+<li>Net::SFTP::Foreign: a full SFTP client written in Perl with lots of bells and whistles. By default is uses ssh to connect to the remote machines but it can also run on top of Net::SSH2 and Net::OpenSSH.</li>
+<li>GRID::Machine, IPC::PerlSSH and SSH::RPC: these modules allow to distribute and run Perl code on remote machines through SSH.</li>
+</ul><br />
+
+<strong><u>Implementing SSH in Ruby</u></strong><br />
+<ul>
+  <li><a href="https://github.com/net-ssh">Net::SSH</a></li>
+  <li><a href="https://github.com/capistrano/capistrano">Capistrano</a></li>
+</ul><br /><br />
+
+<h2>Top Things to remember while implementing SSH in your code</h2><br />
+<ul>
+  <li>Use SSH public key based login</li>
+  <li>Ensuring proper privilege management</li>
+  <li>Disable password based login</li>
+  <li>Disable Empty Passwords</li>
+  <li>Use strong passwords and passphrase for ssh users/keys</li>
+  <li>Firewall SSH TCP port #22 needs to be open on your host running the application</li>
+  <li>Secure Key Excgahange Algorithms (Examples are curve25519-sha256: ECDH over Curve25519 with SHA2 and diffie-hellman-group-exchange-sha256: Custom DH with SHA2)</li>
+  <li>Ensure only strong cipher suites are allowed (Recommendations as of Oct,2018: Encryption: aes256-gcm, aes128-gcm, aes256-ctr, aes192-ctr, aes128-ctr MAC: hmac-sha2-512-etm, hmac-sha2-256-etm, hmac-sha2-512, hmac-sha2-256)</li>
+  <li>Checking for open vulnerabilties in your libraries </li>
+  <li>Ensure good length of keys (DSA and RSA 1024 bit or lower ssh keys are considered weak. Avoid them. RSA keys are chosen over ECDSA keys when backward compatibility is a concern with ssh clients. All ssh keys are either ED25519 or RSA. Do not use any other type).</li>
+</ul><br />
+While following and implementing the above recommendations is language and platform specific, here is a document <a href="https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"> to help you with understanding more about the recommendations. </a>
+<br />
+
+</p>
+
 <p id="tls12patch">
 <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
-<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using SSHv2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of SSHv2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts.  <br />
+<font size="4"><strong>Concept:</strong></font> OpenSSH, one of the most popular librarry used to implement SSH has had a few flaws exploited. Software developers should always keep a close watch on any patches or upgrade notifications from product vendors/libraries (please note that some libraries simply act as wrappers around OpenSSH). The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of SSHv2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts. One of the recent bugs found is <a href="https://www.zdnet.com/article/security-flaw-in-libssh-leaves-thousands-of-servers-at-risk-of-hijacking/">CVE-2018-10933</a>.  <br />
 <br />
-Note: Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.
+Note: Keep an eye out for this section as it will be kept up-to-date with any major patches that are released. As always, keep an eye out on CVE Details: <a href="https://www.cvedetails.com/vulnerability-list/vendor_id-120/SSH.html">CVE Details: SSH vulnerabilties</a>.
 </p>
 
- </div>    
+ </div>
       </div>
 
 

@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -45,7 +45,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -103,7 +103,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -130,9 +130,9 @@
          <li class="breadcrumb-item level1 active">TLSv1.2 versus TLSv1.3</li>
        </ol>
     </div>
-	
+
 	<div class="container-fluid">
-        <div class="center-block"> 
+        <div class="center-block">
 	  <br />
       <p>
 	  <div style="margin-top:2vw;">
@@ -145,7 +145,7 @@
     Handshake RTTs (Round Trip Time) have been reduced from 2 to 1: <br />
     Faster RTTs result in faster connections between the client and the server. This in turn results in faster load times for content (for example, faster load time for  webpages due to HTTPS). The figure below helps in clarifying the idea: <br />
     <img src="../../images/TLSv12-v13-differences.jpg" style="width:1000px;height:500px;" />
-    
+
     <br /> <br />
     Introduction of 0-RTT Session Resumption <br />
     Servers that negotiate a TLSv1.3 connection will remember the sessions they have made. With reduced load times, session resumptions are possible. The server and client achieve this by agreeing on a pre-shared-key before hand. Here is an article written by Cloudflare that explains the concept in greater detail: <br /> <br />
@@ -162,7 +162,7 @@
     RC4 - <a href="https://blog.cloudflare.com/killing-rc4-the-long-goodbye/">Not secure for use in HTTPS </a> <br />
     DES -  <br />
     3DES -  <a href="https://threatpost.com/new-collision-attacks-against-3des-blowfish-allow-for-cookie-decryption/120087/"> Removed by NIST in IPsec and SSL. Provable weakness due to its size. </a> <br />
-    AES-CBC - Responsible for attacks such as BEAST <br /> 
+    AES-CBC - Responsible for attacks such as BEAST <br />
     MD5 - Proved to be non secure because of being non-collison resistant. This weakness allows attackers to create multiple, differing input sources that, when the MD5 algorithm is used, result in the same output fingerprint. <br />
     Arbitrary Diffie-Hellman groups — <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-0701">CVE-2016-0701 </a><br />
     EXPORT-strength ciphers – Responsible for FREAK and LogJam <br />

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -136,7 +136,7 @@
 	<div class="alert alert-success">
       The <strong>Recommended</strong> Cipher Suites is listed in this page.
     </div>
-	
+
 	<a href="#ROBOT"><div class="alert alert-danger">
       <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
     </div> </a>
@@ -144,19 +144,19 @@
   <a href="flaw-categories.html"><div class="alert alert-warning">
       <strong>Background Reading:</strong> Understanding Different Types of Problems in Crypto.
     </div></a>
-	
+
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-	  
+
 		<h3> Introduction </h3>
 		<div class="col-md-12 col-sm-12 col-xs-12">
 		  <p id="GeneralTLSInfo">
-		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is <span class="green">recommended</span> for security. 
+		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is <span class="green">recommended</span> for security.
 <br /> <br /><span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
 
 <ul>
 <strong>Webservers: </strong> <br />
-Enabling TLSv1.1 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
+Enabling TLSv1.1 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done.
 <br /><br />
 <u>Apache: </u> <br/>
 To add TLSs1.1 you just need to add in your ‘https virtual host’ configuration:
@@ -165,7 +165,7 @@ To add TLSs1.1 you just need to add in your ‘https virtual host’ configurati
 SSLProtocol -all +TLSv1.1
 ...</code>
 </pre>
- 
+
 Explanation: <br />
 -all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
 +TLSv1.1 is adding TLS 1.1<br /> <br />
@@ -223,12 +223,12 @@ Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
 
 <strong>Browsers: </strong> <br />
 
-Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well. 
+Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well.
 Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.1 are accepted.
 <br />
 To enable TLS 1.1 protocols on web browsers, see the list below. <br /> <br />
 <ul>
- 
+
 <li>
 <u>Microsoft Internet Explorer</u> <br />
 <ul>
@@ -278,7 +278,7 @@ To enable TLS 1.1 protocols on web browsers, see the list below. <br /> <br />
 <li>Close and restart Opera</li>
 </ul>
 </li> <br />
- 
+
 <li>
 <u>Apple Safari </u> <br />
 There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.

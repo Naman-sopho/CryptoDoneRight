@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -132,7 +132,7 @@
          <li class="breadcrumb-item level1 active">TLS 1.2 IT Quickstart</li>
        </ol>
     </div>
-	
+
 	<div id="contentScroller">
       <strong style="font-size:2vw;">Content</strong>
       <ul>
@@ -147,23 +147,23 @@
         </li></a>
       </ul>
     </div>
-	
+
 	<div class="alert alert-success">
       The <strong>Recommended</strong> Cipher Suites is listed in this page.
     </div>
-	
+
 	<a href="#ROBOT"><div class="alert alert-danger">
       <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
     </div> </a>
-	
+
 	<a href="flaw-categories.html"><div class="alert alert-warning">
       <strong>Background Reading: </strong> Understanding Different Types of Problems in Crypto
     </div></a>
-	
+
 <div class="container-fluid">
 <div class="row" style="padding: 2vw;">
 <div class="col-md-12 col-sm-12 col-xs-12">
-		
+
 <p id="GeneralTLSInfo">
 
 <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> TLS 1.2 Configuration </h2>
@@ -176,15 +176,15 @@ For TLSv1.2, the following configuration settings will provide the best possible
 <li>Cipher Suites: A configurable option that most product vendors provide with SSL/TLS is called the Cipher Suite. The cipher suite decides the key exchange, signature, encryption and hashing algorithm used with SSL/TLS. There are various options with all the above mentioned parameters and some of them have been marked as unsafe due to vulnerabilities found in recent times. Special care must be taken to ensure that TLSv1.2 is configured correctly and below are the recommended cipher suites. The recommendations are based on a recent attack called a ROBOT attacks <a href="tls-1-2-vuln.html">Learn more</a>.</li>
 <li>DH Parameters: Diffie Helman Key Exchange protocol is a popular protocol option for exchanging keys between a server and a client in a secure fashion. SSL/TLS provides options to use DH but it should be ensured that the right kind of keys are configured for the protocol. The recommendations are based on the LogJam attack<a href="tls-1-2-vuln.html#logjam">Learn more</a>.</li>
 <li>Type of Certificates: Certificates form the basis of authentication in SSL/TLS. Using certificates the client can authenticate the server and vice versa (although client side authentication using certificates is optional). </li>
-<li>Key type and Size: Apart from DH keys, there are other keys that are used for digital signature purposes. Choosing the right kind of keys is important. 
+<li>Key type and Size: Apart from DH keys, there are other keys that are used for digital signature purposes. Choosing the right kind of keys is important.
 </li> <br />
 For the above settings, there have been examples mentioned below.
 </ul> <br /> <br />
 <font size="4"><strong>Concept:</strong></font> TLSv1.2 as a protocol is, as of now, safe. But, if configured incorrectly, your device can still be vulnerable. In this section, using a certain few examples
-explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security. 
+explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security.
 <br /> <br />
 
-<span class="red">Note: Enabling TLSv1.2 on your device is the first step that is to be taken towards ensuring security. However, recent vulnerabilities discovered in certain options provided by the 
+<span class="red">Note: Enabling TLSv1.2 on your device is the first step that is to be taken towards ensuring security. However, recent vulnerabilities discovered in certain options provided by the
 protocol mandate that the configuration of TLSv1.2 also follows certain guidelines.These recommendations have been mentioned in the later part of this section under <a href="#GeneralTLSInfoDebra">General Recommendations of TLS </a>.
 </span>
 
@@ -195,7 +195,7 @@ protocol mandate that the configuration of TLSv1.2 also follows certain guidelin
 <ul>
 
 <strong>Webservers: </strong> <br /> <br />
-Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done. 
+Enabling TLSv1.2 under the web server’s SSL configuration settings is required. It is required to leave out vulnerable versions of SSL from the configuration so that legacy clients are not able to connect until an upgrade is performed. Here are a couple of examples from common webservers on how this can be done.
 <br /><br />
 <u>Apache: </u> <br/>
 To add TLSs1.2 you just need to add in your ‘https virtual host’ configuration:
@@ -204,7 +204,7 @@ To add TLSs1.2 you just need to add in your ‘https virtual host’ configurati
 SSLProtocol -all +TLSv1.2
 ...</code>
 </pre>
- 
+
 Explanation: <br />
 -all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
 +TLSv1.2 is adding TLS 1.2<br /> <br />
@@ -262,12 +262,12 @@ Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
 
 <strong>Browsers: </strong> <br /> <br />
 
-Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well. 
+Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well.
 Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.2 are accepted.
 <br />
 To enable TLS 1.2 protocols on web browsers, see the list below. <br /> <br />
 <ul>
- 
+
 <li>
 <u>Microsoft Internet Explorer</u> <br />
 <ul>
@@ -317,7 +317,7 @@ To enable TLS 1.2 protocols on web browsers, see the list below. <br /> <br />
 <li>Close and restart Opera</li>
 </ul>
 </li> <br />
- 
+
 <li>
 <u>Apple Safari </u> <br />
 There are no options for enabling SSL protocols. If you are using Safari version 7 or greater, TLS 1.1 and TLS 1.2 are automatically enabled.
@@ -326,7 +326,7 @@ There are no options for enabling SSL protocols. If you are using Safari version
 </ul>
 
 <strong>VPN: </strong> <br />
-The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart from configuration, patches provided by the software company should be installed with immediate priority. 
+The VPN gateway needs to be configured to only accept TLSv1.2 connection. Apart from configuration, patches provided by the software company should be installed with immediate priority.
 <br /> <br />
 To verify:
 <a href="https://www.ssllabs.com/ssltest/index.html">https://www.ssllabs.com/ssltest/index.html</a>
@@ -336,8 +336,8 @@ To verify:
 
 <span class="red"> Note: Configuring TLSv1.2 - After ensuring that your device is ready to accept TLSv1.2 connections. The next step is to ensure that TLSv1.2 connections are hardened in order to provide best security. A common misconception is why are we "reconfiguring" TLSv1.2 while it's already setup. It has to be noted that the first step was only to setup TLSv1.2, the first step is to ensure that your devices are configured to accept and establish TLSv1.2 connections. For security reasons, it also needs to be ensured that the encryption, key exchange and hashing methods are tweaked for maintaining confidentiality and integrity. </span> <br /><br />
 
-<u>Guide to reading cipher from configuration files: </u><br /> <br /> 
-One of the most popular formats look like this: <br /> 
+<u>Guide to reading cipher from configuration files: </u><br /> <br />
+One of the most popular formats look like this: <br />
 
 <pre>
 <code>...
@@ -347,11 +347,11 @@ ECDH+AESGCM:ECDH+AES256
 <br />
 The above example shows two cipher suites separated by a ':'. The first cipher 'ECDH+AESGCM' specifies ECDH as the signature algorithm for TLS while the AESGCM specifies the encryption scheme with its mode of operation. The second cipher, ECDH:AES256 specifies ECDH being used as the signature scheme and AES256 talks about the encryption algorithm. The mode of operation will be whatever is the system default. <br /> <br />
 </ul>
- 
+
 <p id="GeneralTLSInfoDebra">
 <font size="3"><strong>Recommended Cipher Suites</strong></font> <br /> <br />
 
-		 
+
 		<strong>TLS Recommended Ciphers:</strong><br />
 		TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br />
@@ -361,22 +361,22 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 		TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289<br />
 		TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289<br /><br />
-		
+
 		<strong>Avoid the following ciphers:</strong> <br />
 		TLS_DHE_RSA_WITH_AES_128_CBC_SHA <br />
 		TLS_DHE_RSA_WITH_AES_256_CBC_SHA <br />
 		TLS_DHE_RSA_WITH_AES_128_CBC_ SHA256 <br />
 		TLS_DHE_RSA_WITH_AES_256_CBC_ SHA256 <br /> <br />
-		
+
 		The following ciphers <strong>may be supported, but aren’t recommended for best practices.</strong> The reason is they use RSA for both authentication and key exchange so they use a static public key in a X.509 certificate for key exchange; thus, they do not provide perfect forward secrecy and are susceptible to <a href="https://robotattack.org/"> ROBOT Attack.</a> <br /><br />
-		
+
 		TLS_RSA_WITH_AES_128_CBC_SHA<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA<br />
 		TLS_RSA_WITH_AES_128_CBC_SHA256<br />
 		TLS_RSA_WITH_AES_256_CBC_SHA256<br /><br />
-		
+
 		The problem with this is that using RSA for key exchange does not provide perfect forward secrecy since you are not using ephimeral “one-time use” keys. <br /> <br />
-		
+
 		<strong>Note:</strong> <br />
 
 
@@ -392,25 +392,25 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 		<strong>More info on why not to use DHE and use ECDHE instead:</strong>
 		The DHE ciphers are safe to use only if dh group 14 (2048 bit) key sizes are being used for key exchange. If a lower dh group size is used with DHE ciphers then your server will be susceptible to the <a href="ssl-3-vuln.html">Logjam</a> attack  This setting may have to be set in the OpenSSL code. There is not a configurable option external to the openssl module. Apache allows for configuring the dh parameters via their management interface but extreme care should be taken in order to avoid unecessary implications by tweaking such settings. In order to keep things simple and safe, use ECDHE. There are other benefits which have been well described <a href="https://security.stackexchange.com/questions/14731/what-is-ecdhe-rsa">here</a>.
 		Here is another good write-up: <a href="http://crypto.stackexchange.com/questions/15329/tls-ssls-usage-of-non-ephemeral-dh-vs-dhe"> Usage of non-ephermeral-dh vs dhe </a>.<br /><br />
-		
+
 		<!--<strong>Do not use DSA because “A signature scheme based on the digital signature algorithm (DSA, designedby NSA) is used for server authentication, the knowledge of just one signature nonce enables the attacker to compute the server’s secret identity key and thus to impersonate the server.” – Dual EC: A Standardized Back Door Daniel J. Bernstein, Tanja Lange, and Ruben Niederhagen </strong>
 		 -->
 </p>
 <!--
 <p id=ROBOT>
-		 <br /> 
+		 <br />
 		<strong> NOTE:</strong> Please read through if to understand about a recent attack that has to do with the Cipher Suite that is used with SSL.
 		<br /> <br />
-	
+
 
 	</p>
 	-->
-        
-		
+
+
 <p id=patch>
 	<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
-		
-	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using TLSv1.2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of TLSv1.2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts. 
+
+	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using TLSv1.2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of TLSv1.2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts.
 
 	<br /> <br /> <strong> Note: </strong>
 Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.

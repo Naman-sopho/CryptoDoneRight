@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -156,7 +156,7 @@
      </li></a>
       </ul>
     </div>
-	
+
 	<!--	<div class="alert alert-warning">
       Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
     </div>-->
@@ -170,11 +170,11 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-	  
+
 <p id="keyncert">
   <div class="col-md-12 col-sm-12 col-xs-12">
-		
-        <h2> <img src="../../images/configuration.jpg " style="width:120px;height:100px;" /> Private Key and Certificates</h2>	  
+
+        <h2> <img src="../../images/configuration.jpg " style="width:120px;height:100px;" /> Private Key and Certificates</h2>
 
         <!-- <font size="4"><strong>Concept:</strong></font>  Use 2048-Bit Private Keys <br /> -->
 
@@ -190,10 +190,10 @@
         For most web sites or servers, <span class="green">security provided by 2,048-bit RSA keys is sufficient.</span> The RSA public key algorithm is widely supported, which makes keys of this type a safe default choice. <br /><br />
 
         Ideally, <span class="red">a larger key size doesnt scale very well and are noticeably more slower.</span> If better security than a 2048-bit key is needed, it is <span class="green">recommended to use <a href= "https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA keys (Elliptic Curve Digital Signature Algorithm)</a> </span> since the trade-off of performance vs security is better. <br /><br />
-		
+
 		The utility "openssl" is used to generate the key and CSR. This utility comes with the OpenSSL package and is usually installed under /usr/local/ssl/bin.
 		If the utility was installed elsewhere, these instructions will need to be adjusted accordingly.<br /><br />
- 
+
 		Type the following command at the prompt:<br/>
 
 		<ul>
@@ -256,7 +256,7 @@
 
           <blockquote>
             <strong> Important </strong> <br /> <br />
-          Even when you expect to use only one domain name, remember that you cannot control how your users arrive at the site or how others link to it. In most cases, you should ensure that the certificate works with and without the www prefix (e.g., that it works for both example.com and www.example.com). The rule of thumb is that a secure web server should have a certificate that is valid for every DNS name configured to point to it. 
+          Even when you expect to use only one domain name, remember that you cannot control how your users arrive at the site or how others link to it. In most cases, you should ensure that the certificate works with and without the www prefix (e.g., that it works for both example.com and www.example.com). The rule of thumb is that a secure web server should have a certificate that is valid for every DNS name configured to point to it.
           </blockquote>
           <br />
           <span class="red"> Wildcard certificates have their uses, but avoid using them if it means exposing the underlying keys to a much larger group of people, </span> and especially if doing so crosses team or department boundaries. In other words, the fewer people there are with access to the private keys, the better. Also be aware that certificate sharing creates a bond that can be abused to transfer vulnerabilities from one web site or server to all other sites and servers that use the same certificate (even when the underlying private keys are different).
@@ -314,7 +314,7 @@
         </p>
         </ul>
         </p>
-         </div>    
+         </div>
       </div>
 
 

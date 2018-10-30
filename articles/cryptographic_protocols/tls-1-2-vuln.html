@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -152,20 +152,20 @@
 	  <li>Critical-<img src="../../images/red.jpg" style="width:20px;height:20px;"/></li>
 	  <li>Moderate-<img src="../../images/yellow.jpg" style="width:20px;height:20px;"/></li>
 	  </ul>
-    </div> 
-	
+    </div>
+
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 
 <p id=robotattacks>
 
 <h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> ROBOT Attack: What is it and how to avoid it? <img src="../../images/red.jpg" style="width:55px;height:55px;" align="right" /> </h4>
-		A recent vulnerability was found with the way TLS uses RSA keys for <a href="ssl-3-working.html"> encryption </a> that would 
-		let an attacker decrypt any data that is sent over a TLS session. 
+		A recent vulnerability was found with the way TLS uses RSA keys for <a href="ssl-3-working.html"> encryption </a> that would
+		let an attacker decrypt any data that is sent over a TLS session.
 		This defeats the purpose of confidentiality and should therefore be treated as a <span class="red">serious </span> issue. <br /> <br />
 
 		Several product manufacturers have provided <span class="green"> patches </span> to the problem here: <br />
-		
+
 		<a href= https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches >https://robotattack.org/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B0LalERDcQ8y2%2BHNBAvH4Rg%3D%3D#patches </a>
 		<br /> <br />
 		<span class="yellow"><strong>NOTE:</strong> The above list will be updated as more patches are available. </span> <br /> <br />
@@ -178,7 +178,7 @@
 		<br /> <br />
 		TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 		<br /> <br />
-		The above cipher suite is not vulnerable to the ROBOT attack. This is because of ECDHE keys being used as encryption keys and RSA being used for signature verification. 
+		The above cipher suite is not vulnerable to the ROBOT attack. This is because of ECDHE keys being used as encryption keys and RSA being used for signature verification.
 		<br /> <br />
 		<span class="green"> Action Taken to protect against a ROBOT attack. </span> <br /> <br />
 		In summary, administrators can perform the following to protect their servers:
@@ -190,21 +190,21 @@
 		<li>Even if the ROBOT vulnerability is mitigated, you may consider disabling TLS_RSA cipher suites as they
 		appear to be high risk and do not support perfect forward secrecy.</li>
 		</ul>
-		
+
 		<span class="green"><strong> NOTE: </strong> <u>NO</u> action is required for SSL/TLS certificates as the certificate private key is not exposed by this vulnerability. </span>
-		
+
 </p>
 
 <p id="logjam">
 <h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> Logjam: <img src="../../images/red.jpg" style="width:55px;height:55px;" align="right" /> </h4>
-NOTE: This is not a specific vulnerability with SSLv3. This is vulnerability with a parameter that is configurable and continues to be used with all versions 
-of SSL/TLS. 
+NOTE: This is not a specific vulnerability with SSLv3. This is vulnerability with a parameter that is configurable and continues to be used with all versions
+of SSL/TLS.
 <br /> <br />
-Logjam is a security vulnerability against a Diffie–Hellman key exchange ranging from 512-bit (US export-grade) to 1024-bit keys. It was discovered by a group 
-of computer scientists and publicly reported on May 20, 2015. The Logjam attack allows a man-in-the-middle attacker to downgrade vulnerable TLS connections to 
-512-bit export-grade cryptography. This allows the attacker to read and modify any data passed over the connection. The attack is reminiscent of the FREAK attack, 
-but is due to a flaw in the TLS protocol rather than an implementation vulnerability, and attacks a Diffie-Hellman key exchange rather than an RSA key exchange. 
-The Logjam attack is a perfect example of an attack that was theoretical but became a very real threat to the current environment of readily available raw computing 
+Logjam is a security vulnerability against a Diffie–Hellman key exchange ranging from 512-bit (US export-grade) to 1024-bit keys. It was discovered by a group
+of computer scientists and publicly reported on May 20, 2015. The Logjam attack allows a man-in-the-middle attacker to downgrade vulnerable TLS connections to
+512-bit export-grade cryptography. This allows the attacker to read and modify any data passed over the connection. The attack is reminiscent of the FREAK attack,
+but is due to a flaw in the TLS protocol rather than an implementation vulnerability, and attacks a Diffie-Hellman key exchange rather than an RSA key exchange.
+The Logjam attack is a perfect example of an attack that was theoretical but became a very real threat to the current environment of readily available raw computing
 power.
 <br /> <br />
 Learn more about Logjam: <a href="https://blogs.cisco.com/security/understanding-logjam-and-future-proofing-your-infrastructure">https://blogs.cisco.com/security/understanding-logjam-and-future-proofing-your-infrastructure</a> <br />

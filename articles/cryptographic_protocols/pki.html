@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -105,7 +105,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -163,10 +163,10 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-        
+
         <div class="col-md-12 col-sm-12 col-xs-12">
           <p>
-           <img src="../../images/pki.jpg" style="width:500px;height:275px;" class="center" />   
+           <img src="../../images/pki.jpg" style="width:500px;height:275px;" class="center" />
 
             <center><h2>Certificates and Public Key Infrastructure</h2></center>
             <br /> <br />
@@ -197,7 +197,7 @@ AIM :- A ----------- TRUSTS -------------B <br /><br /><br />
 
 Since, <br />
 
-A -------------- TRUSTS ----------------C <br /> <br /> 
+A -------------- TRUSTS ----------------C <br /> <br />
 
 B ---------------TRUSTS ----------------C <br /> <br />
 
@@ -216,7 +216,7 @@ Lets extrapolate the above example to include a few more technical terms. <br />
 <li>
 <p id="partyncert">
 <h3>Trusted Party and Certificates </h3>
-Charlie is the certificate authority or the "Trusted Party". Charlie generates certificates(analogously ID cards) for Alice and Bob. 
+Charlie is the certificate authority or the "Trusted Party". Charlie generates certificates(analogously ID cards) for Alice and Bob.
 The certificate has the information of Alice (such as Name, Date of Birth, Expiry of the card etc.) and it is also signed by Charlie. Simiarly, even Bob will recieve a certificate of his own signed by Charlie. Now, this step is done before the actual communication exchange between the Alice and Bob. Charlie also has his own certificate which is also given to both Alice and Bob. <br />
 
 Now, armed with the certificates, both Alice and Bob can begin their communication. <br />
@@ -254,8 +254,8 @@ Signed(Hash(Alice's information))
 </li>
 </ul>
 
-<img src="../../images/cert-1.png" class="center" /> 
-<img src="../../images/cert-2.png" class="center" /> 
+<img src="../../images/cert-1.png" class="center" />
+<img src="../../images/cert-2.png" class="center" />
 
 This above process is done for everyone who asks for a certificate. This is analogous to the creation of an ID card (such as a driver's license) by a trusted government agency.<br /><br />
 
@@ -270,11 +270,11 @@ Before we go on to explain how your web browser will negotiate a "trust relation
 
 A Root CA, the entity that is at the top of chain will have the "Issued by" and "Issued to" as the same, i.e., itself. The Subordinate CA's will have the "Issued by" field populated by the Root CA. All the other certificates that users request will now have the Issued by field as this Subordinate CA.<br /><br />
 
-<img src="../../images/cert-3.png" class="center" /> 
-<img src="../../images/cert-4.png" class="center" /> 
-<img src="../../images/cert-5.png" class="center" /> 
-<img src="../../images/cert-6.png" class="center" /> 
-<img src="../../images/cert-7.png" class="center" /> 
+<img src="../../images/cert-3.png" class="center" />
+<img src="../../images/cert-4.png" class="center" />
+<img src="../../images/cert-5.png" class="center" />
+<img src="../../images/cert-6.png" class="center" />
+<img src="../../images/cert-7.png" class="center" />
 
 
 Now this is what is a chain of trust. Every server will validate this chain, if the chain is broken or if there is any missing entity, the authentication of that certificate will fail.<br /><br />
@@ -285,14 +285,14 @@ Now this is what is a chain of trust. Every server will validate this chain, if 
 <li>
 <p id="findsig">
 <h3> How do I know the Signature that I am using in my certificate? </h3>
-  <ul> 
+  <ul>
     <li>
       Go to the Details Tab.
-      <img src="../../images/cert-8.png" class="center" /> 
+      <img src="../../images/cert-8.png" class="center" />
     </li>
     <li>
       Find and click on Fields: "Signature algorithm" or "Signature has algorithm"
-      <img src="../../images/cert-9.png" class="center" /> 
+      <img src="../../images/cert-9.png" class="center" />
     </li>
   </ul>
   </p>
@@ -352,7 +352,7 @@ Recommended viewing for further strengthening above concepts<br /><br />
 
 <a href="https://www.youtube.com/watch?v=i-rtxrEz_E8">https://www.youtube.com/watch?v=i-rtxrEz_E8 </a><br />
 This above video is an excellent illustration of the need for the digital certificates and how asymetric encryption works. It's only about 3 minutes long. It also explains some of the concepts mentioned above.<br /><br />
- 
+
 <a href="https://www.youtube.com/watch?v=q9vu6_2r0o4">https://www.youtube.com/watch?v=q9vu6_2r0o4 </a><br />
 This video is an 18 minute video, but the explanation of the concepts is amazing since it includes the encryption and why different encryption schemes are needed and how they came about. This is definitely a must watch. <br /> <br />
 

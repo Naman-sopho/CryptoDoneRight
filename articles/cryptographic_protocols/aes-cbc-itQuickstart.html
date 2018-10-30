@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="lock-icon.ico">
 
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
                   <a href="index.html"><font color="black">Home</font></a>
                 </li>-->
                 <li>
-                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Algorithms</font></a>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
                   <ul class="fh5co-sub-menu">
                     <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
                     <li><a href="#" class="fh5co-sub-ddown">SSL</a>
@@ -99,7 +99,7 @@
                         </ul>
                         </li>
                           <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
-                        <ul class="fh5co-sub-menu">                       
+                        <ul class="fh5co-sub-menu">
                           <li><a href="#" tar
                                  ="_blank">More to come..</a></li>
                             </ul>
@@ -142,7 +142,7 @@
 	<div class="alert alert-success">
       The <strong>Recommended</strong> Cipher Suites is listed in this page.
     </div>
-	
+
 	<a href="#ROBOT"><div class="alert alert-danger">
       <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
     </div> </a>
@@ -154,7 +154,7 @@
 <div class="container-fluid">
 <div class="row" style="padding: 2vw;">
 <div class="col-md-12 col-sm-12 col-xs-12">
-		
+
 <p id="GeneralAESInfo">
 
 <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> AES CBC Introduction </h2>
@@ -209,7 +209,7 @@ aes-256-cbc ← this is recommended <br /> <br />
 <u>Apache: </u> <br/> <br />
 The main configuration file is usually called httpd.conf. The location of this file is set at compile-time, but may be overridden with the -f command line flag.
 
-By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx. 
+By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
 
 <pre>
 <code>...
@@ -230,9 +230,9 @@ The above example shows two cipher suites separated by a ':'. The first cipher '
 
 This works on both Apache 2.2 and 2.4. If your OpenSSL doesn’t support the preferred modern ciphers (like the still common 0.9.8), it will fall back gracefully but your configuration is ready for the future.<br /> <br />
 
-<u> Nginx: </u> <br /> <br /> 
+<u> Nginx: </u> <br /> <br />
 By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
-<br /> <br /> 
+<br /> <br />
 <pre>
 <code>...
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -243,8 +243,8 @@ ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+A
 <strong>VPN: </strong> <br />
 We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html">http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
 
-<u>Guide to reading cipher from configuration files: </u><br /> <br /> 
-One of the most popular formats look like this: <br /> 
+<u>Guide to reading cipher from configuration files: </u><br /> <br />
+One of the most popular formats look like this: <br />
 
 <pre>
 <code>...

@@ -131,8 +131,8 @@
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
          <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
          <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
-         <li class="breadcrumb-item level"><a href="aes-ctr.html">AES CTR</a></li>
-         <li class="breadcrumb-item level0 active">AES CTR Dev Quickstart</li>
+         <li class="breadcrumb-item level"><a href="aes-gcm.html">AES GCM</a></li>
+         <li class="breadcrumb-item level0 active">AES GCM Dev Quickstart</li>
        </ol>
     </div>
 
@@ -140,7 +140,7 @@
       <strong style="font-size:2vw;">Content</strong>
       <ul>
         <a href="#cbcintro"><li>
-          CTR Introduction
+          GCM Introduction
         </li></a>
         <a href="#nocryptoroll"><li>
           AES Implementation
@@ -162,44 +162,51 @@
       <div class="row" style="padding: 2vw;">
 
 <p id="cbcintro">
+  <div class="alert alert-success">
+    <a href="dev-bp.html">Click here to read <strong> guidances  </strong> while using crypto in software.</a>
+  </div>
+  <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> AES GCM Mode </h2>
 
-  <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> AES CTR Mode </h2>
 
-<strong>Why CTR Mode:</strong> <br />
-Considered a safe and efficient method of operation. Both CBC and CTR come recommended by Niels Ferguson and Bruce Schneier, both of whom are respected cryptographers. <br />
+<strong>Why GCM Mode:</strong> <br />
+Considered a safe and efficient method of operation. It is a very popular choice for authenticated encryption <a href="https://crypto.stackexchange.com/questions/12178/why-should-i-use-authenticated-encryption-instead-of-just-encryption">MAC</a>.
+There are no other advantages from a security standpoint (as long as all modes of operation are configured as per the best practice). <br /><br />
+
+Additonal Reading: <a href="https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/"> Matthew Green: How to choose authenticated encryption? </a><br /><br />
 
 <strong>How it works:</strong><br />
-This essentially involves encrypting a sequence of incrementing numbers prefixed with a nonce (number used once) to produce a keystream, and again is a stream cipher mode. <br /> <br />
+<ul>
+ <li><a href="https://en.wikipedia.org/wiki/Galois/Counter_Mode">Galois/Counter Mode</a></li>
+ <li><a href="https://crypto.stackexchange.com/questions/12178/why-should-i-use-authenticated-encryption-instead-of-just-encryption">Difference between AES CBC and GCM.</a>. </li>
+</ul><br />
 
 <strong>Where is it commonly used:</strong><br />
-CTR is used in many of the SSL/TLS cipher suites. <br /> <br />
+GCM is used in many of the SSL/TLS cipher suites. It has various other applications as listed on this <a href="https://en.wikipedia.org/wiki/AES_implementations#Python"> wiki page. </a><br /> <br />
 
-<strong>How to use CTR: </strong>
+<strong>How to use GCM: </strong>
 <ul>
-<li>aes-128-ctr ← this is okay</li>
-<li>aes-192-ctr</li>
-<li>aes-256-ctr ← this is recommended</li>
+<li>aes-128-gcm← this is good!</li>
+<li>aes-256-gcm  (with iv = 96bit,tag=128bit) ← this is good too!</li>
 </ul>
 
-<br />
-CTR mode is widely accepted and any problems are considered a weakness of the underlying block cipher, which is expected to be secure regardless of systemic bias in its input. <br /><br />
-
 <strong>How secure?</strong> <br /> <br />
-<span class="red">CTR requires no padding </span> <br /> <br />
-CTR mode is special in a few ways: <br /><br />
+<span class="red">GCM requires no padding. This is because CTR mode is also a part of GCM. </span> <br /> <br />
+As a reminder, CTR mode is special in a few ways: <br /><br />
 
 <ul>
 <li> Padding doesn't apply and therefore eliminates all the padding attacks that were possible with modes like CCB where padding is required. . Normally, a block encryption algorithm (AES, Blowfish, DES, RC2, etc.) emit encrypted output that is a multiple of the block size (16 bytes for AES as an example). With CTR mode, the number of bytes output is exactly equal to the number of bytes input, so no padding/unpadding is required. The PaddingScheme property does not apply for counter mode.</li>
 
 <li>CTR mode increments a counter for each subsequent block encrypted. For example, if an application encrypted the string "1234567890" twenty times in a row, using the same instance of the Chilkat Crypt2 object, then each iteration's result would be different. This is because the counter is being incremented. The decrypting application would need to decrypt in exactly the same manner. The 1st decrypt should begin with a new instance of a Crypt2 object so that it's counter is at the initial value of 0.</li>
 
+Additionally, GCM mode provides authentication of the message without any additonal calculations.
+
 </ul>
 
 <br />
 It would be a mistake to encrypt 20 strings using an instance of the Crypt2 object, and then attempt to decrypt with the same Crypt2 object. To decrypt successfully, the app would need to instantiate a new Crypt2 object and then decrypt, so that the counters match. <br /> <br />
 
-<span class="green">Good points:</span>  Secure when done right, parallel encryption and decryption. <br />
-<span class="red">Bad points:</span>  Not many. Some question the security of the "related plaintext" model but it's generally considered to be safe.
+<span class="green">Good points:</span>  Secure when done right, parallel encryption and decryption with authentication built in. <br />
+<span class="red">Bad points:</span>  Not many. It is complicated to implement and can be catostrophical if not implemented correctly.
 
 </p>
 
@@ -221,7 +228,7 @@ OpenSSL is not the only available crypto library. For a list of different librar
 between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.
 <br /> <br />
 
-The recommended version of OpenSSL that is to be used for AES is 1.1.0. This is for various reasons that concern and do not concern with AES. Some of them include for the latest encryption standards and removal of older vulnerable ones.
+The recommended version of OpenSSL is the latest 1.1.1. Some of them are additon the latest encryption standards and removal of older vulnerable ones.
 <br /> <br />
 </p>
 
@@ -233,179 +240,73 @@ The recommended version of OpenSSL that is to be used for AES is 1.1.0. This is 
 languages that can readily be used to perform cryptographic operations.
 <br /> <br />
 <font size="4"><strong>Examples:</strong></font> <br />
-<strong>PHP: </strong> <br />
-Examples of encryption and decryption  using AES in PHP: <br /> <br />
+<strong>Python: </strong> <br /><br />
+There are multiple libraries that support AES in GCM mode. Some of them are:<br />
+<ul>
+  <li>PyCrypto – The Python Cryptography Toolkit PyCrypto, extended in PyCryptoDome</li>
+<li>keyczar – Cryptography Toolkit keyczar</li>
+<li>M2Crypto – M2Crypto is the most complete OpenSSL wrapper for Python.</li>
+<li>Cryptography – Python library which exposes cryptographic recipes and primitives.</li>
+<li>PyNaCl – Python binding for libSodium (NaCl)</li>
+</ul>
+<br />
+Cryptography is a popular library and here is a basic example of how it works:
+<code>
+  <pre>
+>>> import os
+>>> from cryptography.hazmat.primitives.ciphers.aead import AESCCM
+>>> data = b"a secret message"
+>>> aad = b"authenticated but unencrypted data"
+>>> key = AESCCM.generate_key(bit_length=128)
+>>> aesccm = AESCCM(key)
+>>> nonce = os.urandom(13)
+>>> ct = aesccm.encrypt(nonce, data, aad)
+>>> aesccm.decrypt(nonce, ct, aad)
+b'a secret message'
+</pre>
+</code>
+<!DOCTYPE html>
+<a href="https://cryptography.io/en/latest/hazmat/primitives/aead/">Documentation</a><br /><br />
 
-<a href="https://askubuntu.com/questions/60712/how-do-i-quickly-encrypt-a-file-with-aes">https://askubuntu.com/questions/60712/how-do-i-quickly-encrypt-a-file-with-aes </a>
-<br /> <br />
 
 <strong>Java: </strong> <br />
+Some of the popular libraries in Java:
+<ul>
+  <li>Java Cryptography Extension, integrated in the Java Runtime Environment since version 1.4.2</li>
+  <li>IAIK JCE</li>
+  <li>Bouncy Castle Crypto Library</li>
+</ul>
 
-Example:
-<pre>
-  <code>
-/**
-* Copyright (c) 2013 The University of Texas at Dallas, Data Security and Privacy Lab.
-* All rights reserved.
-*
-* Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
-* file except in compliance with the License. You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software distributed
-* under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-* CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
-* language governing permissions and limitations under the License. See accompanying
-* LICENSE file.
-*/
+An example from the Java Cryptographic Extensions:<br />
+<code>
+  <pre>
+  SecretKey myKey = ...
+  byte[] myAAD = ...
+  byte[] plainText = ...
+  int myTLen = ...
+  byte[] myIv = ...
 
-package edu.utdallas.bigsecret.cipher;
+  GCMParameterSpec myParams = new GCMParameterSpec(myTLen, myIv);
+  Cipher c = Cipher.getInstance("AES/GCM/NoPadding");
+  c.init(Cipher.ENCRYPT_MODE, myKey, myParams);
 
-import java.math.BigInteger;
-import java.security.SecureRandom;
+  // AAD is optional, if present, it must be supplied before any update/doFinal calls.
+  c.updateAAD(myAAD);  // if AAD is non-null
+  byte[] cipherText = new byte[c.getOutputSize(plainText.length)];
+  // conclusion of encryption operation
+  int actualOutputLen = c.doFinal(plainText, 0, plainText.length, cipherText);
 
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
+  // To decrypt, same AAD and GCM parameters must be supplied
+  c.init(Cipher.DECRYPT_MODE, myKey, myParams);
+  c.updateAAD(myAAD);
+  byte[] recoveredText = c.doFinal(cipherText, 0, actualOutputLen);
 
-import org.apache.commons.lang.ArrayUtils;
-
-/**
-* This class extends abstract Cipher class. It implements AES in counter mode.
- */
-public class AesCtr extends JavaxCipher
-{
- /**
-  * Secure random generator.
-  */
- protected SecureRandom m_secureRandom;
-
- /**
-  * Number of bytes in a block, which is constant for AES.
-  */
- protected static int BLOCK_SIZE_BYTES = 16;
-
- /**
-  * Number of bits in a block, which is constant for AES.
-  */
- protected static int BLOCK_SIZE_BITS = 128;
-
- /**
-  * Number of bytes in key.
-  */
- protected int KEY_SIZE_BYTES;
-
-
- /**
-  * Class constructor. Creates a Javax.Crypto.Cipher instance with AES in CTR<br>
-  * mode, without any padding.
-  * @param key Input key for the cipher. Should be 16, 24, or 32 bytes long
-  * @throws Exception Throws exception if key length is not 16, 24, or 32 bytes.<br>
-  *       May throw exception based on Javax.Crypto classes.
-  */
- public AesCtr(byte[] key) throws Exception
- {
-  //use default constructor for cipher.Cipher
-  super();
-
-  //check if input key is ok
-  if(key.length != 16 && key.length != 24 && key.length != 32)
-  {
-   throw new Exception("Key length should be 16, 24, or 32 bytes long");
-  }
-
-  //set key length
-  KEY_SIZE_BYTES = key.length;
-
-  //create secret key spec instance
-  m_keySpec = new SecretKeySpec(key, "AES");
-
-  //create cipher instance
-  m_cipher = javax.crypto.Cipher.getInstance("AES/CTR/NoPadding");
-
-  //create secure random number generator instance
-  m_secureRandom = new SecureRandom();
- }
-
-
- /**
-  * Encrypts input data with AES CTR mode.
-  * @param data Input byte array.
-  * @return Encryption result.
-  * @throws Exception Throws exception if there is no data to encrypt.<br>
-  *       May throw exception based on Javax.Crypto.Cipher class
-  */
- public byte[] encrypt(byte[] data) throws Exception
- {
-  //check if there is data to encrypt
-  if(data.length == 0)
-  {
-   throw new Exception("No data to encrypt");
-  }
-
-  //create iv
-  byte[] iv = new byte[BLOCK_SIZE_BYTES];
-  byte[] randomNumber = (new BigInteger(BLOCK_SIZE_BITS, m_secureRandom)).toByteArray();
-  int a;
-  for(a = 0; a<randomNumber.length && a<BLOCK_SIZE_BYTES; a++)
-   iv[a] = randomNumber[a];
-  for(; a<BLOCK_SIZE_BYTES; a++)
-   iv[a] = 0;
-
-  //init cipher instance
-  m_cipher.init(javax.crypto.Cipher.ENCRYPT_MODE, m_keySpec, new IvParameterSpec(iv));
-
-  //return concatenation of iv + encrypted data
-  return ArrayUtils.addAll(iv, m_cipher.doFinal(data));
- }
-
-
- /**
-  * Decrypts input data with AES CTR mode
-  * @param data Input byte array.
-  * @return Decryption result.
-  * @throws Exception Throws exception if there is no data to decrypt.<br>
-  *       May throw exception based on Javax.Crypto.Cipher class.
-  */
- public byte[] decrypt(byte[] data) throws Exception
- {
-  //call overriden function with offset = 0
-  return decrypt(data, 0);
- }
-
-
- /**
-  * Decrypts input data starting and including the offset index position<br>
-  * with AES CTR mode.
-  * @param data Input byte array.
-  * @param offset Offset to start decryption.
-  * @return Decryption result.
-  * @throws Exception Throws exception if there is no data to decrypt.<br>
-  *       Throws exception if offset is invalid.<br>
-  *       May throw exception based on Javax.Crypto.Cipher class.
-  */
- public byte[] decrypt(byte[] data, int offset) throws Exception
- {
-  //check if there is data to decrypt after the offset and iv
-  if(data.length <= BLOCK_SIZE_BYTES + offset)
-  {
-   throw new Exception("No data to decrypt");
-  }
-
-  //get iv value from the beggining of data
-  byte[] iv = new byte[BLOCK_SIZE_BYTES];
-  System.arraycopy(data, offset, iv, 0, BLOCK_SIZE_BYTES);
-
-  //init cipher instance
-  m_cipher.init(javax.crypto.Cipher.DECRYPT_MODE, m_keySpec, new IvParameterSpec(iv));
-
-  //return decrypted value
-  return m_cipher.doFinal(data, (BLOCK_SIZE_BYTES + offset), data.length - (BLOCK_SIZE_BYTES + offset));
- }
-}
-
-</code>
+  // MUST CHANGE IV VALUE if the same key were to be used again for encryption
+  byte[] newIv = ...;
+  myParams = new GCMParameterSpec(myTLen, newIv);
 </pre>
+</code>
+<a href="https://en.wikipedia.org/wiki/AES_implementations#Python"><strong>WIKI PAGE WITH OTHER LANGUAGES</strong></a><br /><br />
 </p>
 
  </div>

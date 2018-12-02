@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>PKI and Certificates</title>
+    <title>3DES IT Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,7 +33,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body background="..\..\images\test9.jpg"> <!-- background="..\..\images\test9.jpg" -->
+  <body background="..\..\images\test9.jpg">
     <div id="header">
       <header id="fh5co-header-section">
         <div class="container">
@@ -82,6 +82,7 @@
                           <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
                           <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
                           <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
                         </ul>
                       </li>
                     <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
@@ -123,6 +124,7 @@
       </header>
     </div>
 
+
       <div id="contentScroller">
       <strong style="font-size:2vw;">Content</strong>
       <br />
@@ -142,6 +144,9 @@
         <a href="#mutual"><li>
               Mutual Authentication using Certificates
             </li></a><br />
+        <a href="#revocation"><li>
+              What is certificate revocation? OCSP? CRL?
+        </li></a><br />
         <a href="#definitions"><li>
               Defintions
             </li></a><br />
@@ -307,6 +312,10 @@ Now, lets explore what happens if your web browser talks to www.google.com.<br /
 <li>The web browser then validates the chain and verifies the signature just the web server did. If everything checks out then web browser will now trust www.google.com.</li>
 </ul>
 Now, they have authenticated each other and are ready for a secure communications. Note: this is a simplified version of a protocol. This process is typically coupled with a lot of other messages and information .<br /><br />
+
+</p>
+<p id="revocation">
+  <a href="revocation.html"><h3> What is certifacte revocation? </h3></a><br />
 
 </p>
 </li>

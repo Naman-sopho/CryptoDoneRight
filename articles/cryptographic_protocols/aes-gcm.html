@@ -124,99 +124,154 @@
       </header>
     </div>
 
-
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
          <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
-         <li class="breadcrumb-item level0 active">SSL 1.0</li>
+         <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
+         <li class="breadcrumb-item level0 active">AES GCM</li>
        </ol>
     </div>
 
+  <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="aes-gcm-dev-qs.html"><li>
+          Developer's QuickStart
+        </li></a>
+        <a href="aes-ctr-itQuickstart.html"><li>
+          IT  Admin's QuickStart
+     </li></a>
+    <a href="aes-ctr-managerQuickstart.html"><li>
+          Manager's QuickStart
+        </li></a>
+      </ul>
+    </div>
+
   <div id="testtitle">
-        <strong style="font-size:3vw;">SSL 1.0</strong>
+        <strong style="font-size:3vw;">AES GCM</strong>
   </div>
 
-    <div class="alert alert-danger">
-      <strong>Warning!</strong> This technology is <strong>obsolete</strong>! <a href="tls-1-2.html">Try this instead</a>
+    <div class="alert alert-success">
+      This is currently one of the two <strong>Recommended </strong> Modes of Operation.
     </div>
+    <!--
+  <a href="https://tools.ietf.org/html/draft-ietf-tls-tls13-11"><div class="alert alert-success">
+      TLSv1.3 is expected to come out soon. There is no current ETA, click here for the initial draft.
+    </div></a>
+  <a href="tls-1-2-itQuickstart.html#ROBOT"><div class="alert alert-danger">
+      <strong>TLSv1.2 is secure only when it is configured properly!</strong>
+    </div></a>
+  -->
+
+
     <div class="container-fluid">
       <div class="row">
         <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
           <!--<div class="title">
-            <h2><span>SSL 1.0</span></h2>
-          </div>-->
+            <h2><span>AES</span></h2>
+          </div> -->
           <div class="timestamp">
-            <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
+            <p><span>Last Updated Tue, 13 Nov 2018</span></p>
           </div>
           <div class="description">
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             </p>
+
+      <p>
+        GCM mode stands for Galois/Counter mode. GCM operates quite differently from CTR or CBC modes. GCM combines the mathematical properties of  Galois field multiplication
+        with the counter mode of operation for block ciphers. AES GCM has been designed to work in parallel (just like CTR mode) and is therefore fast and its security has been proven.
+        . A safe length of key size for AES in GCM mode is only a 128bit key as compared to AES-CBC mode which typically requires a 256bit key. <br /><br />
+        Additionally, AES-GCM incorporates the authentication checks for datainto the cipher natively. This would have to be generated using a mechanicsm such as a <a href="basics.html"> MAC. <br \><br \><br \>
+
+         <!--
+         <strong>Attacks: </strong> <br />
+         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
+
+         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available. -->
+      </p>
           </div>
         </div>
 
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/NewDevLogo.png" />
-          <div>
-            <button class="btn btn-warning">DEV QUICKSTART</button>
-
+    <br /><br /><br />
+    <a href="aes-gcm-dev-qs.html" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
+            DEV QUICKSTART</a>
+      <p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li><span>Begin to <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashing Algorithm Best Practices">move away</a> from SHA-1</span></li>
-                <li><span>Remain Calm</span></li>
-              </ul>
             </div>
           </div>
-        </div>
 
 
 
         <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-          <img class="logos" src="../../images/itLogo.png" />
-          <div>
-            <button class="btn btn-warning">IT QUICKSTART</button>
-
+    <br /><br /><br />
+    <a href="aes-ctr-itQuickstart.html" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+      <p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
             <div class="blockNotes">
-              <h4>Implemenation Notes</h4>
-              <ul>
-                <li><span>Panic</span></li>
-                <li><span>Use SHA-1 for <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashes for File Verification">file validation</a></span></li>
-              </ul>
             </div>
-
           </div>
+
+    <div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
+    <br />    <br />    <br />    <br />
+    <a href="aes-ctr-managerQuickstart.html" class="btn btn-success"> <img class="logos" src="../../images/manager.png" />
+            MANAGER QUICKSTART</a>
+      <p>
+              Are you a Manager? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+        </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        <p>
+        <!--<strong>Attacks: </strong> <br />
+         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
+
+         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available.-->
+        </p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="row" style="margin-top:10vw;border-top:1px solid #4f4f4f;">
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
-          <p>
-	           It's pretty difficult to create a create a SHA-1 collision right
-	           now, so don't panic. You should start using <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Hashes for File Verification">another algorithm for
-	           file verification</a> as soon as posible. SHA-1 collisions
-	           present very little increase in risk for password storage,
-	           however you should <a href="http://ciscodemo.isi.jhu.edu/template3.html#" title="Read More about Properly Storing Passwords">move
-	           to a better hashing algorithm for passwords</a> as soon as possible.
-	        </p>
+          <ul>
+             <li><a href="https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf
+">History of Hash Functions</a></li>
+            <li>
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.659.1400&rep=rep1&type=pdf">Comparative Study Between MD5 and SHA-1 </a>
+            </li>
+             <li><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Comparisons between the different SHAs</a></li>
+          </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
           <ul>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
-      	  </ul>
+            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+          </ul>
         </div>
       </div>
-
       <div class="footerfix"></div>
       <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
       </footer>
+    </div>
+
   </body>
 </html>

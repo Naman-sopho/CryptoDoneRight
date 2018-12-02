@@ -1,16 +1,127 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>AES IT Quickstart</title>
+    <title>3DES IT Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body background="..\..\images\test9.jpg">
     <div id="header">
-      <h1>JHUISI / Cisco Crypto Library Demo</h1>
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="white">About</font></a></li>
+                <li><a href="contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     </div>
 
     <div class="breadcrumbs">
@@ -38,11 +149,11 @@
 	<div class="alert alert-success">
       The <strong>Recommended</strong> Cipher Suites is listed in this page.
     </div>
-	
+
 	<a href="#ROBOT"><div class="alert alert-danger">
       <strong>WARNING:</strong> Please click here to know about ROBOT attacks.
     </div> </a>
-	
+
 	<a href="flaw-categories.html"><div class="alert alert-warning">
       <strong>MUST READ</strong> Click here to understand about possible land mines.
     </div></a>
@@ -51,7 +162,7 @@
 <div class="container-fluid">
 <div class="row" style="padding: 2vw;">
 <div class="col-md-12 col-sm-12 col-xs-12">
-		
+
 <p id="GeneralAESInfo">
 
 <h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> AES Configuration </h2>
@@ -64,7 +175,7 @@ For AES, the following configuration settings will provide the best possible sec
 <li>Mode of Operation: CTR or GCM. Choosing the right mode of operation is very important as it could not just effect security but also performance. </li>
 </ul> <br /> <br />
 <font size="4"><strong>Concept:</strong></font> AES is a <span class="green">recommended</span> encryption scheme by many security professionals and also US governmental agencies. This is because, it is considered to be almost unbreakable. There are a set of certain attacks that but they are not considered practical in the current time. It is , however, recommended to make sure that AES is properly configured.
-<br /> <br /> <br /> 
+<br /> <br /> <br />
 
 <font size="3"><strong>Examples for Enabling AES:</strong></font> <br />
 <br />We have categorized the examples into two sections. VPN and File Storage. These are the two section of usage where encryption is the most prevalent. <br />
@@ -83,9 +194,9 @@ SSLCipherSuite ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RS
 
 This works on both Apache 2.2 and 2.4. If your OpenSSL doesn’t support the preferred modern ciphers (like the still common 0.9.8), it will fall back gracefully but your configuration is ready for the future.<br /> <br />
 
-<u> Nginx: </u> <br /> <br /> 
+<u> Nginx: </u> <br /> <br />
 By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
-<br /> <br /> 
+<br /> <br />
 <pre>
 <code>...
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -96,8 +207,8 @@ ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+A
 <strong>VPN: </strong> <br />
 We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html">http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
 
-<u>Guide to reading cipher from configuration files: </u><br /> <br /> 
-One of the most popular formats look like this: <br /> 
+<u>Guide to reading cipher from configuration files: </u><br /> <br />
+One of the most popular formats look like this: <br />
 
 <pre>
 <code>...

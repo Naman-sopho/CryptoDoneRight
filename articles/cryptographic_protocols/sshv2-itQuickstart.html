@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SSHv2sS IT Quickstart</title>
+    <title>SSHv2 IT Quickstart</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -214,7 +214,8 @@ Looking for a SSH client? There are a lot of options, some of them are: https://
         ssh-keygen -t ed25519 -f ssh_host_ed25519_key -N "" < /dev/null
         ssh-keygen -t rsa -b 4096 -f ssh_host_rsa_key -N "" < /dev/null
       </pre>
-    </code><br /><br />
+    </code>
+    <br /><br />
 
     Next step is changing the sshd_config file. Add the new host key type:<br />
     <code>

@@ -147,12 +147,12 @@
 	 <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 			  <font size="4"><strong>Concept:</strong></font>
-			  It is important to understand that the fixes for both the vulnerabilities is to ensure that any services or devices that you own/control and accepts TLS connections should not do so on TLSv1.0.
-			  Please bear this in mind for whatever fix maybe applicable.
+			  It is important to understand that the fixes for all the vulnerabilities with TLSv1 is to ensure that any services or devices that you own/control and accepts TLS connections should not do so on TLSv1.0.
+			  Please bear this in mind for whatever fix maybe applicable. Yes, this sounds very similar to what has to be done to get out of SSLv3 and the same instructions apply here as well.
 			  Click <a href="TLS-3-working.html"><b>here</b></a> for basic understanding of the TLS packet flow.
 			  <br /> <br />
-			  <strong>Web Servers: </strong> <br />
-			  Completely disable TLS1.0 on the server. The recommendation is to move to TLSv1.2.
+			  <strong>Web Servers:  <sup>1</sup></strong> <br />
+			  Completely disable TLS1.0 on the server. The recommendation is to move to <b> TLSv1.2 at least</b>.
 <ul>
 <li><u>Nginx Web Server</u> <br/> <br/>
 To disable TLSv1.0 in the Nginx web server, you can use the SSL_protocols directive. This will be located in the server or http blocks in your configuration.
@@ -164,7 +164,7 @@ To disable TLSv1.0, your TLS_protocols directive should be set like this:
 <pre>
 <code>
 ...
-TLS_protocols TLSv1.1 TLSv1.2;
+TLS_protocols TLSv1.2;
 ...
 </code>
 </pre>
@@ -194,7 +194,7 @@ Inside you can find the TLSProtocol directive. If this is not available, create 
 <pre>
 <code>
 ...
-SSLProtocol all -SSLv3 -SSLv2
+SSLProtocol all -SSLv3 -SSLv2 -TLSv1
 ...
 </code>
 </pre>
@@ -212,18 +212,22 @@ $sudo service apache2 restart
 <code>$sudo service httpd restart</code>
 </pre>
 </li>
+<br /><br />
 
-</ul>
+<blockquote>
+Please go through the Related Articles section for more examples for how to disable TLSv1 on other products.
+</blockquote>
+
 			  <br /> <br />
-			  <strong> Browsers </strong> <br />
-			  Upgrade browser (client) to the latest version or if for whatever reason you need to use an older version be sure to disable TLS 2.0 and TLS 3.0 Protocols. Most up to date browsers/servers use TLS_FALLBACK_SCSV. If a client requests a TLS protocol version which is lower than the highest supported by the server (and client), the server will identify intentional downgrade fallback and will drop the connection.
+			  <strong> Browsers<sup>3</sup> </strong> <br />
+			  Upgrade browser (client) to the latest version or if for whatever reason you need to use an older version be sure to disable TLS 2.0 and TLS 3.0 Protocols. Most up to date browsers/servers use<a href="https://tools.ietf.org/html/rfc7507">TLS_FALLBACK_SCSV</a><sup>2</sup>. If a client requests a TLS protocol version which is lower than the highest supported by the server (and client), the server will identify intentional downgrade fallback and will drop the connection.
 
 			  <br /></br />
 
 			  Here is a list of some common browsers and if whether the mitigations (no support for TLSv3.0) are completed. <br /><br />
 			<ul>
 			    <li><b>Google Chrome:</b> On the browser address bar, visit chrome://flags and under "Minimum SSL/TLS version supported.", change from "Default" to "TLS 1.1".)</li>
-				<li><b>Mozilla Firefox:</b> In the addresa bard, type "about:config" and hit enter. Post this, in the "Search" field, enter "tls". Find and double-click the entry for "security.tls.version.min" and set the interger value to "2" to force a minimum protocol of TLSv1.1 (entering "3" would force TLSv1.2). Do not forget to clear your cache post this change.
+				<li><b>Mozilla Firefox:</b> In the address bard, type "about:config" and hit enter. Post this, in the "Search" field, enter "tls". Find and double-click the entry for "security.tls.version.min" and set the interger value to "2" to force a minimum protocol of TLSv1.1 (entering "3" would force TLSv1.2). Do not forget to clear your cache post this change.
 			   </li>
 			   <li><b>Internet Explorer:</b> Left click the gear icon on the top-left of the browser window. Select "Internet Options" from the dropdown menu. Next, click the “Advanced” tab,  scroll down and deselect “SSL 3.0” and “TLS 1.0”. Finally, click OK (you may need to refresh your browser post these changes).
 				</li>
@@ -246,11 +250,12 @@ $sudo service apache2 restart
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
+          <h3>References</h3>
           <p>
 	          <ul>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-TLS-and-tls/>Book:- Understanding TLS, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of TLS, TLS and DTLS</a></li>
+              <li><a href="https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-poodle-sslv3-vulnerability">[1] Digital Ocean: How To Protect your Server Against the POODLE SSLv3 Vulnerability  </a></li>
+              <li><a href="https://crypto.stackexchange.com/questions/19673/how-does-tls-fallback-scsv-help">[2] Stack Exchange: How does TLS_FALLBACK_SCSV help? </a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">[3] Wikipedia: Transport Layer Security</a></li>
 			  </ul>
 	        </p>
         </div>
@@ -259,8 +264,10 @@ $sudo service apache2 restart
           <h3>Related Articles</h3>
           <p>
 	          <ul>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-TLS-and-tls/>Book:- Understanding TLS, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of TLS, TLS and DTLS</a></li>
+              <li><a href="https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/">Acunetix: TLS/SSL Explained – Examples of a TLS Vulnerability and Attack, Final Part </a></li>
+              <li><a href="https://disablessl3.com/">How to disable SSLv3 on devices? (comprehensive list)</a></li>
+              <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+      			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
 			  </ul>
 	        </p>
         </div>

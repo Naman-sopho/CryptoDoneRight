@@ -136,10 +136,10 @@
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
-        <h2>Working Tab</h2>
+        <h2>Basic Anatomy of SSL/TLS</h2>
         <div class="col-md-6 col-sm-6 col-xs-6">
           <p>
-            <strong>How SSL/TLS Works</strong><br />
+            <strong>(Taken from <a href="https://www.eecis.udel.edu/~cshen/367/notes/ssl-tls-beginners-guide-1029.pdf">SSL and TLS: A Beginners Guide)</a></strong><br />
   The four protocol layers of the SSL protocol (Record Layer, ChangeCipherSpec
   Protocol, Alert Protocol, and Handshake Protocol) encapsulate all communication
   between the client machine and the server.
@@ -158,7 +158,7 @@
           <p>
             <strong>ChangeCipherSpec Protocol</strong><br />
   The ChangeCipherSpec layer is composed of one message that signals the
-  beginning of secure communications between the client and server. Though the
+  beginning of secure communications between the client and theserver. Though the
   ChangeCipherSpec Protocol uses the Record Layer format, the actual
   ChangeCipherSpec message is only one byte long, and signals the change in
   communications protocol by having a value of ‘1’.
@@ -176,7 +176,7 @@
             The Severity Level sends messages with a ‘1’ or ‘2’ value, depending on the level
   of concern. A message with a value of ‘1’ is a cautionary or warning message,
   suggesting that the parties discontinue their session and reconnect using a new
-  handshake. A message with a value of ‘2’ is a fatal alert message, and requires that the parties discontinue their season.
+  handshake. A message with a value of ‘2’ is a fatal alert message and requires that the parties discontinue their season.
           </p>
 
           <p>
@@ -196,7 +196,7 @@
   ClientKeyExchange, ChangeCipherSpec, Finished, ChangeCipherSpec, Finished.
   (Thomas, 40) The following sections will detail these messages and, where appropriate,
   will explain how they are used in the webmail example seen earlier in this paper. A
-  visual explanation of the Handshake Protocol is found in Figure 1.
+  visual explanation of the Handshake Protocol is found the Figure. There is plenty of material online that will help you with understanding the workings of the handshake.
           </p>
       </div>
 
@@ -209,25 +209,24 @@
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
+          <!-- <h3>Further Reading</h3>
           <p>
-	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	        </p>
+	        </p>-->
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Related Articles</h3>
+          <!-- <h3>Related Articles</h3>
           <ul>
       	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
       	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
       	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
-      	  </ul>
+      	  </ul> -->
         </div>
       </div>
 
 
       <div class="footerfix"></div>
-      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
       </footer>
     </div>
 

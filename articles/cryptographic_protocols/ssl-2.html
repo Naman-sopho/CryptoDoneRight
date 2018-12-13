@@ -135,7 +135,9 @@
     </div>
 
   <div id="testtitle">
-        <strong style="font-size:3vw;">SSL 2.0</strong>
+        <strong style="font-size:3vw;">SSL 2.0 </strong>
+        <strong>(This page is under construction)</strong>
+
   </div>
 
   <div id="contentScroller">
@@ -153,7 +155,7 @@
       </ul>
   </div>
 
-	<a href="ssl-2-broken.html"><div class="alert alert-danger">
+	<a href="ssl-2-broken.html#"><div class="alert alert-danger">
       <strong>Warning!</strong> This technology is <strong>obsolete</strong>!
     </div></a>
 
@@ -164,13 +166,22 @@
             <h2><span>SSL 2.0</span></h2>
           </div>-->
           <div class="timestamp">
-            <p><span>Last Updated Thu, 13 Jul 2017 12:00:01 -0400</span></p>
+            <p><span>Last Updated Thu, 12 Dev 2018 12:00:01 -0400</span></p>
           </div>
           <div class="description">
             <p>
              SSL 2.0 was officially the first SSL version available (SSLv1 never got released). It was released in February 1995.
 			 A lot of weaknesses in the protocol led to the development of SSLv3.0. A lot of modern systems do not support SSL2.0 so supporting it for whatever reason
-			 would be a major security concern and is simply not recommended. </p>
+			 would be a major security concern and is simply not recommended. <br /><br />
+
+       <b>Attacks:</b><br />
+       <u>DROWN Vulnerability:</u> DROWN (Decrypting RSA using Obsolete and Weakened eNcryption) allows attackers to break the encryption and read or steal sensitive communications,
+       including passwords, credit card numbers, trade secrets, or financial data. <a href="ssl-2-broken.html#">Learn more</a>. <br />
+      <u>Ciphersuite RollBack Attack:</u> An attacker is able to modify the SSL Handshake to force the connection to use weaker cipher suites than what the client has proposed. <a href="ssl-2-broken.html#"> Learn more</a> <br />
+       <uWeak Encryption:</u> SSLv2 has a lot of weak encryption ciphers available. It is not uncommon to find weak encryption settings enabled on a server. One such weak encryption algorithm is named DES. <a href="ssl-2-broken.html#"> Learn more</a> <br />
+     </p>
+
+
           </div>
         </div>
 
@@ -210,15 +221,15 @@
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Related Articles</h3>
+          <!-- <h3>Related Articles</h3>
           <ul>
       	    <li><a href="https://support.globalsign.com/customer/portal/articles/2356063">Disabling SSLv2 and SSLv3</a></li>
-      	  </ul>
+      	  </ul> -->
         </div>
       </div>
 
       <div class="footerfix"></div>
-      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
       </footer>
   </body>
 </html>

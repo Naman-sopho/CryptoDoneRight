@@ -155,7 +155,7 @@
       <a href="ssl-3-broken.html"><div class="alert alert-danger">
       <strong>Warning!</strong> This technology is <strong>obsolete</strong>!
     </div></a>
-    
+
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 
@@ -165,7 +165,7 @@ SSL is one of the most popular technology that aims at, mainly through cryptogra
 
 <p id=protocol>
 <h4> <img src="../../images/prot.png" style="width:80px;height:80px;" /> Protocol: </h4>
-SSLv3 is not safe. It has a few critical vulnerabilities and is rightly being decommissioned by a lot of popular vendors and product manufacturers. There have been major flaws found with SSLv3 protocol such as Poodle and Beast (LINK HERE). There were other factors too apart from the vulnerabilities that led to SSLv3 being marked as an obsolete technology. Since this is a flaw in the official definition and standardization of the protocol, the only option to fix this issue is to upgrade the version of SSL (now being called TLS) being used. Note that upgrading the protocol does not result in any difference in what SSL was intended to do (secure communication), an upgrade to the protocol simply means that the technology is patched for flaws that could compromise the security of the product using it.
+SSLv3 is not safe. It has a few critical vulnerabilities and is rightly being decommissioned by a lot of popular vendors and product manufacturers. There have been major flaws found with SSLv3 protocol such as <a href="ssl-3-vuln.html">Poodle and Beast</a>. There were other factors too apart from the vulnerabilities that led to SSLv3 being marked as an obsolete technology. Since this is a flaw in the official definition and standardization of the protocol, the only option to fix this issue is to upgrade the version of SSL (now being called TLS) being used. Note that upgrading the protocol does not result in any difference in what SSL was intended to do (secure communication), an upgrade to the protocol simply means that the technology is patched for flaws that could compromise the security of the product using it.
 <br /> <br />
 <h5>High-level Action Plan: </h5>
 <input type="checkbox"> Disable SSLv3 on all systems. Should be used in no capability whatsoever.</input> <br />
@@ -192,7 +192,7 @@ A lot of vendors who support SSLv3 should provide software patches that should h
 <input type="checkbox"> Gather the respective teams responsible for administration and management of these devices or technology. </input> <br />
 <input type="checkbox"> Teams should be tasked with finding the patches and devising a plan to implement them ASAP. </input> <br />
 <input type="checkbox"> Consider any sort of verification process to audit these patches. </input> <br />
-<input type="checkbox"> Devise a long term plan to replace the hardware or software to support TLSv1.1 at the least. </input> <br />
+<input type="checkbox"> Devise a long-term plan to replace the hardware or software to support TLSv1.1 at the least. </input> <br />
 <br /> <br />
 </p>
 
@@ -217,27 +217,27 @@ SSLv3 and its successors offer a few options with configuration. Some of these a
       </div>
 
 
-      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
-        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
-          <p>
-	          <ul>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
-			  </ul>
-	        </p>
-        </div>
 
-        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Related Articles</h3>
-          <p>
-	          <ul>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
-			  </ul>
-	        </p>
-        </div>
-      </div>
+            <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+              <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+                <h3>Further Reading</h3>
+                <ul>
+      			<li><a href="https://www.schneier.com/academic/paperfiles/paper-ssl.pdf">Analysis of SSL</a></li>
+            	    <li><a href="http://disablessl3.com/">Disabling SSLv3</a></li>
+      			<li><a href="https://support.globalsign.com/customer/portal/articles/2356063">Disabling SSLv2 and SSLv3</a></li>
+      			<li><a href="https://www.sans.org/reading-room/whitepapers/protocols/ssl-tls-beginners-guide-1029">SSL/TLS: A Beginners Guide</a></li>
+      			<li><a href="https://www.schneier.com/academic/paperfiles/paper-ssl-revised.pdf">Analysis of the SSL 3.0 protocol</a></li>
+            	  </ul>
+              </div>
+
+              <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+                <h3>Related Articles</h3>
+                <ul>
+            	    <li><a href="https://tools.ietf.org/html/rfc7568#section-5">RFC for Disabling SSLv3</a></li>
+      			 <li><a href="https://support.globalsign.com/customer/portal/articles/2356063">Disabling SSLv2 and SSLv3</a></li>
+            	  </ul>
+              </div>
+            </div>
 
 
       <div class="footerfix"></div>

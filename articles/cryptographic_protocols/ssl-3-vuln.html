@@ -168,7 +168,7 @@
 
 <p id=poodle>
 <h4><img src="../../images/prot.png" style="width:80px;height:80px;" /> POODLE: <img src="../../images/red.jpg" style="width:55px;height:55px;" align="right" /> </h4>
-SSL Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE) is a vulnerability affecting SSLv3 where a block cipher is enabled
+SSL Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE)<sup>1</sup> is a vulnerability affecting SSLv3 where a block cipher is enabled
 utilizing the CBC cipher mode. It requires a man-in-the-middle attack and the ability for the attacker to cause the application to send the same
 data over newly created SSL3.0 connections but allows an attacker to decipher a chosen byte of ciphertext in as few as 256 attempts. This vulnerability
 is an issue in the specification, not a specific implementation issue. Additionally, if a service prefers TLS over SSLv3 it may be possible to ‘roll back’
@@ -259,14 +259,13 @@ a connection. It is therefore very important to completely disable SSLv3.0.
         </div>
       </div>
 
-<!--
-      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+
+  <!--    <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
+          <h3>References</h3>
           <p>
 	          <ul>
-			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  <li><a href="https://luxsci.com/blog/ssl-versus-tls-whats-the-difference.html"> [1] LUXSCI: SSL VERSUS TLS – WHAT’S THE DIFFERENCE? </a></li>
 			  </ul>
 	        </p>
         </div>
@@ -281,12 +280,11 @@ a connection. It is therefore very important to completely disable SSLv3.0.
 	        </p>
         </div>
       </div>
--->
 
       <div class="footerfix"></div>
-      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
       </footer>
-    </div>
+    </div> -->
 
   </body>
 </html>

@@ -5584,7 +5584,7 @@ a.thumbnail.active {
 }
 
 .alert-danger {
-  background-color: #ff0000 /*#f2dede;*/;
+  background-color: #d63000 /*#f2dede;*/;
   border-color: #ebccd1;
   color: #000000 /*#a94442;*/;
 }

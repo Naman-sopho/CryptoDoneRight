@@ -219,7 +219,7 @@
 
           <p id="modesofencryption" >
             <strong style="font-size:1vw;">Different modes of Encryption: </strong> <br />
-            The two different flavors of encryption are block ciphers and stream ciphers. On a high level: A typical stream cipher encrypts plaintext one byte at a time and a block cipher operates on one block at a time. The block may be of size one byte or more or less. That means we can also encrypt a block of one byte by help of a stream cipher as a stream. For more information, visit here: https://crypto.stackexchange.com/questions/5333/difference-between-stream-cipher-and-block-cipher
+            The two different flavors of encryption are block ciphers and stream ciphers. On a high level: A typical stream cipher encrypts plaintext one byte at a time and a block cipher operates on one block at a time. The block may be of size one byte or more or less. That means we can also encrypt a block of one byte by help of a stream cipher as a stream. For more information, visit <a href="https://crypto.stackexchange.com/questions/5333/difference-between-stream-cipher-and-block-cipher">here</a>.
             <br /> <br />
             Examples of Stream Cipher: RC4 <br />
             Examples of Block Cipher: AES, DES, RSA <br /> <br />
@@ -232,12 +232,12 @@
 	    Here is a good website to get a good idea about which keysizes are to be used based on the algorithm that you use: <a href="https://www.keylength.com/en/compare/">https://www.keylength.com/en/compare/</a> <br /><br />
 
             <strong>Key Lifetimes: </strong><br />
-            There are lifetimes associated with the keys that encryption algorithms generate (lifetime as a concept can be associated with any key generation protocol or algorithm). Although certain encryption algorithms have been proven to be secure, it is considered to be good practise to refresh keys from time to time (consider lifetime of a key to be inversely proportional to sensitivity of the data encrypted). <br /> <br />
+            There are lifetimes associated with the keys that encryption algorithms generate (lifetime as a concept can be associated with any key generation protocol or algorithm). Although certain encryption algorithms have been proven to be secure, it is considered to be good practice to refresh keys from time to time (consider lifetime of a key to be inversely proportional to the sensitivity of the data encrypted). <br /> <br />
           </p>
 
           <p id="modesofoperation">
             <strong style="font-size:1vw;">Mode of Operation: </strong><br />
-            Block ciphers should not be used as described in their original definitions. This is inherently weak since an adversary can build up a dictionary of different plain texts and their corresponding ciphertexts and use them to decipher an encrypted message. Besides the weakness in using encryption algorithms directly, there is also an added limitation where direct use cannot work on variable length of messages (the length of a message should be a multiple of the cipher block size in length). <br /> <br />
+            Block ciphers should not be used as described in their original definitions. This is inherently weak since an adversary can build up a dictionary of different plaintexts and their corresponding ciphertexts and use them to decipher an encrypted message. Besides the weakness in using encryption algorithms directly, there is also an added limitation where direct use cannot work on variable length of messages (the length of a message should be a multiple of the cipher block size in length). <br /> <br />
 
             There are therefore a few modes of operation: <br />
             Galois/Counter Mode (GCM) <br />
@@ -247,11 +247,11 @@
             Output Feedback (OFB) <br />
             Counter (CTR) <br /> <br />
 
-            <span class="red">We strongly recommend to go through the <a href="encryption-modes.html">following document</a> to understand the below operations in greater detail. This will help in futher understanding the strengths and weakenesses of different modes.</span> <br /> <br />
+            <span class="red">We strongly recommend going through the <a href="encryption-modes.html">following document</a> to understand the below operations in greater detail. This will help in further understanding the strengths and weaknesses of different modes.</span> <br /> <br />
 
             Explaining the above modes in detail is beyond the scope of this website. CTR and GCM are  <br /> <br />
 
-            GCM and CBC modes internally work quite differently; they both involve a block cipher and an exclusive-or, but they use them in different ways. It is also important to understand that GCM is considered a authenticated encryption algorithm where authentication and encryption are combined. This is unlike the other modes described above which only do encryption. <br /> <br />
+            GCM and CBC modes internally work quite differently; they both involve a block cipher and an exclusive-or, but they use them in different ways. It is also important to understand that GCM is considered an authenticated encryption algorithm where authentication and encryption are combined. This is unlike the other modes described above which only do encryption. <br /> <br />
           </p>
           <p id="choose">
             <strong style="font-size:1vw;">What to choose? </strong><br />
@@ -298,7 +298,7 @@
       </div>
 
       <div class="footerfix"></div>
-      <footer class="footer">© 2017 Important legal stuff and/or links to usage restrictions etc.
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
       </footer>
     </div>
 

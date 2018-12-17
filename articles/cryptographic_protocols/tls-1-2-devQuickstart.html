@@ -201,7 +201,7 @@ These are the official list of what is included in OpenSSL version 1.0.2: <br />
 <li>ALPN support.</li>
 <li>CMS support for RSA-PSS, RSA-OAEP, ECDH and X9.42 DH.</li>
 </ul> <br />
-Note: The latest major release for OpenSSL is 1.1.1 (released on 11 September, 2018).
+<b> Note:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/"> The latest major release for OpenSSL is 1.1.1 LTS </a> (released on 11th September, 2018).. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade. </b>
 <br /><br />
 <u>Find out which openssl version you are using</u>:
 <br /><br />
@@ -258,18 +258,14 @@ Here is a basic example of how to use Python's SSL library to perform a TLS hand
 # if sock is already connected
 new_sock = ssl.wrap_socket(sock,
         ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
-        ssl_version=ssl.PROTOCOL_TLSv1,
+        ssl_version=ssl.PROTOCOL_TLSv1_2,
 		...
 		...
         )
 return new_sock</pre>
 </code>
 
-For TLSv1.2, a small change in the above would be to have
 
-<pre>
-<code>ssl_version=ssl.PROTOCOL_TLSv1_2</pre>
-</code>
 
 <u>pyopenssl library</u> <br /> <br />
 pyOpenSSL is collaboratively developed by the Python Cryptographic Authority (PyCA) that also maintains the low-level bindings called cryptography. It's a well documented wrapper around OpenSSL and supports all the features required for TLSv1.2. <br /> <br />

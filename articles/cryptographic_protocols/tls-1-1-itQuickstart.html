@@ -147,18 +147,20 @@
       <strong>Background Reading:</strong> Understanding Different Types of Problems in Crypto.
     </div></a>
 
-        <a href="tls-1-1-differences-page.html"> <div class="alert alert-warning">
+        <a href="https://security.stackexchange.com/questions/57878/what-are-the-main-vulnerabilities-of-tls-v1-1"> <div class="alert alert-warning">
       This is a <strong>safe</strong> version but not Recommended. Please click here to find out more.
     </div> </a>
 
     <div class="container-fluid">
       <div class="row" style="padding: 2vw;">
 
-		<h3> Introduction </h3>
+        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> TLS 1.1 Implementation</h2>
 		<div class="col-md-12 col-sm-12 col-xs-12">
 		  <p id="GeneralTLSInfo">
-		  Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is <span class="green">recommended</span> for security.
-<br /> <br /><span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
+		    <strong> Since there are no vulnerabilities that have been found with this version <u>yet</u>,</strong> we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is <span class="green">recommended</span> for security.
+<br /> <br />
+
+<span class="green"> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches.</span>
 
 <ul>
 <strong>Webservers: </strong> <br />
@@ -173,13 +175,13 @@ SSLProtocol -all +TLSv1.1
 </pre>
 
 Explanation: <br />
--all is removing other ssl protocol (SSL 1,2,3 TLS1)<br />
+-all is removing other ssl protocol (SSL 1,2,3, TLSv1)<br />
 +TLSv1.1 is adding TLS 1.1<br /> <br />
 
 For more browser compatibility you can use:- <br />
 <pre>
 <code>...
-SSLProtocol -all +TLSv1 +TLSv1.1 +TLSv1.2
+SSLProtocol -all +TLSv1.1 +TLSv1.2
 ...</code>
 </pre>
 
@@ -187,7 +189,7 @@ SSLProtocol -all +TLSv1 +TLSv1.1 +TLSv1.2
 By default, the configuration file is named nginx.conf and placed in the directory /usr/local/nginx/conf , /etc/nginx , or /usr/local/etc/nginx.
 <pre>
 <code>...
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+ssl_protocols TLSv1.1 TLSv1.2;
 ...</code>
 </pre> <br /> <br />
 
@@ -227,7 +229,7 @@ Within the server.xml file, find the sslEnabledProtocols entry and make sure onl
 
 Restart the Tomcat service to complete the changes. <br /> <br /> <br /> <br />
 
-<strong>Browsers: </strong> <br />
+<strong>Browsers<sup>1</sup>: </strong> <br />
 
 Technically the attack is a client based and although ensuring servers do not accept SSLv3 connections, it is important to plug the problem on the client side as well.
 Here are some common browsers where configuration changes can be made so as to make sure that only connections on TLSv1.1 are accepted.
@@ -300,14 +302,10 @@ There are no options for enabling SSL protocols. If you are using Safari version
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
+          <h3>References</h3>
           <ul>
-	           <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
-            <li>
-              <a href="https://tools.ietf.org/html/rfc4346">TLSv1.1 RFC</a>
-            </li>
-             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
-">Enabling TLSv1.2 on Microsoft machines</a></li>
+	           <li><a href="https://support.globalsign.com/customer/portal/articles/2934392-deprecation-of-tls-1-0-and-tls-1-1">[1] GlobalSign: TLS Protocol compatbility</a></li>
+            
 	        </ul>
         </div>
 

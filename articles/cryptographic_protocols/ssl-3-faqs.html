@@ -144,7 +144,7 @@
               <strong>Are only servers or also clients affected?</strong> <br />
               The vulnerability exists if both the server and client accepts SSLv3 (even if both are capable of TLSv1/TLSv1.1/TLS1.2 due to a downgrade attack). <br /> <br />
 
-              As a server admin you should disable SSLv3 now for the security of your users. <br /> <br />
+              As a server admin, you should disable SSLv3 now for the security of your users. <br /> <br />
 
               As a user, you should disable SSLv3 in your browser now to secure yourself when visiting websites which still support SSLv3. <br /> <br />
 
@@ -159,14 +159,14 @@
               <strong>Is it relevant for HTTPS only or also for IMAP/SMTP/OpenVPN and other protocols with SSL support?</strong> <br />
               The current attack vector, as shown by the researchers, works with controlling the plaintext sent to the server using Javascript being run on the victim's machine. This vector does not apply to non-HTTPS scenarios without using a browser. <br /> <br />
 
-              Also, normally an SSL client doesn't allow the session to be downgraded to SSLv3 (having TLSv1+ seen in the handshake capabilities), but browsers want to be very backward compatible and they do. The combination with controlling plaintext and the specific way a HTTP header is built up makes it exploitable. <br /> <br />
+              Also, normally an SSL client doesn't allow the session to be downgraded to SSLv3 (having TLSv1+ seen in the handshake capabilities), but browsers want to be very backward compatible and they do. The combination with controlling plaintext and the specific way an HTTP header is built up makes it exploitable. <br /> <br />
 
               Conclusion: disable SSLv3 for HTTPS now, disable SSLv3 for other services in your next service window. <br /> <br />
 
               <strong>What's the impact? Do I need to revoke and regenerate my server certificate? (As with Heartbleed)</strong> <br />
               No, you don't need to rotate your certificates for this. The vulnerability exposes plaintext recovery from the session data, it does not provide access to any secrets (neither the session key or certificate key). <br /> <br />
 
-              An attacker is most likely only capable of stealing the plaintext headers like session cookies in order to perform session hijacking. An additional constraint is the need for a full (active) MitM attack. <br /> <br />
+              An attacker is most likely only capable of stealing the plaintext headers like session cookies in order to perform session hijacking. An additional constraint is a need for a full (active) MitM attack. <br /> <br />
 
               <strong>Is there anything else I can do to improve my SSL configuration in general?</strong> <br />
               As a user, besides disabling SSLv3 in your browser, not really. Well, just always install the latest security updates. <br /> <br />
@@ -176,7 +176,7 @@
               <strong>But I really really need SSLv3 support... for reason X,Y,Z! Now what?</strong> <br />
               Well, there's a patch that circumvents the downgrade attack of TLSv1 capable clients, called the SSLv3 Fallback Protection. It will improve the security of TLSv1+ too, by the way (downgrade attack is harder/impossible). It's offered as a backport from a more recent OpenSSL version in the Ubuntu Security advisory usn-2385-1. <br /> <br />
 
-              Big catch: Both clients and servers need this patch in order to work. So, in my opinion while you're updating both clients and servers you should just upgrade to TLSv1+ anyway. <br /> <br />
+              Big catch: Both clients and servers need this patch in order to work. So, in my opinion, while you're updating both clients and servers you should just upgrade to TLSv1+ anyway. <br /> <br />
 
               However, please, please, just retire SSLv3 in your network for now. Put effort in upgrading security standards and just ditch SSLv3. <br /> <br />
 
@@ -229,16 +229,13 @@
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
           <p>
-	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 	        </p>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
           <ul>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
-      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+
       	  </ul>
         </div>
       </div>

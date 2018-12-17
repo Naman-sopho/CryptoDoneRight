@@ -167,14 +167,16 @@
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-        <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> TLS 1.0 Implementation</h2>
+    <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 
 Considering TLSv1.0 weaknesses, an upgrade to system running TLSv1.2 (in future, TLSv1.3) is immminent. However, cryptography should never be made "in-house" and should not be used in production. There are multiple cryptographic libraries out there that let you support TLS (including all the other cryptography features). For the sake of example, we are using OpenSSL here as it is one of the most popular libraries used. <br /> <br />
 
-How to tell if you are running TLSv1.0 using OpenSSL: <br />
-Almost all of OpenSSL releases support TLSv1.0. It is therefore important that if you are considering disabling TLSv1.0, that you look for the configuration file. The other option to disable TLSv1.0 would be to leave the OpenSSL configuration files as they are and change your application code to only use TLSv1.2 (Examples on how to do this are mentioned in the next section). Please note that upgrading OpenSSL should be done with a lot of care as your products that use TLS might not be able to support latest releases of TLS (TLSv1.2 or TLSv1.3) unless both client side and server side are enabled. If this is not taken care of, downtimes in TLS connectivity can be expected. <br /> <br />
+<u>How to tell if you are running TLSv1.0 using OpenSSL:</u>
+<br /><br />
+
+Almost all of OpenSSL releases support TLSv1.0. It is therefore important that if you are considering disabling TLSv1.0, that you look for the configuration file. The other option to disable TLSv1.0 would be to leave the OpenSSL configuration files as they are and change your application code to only use TLSv1.2 (Examples on how to do this are mentioned in the next section). Please NOTE that upgrading OpenSSL should be done with a lot of care as your products that use TLS might not be able to support latest releases of TLS (TLSv1.2 or TLSv1.3) unless both client side and server side are enabled. If this is not taken care of, downtimes in TLS connectivity can be expected. <br /> <br />
 
 <u>Find out which openssl version you are using</u>:
 <br /><br />
@@ -207,12 +209,27 @@ engines:  rdrand dynamic</pre>
 <br /> <br />
 <strong>NOTE: Support for TLSv1.2 only starts with OpenSSL 1.0.1</strong><br /><br />
 
-<b> Note:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/"> The latest major release for OpenSSL is 1.1.1 LTS </a> (released on 11th September, 2018).. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade. </b>
+<b> NOTE:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/"> The latest major release for OpenSSL is 1.1.1 LTS </a> (released on 11th September, 2018).. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade. </b>
+<br /><br />
 
-</p>
+<font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
+<br />
+A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of
+libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team
+backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
+
+<br /> <br />
+Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
+CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
+RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
+
+Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
+CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
+RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
 
 
 <p id="usagelibrary">
+
 <h2>Upgrade to secure SSL/TLS in Programming Languages</h2>
 
 <font size="4"><strong>Concept:</strong></font> It is again advised to not roll out your own cryptography while developing software. There are popular libraries in almost all programming
@@ -269,24 +286,7 @@ Validating a Certificate: <a href="http://blog.san-ss.com.ar/2012/05/validating-
 For more information on which versions of programming languages support secure version of TLS, refer <a href="https://www.docusign.com/blog/dsdev-updating-applications-end-tls-1-0/">here.</a>
 </blockquote>
 
-<p id="tls12patch">
-<h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
-<font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
-<br />
-A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of
-libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team
-backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
-
-<br /> <br />
-Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
-CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
-RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
-
-Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
-CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
-RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
-</p>
 
  </div>
       </div>
@@ -296,10 +296,10 @@ RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redh
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Further Reading</h3>
 	          <ul>
-			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <!-- <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
 			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
 			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
-			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li> -->
 			  </ul>
         </div>
 

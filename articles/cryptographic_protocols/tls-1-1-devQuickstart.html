@@ -145,120 +145,151 @@
       <strong>Background Reading:</strong> Understanding Different Types of Problems in Crypto.
     </div></a>
 
-        <a href="tls-1-1-differences-page.html"> <div class="alert alert-warning">
+        <a href="https://security.stackexchange.com/questions/57878/what-are-the-main-vulnerabilities-of-tls-v1-1"> <div class="alert alert-warning">
       This is a <strong>safe</strong> version but not Recommended. Please click here to find out more.
     </div> </a>
 
-<h2>Introduction</h2>
+
+    <h2> <img src="../../images/implementation.png " style="width:100px;height:100px;" /> TLS 1.1 Implementation</h2>
+
+  <br /><br />
+      <strong>Since there are no vulnerabilities that have been found with this version yet,</strong> we cover as to how you can check if your connections are TLSv1.1 based on configuration and other observations. Again, note that enforcement of TLSv1.1 on all connections is recommended for security.
+    <br /><br />
+
+    <strong> NOTE: Installing patches is an important step as always. Your vendor publishes security fixes; install them. Install the patches. </strong>
+    <br /><br />
+
+    <h2>Basic Implementation/Usage of Libraries</h2>
+    <h3>Python</h3>
+    There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
+    <br /> <br />
+    To check which openssl version you are using execute the following within Python:
+    <pre>
+    <code>import ssl
+    print ssl.OPENSSL_VERSION</pre>
+    </code>
+    <br />
+
+    <h4>ssl library</h4>
+    Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
+
+    <pre>
+    <code>def handshake(sock):
+    # this will trigger the handshake
+    # if sock is already connected
+    new_sock = ssl.wrap_socket(sock,
+            ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
+            ssl_version=ssl.PROTOCOL_TLSv1,
+    		...
+    		...
+            )
+    return new_sock</pre>
+    </code>
+
+    For TLSv1.2, a small change in the above would be to have
+
+    <pre>
+    <code>ssl_version=ssl.PROTOCOL_TLSv1_1</pre>
+    </code>
+
+    <h4>pyopenssl library</h4>
+    <p> ... </p>
+
+
+    <h3>C/C++</h3>
+    <p> ... </p>
+
+    <blockquote>
+    <h3>We apologize for not having enough content on this topic.If you have thoughts about this topic, <a href="../../contact.html">write them to us!</a></h3>
+    </blockquote>
+
+
+    <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+
+    <font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
+    <br />
+    <font size="4"><strong>Example:</strong></font>
+
         <div class="col-md-12 col-sm-12 col-xs-12">
           <p>
-What is OpenSSL? <br /> <br />
-
-OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
-<br /> <br />
-The library includes tools for generating RSA private keys and Certificate Signing Requests (CSRs), checksums, managing certificates and performing encryption/decryption. OpenSSL is written in C, but wrappers are available for a wide variety of computer languages.
-<br /> <br />
-Note that OpenSSL is not the only available crypto library. For a list of different libraries and a comparision between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.
-<br /> <br />
-OpenSSL version 1.0.1 released on March 14, 2012 was the first OpenSSL Library to support TLSv1.1. This can be specifically viewed in the openssl <a href="https://www.openssl.org/news/changelog.html#x51">changelog </a>.
-But OpenSSL does not officially support the release anymore. Version 1.0.2 (released on 22nd January, 2015) is an LTS release and is scheduled to be supported till the end of year 2019. OpenSSL defines LTS support as follows:
-<ul>
-<li>LTS releases will be supported for at least five years and we will specify one at least every four years. Non-LTS releases will be supported for at least two years.</li>
-<li>During the final year of support, we do not commit to anything other than security fixes. Before that, bug and security fixes will be applied as appropriate.</li>
-</ul>
-
-<br /> <br />
-These are the official list of what is included in OpenSSL version 1.0.2: <br /> <br />
-<ul>
-<li>Suite B support for TLS 1.2 and DTLS 1.2</li>
-<li>Support for DTLS 1.2</li>
-<li>TLS automatic elliptic curve (EC) curve selection.</li>
-<li>API to set TLS supported signature algorithms and curves</li>
-<li>SSL_CONF configuration API.</li>
-<li>TLS Brainpool support.</li>
-<li>ALPN support.</li>
-<li>CMS support for RSA-PSS, RSA-OAEP, ECDH and X9.42 DH.</li>
-</ul> <br />
-Note: The latest major release for OpenSSL is 1.1.0 (released on 25th August, 2016).
-<br /><br />
-How do I find out what OpenSSL version I’m running?
-<br /><br />
-Use the version option.
-<br /><br />
-<pre>
-<code>$ openssl version
-OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
-</code>
-<br /> <br />
-You can get much more information with the version -a option.
-<pre>
-<code>$ openssl version -a
-OpenSSL 1.0.1e-fips 11 Feb 2013
-built on: Thu Jul 23 19:06:35 UTC 2015
-platform: linux-x86_64
-options:  bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int)
-          idea(int) blowfish(idx)
-compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
--DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -DTERMIO
--Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions
--fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic
--Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT
--DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM
--DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
--DWHIRLPOOL_ASM -DGHASH_ASM
-OPENSSLDIR: "/etc/pki/tls"
-engines:  rdrand dynamic</pre>
-</code>
-<br /> <br />
-<h3>How to upgrade OpenSSL? </h3>
-<span class="red">Please be careful while upgrading OpenSSL. Do not simply upgrade the package without thinking about the implications it might have on exisiting features of your application or operating system. </span> <br />A lot of application and Operating Sytem vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of libraries like OpenSSL to ensure that no exisiting functionality is affected. Usually, these vendors release their own updates called backported packages. The security team backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
-
-<br /> <br />
-Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
-CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
-RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
-
-Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
-CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
-RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br />
 
 
-<h2>Basic Implementation/Usage of Libraries</h2>
-<h3>Python</h3>
-There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
-<br /> <br />
-To check which openssl version you are using execute the following within Python:
-<pre>
-<code>import ssl
-print ssl.OPENSSL_VERSION</pre>
-</code>
-<br />
+  What is OpenSSL?
+  <br /> <br />
+  OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
+  <br /> <br />
+  <strong> Note that OpenSSL is not the only available crypto library. For a list of different libraries and a comparision between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.</strong>
+  <br /><br />
+  The library includes tools for generating RSA private keys and Certificate Signing Requests (CSRs), checksums, managing certificates and performing encryption/decryption. OpenSSL is written in C, but wrappers are available for a wide variety of computer languages.
+  <br /> <br />
+  OpenSSL version 1.0.1 released on March 14, 2012 was the first OpenSSL Library to support TLSv1.1. This can be specifically viewed in the openssl <a href="https://www.openssl.org/news/changelog.html#x51">changelog </a>.
+  But OpenSSL does not officially support the release anymore. Version 1.0.2 (released on 22nd January, 2015) is an LTS release and is scheduled to be supported till the end of year 2019. OpenSSL defines LTS support as follows:
+  <ul>
+  <li>LTS releases will be supported for at least five years and we will specify one at least every four years. Non-LTS releases will be supported for at least two years.</li>
+  <li>During the final year of support, we do not commit to anything other than security fixes. Before that, bug and security fixes will be applied as appropriate.</li>
+  </ul>
 
-<h4>ssl library</h4>
-Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
+  <br /> <br />
+  These are the official list of what is included in OpenSSL version 1.0.2: <br /> <br />
+  <ul>
+  <li>Suite B support for TLS 1.2 and DTLS 1.2</li>
+  <li>Support for DTLS 1.2</li>
+  <li>TLS automatic elliptic curve (EC) curve selection.</li>
+  <li>API to set TLS supported signature algorithms and curves</li>
+  <li>SSL_CONF configuration API.</li>
+  <li>TLS Brainpool support.</li>
+  <li>ALPN support.</li>
+  <li>CMS support for RSA-PSS, RSA-OAEP, ECDH and X9.42 DH.</li>
+  </ul> <br />
+  <b>Note:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/">The latest major release for OpenSSL is 1.1.1 LTS (released on 11th September, 2018).</a>. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade.
 
-<pre>
-<code>def handshake(sock):
-# this will trigger the handshake
-# if sock is already connected
-new_sock = ssl.wrap_socket(sock,
-        ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
-        ssl_version=ssl.PROTOCOL_TLSv1,
-		...
-		...
-        )
-return new_sock</pre>
-</code>
+  <br /><br />
+  How do I find out what OpenSSL version I’m running?
+  <br /><br />
+  Use the version option.
+  <br /><br />
+  <pre>
+  <code>$ openssl version
+  OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
+  </code>
+  <br /> <br />
+  You can get much more information with the version -a option.
+  <pre>
+  <code>$ openssl version -a
+  OpenSSL 1.0.1e-fips 11 Feb 2013
+  built on: Thu Jul 23 19:06:35 UTC 2015
+  platform: linux-x86_64
+  options:  bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int)
+            idea(int) blowfish(idx)
+  compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
+  -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -DTERMIO
+  -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions
+  -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic
+  -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT
+  -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM
+  -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
+  -DWHIRLPOOL_ASM -DGHASH_ASM
+  OPENSSLDIR: "/etc/pki/tls"
+  engines:  rdrand dynamic</pre>
+  </code>
+  <br /> <br />
 
-For TLSv1.2, a small change in the above would be to have
+  <h3>How to upgrade OpenSSL? </h3>
+  <span class="red">Please be careful while upgrading OpenSSL. Do not simply upgrade the package without thinking about the implications it might have on exisiting features of your application or operating system. </span> <br />A lot of application and Operating Sytem vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of libraries like OpenSSL to ensure that no exisiting functionality is affected. Usually, these vendors release their own updates called backported packages. The security team backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
 
-<pre>
-<code>ssl_version=ssl.PROTOCOL_TLSv1_1</pre>
-</code>
+  <br /> <br />
+  Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
+  CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
+  RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
 
-<h4>pyopenssl library</h4>
+  Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
+  CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
+  RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br />
 
-<h3>C/C++</h3>
+
+
+
+
 </p>
 </div>
 
@@ -269,14 +300,14 @@ For TLSv1.2, a small change in the above would be to have
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-        <h3>Further Reading</h3>
+        <h3>References</h3>
           <p>
 	          <ul>
-			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL Library</a></li>
+			  <!-- <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL Library</a></li>
 			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
 			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
 			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
-			  </ul>
+      </ul> -->
 	        </p>
         </div>
 

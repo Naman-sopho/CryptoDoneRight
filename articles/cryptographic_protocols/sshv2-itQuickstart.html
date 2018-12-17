@@ -146,7 +146,7 @@
 <font size="4"><strong>What to expect:</strong></font><br /> <br />
 SSHv2 is client-server protocol that relies on the following concepts. When the requirement is to set up SSH for an application or system, here are the key terms that are to be expected: <br /> <br />
 
-Here are the basic steps involved in a SSH handshake:<br />
+Here are the basic steps involved in a SSH handshake:<sup>1</sup><br />
 <ul>
   <li>Negotiating the version of the protocol to use.</li>
   <li>Negotiating cryptographic algorithms and other options to use.</li>
@@ -178,6 +178,7 @@ Below are a few highly recommended steps that are to be taken with any SSH setup
   <li>Set an idle timeout value and login timeout value.  </li>
 </ul><br /> <br />
 
+<font size="4"><strong>Example:</strong></font>
 All the above features are product specific. These are common security measures taken and documentation for implementing the above features should be easily available. Here are a few examples: <br /> <br />
 <ul>
   <li><a href="https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file">Secure SSH Server on Linux</a></li><br />
@@ -187,12 +188,11 @@ All the above features are product specific. These are common security measures 
 </ul>
 
 
-Looking for a SSH client? There are a lot of options, some of them are: https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
+<strong> Looking for a SSH client?</strong> There are a lot of options, some of them are: https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
+<br /><br /><br />
 
 
-<blockquote>
-
-    <strong>A special note on SSH Authentication: [Taken from: https://stribika.github.io/2015/01/04/secure-secure-shell.html ]</strong><br /><br />
+    <font size="4"><strong>Concept: A special note on SSH Authentication: Taken from: <a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">https://stribika.github.io/2015/01/04/secure-secure-shell.html</a> </strong></font><br /><br />
     A major part of SSH implementation will be implementing the Authentication. In SSH, the key exchange only ensures that the server and the client shares a secret no one else knows. We also have to make sure that they share this secret with each other and that is where Authentication comes in.<br /><br />
 
     <strong><u>Server authentication</u></strong><br />
@@ -291,7 +291,7 @@ Looking for a SSH client? There are a lot of options, some of them are: https://
       </pre>
     </code>
 
-</blockquote>
+
 
 </p>
   </p>
@@ -301,23 +301,24 @@ Looking for a SSH client? There are a lot of options, some of them are: https://
 
       <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
+          <h3>References</h3>
           <ul>
-             <li><a href="https://code.fb.com/security/scalable-and-secure-access-with-ssh/">Facebook: Secure and Scalable Access with SSH </a></li>
-            <li>
-              <a href="https://www.cisco.com/c/en/us/about/press/internet-protocol-journal/back-issues/table-contents-46/124-ssh.html">Cisco: SSH: Protocol Deep Dive</a>
-            </li>
-             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
-">Enabling TLSv1.2 on Microsoft machines</a></li>
+            <li><a href="https://www.ssh.com/ssh/key/">[1] SSH.com: SSH KEY</a></li>
+
           </ul>
         </div>
 
         <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
           <h3>Related Articles</h3>
           <ul>
-             <li><a href="https://www.wolfssl.com/a-comparison-of-differences-in-tls-1-1-and-tls-1-2/">List of all changes between TLSv1.1 and 1.2</a></li>
+            <li><a href="https://code.fb.com/security/scalable-and-secure-access-with-ssh/">Facebook: Secure and Scalable Access with SSH </a></li>
+           <li>
+             <a href="https://www.cisco.com/c/en/us/about/press/internet-protocol-journal/back-issues/table-contents-46/124-ssh.html">Cisco: SSH: Protocol Deep Dive</a>
+           </li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server">Digital Ocean: How to Configure SSH Key-Based Authentication on a Linux Server</a></li>
+             <li><a href="https://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html#anc41">Securing SSH on Cisco IOS Devices.</a></li>
             <li>
-              <a href="https://tools.ietf.org/html/rfc5246">TLSv1.2 RFC</a>
+              <a href="https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process">Digital Ocean: Understanding the SSH Encryption and Connection Process</a>
             </li>
              <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
 ">Enabling TLSv1.2 on Microsoft machines</a></li>

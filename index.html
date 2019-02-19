@@ -87,6 +87,8 @@ button.gsc-search-button
 {
 	color:#FFF;
 }
+
+
 </style>
 
 	<!-- Modernizr JS -->
@@ -109,6 +111,7 @@ button.gsc-search-button
 	    searchBox.title="Search webslake";
     }
 	</script>
+	<script type="text/javascript" src="js/searchbar.js"></script>
 
 
 
@@ -229,10 +232,17 @@ button.gsc-search-button
 				<div class="desc animate-box">
 					<h2> <font color="white"> A <strong>Cryptographic Knowledge</strong> Base </font> </h2>
 					<font color="white"><span>Created for IT Professionals, Software Developers and Managers</a></span></font>
-					<span><a class="btn btn-primary btn-lg" href="articles/cryptographic_protocols/get-started.html">Get Started</a></span>
+					<div class = "search-field">
+						<center>
+							<input type='text' name='input' id="txt_search" size='50' style="color:black"/> 
+							<!-- <input type='button' value='Search'/> -->
+							<button id = "search" style="color:black">SEARCH</button>
+						</center>
+
+						
+					</div>
 				</div>
 			</div>
-
 		</div>
 		<!-- end:header-top -->
 		<div id="fh5co-features">
@@ -577,7 +587,7 @@ button.gsc-search-button
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright © 2019 Crypto Done Right All rights reserved</p>
+							<p>© 2018 Important legal stuff and/or links to usage restrictions etc.</p>
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>DES</title>
+    <title>SSHv1</title>
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -85,11 +85,7 @@
                           <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
                         </ul>
                       </li>
-                    <li><a href="#" class="fh5co-sub-ddown">DES</a>
-                        <ul class="fh5co-sub-menu">
-                          <li><a href="..\..\articles\cryptographic_protocols\des.html" >Introduction</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
                     <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
                   </ul>
                 </li>
@@ -128,6 +124,7 @@
       </header>
     </div>
 
+
     <div class="breadcrumbs">
       <ol class="breadcrumb">
          <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
@@ -135,155 +132,21 @@
          <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
          <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
          <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
-         <li class="breadcrumb-item level0 active">DES</li>
+         <li class="breadcrumb-item level0 active">3DES-GCM</li>
        </ol>
     </div>
 
-  <div id="contentScroller">
-      <strong style="font-size:2vw;">Content</strong>
-      <ul>
-        <a href="#"><li>
-          Developer's QuickStart
-        </li></a>
-        <a href="#"><li>
-          IT  Admin's QuickStart
-     </li></a>
-    <a href="#"><li>
-          Manager's QuickStart
-        </li></a>
-  <a href="#"><li>
-  DES FAQ
-  </li></a>
-      </ul>
-    </div>
-
-  <div id="testtitle">
-        <strong style="font-size:3vw;">DES</strong>
-  </div>
-
-    <div class="alert alert-danger">
-      <strong>This is NOT the recommended standard.</strong>
-    </div>
-    <!--
-  <a href="https://tools.ietf.org/html/draft-ietf-tls-tls13-11"><div class="alert alert-success">
-      TLSv1.3 is expected to come out soon. There is no current ETA, click here for the initial draft.
-    </div></a>
-  <a href="tls-1-2-itQuickstart.html#ROBOT"><div class="alert alert-danger">
-      <strong>TLSv1.2 is secure only when it is configured properly!</strong>
-    </div></a>
-  -->
-  <a href="#"><div class="alert alert-warning">
-      <strong>Background Reading: </strong>
-    </div></a>
 
     <div class="container-fluid">
-      <div class="row">
-        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
-          <!--<div class="title">
-            <h2><span>AES</span></h2>
-          </div> -->
-          <div class="timestamp">
-            <p><span>Last Updated Thu, 12 Dev 2018 12:00:01 -0400</span></p>
-          </div>
-          <div class="description">
+      <div class="row" style="padding: 2vw;">
 
-      <p>
-         It is a symmetric-key block cipher designed by IBM and published by the National Institute of Standards and Technology (NIST). The plaintext is broken into blocks of 64-bits and encryption is performed block-wise. This means that the cryptographic key and the algorithm are applied to it together rather than one bit at a time. The encryption process consists of 16 rounds and each block is encrypted using a key to a cipher-text (64-bits) by using permutations and combinations. They key used in DES has 56-bits as a functional key while the rest 8 bits are for parity checking. DES was actually the first encryption algorithm approved by the US government for public disclosure. DES is insecure due to its small key size and the most common attack affecting DES is the brute force attack. <br /> <br />
-
-         <!--
-         <strong>Attacks: </strong> <br />
-         It is usually considered that longer the key size of an algorithm, the more difficult it is to break it. This is not necessarily true and there have been attacks that have been proven to be easier to carry out on AES 256 than AES 128. This should not however raise off any alarms as the attacks that were suggested are more theoretical than practical. <br /> <br />
-
-         There have been no practical attacks discovered for any flavor of AES. This does men that there were attacks found but they are no cause of concern at the moment since they are either very difficult to carry out or need very specific privileges or information that is not easily available. -->
-      </p>
-      <!--
-            <p>
-             TLS stands for Transport Layer Security.  TLS is a cryptographic session protocol.
-       TLS 1.0 is essentially a renamed Secure Sockets Layer (SSL) 3.0. SSL was originally created by Netscape.
-       SSL and TLS are used interchangeably, but SSLv3 and below have been deprecated.
-             </p>
-       -->
-          </div>
-        </div>
-
-
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-    <br /><br /><br />
-    <a href="#" class="btn btn-success "> <img class="logos" src="../../images/NewDevLogo.png" />
-            DEV QUICKSTART</a>
-      <p>
-              Are you a developer? Get started with crucial implementation details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-
-
-
-        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
-    <br /><br /><br />
-    <a href="#" class="btn btn-success "> <img class="logos" src="../../images/pc-administrator.png" />
-            IT QUICKSTART</a>
-      <p>
-              Are you an IT administrator? Get started with best practice setup details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-
-    <div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
-    <br />    <br />    <br />    <br />
-    <a href="#" class="btn btn-success"> <img class="logos" src="../../images/manager.png" />
-            MANAGER QUICKSTART</a>
-      <p>
-              Are you a Manager? Get started with best practice setup details above.
-            </p>
-            <div class="blockNotes">
-            </div>
-          </div>
-        </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-        <p>
-        <strong>Attacks: </strong> <br />
-          DES is comparatively easy to attack and several successful attacks have been done on DES. Some of them are: <br>
-         1. Brute Force attacks are common since the key length is mall for DES (64 bits). <br>
-         2. Differential Cryptanalysis can break full 16-round DES by using 247 chosen plaintext. <br>
-         3. A man-in-the-middle attack requires complexity of 232 to break 6-round DES.<br>
-         4. Linear cryptanalysis can break DES using 243 known plaintext.<br>
-         5. A combination of linear and differential cryptanalysis called ‘differential-linear’ cryptanalysis can also break DES depending on how many rounds <br>
-         6. Davies Attack (DA) can break DES with 250 known plaintext. <br>
-        </p>
+        <blockquote>
+        <h3>Coming soon!</h3>
+        </blockquote>
         </div>
       </div>
-    </div>
-  </div>
 
-
-
-      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
-        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Further Reading</h3>
-          <ul>
-             <li><a href="#">A</a></li>
-            <li>
-              <a href="#">B </a>
-            </li>
-             <li><a href="#">C</a></li>
-          </ul>
-        </div>
-
-        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
-          <h3>Related Articles</h3>
-          <ul>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">A</a></li>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">B</a></li>
-            <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">C</a></li>
-          </ul>
-        </div>
-      </div>
+      </div> -->
               <div class="footerfix"></div>
         <footer class="footer">Copyright © 2019 Crypto Done Right All rights reserved.
         </footer>

@@ -88,7 +88,7 @@
                     <li><a href="#" class="fh5co-sub-ddown">DES</a>
                         <ul class="fh5co-sub-menu">
                           <li><a href="..\..\articles\cryptographic_protocols\des.html" >Introduction</a></li>
-                          <li><a href="\articles\cryptographic_protocols\des-ecb.html">DES ECB</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\des-ecb.html">DES ECB</a></li>
                         </ul>
                     </li>
                     <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>

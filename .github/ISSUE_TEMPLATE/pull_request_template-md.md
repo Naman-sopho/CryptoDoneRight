@@ -1,8 +1,8 @@
 ---
 name: pull_request_template.md
 about: This is the official template for pull requests.
-title: ''
-labels: ''
+title: '[PR]'
+labels: '[PR]'
 assignees: ''
 
 ---
@@ -12,7 +12,7 @@ assignees: ''
 
 
 ##  This pull request includes a:
-###### (You can select by putting a 'x' in '[ ]' without any spaces. ( - [ x ])
+###### (You can select the box by putting a 'x' in '[ ]' without any spaces. ( - [ x ])
 - [ ] Code bug fix
 - [ ] Current content fix (update outdated contents, error fix, proofreading, etc.)
 - [ ] New content creation

@@ -1,6 +1,6 @@
 ---
 name: issue_template.md
-about: 'Describes how users can raise issues '
+about: 'This is the official template to raise issues '
 title: ''
 labels: ''
 assignees: ''

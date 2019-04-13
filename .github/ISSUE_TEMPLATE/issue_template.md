@@ -11,11 +11,9 @@ This template shows the proper format to make an issue for [CryptoDoneRight.org]
 
 ## I. PREREQUISITES 
 
--  I have searched for similar issues in both open and closed tickets and cannot find a duplicate
--  I have read the FAQs (Frequently Asked Questions)
--
-- 
--
+- [ ] I have searched for similar issues in both open and closed tickets and cannot find a duplicate
+- [ ] I have read the FAQs (Frequently Asked Questions)
+
 
 ## II. TYPES OF ISSUES
 

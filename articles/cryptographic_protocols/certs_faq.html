@@ -1,0 +1,358 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Certificates FAQs</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+
+      <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <br />
+      <ul>
+        <a href="#trust"><li>
+          Trust
+            </li></a><br />
+        <a href="#partyncert"><li>
+          Trusted Party and Certificates
+            </li></a><br />
+        <a href="#chain"><li>
+              Chain of Trust
+            </li></a><br />
+        <a href="#findsig"><li>
+              Find my Signature
+            </li></a><br />
+        <a href="#mutual"><li>
+              Mutual Authentication using Certificates
+            </li></a><br />
+        <a href="#definitions"><li>
+              Defintions
+            </li></a><br />
+        <a href="#links"><li>
+              Good Links
+            </li></a>
+      </ul>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level1 active">PKI</li>
+       </ol>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p>
+           <img src="../../images/pki.jpg" style="width:500px;height:275px;" class="center" />
+
+            <center><h2>Certificates and Public Key Infrastructure</h2></center>
+            <br /> <br />
+
+
+<h2>PKI FAQ</h2> <br />
+
+<ul>
+  <li><strong> When do I need a cert? </strong><br />
+    A proper SSL certificate provides authentication. This means you can be sure that you are sending information to the right server and not to an imposter trying to steal your information. Why is this important? The nature of the Internet means that your customers will often be sending information through several computers. Any of these computers could pretend to be your website and trick your users into sending them personal information.  It is only possible to avoid this by getting an SSL Certificate from a trusted SSL provider.<br /><br />
+
+   Why are SSL providers important? Trusted SSL providers will only issue an SSL certificate to a verified company that has gone through several identity checks. Certain types of SSL certificates, like EV SSL Certificates, require more validation than others. How do you know if an SSL provider is trusted? You can use our SSL Wizard to compare SSL providers that are included in most web browsers. Web browser manufactures verify that SSL providers are following specific practices and have been audited by a third-party using a standard such as WebTrust.<br /> <br />
+
+   Read more here: <a href="Read more at: https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html">The purpose of using SSL certificates</a>
+ </li>
+<li><strong>How do I obtain  a certificate?</strong><br />
+  To obtain a certificate, these are the summary of steps:<br />
+  <ul>
+    <li> Generate a key pair. </li>
+    <li> Generate a Certificate Signing Request </li>
+    <li> Send the CSR to a Trusted CA.</li>
+    <li> CA delivers the signed certificate. Install them in all the keystores.</li>
+  </ul><br /><br />
+  For a more in-depth understanding, you can refer to the various documents written by some popular CAs. For example: <a href="https://www.instantssl.com/articles/installing-a-pki-certificate-on-a-server.php">COMODO.</a><br /><br />
+</li>
+<li><strong>Do I need to pay to obtain certificates?</strong><br />
+  There are both paid (Verisign, GoDaddy, Comodo, DigiCert etc.) and free services (LetsEncrypt being the most popular ones) to obtain digital certificates. <br /><br />
+</li>
+<li><strong>How do I generate a Certificate Signing Request(CSR)?</strong><br />
+  In most cases CSRs can be generated using tools like OpenSSL but there are other options inlcuding dedicate certificate management software or tools that CAs provide. An excellent resource for Apache, Tomcat, Microsoft IIS and Microsoft Exchabge Server.
+</li><br /><br />
+<li><strong>How do I store my certificates?</strong><br />
+  Do not confuse storing certificates with storing keys. When you generate a key pair, it is obviously most important for the private key to be stored securely. Certificates, as a general principle should be stored
+  at secure places too. But the risk involved in losing a certificate is minimal as compared to losing the private key (the corresponding private key should be kept securely but to ensure functionality, not security like in the case of private key).
+  <br /><br />
+  Here are some common locations of keystores (term referring to the default location where the keys and certificates are stored):<br />
+    <ul>
+      <li>
+        Mac OS: Apple's Mac OS X includes a built-in key and password manager, Keychain, which stores user passwords, user and server certificates, and keys.  Certain applications, including the Safari web browser, use this centralized Keychain for storing and retrieving certificate information in lieu of maintaining their own, separate certificate repositories.  One must use the OS X Keychain in order to add a certificate-key pair to, or remove or export certificate-key pairs from Safari and other, similar applications.<br />
+        <a href="https://support.apple.com/guide/keychain-access/add-certificates-to-a-keychain-kyca2431/10.5/mac/10.14">Read more to understand how to install or extract certificates here</a><br /><br />
+      </li>
+      <li>
+        Windows: <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores">Windows Official Documentation</a><br />
+      </li>
+      <li>
+        Linux: For system wide use, OpenSSL should provide you /etc/ssl/certs and /etc/ssl/private. The latter of which will be restricted 700 to root:root.
+      </li>
+    </ul>
+</li><br /<br />
+<li><strong>Do I need certificates for clients?</strong><br />
+  If you want to perform client authentication based on certificates, yes. SSL/TLS does not make this mandatory so you are free to choose whether you want client side authentication or not.
+</li><br /<br />
+<li><strong>Are there performance overheads to using certificate based authentication?</strong><br />
+  On a Macbook running OS X 10.5.5 and a stock build of OpenSSL, "openssl speed" clocks AES-128-CBC at 46,000 1024 bit blocks per second. That same box clocks 1024 bit RSA at 169 signatures per second. AES-128-CBC is the "textbook" block encryption algorithm, and RSA 1024 is the "textbook" public key algorithm. It's apples-to-oranges, but the answer is: RSA is much, much slower.<br />
+  Source: https://stackoverflow.com/questions/118463/what-is-the-performance-difference-of-pki-to-symmetric-encryption
+</li><br ?><br />
+<li><strong>Why shouldn't I use public key encryption?</strong><br />
+  <ul>
+    <li>
+      Public key crypto operations aren't intended for raw data encryption. Algorithms like Diffie-Hellman and RSA were devised as a way of exchanging keys for block crypto algorithms. So, for instance, you'd use a secure random number generator to generate a 128 bit random key for AES, and encrypt those 16 bytes with RSA.
+    <br /></li>
+    <li>
+      Algorithms like RSA are much less "user-friendly" than AES. With a random key, a plaintext block you feed to AES is going to come out random to anyone without the key. That is actually not the case with RSA, which is --- more so than AES --- just a math equation. So in addition to storing and managing keys properly, you have to be extremely careful with the way you format your RSA plaintext blocks, or you end up with vulnerabilities.
+    <br /></li>
+    <li>
+      Public key doesn't work without a key management infrastructure. If you don't have a scheme to verify public keys, attackers can substitute their own keypairs for the real ones to launch "man in the middle" attacks. This is why SSL forces you to go through the rigamarole of certificates. Block crypto algorithms like AES do suffer from this problem too, but without a PKI, AES is no less safe than RSA.
+    <br /></li>
+    <li>
+      Public key crypto operations are susceptible to more implementation vulnerabilities than AES. For example, both sides of an RSA transaction have to agree on parameters, which are numbers fed to the RSA equation. There are evil values attackers can substitute in to silently disable encryption. The same goes for Diffie Hellman and even more so for Elliptic Curve. Another example is the RSA Signature Forgery vulnerability that occurred 2 years ago in multiple high-end SSL implementations.
+    <br /></li>
+    <li>
+      Using public key is evidence that you're doing something "out of the ordinary". Out of the ordinary is exactly what you never want to be with cryptography; beyond just the algorithms, crypto designs are audited and tested for years before they're considered safe.
+    <br /></li>
+  </ul>
+</li><br /><br />
+<li><strong>What is PKI? And how is it related to certificates?</strong><br />
+  In a nutshell, the comprehensive system required to provide public-key encryption and digital signature services is known as a public-key infrastructure. It could be thought of the technology that uses digital signatures and encryption based on key systems like RSA, EC etc to provide trust through authentication. <br />
+</li><br /><br />
+<li><strong>What are the different encoding schemes for a certificate?</strong><br />
+  The X.509 Digital certificate formats are defined using ASN.1 or Abstract Syntax Notation One, is an International Standards Organization (ISO) data representation format used to achieve interoperability between platforms.<br /><br />
+
+  The current structure of a X.509 v3 digital certificate looks as follows. This basically defines how a certificate contents should be written. You can check the details here.<br /><br />
+  <code><pre>
+
+    Certificate  ::=  SEQUENCE  {
+            tbsCertificate       TBSCertificate,
+            signatureAlgorithm   AlgorithmIdentifier,
+            signatureValue       BIT STRING  }
+
+    TBSCertificate  ::=  SEQUENCE  {
+            version         [0]  EXPLICIT Version DEFAULT v1,
+            serialNumber         CertificateSerialNumber,
+            signature            AlgorithmIdentifier,
+            issuer               Name,
+            validity             Validity,
+            subject              Name,
+            subjectPublicKeyInfo SubjectPublicKeyInfo,
+            issuerUniqueID  [1]  IMPLICIT UniqueIdentifier OPTIONAL,
+                                 -- If present, version MUST be v2 or v3
+            subjectUniqueID [2]  IMPLICIT UniqueIdentifier OPTIONAL,
+                                 -- If present, version MUST be v2 or v3
+            extensions      [3]  EXPLICIT Extensions OPTIONAL
+                                 -- If present, version MUST be v3
+            }
+    AlgorithmIdentifier  ::=  SEQUENCE  {
+            algorithm               OBJECT IDENTIFIER,
+            parameters              ANY DEFINED BY algorithm OPTIONAL  }
+
+    .... More definitions will follow for CertificateSerialNumber, Name, Validity etc ...
+  </pre></code><br /><br />
+
+  The ITU-T has defined a standard way of encoding data structures described in ASN.1 into binary data.<br />
+  <ul>
+    <li>PEM (Privacy Enhanced Mail) Encoding</li>
+    <li>DER (Distinguished Encoding Rules) Encoding</li>
+    <li>PKCS Formats</li>
+  </ul><br /><br />
+
+  Here is a good document that explains the above encoding schemes in detail:<a href="https://www.cisco.com/c/en/us/support/docs/security/vpn-client/116039-pki-data-formats-00.html">PKI Data Forms</a><br /><br />
+</li>
+<li><strong>What do the different file extensions for certificates or PKI mean?</strong><br />
+  Here are the various different extensions in the certificate:<br />
+  <ul>
+    <li>Certificate Signing Request (.csr)</li>
+    <li>Base64-encoded X.509 Certificate (.cer or .crt)</li>
+    <li>DER-encoded binary X.509 Certificate (.cer, .der or .crt)</li>
+    <li>Cryptographic Message Syntax Standard (PKCS#7) Certificate (.p7b, .p7r or .spc)</li>
+    <li>Personal Information Exchange Format (PKCS#12) Certificate (.pfx or .p12)</li>
+    <li>Certificate Revocation List (.crl extension)</li><br /><br />
+  </ul>
+  Read more about all of the above extensions here: <a href="https://blogs.msdn.microsoft.com/kaushal/2010/11/04/various-ssltls-certificate-file-typesextensions/">Microsoft: Certificate File Extensions</a><br /><br />
+</li>
+<li><strong>How certificate chains work?</strong><br />
+  A certificate chain is an ordered list of certificates, containing an SSL Certificate and Certificate Authority (CA) Certificates, that enable the receiver to verify that the sender and all CA's are trustworthy. The chain or path begins with the SSL certificate, and each certificate in the chain is signed by the entity identified by the next certificate in the chain.<br /><br />
+
+  Any certificate that sits between the SSL Certificate and the Root Certificate is called a chain or Intermediate Certificate. The Intermediate Certificate is the signer/issuer of the SSL  Certificate. The Root CA Certificate is the signer/issuer of the Intermediate Certificate. If the Intermediate Certificate is not installed on the server (where the SSL certificate is installed) it may prevent some browsers, mobile devices, applications, etc. from trusting the SSL certificate. In order to make the SSL certificate compatible with all clients, it is necessary that the Intermediate Certificate be installed.<br /><br />
+
+  The chain terminates with a Root CA Certificate. The Root CA Certificate is always signed by the CA itself. The signatures of all certificates in the chain must be verified up to the Root CA Certificate.<br /><br />
+
+  <img src="../../images/cert_chain.png" style="width:900px;height:300px;" class="center" /><br /><br />
+  Have a certificate, check your certificate <a href="https://whatsmychaincert.com/"> chain here </a>  <br />
+  {source: https://knowledge.digicert.com/solution/SO16297.html}<br /><br />
+</li>
+<li><strong>What are the best practices for generating certificates?</strong><br />
+  Refer to <a href="bp-certificates.html">our other document that walks through the best practices.</a><br /><br />
+</li>
+<li><strong>Why does by browser say "Not Secure" on the URL bar?</strong><br />
+  Your browser is telling you that the connection to the server isn't over HTTPS and that is a security concern. But browsers have started to do more that simply check for non HTTPS based connections. Such as:<br />
+  <ul>
+    <li><a href="https://www.blog.google/products/chrome/milestone-chrome-security-marking-http-not-secure/">Chrome</a></li>
+    <li><a href="https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn">Firefox</a></li>
+  </ul>
+</li><br /<br />
+<li><strong>What are self signed certificates? And why do you have to worry about them?</strong><br />
+  Self signed certificates are certificates that have been issued by a CA on the same machine for which the CSR was generated. Think of it as your own CA (that no one trusts unless specified) signing the certificaet. Please refer to the <a href="https://www.globalsign.com/en/ssl-information-center/dangers-self-signed-certificates/"> following document to understand why self signed are a possible security risk. </a> <br /><br />
+</li>
+<li><strong><a href="https://geekflare.com/openssl-commands-certificates/">Some common operations using OpenSSL</strong><br /><br /></li>
+</li>
+</ul>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <p>
+	           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	        </p>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Properly Storing Passwords</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Hashes for File Verification</a></li>
+      	    <li><a href="http://ciscodemo.isi.jhu.edu/template3.html#">Digital Signatures for File Verification</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

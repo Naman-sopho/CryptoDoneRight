@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Encryption Modes</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level"><a href="encryption.html">Encryption</a></li>
+         <li class="breadcrumb-item level0 active">Modes of Encryption</li>
+       </ol>
+    </div>
+
+<!--<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#nocryptoroll"><li>
+          TLSv1.2 Implementation
+        </li></a>
+		<a href="#tls12patch"><li>
+          Upgrade/Patch-Management
+        </li></a>
+		<a href="#usagelibrary"><li>
+          Usage-of-Library-Examples
+		 </li></a>
+      </ul>
+    </div>
+
+		<div class="alert alert-warning">
+      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
+    </div>
+	<a href="flaw-categories.html"><div class="alert alert-warning">
+      <strong>MUST READ</strong> Click here to understand about possible land mines.
+    </div></a> -->
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+	       <h2 align="center">Introduction to modes of Operations in Cryptography</h2>
+
+          <br /> <br /> <br />Encryption algorithms are in basic definition a set of rules that allow for generation of confidentiality of data. But encryption algorithms have evolved in the way they encrypt data. The various different modes of operation work in different ways and operate with input data (to be encrypted) in different ways. Here is an overview of how encryption algorithms are organized based on their functionality. <br />
+
+          <img src="../../images/Modes_of_operation diagram.jpg" /> <br /> <br />
+
+          For the case of this section of the website, we will be discussing the popular examples from confidentiality and authenticated encryption modes. <br /> <br />
+
+          <h3>Confidentiality (Encryption Only): </h3>
+
+          As the name suggests, encryption algorithms operating in this mode can only provide encryption capabilities. There are reasons why this can be considered to be a sufficient feature but it is recommended that such a decision be taken after understanding all the possible options carefully. <br /> <br />
+
+          <h4>Block Ciphers Modes of Operation </h4>
+          The modes of operation of block ciphers are configuration methods that allow those ciphers to work with large data streams, without the risk of compromising the provided security. <br /> <br />
+
+          Modes that require padding: An element's padding is the space between its content and its border. In encryption this would mean filler bits to make up remaining space in a packet field. Padding can generally be dangerous because it opens up the possibility of padding oracle attacks (learn more about these ATTQCHAS). The easiest defense is to authenticate every message before decryption (using authenticated encryption modes of operation). <br /> <br />
+
+          <strong><u>ECB:</u></strong> <br />
+          Electronic Code Book (ECB) is a mode of operation for a block cipher, with the characteristic that each possible block of plaintext has a defined corresponding ciphertext value and vice versa. In other words, the same plaintext value will always result in the same ciphertext value. Electronic Code Book is used when a volume of plaintext is separated into several blocks of data, each of which is then encrypted independently of other blocks. Learn more (a possible video link and more resources). <br /> <br />
+
+          <strong>Security:</strong> <br />
+          <ul>
+            <li>The security properties of ECB are weak. </li>
+            <li>It's a legacy mode of operation. </li>
+            <li>Should be avoided or should be used with great caution. </li>
+          </ul><br />
+
+          <strong><u>CBC:</u></strong> <br />
+          Cipher block chaining (CBC) is a mode of operation for a block cipher (one in which a sequence of bits are encrypted as a single unit or block with a cipher key applied to the entire block). Cipher block chaining uses what is known as an initialization vector (IV) of a certain length. One of its key characteristics is that it uses a chaining mechanism that causes the decryption of a block of ciphertext to depend on all the preceding ciphertext blocks. As a result, the entire validity of all preceding blocks is contained in the immediately previous ciphertext block. A single bit error in a ciphertext block affects the decryption of all subsequent blocks. Rearrangement of the order of the ciphertext blocks causes decryption to become corrupted. Basically, in cipher block chaining, each plaintext block is XORed (see XOR) with the immediately previous ciphertext block, and then encrypted. <br /> <br />
+
+          <strong>Security:</strong> <br />
+          <ul>
+          <li>Care should be taken to implement the IV correctly. Cannot be the same ever and should not be a nonce. <br /> </li>
+          <li>Is frequently misused. <br /> </li>
+          <li>No important advantages over CTR mode.</li> <br /> <br />
+          </ul>
+
+          <h4>Stream Cipher Modes</h4>
+          These modes can generate random stream of data (bits) that may or may not depend on the plaintext.  In a stream cipher, each plaintext digit is encrypted one at a time with the corresponding digit of the keystream, to give a digit of the ciphertext stream. Note that these modes operate on blocks. <br /> <br />
+
+          <strong><u>CTR mode:</u></strong> <br />
+          An IV based encryption scheme. This mode of operation is really fast as it performs a lot of operations in parallel. CTR mode acts as an important block for authenticated encryption schemes. Overall, usually the best and modern way to achieve privacy-only encryption. <br /> <br />
+
+          <strong>Authenticated Encryption: </strong> <br />
+          The idea behind authenticated encryption is to combine encryption and authentication by performing encryption on a plain text and then creating a token that equals the message digest of the cipher text.  This approach has been proven to be highly secure but care must be taken to make sure that it is configured correctly. From a security standpoint, authenticated encryption has proven to be secure against padding oracle attacks. <br /> <br />
+
+          <strong><u>GCM: <br /></u></strong>
+          GCM mode provides both privacy (encryption) and integrity. To provide encryption, GCM maintains a counter; for each block of data, it sends the current value of the counter through the block cipher. Then, it takes the output of the block cipher, and exclusive or's that with the plaintext to form the ciphertext. <br /> <br />
+
+          <strong>Security: <br /></strong>
+          <ul>
+            <li>Widely standardized and used.</li>
+            <li>Very efficient while providing good provable security (although can get complex to implement).</li>
+          </ul>
+
+      </div>
+    </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
+      </footer>
+    </div>
+
+  </body>
+</html>

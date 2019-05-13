@@ -1,0 +1,1 @@
+robot attack desc in SSLv3.0 from https://blog.rapid7.com/2017/12/13/attention-humans-the-robot-attack/

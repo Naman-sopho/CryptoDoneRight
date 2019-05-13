@@ -1,0 +1,336 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSHv2 IT Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="sshv2.html">SSHv2</a></li>
+         <li class="breadcrumb-item level1 active">SSHv2 IT Quickstart</li>
+       </ol>
+    </div>
+
+<div class="container-fluid">
+<div class="row" style="padding: 2vw;">
+<div class="col-md-12 col-sm-12 col-xs-12">
+
+<p id="GeneralTLSInfo">
+
+<h2> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> SSHv2 Configuration </h2>
+
+<font size="4"><strong>What to expect:</strong></font><br /> <br />
+SSHv2 is client-server protocol that relies on the following concepts. When the requirement is to set up SSH for an application or system, here are the key terms that are to be expected: <br /> <br />
+
+Here are the basic steps involved in a SSH handshake:<sup>1</sup><br />
+<ul>
+  <li>Negotiating the version of the protocol to use.</li>
+  <li>Negotiating cryptographic algorithms and other options to use.</li>
+  <li>Negotiating a one-time session key for encrypting the rest of the session.</li>
+  <li>Authenticating the server host using its host key.</li>
+  <li>Authenticating the user using a password, public key authentication, or other means.</li>
+</ul><br /><br />
+
+<b><u>Authentication Scheme:</u></b> SSHv2 provides a few options when it comes to authentication (client authenticating the server and itself). Different authentication schemes could be appropriate for different setups. But a general recommendation IS TO AVOID PASSWORD as SSH keys are long and complex, far more than any password could be and keys don't get transmitted to the remote system (except key forwarding, natch) which passwords need to be. <a href="https://www.ssh.com/ssh/key/">https://www.ssh.com/ssh/key/</a>.  The details of this method depend on the public-key algorithm chosen. In essence, the client sends a message to the server that contains the client's public key, with the message signed by the client's private key. When the server receives this message, it checks to see whether the supplied key is acceptable for authentication and, if so, it checks to see whether the signature is correct.<br /> <br />
+
+<b><u>Setting up keys:</u></b> SSH protocol uses cryptographic keys in order to secure communication between the server and the client. These keys could be of type of several types such as RSA, DSA or ECDSA. Note that OpenSSH, one of the most popular libraries used by vendors to implement SSH, has removed support for DSA keys because of security concerns.  <br /> <br />
+
+<b><u>CipherSuites and KeyExchange Algorithm:</u></b> These are the settings that determine which encryption algorithm and message integrity algorithm will be used for securing data. Also the key-exchange protocol (DH or ECDH) will be negotiated betweeen the client and the server. <br /> <br />
+
+<b><u>Setting up communication:</u></b> SSH by default listens on TCP port 22. This can however be changed with almost any vendor. <br /> <br />
+
+<font size="4"><strong>Concept:</strong></font> SSHv2 is a secure protocol but there are components that the protocol uses that could provide the weakness. <br /> <br />
+
+Below are a few highly recommended steps that are to be taken with any SSH setup to provide maximum security.<br />
+<ul>
+  <li>Choose the form of SSH Authentication. Prefer key based authentication over passwords.</li> <br />
+  <li>Ensure that key pairs generated are large (DSA and RSA 1024 bit or lower ssh keys are considered weak. Avoid them. RSA keys are chosen over ECDSA keys when backward compatibility is a concern with ssh clients. All ssh keys are either ED25519 (ex: curve25519) or RSA . Do not use any other type) </li><br />
+  <li>Secure Key Excgahange Algorithms (Examples are curve25519-sha256: ECDH over Curve25519 with SHA2 and diffie-hellman-group-exchange-sha256: Custom DH with SHA2)</li><br />
+  <li>Secure ciphersuites.(Recommendations as of Oct,2018: Encryption: aes256-gcm, aes128-gcm, aes256-ctr, aes192-ctr, aes128-ctr MAC: hmac-sha2-512-etm, hmac-sha2-256-etm, hmac-sha2-512, hmac-sha2-256) </li><br />
+  <li>Change the default SSH passwords. Ensure characters meet minimum requirements. Better, remove passwords entirely!(<a href="https://security.stackexchange.com/questions/69407/why-is-using-an-ssh-key-more-secure-than-using-passwords"> For reasons mentioned here). </a>  </li><br />
+  <li>Disable privilege escalation. Deny root/super user access. </li><br />
+  <li>Filter incoming SSH connections based on IP addresses.  </li><br />
+  <li>Log information about the sessions.  </li><br />
+  <li>Set an idle timeout value and login timeout value.  </li>
+</ul><br /> <br />
+
+<font size="4"><strong>Example:</strong></font>
+All the above features are product specific. These are common security measures taken and documentation for implementing the above features should be easily available. Here are a few examples: <br /> <br />
+<ul>
+  <li><a href="https://devops.profitbricks.com/tutorials/secure-the-ssh-server-on-ubuntu/#secure-the-ssh-configuration-file">Secure SSH Server on Linux</a></li><br />
+  <li><a href="https://www.cisco.com/c/en/us/tech/security-vpn/secure-shell-ssh/tech-configuration-examples-list.html">Secure SSH configuration on Cisco devices</a></li><br />
+  <li><a href="https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ssh-remoting-in-powershell-core?view=powershell-6"> Setting up SSH using Powershell</a></li><br />
+  <li><a href="https://winscp.net/eng/docs/guide_windows_openssh_server"> WinSCP: How to use OpenSSH on Windows</a></li><br /><br />
+</ul>
+
+
+<strong> Looking for a SSH client?</strong> There are a lot of options, some of them are: https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
+<br /><br /><br />
+
+
+    <font size="4"><strong>Concept: A special note on SSH Authentication: Taken from: <a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">https://stribika.github.io/2015/01/04/secure-secure-shell.html</a> </strong></font><br /><br />
+    A major part of SSH implementation will be implementing the Authentication. In SSH, the key exchange only ensures that the server and the client shares a secret no one else knows. We also have to make sure that they share this secret with each other and that is where Authentication comes in.<br /><br />
+
+    <strong><u>Server authentication</u></strong><br />
+    The server proves its identity to the client by signing the key resulting from the key exchange. There are 4 public key algorithms for authentication:<br />
+    <ul>
+      <li>DSA with SHA1</li>
+      <li>ECDSA with SHA256, SHA384 or SHA512 depending on key size</li>
+      <li>Ed25519 with SHA512</li>
+      <li>RSA with SHA1</li>
+    </ul><br /><br />
+
+    <a href="https://security.stackexchange.com/questions/112802/why-openssh-deprecated-dsa-keys">DSA keys must be exactly 1024 bits and is no longer considered secure.</a> Another important disadvantage of DSA and ECDSA is that it uses randomness for each signature. If the random numbers are not the best quality, then it is possible to recover the secret key. Fortunately, RSA using SHA1 is not a problem here because the value being signed is actually a SHA2 hash. The hash function SHA1(SHA2(x)) is just as secure as SHA2 (it has less bits of course but no better attacks). <br /><br />
+
+    To generate the keys on a Linux system:
+    <code>
+      <pre>
+        cd /etc/ssh
+        rm ssh_host_*key* //ONLY IF YOU WANT TO REMOVE ALL OF THE EXISTING KEYS
+        ssh-keygen -t ed25519 -f ssh_host_ed25519_key -N "" < /dev/null
+        ssh-keygen -t rsa -b 4096 -f ssh_host_rsa_key -N "" < /dev/null
+      </pre>
+    </code>
+    <br /><br />
+
+    Next step is changing the sshd_config file. Add the new host key type:<br />
+    <code>
+      <pre>
+      HostKey /etc/ssh/ssh_host_ed25519_key
+      HostKey /etc/ssh/ssh_host_rsa_key
+      </pre>
+    </code>
+
+    The first time you connect to your server, you will be asked to accept the new fingerprint. Something like this:<br /><br />
+
+
+    <strong><u>Client authentication</u></strong><br /><br />:
+    The client must prove its identity to the server as well. There are various methods to do that. The simplest is password authentication. This should be disabled immediately after setting up a more secure method because it allows compromised servers to steal passwords. Password authentication is also more vulnerable to online bruteforce attacks.<br /><br />
+
+    Recommended /etc/ssh/sshd_config snippet:<br />
+    <code>
+      <pre>
+
+        PasswordAuthentication no
+        ChallengeResponseAuthentication no
+      </pre>
+    </code><br />
+    Recommended /etc/ssh/ssh_config snippet:<br />
+    <code>
+      <pre>
+        Host *
+            PasswordAuthentication no
+            ChallengeResponseAuthentication no
+      </pre>
+    </code><br /><br />
+
+    The most common and secure method is public key authentication, basically the same process as the server authentication.<br /><br />
+
+    Recommended /etc/ssh/sshd_config snippet:<br /><br />
+    <code>
+      <pre>
+        PubkeyAuthentication yes
+      </pre>
+    </code><br />
+
+    Recommended /etc/ssh/ssh_config snippet:<br /><br />
+    <code>
+      <pre>
+        Host *
+            PubkeyAuthentication yes
+            HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
+      </pre>
+    </code><br />
+
+    Generate client keys using the following commands:<br /><br />
+
+    <code>
+      <pre>
+        ssh-keygen -t ed25519 -o -a 100
+        ssh-keygen -t rsa -b 4096 -o -a 100
+      </pre>
+    </code><br />
+
+    You can deploy your new client public keys using ssh-copy-id.<br /><br />
+
+    It is also possible to use OTP authentication to reduce the consequences of lost passwords. Google Authenticator is a nice implementation of TOTP, or Timebased One Time Password. You can also use a printed list of one time passwords or any other PAM module, really, if you enable ChallengeResponseAuthentication.<br /><br />
+
+    <strong><u>User Authentication</u></strong><br />
+    Even with Public Key authentication, you should only allow incoming connections from expected users. The AllowUsers setting in sshd_config lets you specify users who are allowed to connect, but this can get complicated with a large number of ssh users. Additionally, when deleting a user from the system, the username is not removed from sshd_config, which adds to maintenance requirements. The solution is to use the AllowGroups setting instead, and add users to an ssh-user group.<br /><br />
+
+    Recommended /etc/ssh/sshd_config snippet:<br /><br />
+
+    <code>
+      <pre>
+        AllowGroups ssh-user
+        Create the ssh-user group with sudo groupadd ssh-user, then add each ssh user to the group with sudo usermod -a -G ssh-user <username>.
+      </pre>
+    </code>
+
+
+
+</p>
+  </p>
+      </div>
+    </div>
+    </div>
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://www.ssh.com/ssh/key/">[1] SSH.com: SSH KEY</a></li>
+
+          </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+            <li><a href="https://code.fb.com/security/scalable-and-secure-access-with-ssh/">Facebook: Secure and Scalable Access with SSH </a></li>
+           <li>
+             <a href="https://www.cisco.com/c/en/us/about/press/internet-protocol-journal/back-issues/table-contents-46/124-ssh.html">Cisco: SSH: Protocol Deep Dive</a>
+           </li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server">Digital Ocean: How to Configure SSH Key-Based Authentication on a Linux Server</a></li>
+             <li><a href="https://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html#anc41">Securing SSH on Cisco IOS Devices.</a></li>
+            <li>
+              <a href="https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process">Digital Ocean: Understanding the SSH Encryption and Connection Process</a>
+            </li>
+             <li><a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in
+">Enabling TLSv1.2 on Microsoft machines</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">Copyright © 2019 Crypto Done Right All rights reserved.
+      </footer>
+
+
+  </body>
+</html>

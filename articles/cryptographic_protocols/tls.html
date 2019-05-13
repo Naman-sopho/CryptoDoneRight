@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0043)http://ciscodemo.isi.jhu.edu/template3.html -->
+<html lang="en-us">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="robots" content="noindex, noarchive, nofollow" />
+  <title>Template 3 (with Div Tags)</title>
+  <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../css/style3.css" type="text/css" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1><span>JHUISI / Cisco Crypto Library Demo</span></h1>
+    </div>
+    <div id="content">
+      <div class="breadcrumbs">
+        <ol class="breadcrumb">
+	  <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Articles</a></li>
+	  <li class="breadcrumb-item"><a href="#">Cryptographic Protocols</a></li>
+	  <li class="breadcrumb-item active">TLS</li>
+        </ol>
+      </div>
+      <div class="topic">
+        <div class="title">
+          <h2><span>TLS (Transport Layer Security) Protocol</span></h2>
+        </div>
+	<div class="timestamp">
+	  <p><span>Last Updated Thu, 21 Aug 2017 12:00:01 -0400</span></p>
+	</div>
+	<div class="topicimage">
+	  <img src="./images/encr-icon.png">
+	</div>
+        <div class="obsoletes"><p>Obsoletes SSL</p></div>
+        <div class="description">
+          <p>
+	    TLS (Transport Layer Security) is a cryptographic communications protocol
+            that can be used to provide <a href="#">privacy</a>, <a href="#">message integrity</a>,
+            and <a href>authentication of the communicating parties</a> in network communications.
+            TLS is unfortunately sometimes referred to as "<a href="#">SSL</a>," the obsoleted,
+            and vulnerable algorithm it replaced. The current version of TLS is blah and is specified
+            in RFC-.
+          </p>
+          <p>
+            TLS is a critical component, if not the critical component, of contemporary
+            web security. Every "secure" web session (i.e., "https://") relies on either
+            TLS or (if poorly configured) SSL. Therefore, it is essential that administrators,
+            and other relevant IT professionals, correctly configure their TLS installations.
+            Although TLS is its own protocol, it relies on a number of component protocols
+            for bulk encryption, authentication, and so forth. Selecting the appropriate 
+            algorithms and algorithm parameters is an important part of configuration.
+	  </p>
+        </div>
+        <h4><span>Sub-topics</span></h4>
+        <div class="subtopics">
+          <ul>
+            <li><span>TLS Protocol State Machine (Dev)</span></li>
+            <li><span>Certificate Authorities (Dev, IT)</span></li>
+            <li><span>Certificate and Private Key Best Practices (IT)</span></li>
+          </ul>
+        </div>
+        <h4><span>Versions</span></h4>
+        <div class="versions">
+          <ul>
+            <li><span>TLS 1.0 (WARNING: DANGEROUS!)</span></li>
+            <li><span>TLS 1.1</span></li>
+            <li><span>TLS 1.2</span></li>
+            <li><span>TLS 1.3 (Working Draft)</span></li>
+          </ul>
+	</div>
+        <div class="news">
+	  <h3><span>News</span></h3>
+	  <div class="bs-callout bs-callout-danger">
+	    <h4><span>Important</span></h4>
+            <p>
+	      TLS should no longer use Digital Certificates that use <a HREF>SHA-1</a> as the hash algorithm.
+	      <a href="https://www.theverge.com/2017/2/23/14712118/google-sha1-collision-broken-web-encryption-shattered">Read More</a>
+	    </p>
+	  </div>
+        </div>
+	<div class="bestpractices">
+	  <h3><span>Best Practices</span></h3>
+          <div class="dos">
+            <h4><span>Do:</span></h4>
+            <ul>
+              <li><span>Use TLS 1.2 and prepare to move to TLS 1.3</span></li>
+              <li><span>Carefully choose certificate generation including Certificate Authority choice</span></li>
+              <li><span>Secure private keys</span></li>
+              <li><span>Choose algorithms appropriate for the context and the TLS version</span></li>
+              <li><span>Secure random number generation</span></li>
+              <li><span>Test TLS to ensure it is working as expected</span></li>
+            </ul>
+          </div>
+          <div class="donts">
+            <h4><span>Don't:</span></h4>
+            <ul>
+              <li><span>Use SSL under any circumstances</span></li>
+              <li><span>Use TLS 1.0 unless absolutely necessary</span></li>
+              <li><span>Use SHA-1 with your Digital Certificates</span></li>
+              <li><span>Assume that just "using" TLS makes your communications secure</span></li>
+            </ul>
+          </div>
+	</div>
+        <div class="further_reading">
+	  <h3><span>Further Reading</span></h3>
+          <p>
+	    Development guide? Sample code? Testing?
+	  </p>
+	  <h4>Related Articles:</h4>
+	  <ul>
+	    <li><a href="#">TLS to SSL Rollback Attacks</a></li>
+	    <li><a href="#">CA compromises</a></li>
+	    <li><a href="#">EFF TLS visibility</a></li>
+	  </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <p><span>Copyright © 2019 Crypto Done Right All rights reserved.</span></p>
+    </div>
+  </div>
+</body>
+</html>

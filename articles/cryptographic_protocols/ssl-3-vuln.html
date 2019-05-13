@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSLv3 Vulnerabilities</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="ssl-3.html">SSL 3.0</a></li>
+         <li class="breadcrumb-item level1 active">SSL 3.0 Vulnerabilities</li>
+       </ol>
+    </div>
+
+<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#poodle"><li>
+          POODLE
+        </li></a>
+        <a href="#beast"><li>
+          BEAST
+        </li></a>
+        <a href="#logjam"><li>
+          LogJam
+        </li></a>
+		<a href="#crime"><li>
+          CRIME
+        </li></a>
+		<a href="#breach"><li>
+          BREACH
+        </li></a>
+        <!--<a href="#relatedArticles"><li>
+          Related Articles & Further Reading
+        </li></a>-->
+      </ul>
+	  <strong style="font-size:2vw;">Legend</strong>
+	  <ul>
+	  <li>Critical-<img src="../../images/red.jpg" style="width:20px;height:20px;"/></li>
+	  <li>Moderate-<img src="../../images/yellow.jpg" style="width:20px;height:20px;"/></li>
+	  </ul>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+
+<p id=poodle>
+<h4><img src="../../images/prot.png" style="width:80px;height:80px;" /> POODLE: <img src="../../images/red.jpg" style="width:55px;height:55px;" align="right" /> </h4>
+SSL Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE)<sup>1</sup> is a vulnerability affecting SSLv3 where a block cipher is enabled
+utilizing the CBC cipher mode. It requires a man-in-the-middle attack and the ability for the attacker to cause the application to send the same
+data over newly created SSL3.0 connections but allows an attacker to decipher a chosen byte of ciphertext in as few as 256 attempts. This vulnerability
+is an issue in the specification, not a specific implementation issue. Additionally, if a service prefers TLS over SSLv3 it may be possible to ‘roll back’
+the connect if the TLS Fallback SCSV mechanism is not enabled.
+<br /> <br />
+The Padding Oracle On Downgraded Legacy Encryption (POODLE) attack was published in October 2014 and takes advantage of two factors. The first is the
+fact that some servers/clients still support SSL 3.0 for interoperability and compatibility with legacy systems, and the second factor is a vulnerability
+that exists in SSL v3.0 which is related to Block Padding. These two vulnerabilities could be combined together to steal information.
+<br /> <br />
+In 2016, the Google Security Team introduced their Padding Oracle On Downgraded Legacy Encryption (POODLE) attack. POODLE demonstrated that, under certain
+conditions, it is possible to conduct a "padding oracle" attack against ciphers using cipher-block chaining (CBC) mode. This may allow decryption of communications
+and disclosure of session cookies. As the only non-CBC cipher supported in SSLv3, RC4, is also known to be cryptographically weak, the conclusion is that SSLv3
+should not be used for communications. The Google Security Team further showed that an attacker can force the client and server to downgrade to SSLv3 even if
+they would normally use TLS, meaning that it is important to ensure that SSLv3 is disabled completely.
+<br /> <br />
+Learn more >>> <br />
+A more in-depth explanation: <a href="https://www.imperialviolet.org/2014/10/14/poodle.html">https://www.imperialviolet.org/2014/10/14/poodle.html</a> <br />
+Google's Paper on POODLE: <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">https://www.openssl.org/~bodo/ssl-poodle.pdf</a> <br />
+<br />
+</p>
+
+<p id="beast">
+<h4><img src="../../images/prot.png" style="width:80px;height:80px;" /> Beast: <img src="../../images/yellow.jpg" style="width:55px;height:55px;" align="right" /> </h4>
+The Browser Exploit Against SSL/TLS attack was published in September 2011 and affects SSLv3.0 (and TLS 1.0). An attacker can “decrypt” data exchanged between
+two parties by taking advantage of a vulnerability in the implementation of the Cipher Block Chaining (CBC) mode in SSLv3.0 which allows them to perform chosen
+plaintext attack.
+<br /> <br />
+This vulnerability is an attack on the confidentiality of an HTTPS connection in a negligible amount of time. That is, it provides a way to extract the unencrypted
+plaintext from an encrypted session. Please note that BEAST does not do any harm to remote servers and is therefore considered to be a client-side attack.
+<br /> <br />
+BEAST is a practical attack was found to be possible against TLS v1.0 and SSLv3.0 (and below) when a block cipher is in use. Effectively an attacker is able to
+determine the Initialisation Vector utilized as part of the encryption process meaning that if a repeating pattern is evident in the plaintext then it will be
+evident in the ciphertext. However, it is of limited use it is only possible to retrieve small pieces of data, such as session tokens. The attacker must be able
+to man-in-the-middle a connection and there must be a way of generating additional traffic such as an SOP bypass or a Cross-site Scripting vulnerability. The user
+must be using an older web browser, as modern browsers protect against this issue. If all of these conditions are met and session tokens are protected against XSS
+through mechanisms such as HttpOnly cookies then an attacker may exploit BEAST to gain access to these protected tokens.
+<br /> <br />
+Learn more >>> <br />
+What do you need to know about BEAST?  <a href="https://blogs.akamai.com/2012/05/what-you-need-to-know-about-beast.html">https://blogs.akamai.com/2012/05/what-you-need-to-know-about-beast.html </a>
+<br />
+Another overview about BEAST: <a href="https://www.contextis.com/blog/server-technologies-https-beast-attack">https://www.contextis.com/blog/server-technologies-https-beast-attack </a>
+<br />
+BEAST Demonstration: <a href="https://vnhacker.blogspot.com/2011/09/beast.html">https://vnhacker.blogspot.com/2011/09/beast.html </a>
+<br /> <br />
+</p>
+
+<!--
+Under IT Quick Start:"""
+The BEAST attack is akin to not setting the HTTPOnly property on cookies. Many websites don’t set this property, and thus are no more vulnerable. If you are concerned about the BEAST attack, we suggest you first concern yourself with the HTTPOnly property which is more likely.
+"""
+-->
+
+<p id="logjam">
+<h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> Logjam: <img src="../../images/red.jpg" style="width:55px;height:55px;" align="right" /> </h4>
+NOTE: This is not a specific vulnerability with SSLv3. This is vulnerability with a parameter that is configurable and continues to be used with all versions
+of SSL/TLS.
+<br /> <br />
+Logjam is a security vulnerability against a Diffie–Hellman key exchange ranging from 512-bit (US export-grade) to 1024-bit keys. It was discovered by a group
+of computer scientists and publicly reported on May 20, 2015. The Logjam attack allows a man-in-the-middle attacker to downgrade vulnerable TLS connections to
+512-bit export-grade cryptography. This allows the attacker to read and modify any data passed over the connection. The attack is reminiscent of the FREAK attack,
+but is due to a flaw in the TLS protocol rather than an implementation vulnerability, and attacks a Diffie-Hellman key exchange rather than an RSA key exchange.
+The Logjam attack is a perfect example of an attack that was theoretical but became a very real threat to the current environment of readily available raw computing
+power.
+<br /> <br />
+Learn more about Logjam: <a href="https://blogs.cisco.com/security/understanding-logjam-and-future-proofing-your-infrastructure">https://blogs.cisco.com/security/understanding-logjam-and-future-proofing-your-infrastructure</a> <br />
+Learn more about different key exchange option available in SSL/TLS: <a href="https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work/20847#20847">https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work/20847#20847 </a>
+<br /> <br />
+
+</p>
+
+<p id="crime">
+<h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" /> CRIME: <img src="../../images/yellow.jpg" style="width:55px;height:55px;" align="right" />  </h4>
+The Compression Ratio Info-leak Made Easy (CRIME) attack is a side-channel attack against TLS compression. To carry out the attack, the attacker needs to exert
+partial control over the content of requests made by the client (e.g. by using a Cross-Site Scripting vulnerability to force the user's browser to issue requests).
+The attacker can then observe the compressed size of these requests on the network and from that infer the contents of the remainder of the request (e.g. session
+cookies) based on the level of compression achieved.
+</p>
+
+<p id="breach">
+<h4> <img src="../../images/configuration.jpg " style="width:110px;height:100px;" />BREACH: <img src="../../images/yellow.jpg" style="width:55px;height:55px;" align="right" /> </h4>
+The BREACH attack is analogous to the CRIME attack, but this time exploits the use of HTTP compression to again infer the contents of attacker-influenced requests.
+</p>
+
+<strong>Note:</strong> Although SSLv3.0 is an older version of the protocol which is mainly obsolete, many pieces of software still fall back on SSLv3 if better encryption options
+are not available. More importantly, it is possible for an attacker to force SSLv3 connections if it is an available alternative for both participants attempting
+a connection. It is therefore very important to completely disable SSLv3.0.
+
+        </div>
+      </div>
+
+      <div class="footerfix"></div>
+      <footer class="footer">Copyright © 2019 Crypto Done Right All rights reserved.
+      </footer>
+    </div>
+
+  </body>
+</html>

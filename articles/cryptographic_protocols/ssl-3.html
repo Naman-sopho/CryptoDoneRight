@@ -1,0 +1,274 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SSLv3</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0 active">SSL 3.0</li>
+       </ol>
+    </div>
+
+      <div id="testtitle">
+        <strong style="font-size:3vw;">SSL 3.0</strong>
+  </div>
+
+	<a href="ssl-3-broken.html"><div class="alert alert-danger">
+      <strong>Warning! This technology is obsolete!</strong>
+    </div></a>
+
+	<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="ssl-3-devQuickstart.html"><li>
+          Developer's QuickStart
+        </li></a>
+        <a href="ssl-3-itQuickstart.html"><li>
+          IT  Admin's QuickStart
+		 </li></a>
+		<a href="ssl-3-managerQuickstart.html"><li>
+          Manager's QuickStart
+        </li></a>
+    <a href="ssl-3-faqs.html"><li>
+          SSLv3 FAQs
+        </li></a>
+      </ul>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div id="topic" class="col-md-4 col-sm-4 col-xs-4">
+          <!--<div class="title">
+            <h2><span>SSL 3.0</span></h2>
+          </div>-->
+          <div class="timestamp">
+            <p><span>Last Updated 12 Dec 2018 2:02:01 -0400</span></p>
+          </div>
+          <div class="description">
+            <p>
+             SSL stands for Secure Sockets Layer and was originally created by Netscape.
+      			 It is used for providing confidentiality, authenticity and integrity by establishing an encrypted link between a server and a client.
+      			 This link ensures that all data passed between the web server and browsers remain private and integral.
+      			 SSLv2 and SSLv3 are the 2 versions of this protocol (SSLv1 was never publicly released). After SSLv3, SSL was renamed to TLS.
+      			 Those protocols are standardized and described by RFCs.
+
+			 <br /> <br /> <strong>Attacks: </strong>
+            <br /><u>POODLE:</u> The attack that killed off SSLv3.0. POODLE allows an attacker to force a SSLv3 connection and use weak configuration to break security.
+            <a href="ssl-3-vuln.html#poodle">Learn more</a>.
+            <br /><u>BEAST:</u> A vulnerability that can be exploited using browsers (HTTPS). A client side attack whose possible impacts include session hijacking.
+            <a href="ssl-3-vuln.html#beast">Learn more</a>.
+            <br /><u>Logjam:</u> An easy to exploit vulnerability if weak configuration is used. This vulnerability affects all versions of SSL/TLS. Learn more.
+            <a href="ssl-3-vuln.html#logjam">Learn more.</a>
+            <br /><u>ROBOT:</u> A weakness in the RSA encryption standard known as PKCS#1v1.5 that can ultimately allow an attacker to learn a secured website’s private key in a relatively short amount of time.
+             <a href="https://robotattack.org/">Learn more.</a>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br />		<br />		<br />		<br />
+		<a href="ssl-3-devQuickstart.html" class="btn btn-primary"> <img class="logos" src="../../images/NewDevLogo.png" />
+            DEV QUICKSTART</a>
+			<p>
+              Are you a developer? Get started with crucial implementation details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+			<!--
+			<br /> <br />
+			<a class="btn btn-warning" href="#"> <img class="logos" style="margin-right:6vw" src="../../images/historyIcon.png" />
+            HISTORY</a>
+			<p>
+			A quick history of SSL.
+			</p>
+			-->
+          </div>
+
+
+
+        <div class="col-md-4 col-sm-4 col-xs-4 infoBlocks">
+		<br />		<br />		<br />		<br />
+		<a href="ssl-3-itQuickstart.html" class="btn btn-primary"> <img class="logos" src="../../images/pc-administrator.png" />
+            IT QUICKSTART</a>
+			<p>
+              Are you an IT administrator? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+			<!--
+			<br /><br />
+			<a class="btn btn-warning" href="ssl-3-working.html"> <img class="logos" style="margin-right:5vw" src="../../images/workingIcon.png" />
+            WORKING</a>
+			<p>
+			Basic SSL Packet Flow.
+			</p>
+			-->
+          </div>
+
+		<div class="col-md-8 col-sm-8 col-xs-8 infoBlocks">
+		<br />		<br />		<br />		<br />
+		<a href="ssl-3-managerQuickstart.html" class="btn btn-primary"> <img class="logos" src="../../images/manager.png" />
+            MANAGER QUICKSTART</a>
+			<p>
+              Are you a Manager? Get started with best practice setup details above.
+            </p>
+            <div class="blockNotes">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+          <ul>
+			<li><a href="https://www.schneier.com/academic/paperfiles/paper-ssl.pdf">Analysis of SSL</a></li>
+      	    <li><a href="http://disablessl3.com/">Disabling SSLv3</a></li>
+			<li><a href="https://support.globalsign.com/customer/portal/articles/2356063">Disabling SSLv2 and SSLv3</a></li>
+			<li><a href="https://www.sans.org/reading-room/whitepapers/protocols/ssl-tls-beginners-guide-1029">SSL/TLS: A Beginners Guide</a></li>
+			<li><a href="https://www.schneier.com/academic/paperfiles/paper-ssl-revised.pdf">Analysis of the SSL 3.0 protocol</a></li>
+      	  </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+          <ul>
+      	    <li><a href="https://tools.ietf.org/html/rfc7568#section-5">RFC for Disabling SSLv3</a></li>
+			 <li><a href="https://support.globalsign.com/customer/portal/articles/2356063">Disabling SSLv2 and SSLv3</a></li>
+      	  </ul>
+        </div>
+      </div>
+
+      <div class="footerfix"></div>
+      <footer class="footer">Copyright © 2019 Crypto Done Right All rights reserved.
+      </footer>
+  </body>
+</html>

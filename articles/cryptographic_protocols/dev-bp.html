@@ -1,0 +1,269 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Developer Best Practices!</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+      <div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <br />
+      <ul>
+        <a href="#hard-coded"><li>
+          Hard Coded Keys
+            </li></a><br />
+        <a href="#improper-iv"><li>
+          Improperly Choosing an IV
+            </li></a><br />
+        <a href="#pass-storage"><li>
+              Password Storage
+            </li></a><br />
+        <a href="#pass-hashing"><li>
+              Password Hashing
+            </li></a><br />
+        <a href="#random"><li>
+              Random must be RANDOM!
+            </li></a><br />
+        <a href="#pass-not-keys"><li>
+              Passwords are not the same as keys!
+            </li></a><br />
+        <a href="#key-too-small"><li>
+              Choosing small keys
+            </li></a><br />
+      </ul>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="basics.html">Basics</a></li>
+         <li class="breadcrumb-item level1 active">PKI</li>
+       </ol>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <p>
+           <img src="../../images/pki.jpg" style="width:500px;height:275px;" class="center" />
+
+            <center><h2>Developer Best Practices while using Crypto</h2></center>
+            <br /> <br />
+
+<ul>
+  <li><b><u>Hard Coded Keys</u></b><br />
+Ideally, we never want cryptographic keys accessible to human eyes (for example, see what happened to RSA about six years ago). But many companies fall far short of this ideal, and therefore the next best thing we can ask is to restrict access to the keys to a security operations team only. Developers should not have access to production keys, and especially those keys should not be checked into source code repositories.<br /><br />
+<a href="https://medium.com/on-docker/secrets-and-lie-abilities-the-state-of-modern-secret-management-2017-c82ec9136a3d">Here is a comprehensive read about Secret Management</a></li><br />
+   <li><b><u>Improperly choosing an IV</u></b><br />
+When you are using CBC mode of operation, the requirement is that the IV is chosen randomly and unpredictably.  In Java, use SecureRandom.  In .Net, simply use <a href="https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/k9c2z5d0(v=vs.95)">GenerateIV.</a>  Also, you cannot just choose an IV this way once and then use the exact same IV again for another encryption.  For every encryption, a new IV needs to be generated. The IV is not secret and is typically included with the encrypted data at the beginning.</li>
+If you do not choose your IV properly, then security properties are lost. An example of improper choice of IV where the implications were huge is in SSL/TLS.<br /><br />
+Related Reading: <a href="https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb/42658861#42658861">IV for different encryption modes</a></li><br /><br />
+
+<li><b><u>Wrong use or misuse of a cryptographic primitive for password storage</u></b><br />
+For password processing, the main properties we need are slow speed, preimage resistance, and 2nd preimage resistance. The slow speed requirement is <a href="https://www.troyhunt.com/our-password-hashing-has-no-clothes/">explained wonderfully by Troy Hunt.</a>There are specific functions designed to meet these goals: pbkdf2, bcrypt, scrypt and argon2. Thomas Pornin has played an excellent role in helping developers and security engineers understand this. Now if only we can get rid of the MD5, SHA1, SHA256, and SHA512 implementations for processing passwords!<br /><br />
+
+Additionally, another common problem I see is hard-coded salts when doing password processing. One of the main purposes of the salt is so that two identical passwords do not “hash” to the same value. If you hard-code the salt, then you lose this property. In this case, one who gets access to your database can readily identify the easy targets by doing a frequency analysis on the ‘hashed’ passwords. The attacker’s efforts suddenly become more focused and more successful.<br /><br />
+
+Go with bcrypt if that is possible. Unfortunately, many libraries only give you PBKDF2. If you are stuck with that, then make sure you use at least 10,000 iterations.<br /><br />
+
+<li><b><u>Password Hashing</u></b><br />
+When using bcrypt, make sure to use the following algorithm to prevent the leading NULL byte problem. and the 72-character password limit:<br />
+<code>
+  <pre>
+bcrypt(base64(sha-512(password)))
+</pre>
+</code>
+
+Worth checking out are newer standards such as Argon2, the winner of the Password Hashing Competition, has had ample analysis and has been considered to be secure.<br /><br />
+
+Each password hashing algorithm requires a "cost" to implement correctly. For Argon2, this is using a sufficient time on the CPU and a sufficient amount of RAM. For scrypt, this is using at least 16 MB of RAM. For bcrypt, this is a cost of at least "5". For sha512crypt and sha256crypt, this it at least 5,000 rounds. For PBKDF2, this is at least 1,000 rounds.<br /><br />
+Jeremi Gonsey, a professional password cracker, publishes benchmarks with Nvidia GPU clusters, such as with 8x Nvidia GTX 1080 Ti GPUs. <a href="https://gist.github.com/epixoip/ace60d09981be09544fdd35005051505">It's worth looking over those numbers.</a><br /><br />
+
+<b>Use, in order of preference:</b><br />
+<ul>
+  <li>scrypt (>= 16 MB)</li>
+  <li>bcrypt (>= 5)</li>
+  <li>sha512crypt (>= 5,000 rounds)</li>
+  <li>sha256crypt (>= 5,000 rounds)</li>
+  <li>PBKDF2 (<= 1,000 rounds)</li>
+</ul><br /><br />
+
+<b>Avoid:</b><br />
+<ul>
+  <li>Plaintext</li>
+  <li>Naked SHA-2, SHA-1, MD5(Without salt)</li>
+  <li>Complex homebrew algorithms</li>
+  <li>Any encryption algorithm</li>
+</ul><br /><br />
+</li><br /><br />
+
+<li><b><u>Ensure that random is RANDOM:</u></b><br />
+The general issue is that typical (pseudo) random number generators may look random to the untrained eye, but they fail to meet the unpredictable requirement to the trained expert.
+
+As an example, imagine you are using java.util.Random to generate a session token for a web application. When a legitimate user gets a session token, an attacker (using crypto expertise) can then predict the next session token for the next user and the previous session token for the previous user leading to session hijacking. <br /><br />
+
+This would not be possible if the session token is generated with SecureRandom. The general requirement is a pseudo random number generator with cryptographic security. In .Net, the good source is System.Security.Cryptography.RandomNumberGenerator.<br /><br />
+
+When creating random IDs, numbers, URLs, initialization vectors, or anything that is random, then you should always use your operating system's kernelspace CSPRNG On GNU/Linux (including Android), BSD, or Mac (including iOS), this is /dev/urandom. On Windows, this is CryptGenRandom.<br /><br />
+<blockquote>
+NOTE: /dev/random is not more secure then /dev/urandom. They use the same CSPRNG. They only time you would obsess over this, is when working on an information theoretic cryptographic primitive that exploits the blocking aspects of /dev/random, which you aren't doing (you would know it when you're doing it).
+</blockquote>
+The only time you should ever use a userspace RNG, is when you're in a constrained environment, such as embedded firmware, where the OS RNG is not available. In that case, use fast-key erasure. The problem here, however, is making sure that it is properly seeded with entropy on each boot. This is harder than it sounds, so really, at all costs, this should only be used as a worst-scenario fallback.
+<br /><br />
+
+<b>Use:</b><br />
+<ul>
+  <li>Your operating system's CSPRNG.</li>
+  <li>Fast key erasure (as a fallback).</li>
+  <li> Create: large enough random numbers</li>
+</ul><br />
+
+<b>Avoid:</b>
+<ul>
+  <li>Userspace random number generators</li>
+  <li>/dev/random</li>
+</ul><br /><br />
+</li>
+
+<li><b><u>Asuuming encryption provides message integrity</u></b><br />
+  Encryption hides data, but an attacker might be able to modify the encrypted data, and the results can potentially be accepted by your software if you do not check message integrity. While the developer will say “but the modified data will come back as garbage after decryption”, a good security engineer will find the probability that the garbage causes adverse behaviour in the software, and then he will turn that analysis into a real attack.<br /><br />
+
+
+<li><b><u>Passwords are not cryptographic keys</u></b><br />
+Passwords are things people remember and can be arbitrary length. Keys on the other hand are not limited to printable characters and have fixed length.
+<br /><br />
+The security issue here is that keys should be full entropy, whereas passwords are low entropy by nature.  Sometimes you need to change a password into a key.  The proper way to do this is with a password based key derivation function (pbkdf2, bcrypt, scrypt or argon2), which compensates for the low entropy input by making the derivation of the key from the password a time consuming process.
+<br /><br />
+There are some tools that let you validate your crypto code: https://cryptosense.com/# (We are not endorsing the tool).<br /><br />
+</li>
+
+<li><b><u>Small key sizes</u></b><br />
+Developers do really well in choosing their symmetric key sizes, often choosing much stronger than they need (128-bit is enough). But for asymmetric crypto, they often err on the other side.
+<br /><br />
+For RSA, DSA, DH, and similar algorithms, 1024-bit is within reaching distance of an organisation such as the NSA, and will soon become reachable by smaller organisations with Moore’s law. At the very least, using 2048-bits.
+<br /><br />
+For elliptic curve based systems, one can get away with much smaller key sizes.
+
+<a href="https://www.keylength.com/">General guidance on key sizes is provided here.</a>

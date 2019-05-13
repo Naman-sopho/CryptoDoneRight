@@ -1,0 +1,324 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TLSv1 Dev Quickstart</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="..\..\about.html"><font color="white">About</font></a></li>
+                <li><a href="..\..\contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0"><a href="tls-1.html">TLS 1.0</a></li>
+         <li class="breadcrumb-item level1 active">TLS 1.0 Dev Quickstart</li>
+       </ol>
+    </div>
+
+<div id="contentScroller">
+      <strong style="font-size:2vw;">Content</strong>
+      <ul>
+        <a href="#nocryptoroll"><li>
+          TLSv1.0 Implementation
+        </li></a>
+		<a href="#tls12patch"><li>
+          Upgrade/Patch-Management
+        </li></a>
+		<a href="#usagelibrary"><li>
+          Usage-of-Library-Examples
+		 </li></a>
+      </ul>
+    </div>
+
+	<!--	<div class="alert alert-warning">
+      Please <strong> DO NOT </strong> roll your own Crypto! Use standard services and libraries.
+    </div>-->
+  <a href="flaw-categories.html"><div class="alert alert-warning">
+      <strong>Background Reading: Understanding Different Types of Problems in Crypto.</strong>
+    </div></a>
+  <a href="tls-1-2.html"><div class="alert alert-danger">
+      <strong>This is page is only meant for LEGACY DEVICES and backward compatibility for these devices.</strong>
+    </div></a>
+    <a href="tls-1-2.html"><div class="alert alert-danger">
+      <strong>This is NOT the Recommended Version of TLS. TLS 1.0 is riddled with implementation bugs. Click here to go to the latest stable version.</strong>
+    </div></a>
+    <div class="container-fluid">
+      <div class="row" style="padding: 2vw;">
+
+<p id="nocryptoroll">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+
+    <h2> <img src="../../images/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+
+<font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
+
+Considering TLSv1.0 weaknesses, an upgrade to system running TLSv1.2 (in future, TLSv1.3) is immminent. However, cryptography should never be made "in-house" and should not be used in production. There are multiple cryptographic libraries out there that let you support TLS (including all the other cryptography features). For the sake of example, we are using OpenSSL here as it is one of the most popular libraries used. <br /> <br />
+
+<u>How to tell if you are running TLSv1.0 using OpenSSL:</u>
+<br /><br />
+
+Almost all of OpenSSL releases support TLSv1.0. It is therefore important that if you are considering disabling TLSv1.0, that you look for the configuration file. The other option to disable TLSv1.0 would be to leave the OpenSSL configuration files as they are and change your application code to only use TLSv1.2 (Examples on how to do this are mentioned in the next section). Please NOTE that upgrading OpenSSL should be done with a lot of care as your products that use TLS might not be able to support latest releases of TLS (TLSv1.2 or TLSv1.3) unless both client side and server side are enabled. If this is not taken care of, downtimes in TLS connectivity can be expected. <br /> <br />
+
+<u>Find out which openssl version you are using</u>:
+<br /><br />
+Use the version option.
+<br /><br />
+<pre>
+<code>$ openssl version
+OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
+</code>
+<br /> <br />
+You can get much more information with the version -a option.
+<pre>
+<code>$ openssl version -a
+OpenSSL 1.0.1e-fips 11 Feb 2013
+built on: Thu Jul 23 19:06:35 UTC 2015
+platform: linux-x86_64
+options:  bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int)
+          idea(int) blowfish(idx)
+compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
+-DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -DTERMIO
+-Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions
+-fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic
+-Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT
+-DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM
+-DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
+-DWHIRLPOOL_ASM -DGHASH_ASM
+OPENSSLDIR: "/etc/pki/tls"
+engines:  rdrand dynamic</pre>
+</code>
+<br /> <br />
+<strong>NOTE: Support for TLSv1.2 only starts with OpenSSL 1.0.1</strong><br /><br />
+
+<b> NOTE:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/"> The latest major release for OpenSSL is 1.1.1 LTS </a> (released on 11th September, 2018).. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade. </b>
+<br /><br />
+
+<font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
+<br />
+A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of
+libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team
+backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
+
+<br /> <br />
+Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
+CentOS: <a href="https://wiki.centos.org/PackageManagement/SourceInstalls">https://wiki.centos.org/PackageManagement/SourceInstalls </a><br />
+RedHat: <a href="https://access.redhat.com/security/updates/backporting/?sc_cid=3093"> https://access.redhat.com/security/updates/backporting/?sc_cid=3093 </a><br /> <br />
+
+Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
+CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
+RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
+
+
+<p id="usagelibrary">
+
+<h2>Upgrade to secure SSL/TLS in Programming Languages</h2>
+
+<font size="4"><strong>Concept:</strong></font> It is again advised to not roll out your own cryptography while developing software. There are popular libraries in almost all programming
+languages that can readily be used to perform cryptographic operations.
+<br /> <br />
+<font size="4"><strong>Examples:</strong></font> <br />
+<strong>Python </strong> <br />
+There are a lot of libraries that Python can use for SSL/TLS. Some of the notable ones include the native SSL module in Python and PyOpenSSL. Both these libraries are essentially wrappers around the OpenSSL Library found on the system where Python is installed. Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior.
+<br /> <br />
+To check which openssl version you are using execute the following within Python:
+<pre>
+<code>import ssl
+print ssl.OPENSSL_VERSION</pre>
+</code>
+<br />
+
+NOTE: Support for TLSv1.2 only starts with OpenSSL 1.0.1 <br />
+
+<u>ssl library</u> <br /> <br />
+Here is a basic example of how to use Python's SSL library to perform a TLS handshake using sockets:-
+
+<pre>
+<code>def handshake(sock):
+# this will trigger the handshake
+# if sock is already connected
+new_sock = ssl.wrap_socket(sock,
+        ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5",
+        ssl_version=ssl.PROTOCOL_TLSv1,
+		...
+		...
+        )
+return new_sock</pre>
+</code>
+
+For TLSv1.2, a small change in the above would be to have
+
+<pre>
+<code>ssl_version=ssl.PROTOCOL_TLSv1_2</pre>
+</code>
+
+<u>pyopenssl library</u> <br /> <br />
+pyOpenSSL is collaboratively developed by the Python Cryptography Authority (PyCA) that also maintains the low-level bindings called cryptography. It's a well documented wrapper around OpenSSL and supports all the features required for TLSv1.2 and more details <a href="https://pyOpenSSL.org/en/stable/api/crypto.html">here</a>.  <br /> <br />
+
+Almost everything that you would want with pyOpenSSL is on their website:  <br />
+<a href="https://pyopenssl.org/en/stable/">https://pyopenssl.org/en/stable/ </a><br /> <br />
+
+Here are some examples of opensource code that utilizes pyOpenSSL: <br />
+HTTP Server supporting SSL: <a href="http://code.activestate.com/recipes/442473-simple-http-server-supporting-ssl-secure-communica/"> http://code.activestate.com/recipes/442473-simple-http-server-supporting-ssl-secure-communica/ </a> <br />
+HTTP Client: <a href="http://www.de-brauwer.be/wiki/wikka.php?wakka=PyOpenSSLClient">http://www.de-brauwer.be/wiki/wikka.php?wakka=PyOpenSSLClient </a><br />
+Validating a Certificate: <a href="http://blog.san-ss.com.ar/2012/05/validating-ssl-certificate-in-python.html"> http://blog.san-ss.com.ar/2012/05/validating-ssl-certificate-in-python.html </a><br />
+</p>
+
+<blockquote>
+For more information on which versions of programming languages support secure version of TLS, refer <a href="https://www.docusign.com/blog/dsdev-updating-applications-end-tls-1-0/">here.</a>
+</blockquote>
+
+
+
+ </div>
+      </div>
+
+
+      <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Further Reading</h3>
+	          <ul>
+			  <!-- <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li> -->
+			  </ul>
+        </div>
+
+        <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+          <h3>Related Articles</h3>
+	          <ul>
+			  <li><a href=https://docs.python.org/2/library/ssl.html>Python SSL/TLS Library</a></li>
+			  <li><a href=https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet>OWASP Cheat Sheet for TLS</a></li>
+			  <li><a href=https://www.feistyduck.com/books/bulletproof-ssl-and-tls/>Book:- Understanding SSL, TLS and PKI</a></li>
+			  <li><a href=https://datatracker.ietf.org/doc/rfc7525/?include_text=1>RFC for secure use of SSL, TLS and DTLS</a></li>
+			  </ul>
+        </div>
+      </div>
+
+
+      <div class="footerfix"></div>
+      <footer class="footer">Copyright © 2019 Crypto Done Right All rights reserved.
+      </footer>
+    </div>
+
+  </body>
+</html>

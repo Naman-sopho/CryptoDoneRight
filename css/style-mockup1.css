@@ -48,7 +48,7 @@ border-left: 3px solid #619644;
   position: relative;
   margin-bottom: 0;
   z-index: 9999999;
-  background-image: url('/CryptoDoneRight/static_files/crypto2.jpg');
+  background-image: url('../images/crypto2.jpg');
 }
 
 .breadcrumb {
@@ -244,7 +244,7 @@ border-left: 3px solid #619644;
   background-position: 100% 100%;
   background-repeat: no-repeat;
   font-family: "Open Sans", Arial, sans-serif;
-
+  /*background-image: url('../images/crypto2.jpg');*/
   line-height: 1.6;
   font-size: 16px;
   font-weight: 300;

@@ -1,0 +1,436 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Basics</title>
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="lock-icon.ico">
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="../../css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="../../css/superfish.css">
+
+    <!--<link rel="stylesheet" href="../../css/style.css">-->
+
+
+    <!-- Modernizr JS -->
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/style-mockup1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background>
+    <div id="header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a href="..\..\index.html"><strong><font color="white">Crypto Done Right!</font></strong></a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--<li class="active">
+                  <a href="index.html"><font color="black">Home</font></a>
+                </li>-->
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\cryptographic-protocols.html" class="fh5co-sub-ddown"><font color="white">Cryptographic Protocols</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\basics.html" ><font color="black">Basics</font></a></li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSL</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-2.html">SSL 2.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\ssl-3.html">SSL 3.0</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">TLS</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1.html">TLS 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-1.html" >TLS 1.1</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-2.html" >TLS 1.2</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\tls-1-3.html" >TLS 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fh5co-sub-ddown">SSH</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv1.html" >SSH 1.0</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\sshv2.html" >SSH 2.0</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="..\..\articles\cryptographic_protocols\encryption.html" class="fh5co-sub-ddown"><font color="white">Encryption</font></a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\cryptographic_protocols\encryption.html" ><font color="black">Introduction</font></a></li>
+                      <li><a href="#" class="fh5co-sub-ddown">AES</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\cryptographic_protocols\aes.html" >Introduction</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-ctr.html" >AES CTR</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-cbc.html" >AES CBC</a></li>
+                          <li><a href="..\..\articles\cryptographic_protocols\aes-gcm.html">AES GCM</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#" class="fh5co-sub-ddown">DES</a></li>
+                    <li><a href="..\..\articles\cryptographic_protocols\3des.html" class="fh5co-sub-ddown">3DES</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="fh5co-sub-ddown"><font color="white">Hashing Algorithms</font></a>
+                   <ul class="fh5co-sub-menu">
+                    <li><a href="..\..\articles\hashing_algorithms\example_index.html">Introduction</a></li>
+                    <li>
+                      <a href="#" class="fh5co-sub-ddown">Hash Functions</a>
+                      <ul class="fh5co-sub-menu">
+                          <li><a href="#" class="fh5co-sub-ddown">Unkeyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="..\..\articles\hashing_algorithms\md5.html" >MD5</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha1.html" >SHA-1</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha2.html" >SHA-2</a></li>
+                          <li><a href="..\..\articles\hashing_algorithms\sha3.html" >SHA-3</a></li>
+                        </ul>
+                        </li>
+                          <li><a href="#" class="fh5co-sub-ddown">Keyed</a>
+                        <ul class="fh5co-sub-menu">
+                          <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" tar
+                                 ="_blank">More to come..</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><font color="white">About</font></a></li>
+                <li><a href="contact.html"><font color="white">Contact</font></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item level"><a href="../../index.html">Home</a></li>
+         <li class="breadcrumb-item level"><a href="../articles.html">Articles</a></li>
+         <li class="breadcrumb-item level"><a href="cryptographic-protocols.html">Cryptographic Protocols</a></li>
+         <li class="breadcrumb-item level0 active">Basics</li>
+       </ol>
+    </div>
+    <div class="row container-fluid">
+      <h1>Cryptographic Protocol Basics</h1>
+
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse2">Hashing</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+		  <p>
+			<strong>
+        Hashing is the process in which a mathematical function takes in as input a string of text and outputs a random value. What makes this special are the properties of the function that help
+        during to ensure that the string has not been tampered with. This property of hash functions is popularly to enable security during message transmission when the message is intended for a particular recipient only.
+     </strong><br /><br />
+			<strong><u>Common applications:</u><strong><br />
+			<ul>
+			<li> <a href="../hashing_algorithms/example_index.html"> Cryptographical Signatures </a></li>
+			<li> <a href="../hashing_algorithms/example_index.html"> Commitment Schemes </a></li>
+			<li> <a href="../hashing_algorithms/example_index.html"> Generating Message Authentication Codes </a></li>
+			</ul></p>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="../hashing_algorithms/example_index.html">Algorithms List</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+	         <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse4">MAC and H-MAC</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <h3>MAC and H-MAC</h3>
+            <p>
+              Message authentication is a procedure that allows communicating parties to verify that received messages are authentic. The two important aspects are verifying that the contents of the message have not been altered and that the source is authentic. The Message Authentication Code (MAC) is a widely used technique for performing message authentication. And yes, it sounds very similar to Hashing but has separate applications: <a href="https://stackoverflow.com/questions/2836100/what-is-the-difference-between-a-hash-and-mac-message-authentication-code"> Read more. </a><br /><br />
+              HMAC algorithms (Hashing based MAC algorithms) involve the use of a secret key to generate a small block of data, known as a "message authentication code," that is appended to the message. This technique assumes that two communicating parties, say A and B, share K as a secret key. When A has a message to send to B, it calculates the message authentication code as a function of the message and the key. The message and code are transmitted to the intended recipient. The recipient performs the same calculation on the received message, using the same secret key, to generate a new message authentication code. The received code is compared to the calculated code. If you assume that only the receiver and the sender know the identity of the secret key, and if the received code matches the calculated code, then:
+            </p>
+            <p>
+              1. The receiver is assured that the message has not been altered. If an attacker alters the message but does not alter the code, then the receiver's calculation of the code will differ from the received code. Because the attacker is assumed not to know the secret key, the attacker cannot alter the code to correspond to the alterations in the message.
+            </p>
+            <p>
+              2. The receiver is assured that the message is from the alleged sender. Because no one else knows the secret key, no one else could prepare a message with the proper code.
+            </p>
+            <p>
+              3. If the message includes a sequence number (such as is used with X.25, HDLC, and TCP), then the receiver can be assured of the proper sequence, because an attacker cannot successfully alter the sequence number. <sup>[1]</sup>
+            </p>
+            <p>
+			The below image illustrates briefly the steps involved in creating a SHA256-HMAC.
+            <img src="../../images/hmac-diagram.png" /><br /><br />
+
+			<strong> NOTE: </strong> HMAC is only one of the few available options for generating MACs. Although other algorithms such as KMAC and CMAC exist, HMAC remains to be one of the popular choices. Descriptions about the other algorithms are currently beyond the scope of this basic page.<br /><br />
+
+			<strong><u>Common application:</u></strong>
+
+
+			<ul>
+			<li> <a href="../cryptographic_protocols/tls-1-2.html"> Message authentication in VPN Technologies (SSL/TLS,IPSEC) </a></li>
+			</ul></p>
+
+
+          </div>
+        </div>
+
+        <!-- <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse5">SALT</a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <h3>SALT</h3>
+              <p>
+                <strong>Ways to mitigate the Cracks mentioned in the Hashing page?</strong><br />
+                EASIEST WAY is by ADDING SALT
+              </p>
+              <p>
+                Lookup tables and rainbow tables only work because each password is hashed the exact same way. If two users have the same password, they'll have the same password hashes. We can prevent these attacks by randomizing each hash, so that when the same password is hashed twice, the hashes are not the same.
+              </p>
+              <p>
+                We can randomize the hashes by appending or prepending a random string, called a salt, to the password before hashing. As shown in the example above, this makes the same password hash into a completely different string every time. To check if a password is correct, we need the salt, so it is usually stored in the user account database along with the hash, or as part of the hash string itself.
+              </p>
+              <p>
+                The salt does not need to be secret. Just by randomizing the hashes, lookup tables, reverse lookup tables, and rainbow tables become ineffective. An attacker won't know in advance what the salt will be, so they can't pre-compute a lookup table or rainbow table. If each user's password is hashed with a different salt, the reverse lookup table attack won't work either.
+              </p>
+              <p>
+                <strong style="color:red">INCORRECT WAYS TO ADD SALT</strong>
+              </p>
+              <p>
+                <strong>SALT Reuse</strong><br />
+                A common mistake is to use the same salt in each hash. Either the salt is hard-coded into the program, or is generated randomly once. This is ineffective because if two users have the same password, they'll still have the same hash. An attacker can still use a reverse lookup table attack to run a dictionary attack on every hash at the same time. They just have to apply the salt to each password guess before they hash it. If the salt is hard-coded into a popular product, lookup tables and rainbow tables can be built for that salt, to make it easier to crack hashes generated by the product. A new random salt must be generated each time a user creates an account or changes their password.
+              </p>
+              <p>
+                <strong>Short SALT</strong><br />
+                If the salt is too short, an attacker can build a lookup table for every possible salt. For example, if the salt is only three ASCII characters, there are only 95x95x95 = 857,375 possible salts. That may seem like a lot, but if each lookup table contains only 1MB of the most common passwords, collectively they will be only 837GB, which is not a lot considering 1000GB hard drives can be bought for under $100 today.
+              </p>
+              <p>
+                For the same reason, the username shouldn't be used as a salt. Usernames may be unique to a single service, but they are predictable and often reused for accounts on other services. An attacker can build lookup tables for common usernames and use them to crack username-salted hashes.
+              </p>
+              <p>
+                To make it impossible for an attacker to create a lookup table for every possible salt, the salt must be long. A good rule of thumb is to use a salt that is the same size as the output of the hash function. For example, the output of SHA256 is 256 bits (32 bytes), so the salt should be at least 32 random bytes.
+              </p>
+              <p>
+                <strong style="color:green">CORRECT WAY TO ADD SALT</strong>
+              </p>
+              <p>
+                <strong>Hashing with SALT</strong><br />
+                This section answers the following questions:- how do we generate the salt, and how do we apply it to the password?
+              </p>
+              <p>
+                Salt should be generated using a Cryptographically Secure Pseudo-Random Number Generator (CSPRNG). CSPRNGs are very different than ordinary pseudo-random number generators, like the "C" language's rand() function. As the name suggests, CSPRNGs are designed to be cryptographically secure, meaning they provide a high level of randomness and are completely unpredictable. We don't want our salts to be predictable, so we must use a CSPRNG. The following table lists some CSPRNGs that exist for some popular programming platforms.
+                <img class="brokenImage" src="../../images/sha1_dev-1.png" />
+              </p>
+              <p>
+                The salt needs to be UNIQUE per-user per-password. Every time a user creates an account or changes their password, the password should be hashed using a new random salt. Never reuse a salt. The salt also needs to be long, so that there are many possible salts. As a rule of thumb, make your salt is at least as long as the hash function's output. The salt should be stored in the user account table alongside the hash.
+              </p>
+              <p>
+                <strong>To store a password:</strong>
+                <ol>
+                  <li>
+                    Generate a long random salt using a CSPRNG.
+                  </li>
+                  <li>
+                    Prepend the salt to the password and hash it with a standard password hashing function like Argon2, bcrypt, scrypt, or PBKDF2.
+                  </li>
+                  <li>
+                    Save both the salt and the hash in the user's database record.
+                  </li>
+                </ol>
+              </p>
+              <p>
+                <strong>To validate a password:</strong>
+                <ol>
+                  <li>
+                    Retrieve the user's salt and hash from the database.
+                  </li>
+                  <li>
+                    Prepend the salt to the given password and hash it using the same hash function.
+                  </li>
+                  <li>
+                    Compare the hash of the given password with the hash from the database. If they match, the password is correct. Otherwise, the password is incorrect.
+                  </li>
+                </ol>
+              </p>
+              <p>
+                <strong>In a Web Application, always hash on the server</strong><br />
+                If you are writing a web application, you might wonder where to hash. Should the password be hashed in the user's browser with JavaScript, or should it be sent to the server "in the clear" and hashed there?
+              </p>
+              <p>
+                Even if you are hashing the user's passwords in JavaScript, you still have to hash the hashes on the server. Consider a website that hashes users' passwords in the user's browser without hashing the hashes on the server. To authenticate a user, this website will accept a hash from the browser and check if that hash exactly matches the one in the database. This seems more secure than just hashing on the server, since the users' passwords are never sent to the server, but it's not.
+              </p>
+              <p>
+                The problem is that the client-side hash logically becomes the user's password. All the user needs to do to authenticate is tell the server the hash of their password. If a bad guy got a user's hash they could use it to authenticate to the server, without knowing the user's password! So, if the bad guy somehow steals the database of hashes from this hypothetical website, they'll have immediate access to everyone's accounts without having to guess any passwords.
+              </p>
+              <p>
+                This isn't to say that you shouldn't hash in the browser, but if you do, you absolutely have to hash on the server too. Hashing in the browser is certainly a good idea, but consider the following points for your implementation:
+                <ul>
+                  <li>
+                    Client-side password hashing is not a substitute for HTTPS (SSL/TLS). If the connection between the browser and the server is insecure, a man-in-the-middle can modify the JavaScript code as it is downloaded to remove the hashing functionality and get the user's password.
+                  </li>
+                  <li>
+                    Some web browsers don't support JavaScript, and some users disable JavaScript in their browser. So for maximum compatibility, your app should detect whether or not the browser supports JavaScript and emulate the client-side hash on the server if it doesn't.
+                  </li>
+                  <li>
+                    You need to salt the client-side hashes too. The obvious solution is to make the client-side script ask the server for the user's salt. Don't do that, because it lets the bad guys check if a username is valid without knowing the password. Since you're hashing and salting (with a good salt) on the server too, it's OK to use the username (or email) concatenated with a site-specific string (e.g. domain name) as the client-side salt.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                <strong>Making Password Cracking Harder: Slow Hash Functions</strong><br />
+                Salt ensures that attackers can't use specialized attacks like lookup tables and rainbow tables to crack large collections of hashes quickly, but it doesn't prevent them from running dictionary or brute-force attacks on each hash individually. High-end graphics cards (GPUs) and custom hardware can compute billions of hashes per second, so these attacks are still very effective. To make these attacks less effective, we can use a technique known as key stretching.
+              </p>
+              <p>
+                The idea is to make the hash function very slow, so that even with a fast GPU or custom hardware, dictionary and brute-force attacks are too slow to be worthwhile. The goal is to make the hash function slow enough to impede attacks, but still fast enough to not cause a noticeable delay for the user.
+              </p>
+              <p>
+                Key stretching is implemented using a special type of CPU-intensive hash function. Don't try to invent your own–simply iteratively hashing the hash of the password isn't enough as it can be parallelized in hardware and executed as fast as a normal hash. Use a standard algorithm like PBKDF2 or bcrypt. You can find a PHP implementation of PBKDF2 here.
+              </p>
+              <p>
+                These algorithms take a security factor or iteration count as an argument. This value determines how slow the hash function will be. For desktop software or smartphone apps, the best way to choose this parameter is to run a short benchmark on the device to find the value that makes the hash take about half a second. This way, your program can be as secure as possible without affecting the user experience.
+              </p>
+              <p>
+                If you use a key stretching hash in a web application, be aware that you will need extra computational resources to process large volumes of authentication requests, and that key stretching may make it easier to run a Denial of Service (DoS) attack on your website. We would still recommend using key stretching, but with a lower iteration count. You should calculate the iteration count based on your computational resources and the expected maximum authentication request rate. The denial of service threat can be eliminated by making the user solve a CAPTCHA every time they log in. Always design your system so that the iteration count can be increased or decreased in the future.
+              </p>
+              <p>
+                If you are worried about the computational burden, but still want to use key stretching in a web application, consider running the key stretching algorithm in the user's browser with JavaScript. The Stanford JavaScript Crypto Library includes PBKDF2. The iteration count should be set low enough that the system is usable with slower clients like mobile devices, and the system should fall back to server-side computation if the user's browser doesn't support JavaScript. Client-side key stretching does not remove the need for server-side hashing. You must hash the hash generated by the client the same way you would hash a normal password.
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse6">Certificates</a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+			<p>
+
+			<span class="red">Certificates are not the same as protocols </span> <br />
+			To understand the importance of ceritificates, it is easier to first understand the concept of Public Key Cryptography (where we can own a “private key”, which we keep secret, and a “public key”, which we can share).  There are two common things we can do with public keys:
+			<ul>
+			<li>
+Anyone with the public key can encrypt the message; only we can decrypt that; that’s because the private key is what is needed to decrypt and we’re the only one that knows that.
+</li>
+<li>
+We can ‘sign’ a message with our private key; anyone with the public key can verify that we signed it.  No one else can ‘sign’ a message that will verify with our public key, because you need our private key to sign, and we’re the only one that knows that.
+</li>
+</ul>
+<p>
+So, “if someone gets a public key, how does he know it’s ours”?  After all, an attacker can claim to be us, and give out his own public key, how does (say) a web browser know that he’s actually giving his credit card into to amazon.com and not hackers-r-us.com?
+The answer is a certificate, a certificate is a cryptographical binding between an identity (e.g. amazon.com) and a key.  It includes a listing of the identity, and a listing of the public key, signed by a Certificate Authority.  Everyone knows the public key of the Certificate Authority.  Hence, if you get a certificate, you can verify the signature (with the Certificate Authority’s public key); if that validates, you know (because you trust the Certificate Authority) that the public key is owned by the listed identity.  Then, if the listed identity is who you expect to be talking to, then you can use the public key knowing who has the private key. <br /><br />
+
+
+		    <strong>NOTE: </strong>It’s important to note that certificates are not dependent on protocols. That is, you don’t need to use a TLS Certificate vs. an SSL Certificate. While many vendors tend to use
+			the phrase “SSL/TLS Certificate”, it may be more accurate to call them “Certificates for use with SSL and TLS", since the protocols are determined by
+			your server configuration, not the certificates themselves.
+
+			It’s likely you will continue to see certificates referred to as SSL Certificates because at this point that’s the term more people are familiar
+			with, but we’re beginning to see increased usage of the term TLS across the industry. SSL/TLS is a common compromise until more people become familiar with TLS.<sup>2</sup><br /><br />
+
+			<strong><u>Common application:</u></strong>
+			<ul>
+			<li><a href="../cryptographic_protocols/tls-1-2.html">SSL/TLS</a></li>
+			</ul>
+			</p>
+			<ul class="list-group">
+              <li class="list-group-item"><a href="../cryptographic_protocols/pki.html">Click here to read more about Certificates</a></li>
+			           <li class="list-group-item"><a href="../cryptographic_protocols/bp-certificates.html">Best Practices to deploy certificates</a></li>
+                 <li class="list-group-item"><a href="../cryptographic_protocols/certs_faq.html">FAQs</a></li>
+
+            </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel-group">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse7">Encryption</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+			<p>
+			Encryption is the method by which plaintext or any other type of data is converted from a readable form to an encoded version that can only be decoded by another entity if they have access to a decryption key. Encryption is one of the most important methods for providing data security, especially for end-to-end protection of data transmitted across networks.<br /><br />
+
+			<strong><u>Common application:</u></strong>
+			<ul>
+			<li>Encrypt data-in-transit. For example, Message Confidentiality in SSL/TLS</li>
+			<li>Encryption of data-at-rest. For example, disk encryption</li>
+			</ul>
+			</p>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="../cryptographic_protocols/encryption.html">Protocols List</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <p>
+          more to be added...
+        </p>
+      </div>
+
+
+                    <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
+                      <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+                        <h3>References</h3>
+              	          <ul>
+              			  <li><a href=http://collaboration.cmc.ec.gc.ca/science/rpn/biblio/ddj/Website/articles/DDJ/1999/9904/9904e/9904e.htm>[1] William Stallings: The HMAC Algorithm </a></li>
+              			  <li><a href=https://www.globalsign.com/en/blog/ssl-vs-tls-difference/>[2] Global Sign: SSL vs. TLS - What's the Difference?</a></li>
+              			  </ul>
+                      </div>
+
+                      <div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+                        <h3>Related Articles</h3>
+              	          <ul>
+
+              			  </ul>
+                      </div>
+                    </div>
+
+</div>
+
+        <div class="footerfix"></div>
+        <footer class="footer">© 2018 Important legal stuff and/or links to usage restrictions etc.
+        </footer>
+
+
+
+  </body>
+</html>

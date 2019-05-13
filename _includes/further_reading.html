@@ -1,0 +1,18 @@
+<div id="relatedArticles" class="col-md-6 col-sm-6 col-xs-6">
+  {% if page.further-reading %}
+  <h3>Further Reading</h3>
+  <ul>
+    {% for item in page.further-reading %}
+      <li>
+        {% if item.link != "" %}
+          <a href = "{{item.link}}">
+        {% endif %}
+          {{item.name}}
+        {% if item.link != "" %}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

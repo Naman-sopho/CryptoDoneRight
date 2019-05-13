@@ -1,0 +1,17 @@
+<div class="breadcrumbs">
+  <ol class="breadcrumb">
+    {% assign URL = page.url | split:'/' %}
+    {% for a in URL %}
+      {% if a == "" %}
+        <li class="breadcrumb-item level"><a href="/dev/index.html">Home</a></li>
+      {% elsif a != "" %}
+        {% for b in site.pages %}
+          {% if b.title == a %}
+          <li class="breadcrumb-item level"><a href="/dev/{{b.url}}">{{a}}</a></li>
+          {% endif %}
+        {% endfor %}
+     {% endif %}
+     {% endfor %}
+     <li class="breadcrumb-item level">{{page.title}}</li>
+   </ol>
+</div>

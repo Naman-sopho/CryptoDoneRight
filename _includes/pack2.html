@@ -1,0 +1,18 @@
+{% for a in site.pages %}
+  {% if a.type== page.title and a.title != "FAQ"%}
+    <div class="{{a.col}}">
+      <br /><br /><br />
+
+        <a href="/dev/{{a.url}}" class="btn btn-warning "> <img class="logos" src="{{a.image}}" />
+          {{a.title}}</a>
+        <p>
+            {{a.note}}
+        </p>
+        <p>
+        </p>
+
+        <div class="blockNotes">
+        </div>
+      </div>
+  {% endif %}
+{% endfor %}

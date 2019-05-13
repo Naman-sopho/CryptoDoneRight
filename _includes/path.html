@@ -3,11 +3,11 @@
     {% assign URL = page.url | split:'/' %}
     {% for a in URL %}
       {% if a == "" %}
-        <li class="breadcrumb-item level"><a href="/dev/index.html">Home</a></li>
+        <li class="breadcrumb-item level"><a href="/CryptoDoneRight/index.html">Home</a></li>
       {% elsif a != "" %}
         {% for b in site.pages %}
           {% if b.title == a %}
-          <li class="breadcrumb-item level"><a href="/dev/{{b.url}}">{{a}}</a></li>
+          <li class="breadcrumb-item level"><a href="/CryptoDoneRight/{{b.url}}">{{a}}</a></li>
           {% endif %}
         {% endfor %}
      {% endif %}

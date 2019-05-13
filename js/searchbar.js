@@ -1,4 +1,4 @@
-document.write('<script type="text/javascript" src="/dev/js/links.js"></script>');
+document.write('<script type="text/javascript" src="/CryptoDoneRight/js/links.js"></script>');
  window.onload = function()
  {
 	document.querySelector('#search').addEventListener('click',Search);

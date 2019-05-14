@@ -1,0 +1,3 @@
+markdown:
+baseurl: /dev
+exclude: ['README.md']

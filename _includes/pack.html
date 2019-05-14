@@ -1,0 +1,10 @@
+
+<strong style="font-size:2vw;">Content</strong>
+      {% for a in site.pages %}
+        {% if a.type== page.title %}
+        <ul>
+          <a href="/dev/{{a.url}}"><li>
+            {{a.title}}
+          </li></a>
+        {% endif %}
+        {% endfor %}

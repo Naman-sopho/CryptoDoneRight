@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: AES-CTR
-image: /dev/static_files/NewDevLogo.png
+image: /CryptoDoneRight/static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -19,7 +19,7 @@ attacks:
 ---
 <p id="cbcintro">
 
-  <h2> <img src="/dev/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CTR Mode </h2>
+  <h2> <img src="/CryptoDoneRight/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CTR Mode </h2>
 
 <strong>Why CTR Mode:</strong> <br />
 Considered a safe and efficient method of operation. Both CBC and CTR come recommended by Niels Ferguson and Bruce Schneier, both of whom are respected cryptographers. <br />
@@ -62,7 +62,7 @@ It would be a mistake to encrypt 20 strings using an instance of the Crypt2 obje
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-        <h2> <img src="/dev/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+        <h2> <img src="/CryptoDoneRight/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

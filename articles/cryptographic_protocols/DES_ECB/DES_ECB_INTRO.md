@@ -10,19 +10,9 @@ alerts:
     description: This is NOT the recommended mode of operation.
     link: ""
 further-reading:
-  - name: A
-    link: ""
-  - name: B
-    link: ""
-  - name: C
-    link: ""
+
 related-articles:
-  - name: A
-    link: ""
-  - name: B
-    link: ""
-  - name: C
-    link: ""
+
 attacks:
   - name: ""
     description: 1. Replay Attacks
@@ -41,5 +31,5 @@ attacks:
     link: ""
 
 ---
-It is the simplest mode of operation. The message is simply divided into blocks and each block is then encrypted separately. It offers a direct encryption scheme because it makes it easier to encrypt each block. It is a deterministic mode of encryption because if the same key is used for two blocks, the ciphertext for both these blocks would be the same. 
-in DES, a plaintext datablock is directly used as a DES input block. The plaintext and the encrypted ciphertext are all 64 bit in case of DES. It is easier to guess the plaintext in this mode of encryption and this is not at all a recommended mode of operation. 
+It is the simplest mode of operation. The message is simply divided into blocks and each block is then encrypted separately. It offers a direct encryption scheme because it makes it easier to encrypt each block. It is a deterministic mode of encryption because if the same key is used for two blocks, the ciphertext for both these blocks would be the same.
+in DES, a plaintext datablock is directly used as a DES input block. The plaintext and the encrypted ciphertext are all 64 bit in case of DES. It is easier to guess the plaintext in this mode of encryption and this is not at all a recommended mode of operation.

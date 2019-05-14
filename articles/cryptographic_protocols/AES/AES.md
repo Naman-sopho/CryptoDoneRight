@@ -2,7 +2,7 @@
 layout: page
 title: AES
 type: cryptographic_protocols
-update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
+update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
 permalink: "articles/cryptographic_protocols/AES"
 alerts:
   - id: 1

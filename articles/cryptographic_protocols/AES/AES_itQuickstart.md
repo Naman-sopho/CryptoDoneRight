@@ -2,7 +2,7 @@
 layout: quickstart
 title: IT Admin's QuickStart
 type: AES
-image: /dev/static_files/pc-administrator.png
+image: /CryptoDoneRight/static_files/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -16,7 +16,7 @@ attacks:
 ---
 <p id="GeneralAESInfo">
 
-<h2> <img src="/dev/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES Configuration </h2>
+<h2> <img src="/CryptoDoneRight/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES Configuration </h2>
 
 <font size="4"><strong>What to expect:</strong></font><br /> <br />
 For AES, the following configuration settings will provide the best possible security:

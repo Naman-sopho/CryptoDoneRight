@@ -2,7 +2,7 @@
 layout: quickstart
 title: Content Creation Guidelines
 ---
-<img src="/dev/static_files/Content-Creation-1.png" style="width:800px;height:200px;" class="center" />
+<img src="/CryptoDoneRight/static_files/Content-Creation-1.png" style="width:800px;height:200px;" class="center" />
 
 <p id="creation">
 <h1>Content Creation Guidelines!</h1>
@@ -19,7 +19,7 @@ title: Content Creation Guidelines
 
           <li>Almost, all pages must have <span class="green">"Actionable takeways!"</span> or banners that possibly summarize the gist of the page and idea that you would like to convey. The motive is that any type of reader (mainly: Manager, IT professional or a Developer) have a thought or idea about security that "sticks". </li>  <br />
 
-          <li>If possible, the content should also be created such that it follows a Concept and Example/Explanation type of model. As seen in this <a href="/dev/articles/cryptographic_protocols/TLS/TLS_1_3/tls_1_3_devQuickstart.html">page</a>.</li>  <br />
+          <li>If possible, the content should also be created such that it follows a Concept and Example/Explanation type of model. As seen in this <a href="/CryptoDoneRight/articles/cryptographic_protocols/TLS/TLS_1_3/tls_1_3_devQuickstart.html">page</a>.</li>  <br />
 
           <li>If vulnerabilities or attacks are described, the pages can also be constructed to follow the <span class="green">PIC (Protocol, Implementation or Configuration) model</span>. Please visit this <a href=flaw-categories.html>page</a> to for more information of the PIC model.</li>  <br />
 

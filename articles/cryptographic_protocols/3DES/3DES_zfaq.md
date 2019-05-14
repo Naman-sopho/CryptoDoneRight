@@ -4,7 +4,7 @@ title: FAQ
 type: 3DES
 ---
 <p>
-           <img src="/dev/static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
+           <img src="/CryptoDoneRight/static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
 
             <center><h2>3DES FAQs</h2></center>
             <br /> <br />
@@ -19,7 +19,7 @@ type: 3DES
 
            <strong>What is the difference between 3DES and DES?</strong><br /> <br />
 
-			<img src="/dev/static_files/des_versus_3des.jpg" style="width:500px;height:400px;" class="center" />
+			<img src="/CryptoDoneRight/static_files/des_versus_3des.jpg" style="width:500px;height:400px;" class="center" />
 
             <strong>Is 3DES safe to use?</strong><br /> <br />
 

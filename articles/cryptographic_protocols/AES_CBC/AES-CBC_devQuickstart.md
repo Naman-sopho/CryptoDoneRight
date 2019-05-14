@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: AES-CBC
-image: /dev/static_files/NewDevLogo.png
+image: /CryptoDoneRight/static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -19,7 +19,7 @@ attacks:
 ---
 <p id="cbcintro">
 
-  <h2> <img src="/dev/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CBC Introduction </h2>
+  <h2> <img src="/CryptoDoneRight/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CBC Introduction </h2>
 
 <strong>How it works:</strong><br />
 Each block of plaintext is xor'ed with the previous block of ciphertext before being transformed, ensuring that identical plaintext blocks don't result in identical ciphertext blocks when in sequence. For the first block of plaintext (which doesn't have a preceding block) we use an initialization vector instead. This value should be unique per message per key, to ensure that identical messages don't result in identical ciphertexts.  <br /> <br />
@@ -55,7 +55,7 @@ aes-256-cbc ← this is recommended <br /> <br />
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-        <h2> <img src=/dev/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+        <h2> <img src=/CryptoDoneRight/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

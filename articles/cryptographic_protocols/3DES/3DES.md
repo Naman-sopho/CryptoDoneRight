@@ -8,7 +8,7 @@ alerts:
   - id: 1
     type: danger
     description: This is the NOT the recommended standard.
-    link: articles/cryptographic_protocols/AES
+    link: dev/articles/cryptographic_protocols/AES
   - id: 2
     type: danger
     description: There are serious security implications if not configured properly!

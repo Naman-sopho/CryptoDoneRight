@@ -2,7 +2,7 @@
 layout: page
 title: SHA2
 type: hashing_algorithms
-update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
+update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
 permalink: "articles/hashing_algorithms/sha2"
 alerts:
   - id: 1

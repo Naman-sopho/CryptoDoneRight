@@ -2,7 +2,7 @@
 layout: quickstart
 title: IT Admin's QuickStart
 type: SHA1
-image: /dev/static_files/manager.png
+image: /CryptoDoneRight/static_files/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 ---
@@ -21,7 +21,7 @@ col: col-md-4 col-sm-4 col-xs-4 infoBlocks
               </li>
             </ol>
           </p>
-		  
+
 <p id="identification">
             <strong>How do I know if I am using SHA-1 in my IT systems or infrastructure?</strong><br /> <br />
             As described in the migration page, it is essential to gather and create a comprehensive list or an inventory of every unique devices, OS or application in your infrastructure.
@@ -38,9 +38,9 @@ col: col-md-4 col-sm-4 col-xs-4 infoBlocks
                   <code>
 $openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
                 </pre>
-                
+
 <br /><br />
-or 
+or
 <br /><br />
 <pre>
 <code>
@@ -50,7 +50,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
             One real-world example where SHA-1 may be used is when you're entering your password into a website's login page. Though it happens in the background without your knowledge, it may be the method a website uses to securely verify that your password is authentic.
 </p>
 <p>
-            In this example, imagine you're trying to login to a website you often visit. Each time you request to log on, you're required to enter in your username and password. 
+            In this example, imagine you're trying to login to a website you often visit. Each time you request to log on, you're required to enter in your username and password.
           </p>
           <p>
             If the website uses the SHA-1 cryptographic hash function, it means your password is turned into a checksum after you enter it in. That checksum is then compared with the checksum that's stored on the website. If the two match, you're granted access; if they don't, you're told the password is incorrect.
@@ -79,7 +79,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
           </p>
 </div>
 <br /> <br />
-		
+
 <h3>Web Administrator's Configuration Guide - Microsoft Servers</h3>
 <br /> <br />
 <p>
@@ -103,7 +103,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
           <p>
             For the same reason, any self-signed certificate can use the SHA-1 algorithm. For example, Microsoft Exchange Server generates self-signed SHA-1 certificates during installation. These certificates are exempt from the new SHA-2 policy since they aren't chained to a CA. I expect, however, that future releases of Exchange will use SHA-2 in self-signed certificates.
           </p>
-          
+
 <br />
           <h3 id="enterprise">What About My Enterprise CAs</h3>
           <p>
@@ -121,7 +121,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
           <p>
             <span class="red">If your CA is older than Server 2008 R2, you can't upgrade the CA to use SHA-2. You'll need to rebuild it with a newer version.</span> If your organization's internal CA is multi-tiered with one or more subordinate CAs, you'll need to reconfigure them to use SHA-2. This is done using the same certutil command just given on each subordinate or issuing CA. Keep in mind that if you use subordinate CAs, you're not required to update the root CA to SHA-2 since that certificate is at the top of the certificate chain, but it won't cause any problems if you do. You still need to renew any SHA-1 certificates issued by the subordinate CAs to upgrade them to SHA-2 certificates.
           </p>
-          
+
 <br />
           <h3 id="action">Take Action Now</h3>
           <p>

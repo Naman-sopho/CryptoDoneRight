@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: SHA1
-image: /dev/static_files/NewDevLogo.png
+image: /CryptoDoneRight/static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 further-reading:
@@ -87,7 +87,7 @@ Libcrypt: <a href="http://www.gnupg.org/documentation/manuals/gcrypt/Available-h
 <p>
 Another opensource library - Boost: <a href="http://www.boost.org/doc/libs/1_46_0/libs/uuid/index.html">http://www.boost.org/doc/libs/1_46_0/libs/uuid/index.html</a></p>
 <p>
-  
+
 <h3>(2)</h3>
 <pre>
 <code>
@@ -165,16 +165,16 @@ print(hex_dig)
 
 import uuid
 import hashlib
- 
+
 def hash_password(password):
     # uuid is used to generate a random number
     salt = uuid.uuid4().hex
     return hashlib.sha256(salt.encode() + password.encode()).hexdigest() + ':' + salt
-    
+
 def check_password(hashed_password, user_password):
     password, salt = hashed_password.split(':')
     return password == hashlib.sha256(salt.encode() + user_password.encode()).hexdigest()
- 
+
 new_pass = input('Please enter a password: ')
 hashed_password = hash_password(new_pass)
 print('The string to store in the db is: ' + hashed_password)

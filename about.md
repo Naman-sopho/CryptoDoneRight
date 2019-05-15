@@ -1,7 +1,7 @@
 ---
 layout: about_page
 title: About
-permalink: about
+permalink: /about.html
 ---
 <p id="vision">
 <h3> Our Vision: </h3>

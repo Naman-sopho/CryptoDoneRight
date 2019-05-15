@@ -2,7 +2,7 @@
 layout: quickstart
 title: IT Admin's QuickStart
 type: AES-CBC
-image: /CryptoDoneRight/static_files/pc-administrator.png
+image: static_files/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 
@@ -15,7 +15,7 @@ alerts:
 
 <p id="GeneralAESInfo">
 
-<h2> <img src="/CryptoDoneRight/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CBC Introduction </h2>
+<h2> <img src="static_files/configuration.jpg " style="width:110px;height:100px;" /> AES CBC Introduction </h2>
 
 <font size="3"><strong>How it works: </strong></font><br />
 Each block of plaintext is xor'ed with the previous block of ciphertext before being transformed, ensuring that identical plaintext blocks don't result in identical ciphertext blocks when in sequence. For the first block of plaintext (which doesn't have a preceding block) we use an initialization vector instead. This value should be unique per message per key, to ensure that identical messages don't result in identical ciphertexts. <br /> <br />
@@ -100,7 +100,7 @@ ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+A
 </pre> <br /> <br />
 </ul>
 <font size="3"><strong>VPN: </strong><font size="3"> <br />
-We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="/CryptoDoneRight/articles/cryptographic_protocols/TLS/TLS_1_2">here</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
+We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="articles/cryptographic_protocols/TLS/TLS_1_2">here</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
 
 <strong>Guide to reading cipher from configuration files: </strong><br /> <br />
 One of the most popular formats look like this: <br />

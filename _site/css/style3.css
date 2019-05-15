@@ -1,0 +1,127 @@
+@media screen
+{
+	body {
+		font-family: CiscoSans, Arial, sans-serif;
+		font-weight: 100;
+ 	}
+	h3 {
+		border: 1px solid #888;
+		border-width: 0px 0px 1px 0px;	
+	}
+	#container {
+		position: relative;
+		display: block;
+		width: 90%;
+		margin: 0px auto;
+	}
+	#header {
+		border: 2px solid #000;
+		border-width: 0px 0px 2px 0px;	
+	}
+	#footer {
+		margin-top: 2em;
+		margin-bottom: 1em;
+		padding-top: 1em;
+		border: 2px solid #000;
+		border-width: 2px 0px 0px 0px;	
+	}
+	.topicimage img {
+		display: block;
+		width: 250px;
+		float: right;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.news {
+		clear: both;	
+	}
+	.timestamp {
+		font-size: 0.8em;
+		font-weight: bold;	
+	}
+	.bs-callout {
+   		padding: 20px;
+    		margin: 20px 0;
+    		border: 1px solid #eee;
+    		border-left-width: 5px;
+    		border-radius: 3px;
+	}
+	.bs-callout h4 {
+    		margin-top: 0;
+    		margin-bottom: 5px;
+	}
+	.bs-callout p:last-child {
+    		margin-bottom: 0;
+	}
+	.bs-callout code {
+    		border-radius: 3px;
+	}
+	.bs-callout+.bs-callout {
+    		margin-top: -5px;
+	}
+	.bs-callout-default {
+    		border-left-color: #777;
+	}
+	.bs-callout-default h4 {
+	    	color: #777;
+	}
+	.bs-callout-primary {
+	    	border-left-color: #428bca;
+	}
+	.bs-callout-primary h4 {
+	    	color: #428bca;
+	}
+	.bs-callout-success {
+	    	border-left-color: #5cb85c;
+	}
+	.bs-callout-success h4 {
+	    color: #5cb85c;
+	}
+	.bs-callout-danger {
+	    	border-left-color: #d9534f;
+	}
+	.bs-callout-danger h4 {
+	    	color: #d9534f;
+	}
+	.bs-callout-warning {
+	    	border-left-color: #f0ad4e;
+	}
+	.bs-callout-warning h4 {
+	    	color: #f0ad4e;
+	}
+	.bs-callout-info {
+	    	border-left-color: #5bc0de;
+	}
+	.bs-callout-info h4 {
+	    	color: #5bc0de;
+	}
+	.dos li , .donts li {
+		display: block;
+	}
+	.dos li:before , .donts li:before {
+   		font-family: 'Glyphicons Halflings';
+    		float: left;
+		margin-right: 5px;
+		margin-top: -1px;
+	}
+	.dos li:before {	
+		content: "\e089";
+    		color: #080;
+	}
+	.donts li:before {	
+		content: "\e090";
+    		color: #800;
+	}
+    .obsoletes {
+        border-radius: 3px;
+        color: #d9534f;
+        background-color: #000000;
+        border-left-color: #f0ad4e;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 1em;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+}

@@ -6,7 +6,7 @@ update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
 permalink: "articles/cryptographic_protocols/tls/tls_1_3.html"
 alerts:
   - id: 1
-    type: recommend
+    type: success
     description: This is the LATEST and RECOMMENDED Version of TLS.
     link: ""
   - id: 2

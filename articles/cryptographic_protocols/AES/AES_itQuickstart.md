@@ -57,7 +57,7 @@ ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+A
 </pre> <br /> <br />
 </ul>
 <font size="3"><strong>VPN: </strong></font> <br />
-We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html">http://ciscodemo.isi.jhu.edu/ciscodemo/articles/cryptographic_protocols/tls-1-2.html</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
+We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended <a href="/articles/cryptographic_protocols/tls-1-2.html">here</a>. TLS typically uses AES to encrypt data post the handshake completion. <br /> <br />
 <ul>
 <strong>Guide to reading cipher from configuration files: </strong><br /> <br />
 One of the most popular formats look like this: <br />

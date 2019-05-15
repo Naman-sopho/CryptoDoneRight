@@ -1,6 +1,6 @@
 ---
 layout: quickstart
-title: "IT's QuickStart"
+title: "IT Admin's QuickStart"
 type: SHA2
 image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
@@ -78,7 +78,7 @@ SSLCipherSuite      ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:EC
 </pre>
 You may realize that there are other cipher suites that have nothing to do with SHA2. The reason why the list has been provided is to ease cross checks or fresh configuration with the most secure protocols.<br /><br />
 
-A good read: <a href="https://wiki.mozilla.org/Security/Server_Side_TLS"> Server Side TLS </a>< br /><br /><br />
+A good read: <a href="https://wiki.mozilla.org/Security/Server_Side_TLS"> Server Side TLS </a><br /><br />
 
 <strong>Explanation: </strong><br />
 <strong>Guide to reading cipher from configuration files: </strong><br /> <br />
@@ -199,7 +199,6 @@ Products based on OpenSSL 0.9.8o+ <br />
 Safari from Mac OS X 10.5+ <br />
 Windows Phone 7+ <br />
 
-<p id=patch>
 	<h2> <img src="/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using SHA2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of SHA2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts.
 <br /> <br /> <strong> Note: </strong>

@@ -7,10 +7,9 @@ note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 ---
  <p id="when">
-            <strong>When is SHA used?</strong><br />
+            <strong>When is SHA used?</strong>
             SHA is primarily being used for the following purposes:
-            <ol>
-              <li>
+            <ol><li>
                 Cryptography:- SHA-1 forms part of several widely used security applications and protocols, including TLS and SSL, PGP, SSH, S/MIME, and IPsec.
               </li>
               <li>
@@ -25,8 +24,7 @@ col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 <p id="identification">
             <strong>How do I know if I am using SHA-1 in my IT systems or infrastructure?</strong><br /> <br />
             As described in the migration page, it is essential to gather and create a comprehensive list or an inventory of every unique devices, OS or application in your infrastructure.
-            <ol>
-              <li>
+            <ol><li>
                 Identify the systems that use certificates.If certificates are in use, you must check if SHA-1 signature is in use for those certificates or not. You can check by visiting the site in your browser and viewing the certificate that the browser received. The details of how to do that can vary from browser to browser, but generally if you click or right-click on the lock icon, there should be an option to view the certificate details. In the list of certificate fields, look for one called "Certificate Signature Algorithm". (For StackOverflow's certificate, its value is "PKCS #1 SHA-1 With RSA Encryption".)
               </li>
               <li>
@@ -38,14 +36,10 @@ col: col-md-4 col-sm-4 col-xs-4 infoBlocks
                   <code>
 $openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
                 </pre>
-
-<br /><br />
-or
-<br /><br />
-<pre>
-<code>
-$openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
-                </pre>
+<strong>OR</strong>
+<pre><code>
+$openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"
+</code></pre>
 <p>
             One real-world example where SHA-1 may be used is when you're entering your password into a website's login page. Though it happens in the background without your knowledge, it may be the method a website uses to securely verify that your password is authentic.
 </p>

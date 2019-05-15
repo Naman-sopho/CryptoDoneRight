@@ -1,6 +1,6 @@
 ---
 layout: quickstart
-title: "IT's QuickStart"
+title: "IT Admin's QuickStart"
 type: TLS 1.3
 image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
@@ -96,10 +96,8 @@ $sudo service nginx restart
 In order to test if a domain is TLSv1.3 compatible: https://www.ssllabs.com/ssltest/
 
 <br />
-</p>
 
 
-<p id=patch>
 <h2> <img src="/static_files/patch.png" style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 <font size="4"><strong>Concept:</strong></font> TLSv1.3 is a relatively new protocol. A lot of products are still in the process of supporting it. The only major decision at this point of time would be to use TLSv1.3 or not rather than what are the upgrades to TLSv1.3. But, since the protocol is still in draft, expect changes and therefore expect upgrades/patches. As always, we recommend that you read through the product specific advisories
@@ -111,4 +109,4 @@ Keep an eye out for this section as it will be kept up-to-date with any major pa
 <br /> <br />
 Some examples of advisories that you can find: <br />
 <a href="https://forum.nginx.org/read.php?27,273840,273840#msg-273840">https://forum.nginx.org/read.php?27,273840,273840#msg-273840</a> <br />
-<a href="https://community.akamai.com/community/web-performance/blog/2017/10/25/get-ready-for-tls-13">https://community.akamai.com/community/web-performance/blog/2017/10/25/get-ready-for-tls-13</a></p>
+<a href="https://community.akamai.com/community/web-performance/blog/2017/10/25/get-ready-for-tls-13">https://community.akamai.com/community/web-performance/blog/2017/10/25/get-ready-for-tls-13</a>

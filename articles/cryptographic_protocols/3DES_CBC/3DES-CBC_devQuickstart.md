@@ -49,7 +49,6 @@ INPUT: ciphertext bytes, key, IV.<br />
 <li>unpad (or return error if invalid)</li>
 <li>convert bytes to string</li>
 OUTPUT: plaintext string or "decryption error".<br /><br />
-</p>
 
 <span class="green">Good points:</span>  Secure when used properly, parallel decryption. <br />
 <span class="red">Bad points:</span>  No parallel encryption, susceptible to malleability attacks when authenticity checks are bad / missing. But when done right, it's very good.
@@ -525,5 +524,3 @@ int main()
     encrypt_wide_chars();
     return 0;
 }
-</code>
-</pre>

@@ -35,7 +35,7 @@ For TLSv1.2, the following configuration settings will provide the best possible
 For the above settings, there have been examples mentioned below.
 </ul> <br />
 <font size="4"><strong>Concept:</strong></font> TLSv1.2 as a protocol is, as of now, safe. But, if configured incorrectly, your device can still be vulnerable. In this section, using a certain few examples
-explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <u>yet</u>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security.
+explore how configuration is setup to enable TLSv1.2 with right settings. Since there are no vulnerabilities that have been found with this version <strong>yet</strong>, we cover as to how you can check if your connections are TLSv1.2. Again, note that enforcement of TLSv1.2 on all connections is <span class="green">recommended</span> for security.
 <br /> <br />
 
 <span class="red">Note: Enabling TLSv1.2 on your device is the first step that is to be taken towards ensuring security. However, recent vulnerabilities discovered in certain options provided by the

@@ -79,7 +79,6 @@ between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptog
 
 The recommended version of OpenSSL that is to be used for AES is 1.1.0. This is for various reasons that concern and do not concern with AES. Some of them include for the latest encryption standards and removal of older vulnerable ones.
 <br /> <br />
-</p>
 
 
 <p id="usagelibrary">

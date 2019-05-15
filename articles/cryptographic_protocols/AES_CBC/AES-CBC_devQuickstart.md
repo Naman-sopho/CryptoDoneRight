@@ -54,8 +54,7 @@ aes-256-cbc ← this is recommended <br /> <br />
 
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
-
-        <h2> <img src=/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+    <h2> <img src="/static_files/implementation.png" style="width:100px;height:100px;" /> AES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 
@@ -96,9 +95,6 @@ U2FsdGVkX192dXI7yHGs/4Ed+xEC3ejXFINKO6Hufnc=
   </code>
 </pre>
 Note: OpenSSL uses PKCS7 by default for padding.
-
-</p>
-
 
 <p id="usagelibrary">
 <h2>Usage of Cryptography in Programming Languages</h2>

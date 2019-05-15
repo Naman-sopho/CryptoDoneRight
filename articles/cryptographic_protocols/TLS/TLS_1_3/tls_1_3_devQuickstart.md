@@ -69,7 +69,7 @@ These are the official list of what is included in OpenSSL version 1.0.2: <br />
 </ul> <br />
 <b>Note:</b> <a href="https://www.openssl.org/blog/blog/2018/09/11/release111/">The latest major release for OpenSSL is 1.1.1 LTS (released on 11th September, 2018).</a>. Again, we do not stress on upgrading OpenSSL blindly without properly evaluating the products that use them (and their advisories) and the consequences of an upgrade.
 <br /><br />
-<u>Find out which openssl version you are using</u>:
+<strong>Find out which openssl version you are using</strong>:
 <br /><br />
 Use the version option.
 <br /><br />
@@ -99,11 +99,10 @@ engines:  rdrand dynamic
 </code>
 </pre>
 <br /> 
-</p>
 <font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
 <br />
 A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. These vendors perform extensive testing of new releases of
-libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team
+libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <strong>backported packages</strong>. The security team
 backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
 <br /> 
 Here are a couple of examples for regarding upgrades to popular Operating Systems: <br />
@@ -133,7 +132,7 @@ print ssl.OPENSSL_VERSION</code></pre>
 
 <br />
 
-<u>ssl library</u> <br /> <br />
+<strong>ssl library</strong> <br /> <br />
 Here is a basic example of how to use Python's SSL library to perform a TLSv1.2 handshake using sockets. If you are using <i>ssl</i> library in your application, look for the following code block and adjust the parameters accordingly.
 
 <pre>
@@ -155,7 +154,7 @@ For TLSv1.2, a small change in the above would be to have
 <code>ssl_version=ssl.PROTOCOL_TLSv1_2</code></pre>
 
 
-<u>pyopenssl library</u> <br /> <br />
+<strong>pyopenssl library</strong> <br /> <br />
 pyOpenSSL is collaboratively developed by the Python Cryptography Authority (PyCA) that also maintains the low-level bindings called cryptography. It's a well documented wrapper around OpenSSL and supports all the features required for TLSv1.2 and more details <a href="https://pyOpenSSL.org/en/stable/api/crypto.html">here</a>.  <br /> <br />
 
 Almost everything that you would want with pyOpenSSL is on their website:  <br />
@@ -168,6 +167,5 @@ Validating a Certificate: <a href="http://blog.san-ss.com.ar/2012/05/validating-
 </p><br /><br />
 
 <blockquote>
-For more information on which versions of programming languages support secure version of TLS, refer <a href="https://www.docusign.com/blog/dsdev-updating-applications-end-tls-1-0/">here.</a></h3>
+For more information on which versions of programming languages support secure version of TLS, refer <h3><a href="https://www.docusign.com/blog/dsdev-updating-applications-end-tls-1-0/">here.</a></h3>
 </blockquote>
-</p>

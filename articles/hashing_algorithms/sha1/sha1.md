@@ -3,7 +3,7 @@ layout: page
 title: SHA1
 type: hashing_algorithms
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
-permalink: "articles/hashing_algorithms/sha1"
+permalink: "articles/hashing_algorithms/sha1.html"
 alerts:
   - id: 1
     type: danger

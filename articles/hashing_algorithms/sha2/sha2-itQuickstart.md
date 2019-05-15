@@ -2,14 +2,14 @@
 layout: quickstart
 title: "IT's QuickStart"
 type: SHA2
-image: static_files/NewDevLogo.png
+image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 
 ---
 <p id="GeneralInfo">
 
-<h2> <img src="static_files/configuration.jpg " style="width:110px;height:100px;" /> SHA2 Configuration </h2>
+<h2> <img src="/static_files/configuration.jpg " style="width:110px;height:100px;" /> SHA2 Configuration </h2>
 
 <font size="4"><strong>What to expect:</strong></font><br /> <br />
 SHA2 can be utilized in several applications in your IT infrastructure. Here are some of the examples:
@@ -200,7 +200,7 @@ Safari from Mac OS X 10.5+ <br />
 Windows Phone 7+ <br />
 
 <p id=patch>
-	<h2> <img src="static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+	<h2> <img src="/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 	<font size="4"><strong>Concept:</strong></font> There are no notable patches or upgrades that are present for any of the popular products using SHA2. But IT administrators should always keep a close watch on any patches or upgrade notifications from product vendors. The expectation is that these patches will not particularly target protocol vulnerabilities but rather implementation ones. For example, a software bug in Cisco product allows compromise of SHA2's security. Understanding a newly released patch or upgrade should be possible by reading its respective documentation and queries of any sort should be clarified with the product manufacturers to ensure a smooth process with no adverse impacts.
 <br /> <br /> <strong> Note: </strong>
 Keep an eye out for this section as it will be kept up-to-date with any major patches that are released.

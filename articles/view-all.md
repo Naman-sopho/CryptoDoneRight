@@ -1,7 +1,7 @@
 ---
 layout: view_all
 title: Articles
-permalink: /view_all
+permalink: /view_all.html
 ---
 <div class="col-md-4 col-sm-4 col-xs-4 ">
 <h2> Cryptographic protocols </h2>

@@ -3,7 +3,7 @@ layout: page
 title: TLS 1.3
 type: cryptographic_protocols
 update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
-permalink: "articles/cryptographic_protocols/tls/tls_1_3"
+permalink: "articles/cryptographic_protocols/tls/tls_1_3.html"
 alerts:
   - id: 1
     type: recommend
@@ -16,7 +16,7 @@ alerts:
 further-reading:
   - name: "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3"
     link: "https://tools.ietf.org/html/rfc8446"
-    
+
 ---
 TLSv1.3 is currently in its early stages. But, as of 21 March 2018, TLS 1.3 is an Internet Draft proposed to Internet Standard. It is based on the earlier TLS 1.2 specification.
 

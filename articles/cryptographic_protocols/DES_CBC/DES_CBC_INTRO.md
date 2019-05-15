@@ -3,7 +3,7 @@ layout: page
 title: DES CBC
 type: cryptographic_protocols
 update: Last Updated Fri, 3 May 2019 16:53:00 -0400
-permalink: "articles/cryptographic_protocols/DES_CBC_INTRO"
+permalink: "articles/cryptographic_protocols/DES_CBC_INTRO.html"
 alerts:
   - id: 1
     type: danger

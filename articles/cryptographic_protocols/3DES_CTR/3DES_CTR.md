@@ -3,7 +3,7 @@ layout: page
 title: 3DES-CTR
 type: cryptographic_protocols
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
-permalink: "articles/cryptographic_protocols/3DES-CTR"
+permalink: "articles/cryptographic_protocols/3DES-CTR.html"
 alerts:
 
 further-reading:

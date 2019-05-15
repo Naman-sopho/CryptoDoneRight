@@ -3,7 +3,7 @@ layout: page
 title: 3DES-CBC
 type: cryptographic_protocols
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
-permalink: "articles/cryptographic_protocols/3DES-CBC"
+permalink: "articles/cryptographic_protocols/3DES-CBC.html"
 alerts:
   - id: 1
     type: success

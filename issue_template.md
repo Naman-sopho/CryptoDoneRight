@@ -3,7 +3,7 @@ name: issue_template
 about: This is the official template to raise issues
 ---
 
-This template shows the proper format to make an issue for [CryptoDoneRight.org](https://cryptodoneright.org/ciscodemo/)
+This template shows the proper format to make an issue for [CryptoDoneRight.org](https://cryptodoneright.org/)
 
 ## I. PREREQUISITES 
 

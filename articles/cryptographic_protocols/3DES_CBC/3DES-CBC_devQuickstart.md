@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: 3DES-CBC
-image: static_files/NewDevLogo.png
+image: /static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -19,7 +19,7 @@ attacks:
 ---
 <p id="cbcintro">
 
-  <h2> <img src="static_files/configuration.jpg " style="width:110px;height:100px;" /> 3DES CBC Introduction </h2>
+  <h2> <img src="/static_files/configuration.jpg " style="width:110px;height:100px;" /> 3DES CBC Introduction </h2>
 
 <strong>How it works:</strong><br />
 Each block of plaintext is xor'ed with the previous block of ciphertext before being transformed, ensuring that identical plaintext blocks don't result in identical ciphertext blocks when in sequence. For the first block of plaintext (which doesn't have a preceding block) we use an initialization vector instead. This value should be unique per message per key, to ensure that identical messages don't result in identical ciphertexts.  <br /> <br />
@@ -57,7 +57,7 @@ OUTPUT: plaintext string or "decryption error".<br /><br />
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-        <h2> <img src="static_files/implementation.png " style="width:100px;height:100px;" /> 3DES Implementation</h2>
+        <h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> 3DES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

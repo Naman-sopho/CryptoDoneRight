@@ -4,7 +4,7 @@ title: FAQ
 type: AES
 ---
 <p>
-<img src="static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
+<img src="/static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
 
             <center><h2>AES FAQs</h2></center>
             <br /> <br />

@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.3
-image: /dev/static_files/NewDevLogo.png
+image: /static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -27,7 +27,7 @@ related-articles:
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-<h2> <img src="/dev/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+<h2> <img src="/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

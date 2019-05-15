@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: AES
-image: static_files/NewDevLogo.png
+image: /static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -16,7 +16,7 @@ attacks:
 
 ---
 <p>
-<h2> <img src="static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+<h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

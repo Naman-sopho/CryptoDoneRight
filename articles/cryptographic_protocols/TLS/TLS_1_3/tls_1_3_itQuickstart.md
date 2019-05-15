@@ -2,7 +2,7 @@
 layout: quickstart
 title: "IT's QuickStart"
 type: TLS 1.3
-image: /dev/static_files/NewDevLogo.png
+image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 further-reading:
@@ -20,7 +20,7 @@ related-articles:
 ---
 <p id="GeneralTLSInfo">
 
-<h2> <img src="/dev/static_files/configuration.jpg" style="width:110px;height:100px;" /> TLS 1.3 Configuration </h2>
+<h2> <img src="/static_files/configuration.jpg" style="width:110px;height:100px;" /> TLS 1.3 Configuration </h2>
 
  <div class="timestamp">
     <p><span>Last Updated Sun, 15 Apr 2018 2:02:01 -0400</span></p>
@@ -100,7 +100,7 @@ In order to test if a domain is TLSv1.3 compatible: https://www.ssllabs.com/sslt
 
 
 <p id=patch>
-<h2> <img src="/dev/static_files/patch.png" style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+<h2> <img src="/static_files/patch.png" style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 <font size="4"><strong>Concept:</strong></font> TLSv1.3 is a relatively new protocol. A lot of products are still in the process of supporting it. The only major decision at this point of time would be to use TLSv1.3 or not rather than what are the upgrades to TLSv1.3. But, since the protocol is still in draft, expect changes and therefore expect upgrades/patches. As always, we recommend that you read through the product specific advisories
 before taking any decision.

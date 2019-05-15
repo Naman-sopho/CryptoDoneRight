@@ -2,7 +2,7 @@
   {% for b in site.pages %}
   <div class="item">
     {% if b.layout == "page" and b.type == "hashing_algorithms" %}
-      <li><font size="4"><strong><a href="/CryptoDoneRight/{{b.url}}">{{b.title}}</a></strong></font></li>
+      <li><font size="4"><strong><a href="{{b.url}}">{{b.title}}</a></strong></font></li>
     {% endif %}
   </div>
   {% endfor %}

@@ -1,4 +1,3 @@
-
 ---
 layout: quickstart
 title: Manager's QuickStart

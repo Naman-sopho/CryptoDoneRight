@@ -2,7 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: SHA1
-image: /CryptoDoneRight/static_files/NewDevLogo.png
+image: static_files/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 further-reading:

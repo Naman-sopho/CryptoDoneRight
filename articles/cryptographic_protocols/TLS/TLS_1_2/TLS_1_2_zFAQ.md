@@ -4,7 +4,7 @@ type: TLS 1.2
 
 ---
 <p>
-  <img src="/dev//static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
+  <img src="/static_files/faqs.jpg" style="width:500px;height:100px;" class="center" />
   <center><h2>TLS/TLSv1.2 FAQs</h2></center><br /> <br />
   <blockquote>
 	<ul>

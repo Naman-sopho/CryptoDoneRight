@@ -40,7 +40,7 @@ related-articles:
 TLS 1.3 is supported starting from Nginx 1.13 version. If you are running older version then first you got to upgrade.
 <br /><br />
 
-<u> Nginx: </u> <br />
+<strong> Nginx: </strong> <br />
 <ul>
 <li>Login to Nginx server</li>
 <li>Take a backup of nginx.conf file</li>
@@ -74,7 +74,7 @@ $sudo service nginx restart
 
 <ul>
 <li>
-<u>Firefox Nightly</u> <br />
+<strong>Firefox Nightly</strong> <br />
 <ul>
 <li>Install and run Firefox nightly: https://nightly.mozilla.org/</li>
 <li>Enter "about:config" in the address bar</li>
@@ -84,7 +84,7 @@ $sudo service nginx restart
 </li> <br />
 
 <li>
-<u>Chrome Canary</u> <br />
+<strong>Chrome Canary</strong> <br />
 <ul>
 <li>Install and run Chrome Canary: https://www.google.com/chrome/browser/canary.html </li>
 <li>Enter "chrome://flags/" in the address bar </li>

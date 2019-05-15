@@ -75,8 +75,8 @@ Use the version option.
 <br /><br />
 <pre>
 <code>$ openssl version
-OpenSSL 1.0.1e-fips 11 Feb 2013</pre>
-</code>
+OpenSSL 1.0.1e-fips 11 Feb 2013</code></pre>
+
 <br /> <br />
 You can get much more information with the version -a option.
 <pre>
@@ -95,8 +95,9 @@ compiler: gcc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT
 -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM
 -DWHIRLPOOL_ASM -DGHASH_ASM
 OPENSSLDIR: "/etc/pki/tls"
-engines:  rdrand dynamic</pre>
+engines:  rdrand dynamic
 </code>
+</pre>
 <br /> 
 </p>
 <font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
@@ -128,8 +129,8 @@ There are a lot of libraries that Python can use for SSL/TLS. Some of the notabl
 To check which openssl version you are using execute the following within Python:
 <pre>
 <code>import ssl
-print ssl.OPENSSL_VERSION</pre>
-</code>
+print ssl.OPENSSL_VERSION</code></pre>
+
 <br />
 
 <u>ssl library</u> <br /> <br />
@@ -145,14 +146,14 @@ new_sock = ssl.wrap_socket(sock,
 		...
 		...
         )
-return new_sock</pre>
-</code>
+return new_sock</code>
+</pre>
 
 For TLSv1.2, a small change in the above would be to have
 
 <pre>
-<code>ssl_version=ssl.PROTOCOL_TLSv1_2</pre>
-</code>
+<code>ssl_version=ssl.PROTOCOL_TLSv1_2</code></pre>
+
 
 <u>pyopenssl library</u> <br /> <br />
 pyOpenSSL is collaboratively developed by the Python Cryptography Authority (PyCA) that also maintains the low-level bindings called cryptography. It's a well documented wrapper around OpenSSL and supports all the features required for TLSv1.2 and more details <a href="https://pyOpenSSL.org/en/stable/api/crypto.html">here</a>.  <br /> <br />

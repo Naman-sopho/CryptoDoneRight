@@ -148,7 +148,7 @@ related-articles:
   <font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
   <br />
   A lot of application and Operating System vendors provide specific guidelines on how to upgrade your software. A lot of vendors perform extensive testing of new releases of
-  libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <u>backported packages</u>. The security team
+  libraries like OpenSSL to ensure that no existing functionality is affected. Usually, these vendors release their own updates called <strong>backported packages</u>. The security team
   backports security fixes to the released code versions, so while you will not get new features you can be reasonably sure that your SSL libraries are up to date.
 
   <br /> <br />

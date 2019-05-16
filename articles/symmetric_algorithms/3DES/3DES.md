@@ -15,7 +15,7 @@ alerts:
     link: ""
   - id: 3
     type: danger
-    decription: 3 DES is now officially retired!
+    description: "3 DES is now officially retired!"
     link: https://www.cryptomathic.com/news-events/blog/3des-is-officially-being-retired
 further-reading:
 

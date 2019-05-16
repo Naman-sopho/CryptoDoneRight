@@ -22,6 +22,13 @@ permalink: /view_all.html
 </div>
 <div class="col-sm-8">
 <h2> Standards </h2>
-<font size="4"><strong><a><li>COMING SOON</li></a></strong></font>
+{% include standards_list.html %}
+</div>
+<div class="col-sm-4">
+<h2> Guides </h2>
+<font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/CONTRIBUTING-template.md"><li>Contribution Guide</li></a></strong></font>
+<font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/pull_request_template.md"><li>Pull Request Guide</li></a></strong></font>
+<font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/issue_template.md"><li>Issue Template Guide</li></a></strong></font>
+
 </div>
 </div>

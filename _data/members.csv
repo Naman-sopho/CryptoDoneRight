@@ -1,4 +1,4 @@
-Cryptographic Protocol/Algorithm,recommended,acceptable,avoid,future,debated,FIPS 140,CC,Suite B,CSFC,PCI
+Algorithm,recommended,acceptable,avoid,future,debated,FIPS140,CC,SuiteB,CSFC,PCI
 SSL 3.0 or lower,,,TRUE,,,,,,,
 TLS v1.0 or lower,,,TRUE,,,,,,,
 TLSv1.1,,TRUE,,,,TRUE,TRUE,,,TRUE

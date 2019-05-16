@@ -7,6 +7,10 @@ permalink: "articles/cryptographic_protocols/DES.html"
 alerts:
   - id: 1
     type: danger
+    description: THIS IS BAD! IT IS DANGEROUS. DON'T USE IT!
+    link: ""
+  - id: 2
+    type: danger
     description: This is the NOT the recommended standard.
     link: ""
 further-reading:

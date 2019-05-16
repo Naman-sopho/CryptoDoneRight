@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3DES-CBC
-type: cryptographic_protocols
+type: symmetric_algorithms
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
 permalink: "articles/cryptographic_protocols/3DES-CBC.html"
 alerts:

@@ -2,7 +2,7 @@
 layout: quickstart
 title: Content Creation Guidelines
 ---
-<img src="static_files/Content-Creation-1.png" style="width:800px;height:200px;" class="center" />
+<img src="/static_files/Content-Creation-1.png" style="width:800px;height:200px;" class="center" />
 
 <p id="creation">
 <h1>Content Creation Guidelines!</h1>

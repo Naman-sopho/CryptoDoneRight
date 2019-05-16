@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DES ECB
-type: cryptographic_protocols
+type: symmetric_algorithms
 update: Last Updated Fri, 3 May 2019 15:34:00 -0400
 permalink: "articles/cryptographic_protocols/DES_ECB_INTRO.html"
 alerts:

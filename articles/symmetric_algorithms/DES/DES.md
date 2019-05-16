@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DES
-type: cryptographic_protocols
+type: symmetric_algorithms
 update: Last Updated Fri, 3 May 2019 15:13:00 -0400
 permalink: "articles/cryptographic_protocols/DES.html"
 alerts:

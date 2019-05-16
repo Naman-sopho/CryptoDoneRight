@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3DES
-type: cryptographic_protocols
+type: symmetric_algorithms
 update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
 permalink: "articles/cryptographic_protocols/3DES.html"
 alerts:
@@ -15,7 +15,7 @@ alerts:
     link: ""
   - id: 3
     type: danger
-    decription: 3 DES is now officially retired! 
+    decription: 3 DES is now officially retired!
     link: https://www.cryptomathic.com/news-events/blog/3des-is-officially-being-retired
 further-reading:
 
@@ -31,4 +31,3 @@ attacks:
 
 ---
 3DES is an encryption algorithm that evolved from previous flavors of the same algorithm (DES which was first published in 1975). 3DES is being phased out slowly as there are new vulnerabilities that make the protocol significantly weaker. Although 3DES might be widely deployed still, it is because there are certain settings which when applied along with DES can provide good security. But considering the fact that there are newer protocols such as AES, there are no reasons to stick to 3DES apart from backward compatibility or legacy support.
-

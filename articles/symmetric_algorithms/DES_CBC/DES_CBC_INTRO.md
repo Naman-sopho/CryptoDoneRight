@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DES CBC
-type: cryptographic_protocols
+type: symmetric_algorithms
 update: Last Updated Fri, 3 May 2019 16:53:00 -0400
 permalink: "articles/cryptographic_protocols/DES_CBC_INTRO.html"
 alerts:

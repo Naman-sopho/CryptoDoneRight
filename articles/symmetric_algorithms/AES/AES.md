@@ -12,7 +12,7 @@ alerts:
   - id: 2
     type: warning
     description: "Background Reading: Understanding Different Types of Problems in Crypto."
-    link: ""
+    link: "/flaw-categories.html"
 further-reading:
 
 related-articles:

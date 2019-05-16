@@ -100,7 +100,7 @@ related-articles:
         engines:  rdrand dynamic
         </code>
     </pre>
-    <br /> 
+    <br />
 
 <p id="usagelibrary">
   <h2>Usage of Cryptography in Programming Languages</h2>
@@ -163,4 +163,3 @@ related-articles:
   Certain advisories are usually posted when vulnerabilties are found in OpenSSL library, for example: <br />
   CentOS: <a href="https://wiki.centos.org/Security/POODLE">https://wiki.centos.org/Security/POODLE </a><br />
   RedHat: <a href="https://access.redhat.com/articles/1232123">https://access.redhat.com/articles/1232123 </a><br /> <br />
-

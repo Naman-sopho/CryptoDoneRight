@@ -5,6 +5,11 @@ type: TLS 1.3
 image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
+alerts:
+  - id: 1
+    type: warning
+    description: "Background Reading: Understanding Different Types of Problems in Crypto."
+    link: "/flaw-categories.html"
 further-reading:
   - name: "Python SSL/TLS Library"
     link: https://docs.python.org/2/library/ssl.html

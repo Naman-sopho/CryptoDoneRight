@@ -7,8 +7,12 @@ note: "Are you a developer? Get started with crucial implementation details abov
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
   - id: 1
-    type: danger
+    type: warning
     description: There are serious security implications if not configured properly!
+    link: ""
+  - id: 2
+    type: success
+    description: This is the RECOMMENDED standard.
     link: ""
 further-reading:
   - name: "Python SSL/TLS Library"

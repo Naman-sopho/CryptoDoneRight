@@ -11,4 +11,4 @@ The project is dependent on git and ruby being pre-installed.
     6. Navigate to http://127.0.0.1:4000 in a browser
 
 ## We welcome contributions!
-More information in the CONTRIBUTING-template.md, but to be sure you don't have to duplicate your changes, be sure you fork the project and make changes to your own branches. From there, you can open a pull request as the contributing guide describes.
+More information in the CONTRIBUTING-template.md, but to be sure you don't have to duplicate your changes, fork the project and make changes to your own branches. From there, you can open a pull request as the contributing guide describes.

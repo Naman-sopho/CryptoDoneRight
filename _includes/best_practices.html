@@ -1,0 +1,37 @@
+
+  <OL>
+    {%  if page.vulnerabilities %}
+      {% for item in page.vulnerabilities %}
+        <LI> <u>{{item.name}}</u> (<strong>VULNERABILITY!</strong>):
+        {{item.description}}
+        {% if item.link != "" %}
+          <a href = "{{item.link}}">{{item.link}}</a>
+        {% endif %}
+
+      {% endfor %}
+    {% endif %}
+    {%  if page.warnings %}
+      {% for item in page.warnings %}
+        <li> <u>{{item.name}}</u> (<strong>Warning</strong>):
+        {{item.description}}
+        {% if item.link != "" %}
+          <a href = "{{item.link}}">{{item.link}}</a>
+        {% endif %}
+
+      {% endfor %}
+    {% endif %}
+    {% if page.best_practices %}
+      {% for item in page.best_practices %}
+      <li> <u>{{item.name}}</u> (Best Practice}:
+      {{item.description}}
+      {% if item.link != "" %}
+          <a href = "{{item.link}}">{{item.link}}</a>
+        {% endif %}
+
+      {% endfor %}
+    {% endif %}
+
+     </OL>
+     <p>
+     For more details check <A HREF="FAQ">the FAQ</A> for this algorithm.
+    </.p>

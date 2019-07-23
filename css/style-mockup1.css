@@ -786,3 +786,15 @@ border-left: 3px solid #619644;
     padding: 4em 0;
   }
 }
+
+.quickstart_table { 
+    display: table; 
+    }
+.quickstart_row { 
+    display: table-row; 
+    }
+.quickstart_cell { 
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    }

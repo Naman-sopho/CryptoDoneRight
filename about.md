@@ -3,34 +3,34 @@ layout: about_page
 title: About
 permalink: /about.html
 ---
-<p id="vision">
 
 ###  Vision
 
 To unlock the power of cryptography for the non-cryptographer.
 
-<p id="values">
-  
-### Values 
-  
+
+###  Values
+
 **1. Quality**  
 Our top priority is quality.  We strive for nothing less than the highest standards.  
 
 **2. Simplicity**  
-We want your experience to be easy.  Our quest is to demystify cryptography for the non-cryptographer.  Security is complex, yet, we believe through this community, we are building a bridge and connecting two worlds.  And in so doing, the world of security will be transformed.    
+Cryptography is hard, getting it right is even harder.  That is why we write in plain, easy-to-understand language.  If there is ever anything you don't understand or you have a question, please let us know.  All you have to do is submit a new issue [here](https://github.com/jhu-information-security-institute/CryptoDoneRight/issues/new?assignees=&labels=&template=issue_template.md&title=). Just type in a `Title`, fill out the rest of the form, then click the `Submit new issue` button. 
 
 **3. Actionable Takeaways**  
 Ultimately, when you use this website, you should expect to get answers and take action quickly.  Our passion is to equip you with straightforward instructions about your topic of interest.  We want you to leave with clear steps and plenty of confidence.  
 
-Note: if you have any ideas for improvement, go to the [Crypto Done Right Issues page](https://github.com/jhu-information-security-institute/CryptoDoneRight/issues) and click the `New issue` button. 
 
-<h3>Methods:</h3>
-<strong>1. Demystifying Cryptography:</strong> <br />
-Cryptography is a complicated subject. What makes it complicated to consumers are the plethora of options (in terms of configuration and deployment) that exist to achieve most up-to-date and proven security. Everyday use of cryptography for the majority of professionals does not necessitate understanding the intricate details of the various flavors available. Through Crypto Done Right, we aim to deliver content to our audience in the a clear and coherent fashion.  <br /> <br />
+### Methods
 
-<strong>2. Organized, Easy-to-Navigate Content:</strong> <br />
-Cryptography is often seen as inaccessible due to poor and unorganized documentation. Crypto Done Right aims to set a standard template around key content to help the audience become familiar with the structure of the website. After a few clicks around, you should find the website very easy to navigate.  <br /> <br />
+**1. Balanced, Unified Community**  
+We believe the best outcomes come from the most diverse, balanced, high functioning teams.  Our team includes experts representing academia, industry, and government from various locations around the world.  Our top cryptographers debate points of view and ways of implementing solutions so we reach the optimal solution.  We do the heavy lifting, so you don't have to.   
 
-<strong>3. Community Driven: </strong> <br />
-The website will use a centralized database where anyone can come in and contribute content. The content will be automatically rendered according to the standard templates to maintain a consistent overall feel. <br />
-</p>
+**2. Universal Tools**  
+It makes sense to use the most-used tools, right?  We integrate the most common tools into our processes and infrastructure like GitHub and Markdown.  You don't have to know them to use our site, but if you are not already familiar with them and would like to know more, we have resources to get you started.
+  
+**3. Standardization: Organizational Structure and Personas**  
+We know content must be organized logically and flexibly so you can get what you need fast.  We have a multi-tiered structured so you can do just that - find exactly what you need, just when you need it.  We have also defined three personas: Software Developer, IT Professional, and Manager because we know each role has different needs when it comes to security.  
+
+Have an idea for improvement?  We would love to hear it!  Go  [here](https://github.com/jhu-information-security-institute/CryptoDoneRight/issues/new?assignees=&labels=&template=issue_template.md&title=) then type in a `Title`, fill out the rest of the form, then click the `Submit new issue` button. 
+

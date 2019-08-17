@@ -9,15 +9,19 @@ We are a global, trusted community, committed to unlocking the power of cryptogr
 </p>
 
 <p id="values">
-<h3>Our Values: </h3>
-<strong>1. Security: </strong> <br />
-A system is only as strong as its weakest link. Security is complicated and of paramount importance for any organization or product and there are very little room for error. Security needs to be everyone's responsibility. Now, more than ever, earning customers’ trust in any business requires robust security.   <br /> <br />
+  
+### Values 
+  
+**1. Quality**  
+Our top priority is quality.  We strive for nothing less than the highest standards.  
 
-<strong>2. Cryptography has its weaknesses too: </strong> <br />
-Like anything else in this world, cryptography is not foolproof. There are multiple reasons why this is the case. But there are still various flavors of cryptographic algorithms that help protect against a wide range of attacks. Through this knowledge base, we aim to ensure that any professional who wants to implement cryptography is given up-to-date information and is aware of which algorithms to avoid, which configuration to setup, how to move to stronger cryptography etc. All of this is delivered as easy-to-understand, structured content.  <br /> <br />
+**2. Simplicity**  
+We want your experience to be easy.  Our quest is to demystify cryptography for the non-cryptographer.  Security is complex, yet, we believe through this community, we are building a bridge and connecting two worlds.  And in so doing, the world of security will be transformed.    
 
-<strong>3. Change is the only constant: </strong><br />
-Security is adaptive and is based on context. Different organizational values lead to different security measures and cryptography is an ever-changing landscape. Security (including cryptography) can never be achieved with a one-time setup. Like a well-oiled machine, it needs to be maintained and tweaked from time to time.  <br /> <br />
+**3. Actionable Takeaways**  
+Ultimately, when you use this website, you should expect to get answers and take action quickly.  Our passion is to equip you with straightforward instructions about your topic of interest.  We want you to leave with clear steps and plenty of confidence.  
+
+Note: if you have any ideas for improvement, go to the [Crypto Done Right Issues page](https://github.com/jhu-information-security-institute/CryptoDoneRight/issues) and click the `New issue` button. 
 
 <h3>Methods:</h3>
 <strong>1. Demystifying Cryptography:</strong> <br />

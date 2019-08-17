@@ -4,9 +4,10 @@ title: About
 permalink: /about.html
 ---
 <p id="vision">
-<h3> Our Vision: </h3>
-We are a global, trusted community, committed to unlocking the power of cryptography for the non-cryptographer.
-</p>
+
+###  Vision
+
+To unlock the power of cryptography for the non-cryptographer.
 
 <p id="values">
   

@@ -5,7 +5,7 @@ permalink: /about.html
 ---
 <p id="vision">
 <h3> Our Vision: </h3>
-At Crypto Done Right, we as a part of the security community, helping professionals and enthusiasts in the space of software development, I.T or management to get comfortable with the complex world of cryptography through a community driven knowledge base that is accurate, reliable, and up-to-date.
+We are a global, trusted community, committed to unlocking the power of cryptography for the non-cryptographer.
 </p>
 
 <p id="values">

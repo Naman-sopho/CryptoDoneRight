@@ -12,7 +12,7 @@ about: This is the official template for pull requests.
 > -
 
 ## 3. CHANGE TYPES
-###### (You can select by putting a 'x' in '[ ]' without any spaces. ( - [ x ])
+
 - [ ] New content creation
 - [ ] Content update
 - [ ] Content corrections (e.g. grammar, typos, or even incorrect information)
@@ -20,6 +20,7 @@ about: This is the official template for pull requests.
 - [ ] Website UI modifications
 - [ ] Code bug fix (e.g. Jekyl templates)
 - [ ] Others (please specify)
+
 > Specify "Others" here: 
 
 ## 4. RELATED ISSUES

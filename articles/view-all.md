@@ -18,6 +18,10 @@ permalink: /view_all.html
 </ul>
 </div>
 <div class="col-sm-6">
+<h2> Crypto Concepts </h2>
+{% include concepts_list.html %}
+</div>
+<div class="col-sm-6">
 <h2> Hashing Algorithms </h2>
 {% include hashing_list.html %}
 </div>

@@ -20,7 +20,6 @@ related-articles:
 warnings:
   - name: Never Use ECB.
     description: "Do NOT use the Electronic Code Book (ECB) mode of operation. This is only for testing!"
-    link: ""
   - name: Do not Re-use Keys.
     description: "As with most symmetric ciphers, it is almost always wrong to re-use the same key for multiple encryption operations."
     
@@ -33,4 +32,5 @@ Advanced Encryption Standard, or AES, is a symmetric encryption algorithm. AES i
 <br />
 Like most modern symmetric ciphers, AES is often used for "bulk encryption", meaning the encryption and decryption of large amounts of data. Accordingly, AES is used in communication protocols such as TLS and IPSec for encrypting the network traffic, and is also found in file/folder/disk encryption applications as well. <br />
 <br />
-In terms of configuration, the proper use of AES requires selecting a mode of operation. TODO link to mode of operation reading. AES also must be configured with a key size, which can currently be 128 bits (16 bytes), 192 bits (24 bytes), or 256 bits (32 bytes). While 128-bit keys are still in use, 256 bit keys should be used when possible. Even though 128-bit keys are still strong enough, 256-bit keys will last longer against future improvements in computing power including quantum computing.
+In terms of configuration, the proper use of AES requires selecting a mode of operation. 
+TODO link to mode of operation reading. AES also must be configured with a key size, which can currently be 128 bits (16 bytes), 192 bits (24 bytes), or 256 bits (32 bytes). While 128-bit keys are still in use, 256 bit keys should be used when possible. Even though 128-bit keys are still strong enough, 256-bit keys will last longer against future improvements in computing power including quantum computing.

@@ -3,7 +3,7 @@ layout: page
 title: AES-CTR
 type: symmetric_algorithms
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
-permalink: "articles/cryptographic_protocols/AES-CTR.html"
+permalink: "articles/symmetric_algorithms/AES_CTR/AES-CTR.html"
 alerts:
   - id: 1
     type: success

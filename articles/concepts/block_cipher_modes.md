@@ -20,23 +20,35 @@ best_practices:
 
 ---
 
-# Block Cipher
+# Introduction: Block Ciphers
 
-Block ciphers are encryption algorithms that encrypt data in fixed-size chunks. Typically, the size of the chunk, or "block size" is very small (e.g., 16 bytes).
+There are many encryption algorithms that encrypt data in fixed-size chunks called "blocks." Because they encrypt one block at a time, they are called "block ciphers." One of the most well-known block ciphers is [AES](/articles/symmetric_algorithms/AES/AES.html).
 
-The most basic mode of operation for a block cipher is to just encrypt each chunk serially. An image file that was 16,000 bytes long, for example, would be broken up into 16-byte chunks and each chunk encrypted separately. This mode is known as "Electronic Code Book" mode, or ECB.
+The size of a block is relatively small. AES's block size, for example, is just 16 bytes.
 
-# NEVER USE ECB
+# Modes of Operation
 
-ECB mode is always a bad idea because of the patterns that emerge. For a given key, AES will always encrypt the same 16 bytes to the same 16 output bytes. So, if the same 16 bytes happen repeatedly in a file, patterns emerge in the output. To visualize this, here is an image of the Linux "Tux" penguin:
+The mode of operation for a block cipher is the way in which it encrypts data larger than its block size.
+
+The most basic mode of operation for a block cipher is to just encrypt each chunk serially. For example, to encrypt an image file that was 16,000 bytes long using this approach with AES, one would first break up the file into 1,000 16-byte blocks and then encrypt each block using AES. This mode is known as "Electronic Code Book" mode, or ECB.
+
+# WARNING! NEVER USE ECB
+
+You should *NEVER* use ECB. The only exception is to test if a cipher is working correctly using something like, for example, a Known Answer Test.
+
+The reason ECB is so terrible is because when encrypting one chunk at a time, patterns emerge. For a given key, AES will always encrypt the same 16 bytes to the same 16 output bytes. So, if the same 16 bytes happen repeatedly in a file, patterns emerge in the output. To visualize this, here is an image of the Linux "Tux" penguin:
 
 ![Original Tux](https://upload.wikimedia.org/wikipedia/commons/5/56/Tux.jpg "The Original Tux")
 
-And here is that same image "encrypted" by ECBmode.
+And here is that same image "encrypted" by ECB mode.
 
 ![Disguised Tux](https://upload.wikimedia.org/wikipedia/commons/f/f0/Tux_ecb.jpg "Tux in Disguise?!")
 
 Hopefully, it's clear that this isn't very "secret."
+
+_[Source: Wikipedia "Block cipher mode of operation"]_
+
+# Commonly-Used Modes of Operation
 
 There are a number of modes of operation that, if used correctly, will adequately protect data. Three of the more common modes of operation include:
 
@@ -44,7 +56,13 @@ There are a number of modes of operation that, if used correctly, will adequatel
 1. Cipher-Block-Chaining Mode (CBC)
 1. Galois Counter Mode (GCM)
 
+These modes of operation are not limited to any specific cipher but rather can be applied to the common block ciphers in use today such as AES, Twofish, and Serpent. They are also used with legacy ciphers (that are no longer safe and should not be used) such as DES. The common naming scheme is to use the name of the cipher followed by the name of the mode of operation like, for example, AES-CBC, Twofish-GCM, etc.
+
+# Combined Modes of Operation
+
 GCM is different from CTR and CBC because it is a "combined" mode of operation. A combined mode of operation provides _both_ confidentiality AND message integrity. That means that not only can the encrypted data not be read, it cannot be undetectably altered without knowledge of the key. Combined modes of operation, when useable, are almost always a better choice than modes like CTR and CBC.
 
-The modes listed on this page are _not_ an exhaustive list. Each mode has its own strength and weaknesses and it is possible to abuse each one of these. For specific guidance on how to safely and correctly configure, refer to algorithm specific pages. For example, in addition to the article on AES, there is also an artcle for AES-CTR, AES-CBC, and AES-GCM.
+# For More Details
+
+The modes listed on this page are _not_ an exhaustive list. Moreover, each mode has its own strength and weaknesses and it is possible to abuse each one of these. For specific guidance on how to safely and correctly configure, refer to algorithm specific pages. For example, in addition to the article on [AES](/articles/symmetric_algorithms/AES/AES.html), there is also an artcle for [AES-CTR](/articles/symmetric_algorithms/AES_CTR/AES-CTR.html), [AES-CBC](/articles/symmetric_algorithms/AES_CBC/AES-CBC.html), and [AES-GCM](/articles/symmetric_algorithms/AES_GCM/AES-GCM.html).
 

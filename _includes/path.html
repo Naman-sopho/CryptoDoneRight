@@ -1,5 +1,10 @@
-<div class="breadcrumbs">
-  <ol class="breadcrumb">
+<div class="breadcrumbs cdr-title-bc">
+  <div id="contentScroller">
+    <div id="devtitle">
+          <strong style="font-size:3rem;">{{page.title}}</strong>
+    </div>
+  </div>
+  <ol class="breadcrumb cdr-breadcrumb">
     {% assign URL = page.url | split:'/' %}
     {% for a in URL %}
       {% if a == "" %}

@@ -1,5 +1,5 @@
 ---
-layout: page1
+layout: table
 type: standards
 title: Standards
 ---
@@ -8,6 +8,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  overflow-x: scroll;
 }
 
 td, th {

@@ -3,18 +3,12 @@ layout: default
 ---
 {% include path.html %}
 
-
-<div id="contentScroller">
-<div id="devtitle">
-      <strong style="font-size:3vw;">{{page.title}}</strong><br /><br />
-</div>
 {% include page_nav.html %}
-</div>
 
 {% include alerts.html %}
 
 
-<div class="container-fluid">
+<div class="container-fluid cdr-page-container">
   <div class="row">
     <div id="topic" class="col-md-4 col-sm-4 col-xs-4" style="width:100%">
       <div class="timestamp">
@@ -22,7 +16,7 @@ layout: default
       </div>
       <div class="description">
         <p>
-        <a name="Overview"></a> 
+        <a name="Overview"></a>
         <H2>Overview:</H2>
             {{ content }}
         </p>
@@ -31,7 +25,7 @@ layout: default
   </div>
   <div class="row">
     <div id="topic">
-    <a name="GettingStarted"></a> 
+    <a name="GettingStarted"></a>
     <H2> Getting Started:</H2>
     {% include pack2.html %}
     </div>
@@ -39,7 +33,7 @@ layout: default
   <div class="container-fluid">
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
-  <a name="BestPractices"></a> 
+  <a name="BestPractices"></a>
   <H2>Best Practices and Advisories:</H2>
   {% include best_practices.html %}
     </div>

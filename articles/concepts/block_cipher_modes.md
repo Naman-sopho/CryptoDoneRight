@@ -50,19 +50,13 @@ _[Source: Wikipedia "Block cipher mode of operation"]_
 
 # Commonly-Used Modes of Operation
 
-There are a number of modes of operation that, if used correctly, will adequately protect data. Three of the more common modes of operation include:
+There are a number of modes of operation that, if used correctly, will adequately protect data. Here are some modes of operation that can be safely used if used correctly:
 
+1. Galois Counter Mode (GCM)
 1. Counter Mode (CTR)
 1. Cipher-Block-Chaining Mode (CBC)
-1. Galois Counter Mode (GCM)
 
 These modes of operation are not limited to any specific cipher but rather can be applied to the common block ciphers in use today such as AES, Twofish, and Serpent. They are also used with legacy ciphers (that are no longer safe and should not be used) such as DES. The common naming scheme is to use the name of the cipher followed by the name of the mode of operation like, for example, AES-CBC, Twofish-GCM, etc.
 
-# Combined Modes of Operation
-
-GCM is different from CTR and CBC because it is a "combined" mode of operation. A combined mode of operation provides _both_ confidentiality AND message integrity. That means that not only can the encrypted data not be read, it cannot be undetectably altered without knowledge of the key. Combined modes of operation, when useable, are almost always a better choice than modes like CTR and CBC.
-
-# For More Details
-
-The modes listed on this page are _not_ an exhaustive list. Moreover, each mode has its own strength and weaknesses and it is possible to abuse each one of these. For specific guidance on how to safely and correctly configure, refer to algorithm specific pages. For example, in addition to the article on [AES](/articles/symmetric_algorithms/AES/AES.html), there is also an artcle for [AES-CTR](/articles/symmetric_algorithms/AES_CTR/AES-CTR.html), [AES-CBC](/articles/symmetric_algorithms/AES_CBC/AES-CBC.html), and [AES-GCM](/articles/symmetric_algorithms/AES_GCM/AES-GCM.html).
+GCM is different from CTR and CBC because it is a "combined" mode of operation. A combined mode of operation provides _both_ confidentiality AND message integrity. That means that not only can the encrypted data not be read, it cannot be undetectably altered without knowledge of the key. Combined modes of operation, when usable, are almost always a better choice than modes like CTR and CBC.
 

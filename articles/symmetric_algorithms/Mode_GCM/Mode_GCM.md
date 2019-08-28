@@ -13,14 +13,14 @@ further-reading:
 
 related-articles:
 
-best_practices:
+warnings:
   - name: Never Reuse Key, IV pairs.
     description: "Never encrypt with the same key and IV pair twice. Use one-time session keys whenever possible."
   - name: Do Not Exceed Data Limits.
     description: "GCM has a data limit of 64 GB. After this much data has been encrypted, the key and/or IV must be changed."
 ---
 
-Galois/Counter mode (Galois is pronounced "GAL-wah") encryption (“GCM mode”) is a [block cipher mode of operation](/articles/concepts/block_cipher_modes.html) that combines _confidentiality_ *and* _data authentication_. This means that the encrypted data cannot be undetectably altered.
+Galois/Counter mode (Galois is pronounced "GAL-wah") encryption (“GCM mode”) is a [block cipher mode of operation](/articles/concepts/block_cipher_modes.html) that combines _confidentiality_ **and** _data authentication_. This means that the encrypted data cannot be undetectably altered.
 
 GCM mode builds on the concepts introduced in [CTR mode](/articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html) and CTR mode should be reviewed first in order to understand GCM. As with CTR mode, GCM uses an IV/nonce and encrypts increasing counter values. But GCM extends the CTR operations to include a Message Authentication Code (MAC) calculation as a built-in part of the operation. The MAC, called a "tag" in GCM jargon, is verified during decryption. If it does not match the data must be discarded.
 

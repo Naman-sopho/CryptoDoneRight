@@ -20,17 +20,24 @@ related-articles:
 warnings:
   - name: Never Use ECB.
     description: "Do NOT use the Electronic Code Book (ECB) mode of operation. This is only for testing!"
-  - name: Do not Re-use Keys.
-    description: "As with most symmetric ciphers, it is almost always wrong to re-use the same key for multiple encryption operations."
     
 best_practices:
-  - name: GCM Mode.
-    description: "The GCM mode of operation (typically written AES-GCM) is almost always a very good choice. It both encrypts the data and protects it from modifications."
+  - name: Use 256-bit Keys.
+    description: "When possible, use 256-bit keys. This is especially true for data that may remain encrypted for very long periods of time."
+  - name: Authenticated Encryption.
+    description: "Authenticated encryption modes, such as AES-GCM, are almost always a good choice. These modes both encrypt the data and protect it from modifications."
 
 ---
 Advanced Encryption Standard, or AES, is a symmetric encryption algorithm. AES is also a block cipher, encrypting data in 128-bit chunks. As there are no known vulnerabilities against the AES cipher, it is considered safe to use so long as a proper mode of operation is chosen and is correctly configured. AES is a common choice to replace obsolete algorithms such as DES. AES is considered a reasonably efficient algorithm in terms of speed and memory requirements and is also a federal government standard in United States as approved by Secretary of Commerce.
 
 Like most modern symmetric ciphers, AES is often used for "bulk encryption", meaning the encryption and decryption of large amounts of data. Accordingly, AES is used in communication protocols such as TLS and IPSec for encrypting the network traffic, and is also found in file/folder/disk encryption applications as well. 
 
-In terms of configuration, the proper use of AES requires selecting a [mode of operation](/articles/concepts/block_cipher_modes.html). 
-AES also must be configured with a key size, which can currently be 128 bits (16 bytes), 192 bits (24 bytes), or 256 bits (32 bytes). While 128-bit keys are still in use, 256 bit keys should be used when possible. Even though 128-bit keys are still strong enough, 256-bit keys will last longer against future improvements in computing power including quantum computing.
+In terms of configuration, the proper use of AES must be configured with a key size, which can currently be 128 bits (16 bytes), 192 bits (24 bytes), or 256 bits (32 bytes). While 128-bit keys are still in use, 256 bit keys should be used when possible. Even though 128-bit keys are still strong enough, 256-bit keys will last longer against future improvements in computing power including quantum computing.
+
+AES also requires selecting a [mode of operation](/articles/concepts/block_cipher_modes.html). Common AES modes include:
+
+* [AES GCM](/articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html)
+* [AES CTR](/articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html)
+* [AES CBC](/articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html)
+
+AES-GCM is a combined mode of operation, or authenticated encryption. Authenticated encryption should be used whenever possible.

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Mode: CTR
+title: "Mode: CTR"
 type: symmetric_algorithms
-update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
+update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
 permalink: "articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html"
 alerts:
   - id: 1
@@ -25,6 +25,6 @@ Perhaps unintuitively, in CTR mode, a block cipher is _not_ used to directly enc
 
 The same keystream must never be reused to encrypt to different plaintexts. Accordingly, the counter does not actually start at 0; instead, the IV is used as a unique starting point. Because the IV does not have to be random, it is called a nonce.
 
-CTR has a significant advantage over CBC in terms of performance because encryption and decryption can be parallelized. In CBC mode, one block must be encrypted before the next can be. But in CTR mode, the predictable counter values can be encrypted independent of each other enabling trivial parallelization. Unfortunately, this advantage can be lost in practice if a serialized Message Authentication Code (MAC) is used to prevent alteration of the ciphertext. 
+CTR has a significant advantage over CBC in terms of performance because encryption and decryption can be parallelized. In CBC mode, one block must be encrypted before the next can be. But in CTR mode, the predictable counter values can be encrypted independent of each other enabling trivial parallelization. Unfortunately, this advantage can be lost in practice if a serialized Message Authentication Code (MAC) is used to prevent alteration of the ciphertext.
 
 CTR mode is notoriously easy to alter and should not be used without a MAC under almost any circumstances.

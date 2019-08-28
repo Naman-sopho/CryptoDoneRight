@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Mode: CBC
+title: "Mode: CBC"
 type: symmetric_algorithms
-update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
+update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
 permalink: "articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html"
 alerts:
   - id: 1
@@ -22,7 +22,7 @@ warnings:
     description: "Unless a Message Authentication Code (MAC) is used, data encrypted by CBC can often be modified by attackers in ways that leak information."
   - name: Encrypt-then-MAC
     description: "When using a MAC with CBC, make sure to finish the CBC encryption first, then MAC the ciphertext. Do not MAC the plaintext and then encrypt."
-    
+
 ---
 
 Cipher block chaining (CBC) is a [block cipher mode of operation](/articles/concepts/block_cipher_modes.html). Used correctly, CBC enables a block cipher, such as AES, to provide confidentiality over data larger than the block size.

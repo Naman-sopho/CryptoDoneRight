@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Mode-GCM
+title: "Mode: GCM"
 type: symmetric_algorithms
-update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
+update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
 permalink: "articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html"
 alerts:
   - id: 1
@@ -13,7 +13,7 @@ further-reading:
 
 related-articles:
 
-best_practices
+best_practices:
   - name: Never Reuse Key, IV pairs.
     description: "Never encrypt with the same key and IV pair twice. Use one-time session keys whenever possible."
   - name: Do Not Exceed Data Limits.

@@ -3,7 +3,7 @@ layout: quickstart
 title: "IT Admin's QuickStart"
 type: TLS 1.3
 image: /static_files/NewDevLogo.png
-note: "Are you an IT administrator? Get started with best practice setup details above."
+note: "An introduction to where TLS is leveraged in an IT ecosystem, including where configuration files and pertinent security controls live on a system."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
   - id: 1

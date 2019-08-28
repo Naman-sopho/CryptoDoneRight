@@ -2,7 +2,7 @@
 layout: page
 title: 3DES
 type: symmetric_algorithms
-update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
+update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
 permalink: "articles/cryptographic_protocols/3DES.html"
 alerts:
   - id: 1
@@ -30,4 +30,4 @@ attacks:
     link: "https://tools.cisco.com/security/center/viewAlert.x?alertId=48625"
 
 ---
-3DES is an encryption algorithm that evolved from previous flavors of the same algorithm (DES which was first published in 1975). 3DES is being phased out slowly as there are new vulnerabilities that make the protocol significantly weaker. Although 3DES might be widely deployed still, it is because there are certain settings which when applied along with DES can provide good security. But considering the fact that there are newer protocols such as AES, there are no reasons to stick to 3DES apart from backward compatibility or legacy support.
+The Triple Data Encryption Algorithm, called 3DES for short, is an encryption algorithm that evolved from previous flavors of the same algorithm (Data Encryption Standard, or DES, which was first published in 1975). Although under certain configurations 3DES can be acceptable, it is being phased out slowly as there are new vulnerabilities that make the protocol significantly weaker. Where possible, newer standards such as AES should be used; there are no reasons to stick to 3DES apart from backward compatibility or legacy support.

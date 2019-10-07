@@ -9,6 +9,10 @@ alerts:
     type: danger
     description: TLSv1.2 is secure only when it is configured properly!
     link: ""
+best_practices:
+  - name: "TLS 1.2 uses Auth-then-Encrypt, or MAC-then-Encrypt, which is known to be vulnerable"
+    description: "Check out the RFC for Encrypt-then-Auth. note: this is addressed in TLS 1.3, so upgrade if you can!"
+    link: https://tools.ietf.org/html/rfc7366
 further-reading:
   - name: "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.2"
     link: "https://www.ietf.org/rfc/rfc5246.txt"

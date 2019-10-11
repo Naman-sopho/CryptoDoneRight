@@ -14,7 +14,7 @@ about: This is the official template to raise issues
 - [ ] Outdated Content
 - [ ] Page Layout
 - [ ] URL Linking Issue
-- [ ] Code Bug (e.g. Jekyl Template)
+- [ ] Code Bug (e.g. Jekyll Template)
 - [ ] Other
 
 ## 3. ADDITIONAL DETAILS
@@ -29,10 +29,10 @@ about: This is the official template to raise issues
 This template shows the proper format to make an issue for [CryptoDoneRight.org](https://cryptodoneright.org/)
 
 1. Delete the header with the "name" and "about"
-1. Write a description of your issue in the "Description" section
-1. Identify the type of issue in the "Type of Issue" section (mark all that apply)
-1. In applicable, add additional details. Otherwise, enter "None" or "N/A".
-1. Delete this Instructions section.
+2. Write a description of your issue in the "Description" section
+3. Identify the type of issue in the "Type of Issue" section (mark all that apply)
+4. If applicable, add additional details. Otherwise, enter "None" or "N/A".
+5. Delete this Instructions section.
 
 When marking a checkbox, put an "x" in the brackets with no spaces:
 

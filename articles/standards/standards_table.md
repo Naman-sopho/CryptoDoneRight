@@ -1,7 +1,7 @@
 ---
 layout: table
 type: standards
-title: Standards
+title: Standards Table
 ---
 <style>
 table {

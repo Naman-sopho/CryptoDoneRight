@@ -3,6 +3,7 @@ SSL 3.0 or lower,,,TRUE,,,,,,,
 TLS v1.0 or lower,,,TRUE,,,,,,,
 TLSv1.1,,TRUE,,,,TRUE,TRUE,,,TRUE
 TLSv1.2,TRUE,,,,,TRUE,TRUE,,TRUE,TRUE
+TLSv1.3,TRUE,,,,,TRUE,TRUE,,TRUE,TRUE
 Dual_EC_DRBG,,,TRUE,,,,,,,
 ANSI X9.31,,,TRUE,,,,,,,
 CTR_DRBG (AES),TRUE,,,,,TRUE,TRUE,,TRUE,TRUE

@@ -1,7 +1,7 @@
 ---
 layout: view_all
 title: IT Quickstarts
-permalink: /quickstarts/it
+permalink: /quickstarts/it.html
 ---
 <div class="container">
   <div style="padding: 4%">

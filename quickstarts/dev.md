@@ -1,7 +1,7 @@
 ---
 layout: view_all
 title: Developer Quickstarts
-permalink: /quickstarts/dev
+permalink: /quickstarts/dev.html
 ---
 <div class="container">
   <div style="padding: 4%">

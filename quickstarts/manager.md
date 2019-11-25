@@ -1,7 +1,7 @@
 ---
 layout: view_all
 title: Manager Quickstarts
-permalink: /quickstarts/manager
+permalink: /quickstarts/manager.html
 ---
 <div class="container">
   <div style="padding: 4%">

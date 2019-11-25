@@ -2,6 +2,7 @@
 layout: quickstart
 title: IT Admin's QuickStart
 type: "AES-CTR"
+qtype: it
 image: /static_files/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

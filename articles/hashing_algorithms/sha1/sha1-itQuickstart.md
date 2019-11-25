@@ -2,6 +2,7 @@
 layout: quickstart
 title: IT Admin's QuickStart
 type: SHA1
+qtype: it
 image: /static_files/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

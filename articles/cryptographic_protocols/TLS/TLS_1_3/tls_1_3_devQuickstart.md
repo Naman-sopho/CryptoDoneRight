@@ -2,6 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.3
+qtype: dev
 image: /static_files/NewDevLogo.png
 note: "Examples on properly integrating TLSv1.3 into your application, with source code snippets in C and python."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

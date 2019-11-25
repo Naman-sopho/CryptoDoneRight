@@ -2,6 +2,7 @@
 layout: quickstart
 title: Manager's QuickStart
 type: AES-CTR
+qtype: manager
 image: /static_files/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

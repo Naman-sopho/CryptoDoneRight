@@ -3,7 +3,7 @@ layout: view_all
 title: Articles
 permalink: /view_all.html
 ---
-<div class="row">
+<div class="row" style="margin-bottom:40px">
 <div class="col-sm-6">
 <h2> Standards </h2>
 {% include standards_list.html %}

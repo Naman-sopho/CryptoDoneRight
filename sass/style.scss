@@ -291,7 +291,7 @@ figure {
 .sf-menu ul {
 	box-shadow: none;
 	border: transparent;
-	min-width: 10em;
+	*min-width: 10em;
 	*width: 10em;
 }
 

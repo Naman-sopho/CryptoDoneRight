@@ -2,6 +2,7 @@
 layout: quickstart
 title: "Developer's QuickStart"
 type: AES
+qtype: dev
 image: /static_files/NewDevLogo.png
 note: "Introduction to using AES ciphers in source code. Examples in Python and C++ illustrate the basic encryption/decryption operations as well as configuring the mode of operation and key generation."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

@@ -209,11 +209,9 @@ border-left: 3px solid #619644;
 }
 
 .cdr-breadcrumb {
-	padding-right: 72px;
 	text-align: right;
 	padding-top: 18px;
 	font-weight: 400;
-	background-color: rgb(35,218,112) !important;
 	height: 60px;
 	width: auto;
 	color: rgb(51,51,51);
@@ -224,12 +222,11 @@ border-left: 3px solid #619644;
 }
 
 #contentScroller {
-	background-color: rgb(35,218,112) !important;
-	padding:6px 15px 8px 72px;
+	padding:6px 15px 8px 0px;
 	text-align:right;
 	width: auto;
 	float: left;
-	font-size:0.95vw;
+	font-size:0.75vw;
 	max-height: 40px;
 }
 #contentScroller ul {
@@ -575,7 +572,7 @@ border-left: 3px solid #619644;
 .sf-menu ul {
   box-shadow: none;
   border: transparent;
-  min-width: 10em;
+  *min-width: 10em;
   *width: 10em;
 }
 
@@ -822,3 +819,12 @@ border-left: 3px solid #619644;
     padding: 10px;
     vertical-align: top;
     }
+
+#fh5co-logo {
+	text-shadow: 1px 1px 1px black;
+	font-weight: bold;
+}
+
+#fh5co-logo a {
+	color: white;
+}

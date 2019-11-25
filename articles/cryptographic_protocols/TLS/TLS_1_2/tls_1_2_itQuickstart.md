@@ -2,6 +2,7 @@
 layout: quickstart
 title: "IT Admin's QuickStart"
 type: TLS 1.2
+qtype: it
 image: /static_files/NewDevLogo.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

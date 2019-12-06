@@ -7,6 +7,6 @@ os.chdir(git_hook_path)
 for hook_file in os.listdir("."):
     print("Run hook {}".format(hook_file))
 	result = os.system("./{}".format(hook_file))
-    print("Exit status {}".format(result))
+    print("Exit status = {}".format(result))
 	if result != 0:
 		sys.exit(result)

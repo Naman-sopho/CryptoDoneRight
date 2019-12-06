@@ -3,7 +3,10 @@ import os, sys
 
 cur_path = os.path.dirname(__file__)
 git_hooks_path = os.path.join(cur_path,"..","..","git_hooks","pre_commit")
-for hook_file in os.listdir(git_hooks_path):
-	result = os.system("cd {}; ./{}".format(git_hooks_path, hook_file))
+os.chdir(git_hook_path)
+for hook_file in os.listdir("."):
+    print("Run hook {}".format(hook_file))
+	result = os.system("./{}".format(hook_file))
+    print("Exit status {}".format(result))
 	if result != 0:
 		sys.exit(result)

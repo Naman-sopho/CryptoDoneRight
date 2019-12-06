@@ -2,7 +2,7 @@
 layout: page1
 title: Asymmetric Cryptography
 type: concepts
-update: Last Updated Sat, 17 Aug 2019 21:27:01 -0400
+update: Last Updated Fri,  6 Dec 2019 04:01:43 +0000
 permalink: "articles/concepts/asymmetric_cryptography.html"
 alerts:
 
@@ -32,7 +32,7 @@ On the other hand, the party with the private key can distribute the public key 
 
 #### Digital Signatures
 
-TODO.
+A digital signature is.
 
 #### Key Agreement
 

@@ -2,7 +2,7 @@
 layout: page1
 title: Block Cipher Modes of Operation
 type: concepts
-update: Last Updated Sat, 17 Aug 2019 21:27:01 -0400
+update: Last Updated Fri,  6 Dec 2019 04:01:43 +0000
 permalink: "articles/concepts/block_cipher_modes.html"
 alerts:
 
@@ -58,4 +58,4 @@ There are a number of modes of operation that, if used correctly, will adequatel
 
 These modes of operation are not limited to any specific cipher but rather can be applied to the common block ciphers in use today such as AES, Twofish, and Serpent. They are also used with legacy ciphers (that are no longer safe and should not be used) such as DES. The common naming scheme is to use the name of the cipher followed by the name of the mode of operation like, for example, AES-CBC, Twofish-GCM, etc.
 
-GCM is different from CTR and CBC because it is a "combined" mode of operation. A combined mode of operation provides _both_ confidentiality AND message integrity. That means that not only can the encrypted data not be read, it cannot be undetectably altered without knowledge of the key. Combined modes of operation, when usable, are almost always a better choice than modes like CTR and CBC.
+GCM is different from CTR and CBC because it is a "combined" mode of operation. A combined mode of operation provides _both_ confidentiality AND message integrity. That means that not only can the encrypted data not be read, it cannot be undetectably altered without knowledge of the key. Combined modes of operation, when usable, are almost always a better choice than modes like CTR and CBC. If nothing else, a combined mode of operation reduces the complexity for the user.

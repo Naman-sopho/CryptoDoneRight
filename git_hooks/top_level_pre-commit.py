@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import os, sys
+sys.exit(256)
 
 cur_path = os.path.dirname(__file__)
 git_hooks_path = os.path.join(cur_path,"..","..","git_hooks","pre_commit")

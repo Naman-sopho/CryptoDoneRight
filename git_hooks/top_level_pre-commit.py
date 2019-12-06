@@ -11,3 +11,4 @@ for hook_file in os.listdir("."):
     if result != 0:
         print("Failed.")
         sys.exit(result)
+sys.exit(1)

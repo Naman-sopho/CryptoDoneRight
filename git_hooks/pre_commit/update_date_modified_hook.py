@@ -34,6 +34,6 @@ def update_date_modified_hook():
 print("This is a pre-commit hook for auto-update of timestamp on articles")
 try:
     update_date_modified_hook()
-except Exception, e:
+except Exception as e:
     import sys
     sys.exit("Failed because {}".format(e))

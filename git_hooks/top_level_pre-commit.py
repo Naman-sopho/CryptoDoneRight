@@ -9,4 +9,5 @@ for hook_file in os.listdir("."):
     result = os.system("./{}".format(hook_file))
     print("Exit status={}".format(result))
     if result != 0:
+        print("Failed.")
         sys.exit(result)

@@ -3,7 +3,7 @@ import subprocess, datetime
 
 
 def update_date_modified_hook():
-    status = subprocess.check_output(["git","status"])
+    status = subprocess.check_output(["git", "status"], env={})
     for status_line in status.split(b"\n"):
         status_line = status_line.strip()
         if not status_line.startswith(b"modified:"): continue

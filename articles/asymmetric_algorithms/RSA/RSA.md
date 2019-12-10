@@ -27,12 +27,13 @@ related-articles:
 
 warnings:
   - name: Do not use RSA For Encryption
-    description: "RSA encryption "
+    description: "RSA encryption is generally being deprecated. For key exchange, key agreement, using a protocol such as Diffie Hellman (DH), is almost always better."
     
 best_practices:
   - name: Use 2048-bit, or Larger, Keys.
     description: "When possible, use 256-bit keys. This is especially true for data that may remain encrypted for very long periods of time."
-
+  - name: Use PSS Padding for Signatures.
+    description: "Although there are no known attacks against PKCSv1.5 for signatures, it is recommended to use the PSS padding scheme.
 
 ---
 RSA is an asymmetric algorithm named for Rivest, Shamir, and Adleman, the three cryptographers that publicly presented about the system in 1977. RSA was one of the first asymmetric algorithms described and is still one of the most widely used. Nevertheless, more modern algorithms are often recommended for both performance and security reasons.

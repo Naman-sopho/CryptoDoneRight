@@ -34,3 +34,5 @@ further-reading:
 TLSv1.3 is the latest version of the Transport Layer Security, or TLS, protocol. This protocol was designed for securing internet traffic and is typically seen in client/server architectures like connecting to a website from a browser. It was officially made a standard by the IETF in 2018 as an improvement upon TLSv1.2, providing many security and performance enhancements.
 
 Filippo Valsorda had a great talk describing the major benefits of TLS 1.3 vs that of TLS 1.2. Many products, services, and companies have migrated to TLSv1.3 as it is the recommended version of the protocol. Implementations can be found in many major TLS stacks, but some are listed [here](https://github.com/tlswg/tlswg-wiki/blob/master/IMPLEMENTATIONS.md).
+
+One particularly valuable improvement of TLS 1.3 over 1.2 is simplicity of configuration. At the time of this writing, there are only five cipher suites for TLS 1.3. Each cipher suite uses an authenticated encryption algorithm, so no separate MAC algorithm is required. This greatly reduces the burden on IT and development professionals to figure out which parameters are recommended.

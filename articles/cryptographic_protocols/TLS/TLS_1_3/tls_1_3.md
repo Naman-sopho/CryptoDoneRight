@@ -29,7 +29,7 @@ further-reading:
   - name: "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3"
     link: "https://tools.ietf.org/html/rfc8446"
   - name: "TLSv1.3 0-RTT Vulnerabilites"
-
+    link: "https://www.ssl.com/faqs/security-concerns-0-rtt-mode/"
 ---
 TLSv1.3 is the latest version of the Transport Layer Security, or TLS, protocol. This protocol was designed for securing internet traffic and is typically seen in client/server architectures like connecting to a website from a browser. It was officially made a standard by the IETF in 2018 as an improvement upon TLSv1.2, providing many security and performance enhancements.
 

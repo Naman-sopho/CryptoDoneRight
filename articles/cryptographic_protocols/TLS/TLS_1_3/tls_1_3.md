@@ -7,16 +7,23 @@ permalink: "articles/cryptographic_protocols/tls/tls_1_3.html"
 alerts:
   - id: 1
     type: success
-    description: This is the LATEST and RECOMMENDED Version of TLS.
+    description: This is the LATEST and RECOMMENDED Version of TLS. However, TLS 1.2 can also still be used for legacy support.
     link: ""
   - id: 2
     type: danger
-    description: TLSv1.3 is still in its intial roll-out phase. Expect minimum information about issues.
+    description: TLSv1.3 is still a fairly new protocol. Check back regularly for updates about potential issues.
     link: ""
+  - id: 3
+    type: danger
+    description: ETS or eTLS is an artificially weakened version of TLS 1.3 and SHOULD NOT BE USED.
+    link: "https://www.eff.org/deeplinks/2019/02/ets-isnt-tls-and-you-shouldnt-use-it"
 
 warnings:
   - name: Turn off 0-RTT
     description: "0-RTT, or the zero round trip functionality that was written into the TLSv1.3 specification could allow for replay attacks. It is recommended to disable this functionality. These security concerns are documented near the end of the RFC, but attacks have also been presented at conferences. See the Further Reading section for links."
+  - name: Disable RSA key exchange in TLS 1.2
+    description: "Although TLS 1.3 has mechanisms in place to prevent downgrade attacks, these mechanisms can be bypassed if the downgrade is to TLS 1.2 and the key exchange is performed with RSA encryption. If you are running TLS 1.2 alongside TLS 1.3 (this is common!), you must ensure that TLS 1.2 does not provide RSA key exchange as an option."
+    link: "https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2019/february/downgrade-attack-on-tls-1.3-and-vulnerabilities-in-major-tls-libraries/"
 
 further-reading:
   - name: "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3"

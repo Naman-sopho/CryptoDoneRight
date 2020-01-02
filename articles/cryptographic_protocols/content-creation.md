@@ -1,5 +1,5 @@
 ---
-layout: quickstart
+layout: page1
 title: Content Creation Guidelines
 ---
 <img src="/static_files/Content-Creation-1.png" style="width:800px;height:200px;" class="center" />

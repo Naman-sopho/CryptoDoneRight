@@ -1,16 +1,10 @@
 ---
-layout: view_all
+layout: quickstart-home
 title: Manager Quickstarts
 permalink: /quickstarts/manager.html
+qtype: manager
+person: manager
+faqs:
+- link: https://cryptodoneright.org/articles/standards/standards_table.html
+  blurb: Which algorithms are compliant with standards such as FIPS, Common Criteria, and PCI?
 ---
-<div class="container">
-  <div style="padding: 4%">
-    {% for b in site.pages %}
-    <div class="item">
-      {% if b.layout == "quickstart" and b.qtype == "manager" %}
-        <li><font size="4"><strong><a href="{{b.url}}">{{b.type}}</a></strong></font></li>
-      {% endif %}
-    </div>
-    {% endfor %}
-  </div>
-</div>

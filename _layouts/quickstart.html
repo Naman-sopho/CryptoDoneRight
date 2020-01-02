@@ -3,17 +3,17 @@ layout: default
 ---
 {% include path.html %}
 
-{% include alerts.html %}
-
 <div class="container-fluid cdr-page-container">
-  <div class="row" style="padding: 2vw;">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-          {{content}}
+  <div class="row">
+    <div id="topic" >
+      <div class="description">
+        <p>
+            {{ content }}<br /> <br />
+        </p>
       </div>
-	 </div>
-</div>
+    </div>
 
-<div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
-      {% include further_reading.html %}
-      {% include related_articles.html %}
+  </div>
+
+
 </div>

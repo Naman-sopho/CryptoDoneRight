@@ -137,7 +137,7 @@ figure {
   }
 }
 .fh5co-cover .desc {
-  top: 50%;
+  top: 30%;
   position: absolute;
   width: 100%;
   margin-top: -80px;
@@ -168,7 +168,7 @@ figure {
 .fh5co-cover .desc span {
   display: block;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 1px;
 }
 .fh5co-cover .desc span a {
@@ -310,9 +310,10 @@ figure {
 #fh5co-logo {
   position: relative;
   z-index: 2;
-  font-size: 22px;
+  font-size: 26px;
   text-transform: uppercase;
-  margin-top: 35px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-weight: 700;
   float: left;
 }
@@ -563,7 +564,7 @@ figure {
 .feature-left {
   float: left;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   position: relative;
   border-radius: 10px;
   padding: 16px;
@@ -572,6 +573,7 @@ figure {
   float: left;
   text-align: center;
   width: 15%;
+  margin-bottom: 8px !important;
 }
 
 .qs {
@@ -1454,3 +1456,27 @@ button.gsc-search-button
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.qs-homepage {
+	text-align: left;
+}
+
+.qs-homepage h5 {
+  margin-bottom: 8px !important;
+}
+
+#fh5co-logo h5 {
+  color: white;
+}
+
+.fh5co-cover-short, .fh5co-overlay-short {
+  height: 320px !important;
+}
+
+.fh5co-cover-short div {
+  top: 268px !important;
+}
+
+.fh5co-hero-short {
+  height: 320px !important;
+}

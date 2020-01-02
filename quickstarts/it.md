@@ -1,16 +1,12 @@
 ---
-layout: view_all
+layout: quickstart-home
 title: IT Quickstarts
 permalink: /quickstarts/it.html
+qtype: it
+person: IT administrator
+faqs:
+- link: https://medium.com/@mpreziuso/password-hashing-pbkdf2-scrypt-bcrypt-and-argon2-e25aaf41598e
+  blurb: How should I hash and store passwords?
+- blurb: What algorithms should I use in my certificate?
+- blurb: How do I install my certificate?
 ---
-<div class="container">
-  <div style="padding: 4%">
-    {% for b in site.pages %}
-    <div class="item">
-      {% if b.layout == "quickstart" and b.qtype == "it" %}
-        <li><font size="4"><strong><a href="{{b.url}}">{{b.type}}</a></strong></font></li>
-      {% endif %}
-    </div>
-    {% endfor %}
-  </div>
-</div>

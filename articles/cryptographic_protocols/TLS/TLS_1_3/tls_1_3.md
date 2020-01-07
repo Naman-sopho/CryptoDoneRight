@@ -2,7 +2,7 @@
 layout: page
 title: TLS 1.3
 type: cryptographic_protocols
-update: Last Updated Tue, 10 Dec 2019 18:12:56 +00000
+update: Last Updated Tue,  7 Jan 2020 18:05:12 +00000
 permalink: "articles/cryptographic_protocols/tls/tls_1_3.html"
 alerts:
   - id: 1

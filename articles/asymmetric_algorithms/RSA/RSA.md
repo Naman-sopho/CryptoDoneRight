@@ -33,7 +33,7 @@ best_practices:
   - name: Use 2048-bit, or Larger, Keys.
     description: "When possible, use 256-bit keys. This is especially true for data that may remain encrypted for very long periods of time."
   - name: Use PSS Padding for Signatures.
-    description: "Although there are no known attacks against PKCSv1.5 for signatures, it is recommended to use the PSS padding scheme.
+    description: "Although there are no known attacks against PKCSv1.5 for signatures, it is recommended to use the PSS padding scheme."
 
 ---
 RSA is an asymmetric algorithm (a refresher on asymmetric cryptography can be found [here](https:://cryptodoneight.org/articles/concepts/asymmetric_cryptography.html)) named for Rivest, Shamir, and Adleman, the three cryptographers that publicly presented about the system in 1977. RSA was one of the first asymmetric algorithms described and is still one of the most widely used. Nevertheless, more modern algorithms are often recommended for both performance and security reasons.
@@ -48,7 +48,7 @@ Another potential problem with digital signatures is that the RSA encryption mec
 
 In addition to signature functions, RSA can be used for key exchange. In TLS 1.2 and earlier, one side could encrypt a session key (or a session pre-key) using the public key of the other participant. Once received, the RSA private key decrypted the session pre-key. This process of sending an asymmetrically encrypted session (pre-)key is a key-transport mechanism for key-exchange.
 
-An example flow of how this might work is as follows: <br>
+An example flow of how this might work is as follows... <br>
 > 1. Alice has a key pair; she guards the private key and publishes the public key.
 > 2. Bob wants to communicate securely with Alice, so he uses her published public key to encrypt a request to communicate and sends it to her. In his message he may include a secret key to be used with AES.
 > 3. Alice receives an encrypted message and uses her private key to decrypt. She sees the AES secret key, encrypts a message using AES and sends it to Bob.

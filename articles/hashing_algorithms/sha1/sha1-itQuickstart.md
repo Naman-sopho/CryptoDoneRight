@@ -32,19 +32,15 @@ col: col-md-4 col-sm-4 col-xs-4 infoBlocks
                 If your infrastructure has a web server, you can use the following site and see if you are using the SHA-1 or some other certificate. The site is <a href="https://shachecker.com/">https://shachecker.com/</a> or <a href="https://shaaaaaaaaaaaaa.com/">https://shaaaaaaaaaaaaa.com/</a>.
               </li>
               <li>
-                Here, is a quick command in a linux system that you can run to know if you are using the correct SHA-1 certificate.<br /><br />
+                Here, is a quick command in a linux system that you can run to know if you are using the correct SHA-1 certificate.<br><br>
                 <pre>
-                  <code>
-$openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code>
-                </pre>
-<strong>OR</strong>
-<pre><code>
-$openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"
-</code></pre>
-<p>
+<code>$openssl s_client -connect www.yoursite.com:443 < /dev/null 2>/dev/null \ | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code></pre>
+<strong>OR</strong><br>
+<pre><code>$openssl s_client -connect \<host\>:\<port\> < /dev/null 2>/dev/null | openssl x509 -text -in /dev/stdin | grep "Signature Algorithm"</code></pre>
+          <p>
             One real-world example where SHA-1 may be used is when you're entering your password into a website's login page. Though it happens in the background without your knowledge, it may be the method a website uses to securely verify that your password is authentic.
-</p>
-<p>
+          </p>
+          <p>
             In this example, imagine you're trying to login to a website you often visit. Each time you request to log on, you're required to enter in your username and password.
           </p>
           <p>
@@ -52,7 +48,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
           </p>
           <p>
             Another example where the SHA-1 hash function may be used is for file verification. Some websites will provide the SHA-1 checksum of the file on the download page so that when you download the file, you can check the checksum for yourself to ensure that the downloaded file is the same as the one you intended to downloaded.
- </p>
+          </p>
 
 <p id="where">
             <strong>Protocols Used In:</strong>
@@ -72,7 +68,7 @@ $openssl s_client -connect <host>:<port> < /dev/null 2>/dev/null | openssl x509 
             Similarly, HMAC-SHA1 is believed to be (still) safe as long as SHA1 is pseudorandom.   
             The specific construct of HMAC-SHA1 is still considered safe to use (assuming a secret key) due to the security proof for HMAC which does not rely on collision resistance of the underlying PRF.
           </p>
-</div>
+
 <br /> <br />
 
 <h3>Web Administrator's Configuration Guide - Microsoft Servers</h3>

@@ -16,7 +16,7 @@ alerts:
   - id: 3
     type: warning
     description: Click to judge how much time do you have for migration.
-    link: articles/hashing_algorithms/sha1/sha1-itQuickstart
+    link: /articles/hashing_algorithms/sha1/sha1-itQuickstart.html
 further-reading:
   - name: History of Hash Functions
     link: https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf

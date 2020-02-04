@@ -1,8 +1,10 @@
-
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
   <OL>
     {%  if page.vulnerabilities %}
+    <h3>Vulnerabilities</h3>
       {% for item in page.vulnerabilities %}
-        <LI> <u>{{item.name}}</u> (<strong>VULNERABILITY!</strong>):
+        <LI> <u>{{item.name}}</u>:
         {{item.description}}
         {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
@@ -11,8 +13,9 @@
       {% endfor %}
     {% endif %}
     {%  if page.warnings %}
+    <h3>Warnings:</h3>
       {% for item in page.warnings %}
-        <li> <u>{{item.name}}</u> (<strong>Warning</strong>):
+        <li> <u>{{item.name}}</u>:
         {{item.description}}
         {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
@@ -21,8 +24,9 @@
       {% endfor %}
     {% endif %}
     {% if page.best_practices %}
+    <h3>Best Practices</h3>
       {% for item in page.best_practices %}
-      <li>(Best Practice) <u>{{item.name}}</u>: <br/>
+      <li><u>{{item.name}}</u>: <br/>
       {{item.description}}
       {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
@@ -35,3 +39,5 @@
      <p>
      For more details check <A HREF="FAQ.html">the FAQ</A> for this algorithm.
     </p>
+  </div>
+</div>

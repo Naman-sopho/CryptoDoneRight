@@ -30,9 +30,25 @@ On the other hand, the party with the private key can distribute the public key 
 * Key Agreement
 * Asymmetric Encryption
 
+<br>
 #### Digital Signatures
 
-A digital signature is.
+You can think of a digital signature similarly as a regular signature -- typically someone signs a document with their unique identity in order to "agree" (or validate, etc.) with the information contained in the document at the time of signing.
+
+A digital signature is similar. It provides **integrity**, **authenticity**, and **non-repudiation**.
+
+The steps in signature generation and verification are as follows:
+1. The signer hashes the data she wants to sign.
+2. She generates a signature with a signature algorithm using her _private_ key and the hash she generated.
+3. The signer sends (or publishes, etc.) the data and the signature, as well as her _public_ key.
+4. A verifier receives the data and the signature.
+5. The verifier generates a hash of the data.
+6. The verifier provides the signature verification algorithm with the signature she received as well as the sender's _public_ key, which produces the hash of the data that the signer originally signed.
+7. The verifier can compare the hash she generated herself of the data she received with the hash that the signer signed to see if they are equal. If they are, the data has not been corrupted. If they aren't, the data that she received is not the same as the data that the signer signed.
+
+* As we can see from the steps above, if the data has changed at all during transmission the hash will change (remember, small changes in the plaintext can cause major changes in the hash output). This property is how cryptographic signatures provide **integrity**.
+* A little bit more nuanced from the steps above, cryptographic signatures also provide **authenticity**. By using a certain public key to verify the signature, you can be sure that the corresponding private key was used during signature generation.
+* **Non-repudiation** is an interesting property that means that the signer cannot deny signing the message.
 
 #### Key Agreement
 

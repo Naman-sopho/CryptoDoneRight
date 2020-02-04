@@ -1,20 +1,21 @@
-<div class="container-fluid">
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
   <p>
     {%  if page.attacks %}
-      <strong>Attacks: </strong> <br />
+      <h2>Attacks:</h2>
+      <ul>
       {% for item in page.attacks %}
-        <u>{{item.name}}</u>
-        {{item.description}}
-        {% if item.link != "" %}
-          <a href = "{{item.link}}">{{item.link}}</a>
-        {% endif %}
-        <br />
-
+        <li>
+          <u>{{item.name}}</u>
+          {{item.description}}
+          {% if item.link != "" %}
+            <a href = "{{item.link}}">{{item.link}}</a>
+          {% endif %}
+        </li>
       {% endfor %}
+      </ul>
     {%  elsif page.disadvantages %}
-      <strong>Disadvantages: </strong> <br />
+      <h2>Disadvantages:</h2>
       {% for item in page.disadvantages %}
         <u>{{item.name}}</u>
         {{item.description}}
@@ -28,5 +29,4 @@
     {% endif %}
   </p>
   </div>
-</div>
 </div>

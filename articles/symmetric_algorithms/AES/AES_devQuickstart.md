@@ -17,7 +17,7 @@ attacks:
 
 ---
 <p>
-<h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+<h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> AES for Developers</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 
@@ -26,8 +26,9 @@ These libraries offer better stability as they are usually a product of several 
 dedicated towards efforts in implementation. It is therefore considered to be reliable and robust. <br /> <br />
 
 
-<font size="3"><strong>Examples:</strong></font>
-Openssl is one such library which popular and therefore is used as an example for this concept.
+<h2><strong>Examples:</strong></h2>
+<h3>OpenSSL</h3>
+OpenSSL is one such library which popular and therefore is used as an example for this concept.
 OpenSSL is not the only available crypto library. For a list of different libraries and a comparison
 between them, visit <a href="https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries">here</a>.
 <br /> <br />

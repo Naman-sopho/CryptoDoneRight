@@ -17,7 +17,7 @@ layout: default
       <div class="description">
         <p>
         <a name="Overview"></a>
-        <H2>Overview:</H2>
+        <h2>Overview:</h2>
             {{ content }}
         </p>
       </div>
@@ -26,18 +26,21 @@ layout: default
   <div class="row">
     <div id="topic">
     <a name="GettingStarted"></a>
-    <H2> Getting Started:</H2>
+    <h2> Getting Started:</h2>
     {% include pack2.html %}
     </div>
   </div>
-  <div class="container-fluid">
-<div class="row">
-  <div class="col-md-12 col-sm-12 col-xs-12">
-  <a name="BestPractices"></a>
-  <H2>Best Practices and Advisories:</H2>
-  {% include best_practices.html %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2>More Useful Information:</h2>
     </div>
-</div>
+  </div>
+
+  {% include best_practices.html %}
+
+  {% include attacks.html %}
+
 </div>
 </div>
 

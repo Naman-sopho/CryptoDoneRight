@@ -35,6 +35,6 @@ permalink: /view_all.html
 </div>
 <div class="col-sm-6">
 <h2> Asymmetric Algorithms </h2>
-<font size="4"><strong><a><li>COMING SOON</li></a></strong></font>
+{% include asymmetric_list.html %}
 </div>
 </div>

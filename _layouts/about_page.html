@@ -22,18 +22,25 @@ layout: default_about
       </div>
     </div>
   </div>
-  <div id="fh5co-about">
+  <div id="fh5co-about" style="padding-bottom: 0">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
           <h3>People</h3>
-          <figure>
-            <img src="/static_files/people.jpg" alt="Our People" class="img-responsive">
-          </figure>
+					<div class="row">
+						{% for person in page.people %}
+						<div class="col-md-3 people-container">
+							<img src="/static_files/people/{{ person.photo }}"><br>
+							<h4>{{ person.name }}</h4>
+							<h5 style="font-weight: bold">{{ person.title }}</h5>
+							<h5 style="color: #66D37E">{{ person.affiliation }}</h5>
+						</div>
+						{% endfor %}
+					</div>
         </div>
       </div>
     </div>
   </div>
-    {% include developers.html %}
+    {% include contributors.html %}
   <br /><br />
 </div>

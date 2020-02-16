@@ -1,7 +1,7 @@
 <ul id="id04">
   {% for a in site.pages %}
   <div class="item">
-    {% if a.layout == "page1" and a.type == "concepts" %}
+    {% if a.type == "concepts" %}
       <li><font size="4"><strong><a href="{{a.url}}">{{a.title}}</a></strong></font></li>
     {% endif %}
   </div>

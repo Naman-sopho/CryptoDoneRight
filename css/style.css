@@ -1480,3 +1480,18 @@ button.gsc-search-button
 .fh5co-hero-short {
   height: 320px !important;
 }
+
+.people-container {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.people-container h4, .people-container h5 {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.people-container img {
+    width: auto;
+    max-width: 100%;
+}

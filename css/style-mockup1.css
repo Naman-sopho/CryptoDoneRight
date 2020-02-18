@@ -872,3 +872,7 @@ border-left: 3px solid #619644;
 .fh5co-hero-short {
   height: 320px !important;
 }
+
+.cert-img img {
+	max-width: 97%;
+}

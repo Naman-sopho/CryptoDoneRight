@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.2
 qtype: dev
-image: /static_files/NewDevLogo.png
+image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -32,7 +32,7 @@ related-articles:
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-  <h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> TLS 1.2 Implementation</h2>
+  <h2> <img src="/static_files/common/implementation.png " style="width:100px;height:100px;" /> TLS 1.2 Implementation</h2>
 
   <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own crypto! Use standard services and libraries. <br />
 
@@ -148,7 +148,7 @@ related-articles:
 
 
 <p id="tls12patch">
-  <h2> <img src="/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+  <h2> <img src="/static_files/common/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
   <font size="4"><strong>Concept:</strong></font> <span class="red">Please be careful while upgrading your crypto library. Do not simply upgrade the package without thinking about the implications it might have on existing features of your application or operating system. </span> <br />
   <br />

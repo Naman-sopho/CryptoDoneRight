@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: AES-GCM
 qtype: dev
-image: /static_files/NewDevLogo.png
+image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -16,7 +16,7 @@ attacks:
 ---
 <p id="gcmintro">
 
-  <h2> <img src="/static_files/configuration.jpg " style="width:110px;height:100px;" /> AES GCM Mode </h2>
+  <h2> <img src="/static_files/common/configuration.jpg " style="width:110px;height:100px;" /> AES GCM Mode </h2>
 
 
 <strong>Why GCM Mode:</strong> <br />
@@ -61,7 +61,7 @@ It would be a mistake to encrypt 20 strings using an instance of the Crypt2 obje
 
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-        <h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
+        <h2> <img src="/static_files/common/implementation.png " style="width:100px;height:100px;" /> AES Implementation</h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

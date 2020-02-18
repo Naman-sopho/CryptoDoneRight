@@ -4,7 +4,7 @@ title: "Developer's QuickStart"
 type: 3DES
 qtype: dev
 url: /quickstarts/dev/3DES
-image: /static_files/NewDevLogo.png
+image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -29,7 +29,7 @@ attacks:
 
 ---
 <p id="nocryptoroll">
-<h2> <img src="/static_files/implementation.png " style="width:100px;height:100px;" /> 3DES Implementation</h2>
+<h2> <img src="/static_files/common/implementation.png " style="width:100px;height:100px;" /> 3DES Implementation</h2>
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 It is NOT advisable in any circumstances to develop any sort of cryptography on your own. Instead , there are a few options for standard libraries that can be used.
 These libraries offer better stability as they are usually a product of several years of experience in implementing cryptography by an active development community who are

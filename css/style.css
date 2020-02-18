@@ -1495,3 +1495,10 @@ button.gsc-search-button
     width: auto;
     max-width: 100%;
 }
+
+.index-scroll-icon img {
+	max-width: 70px;
+  margin-left: 36%;
+  margin-right: auto;
+	margin-top: -40px;
+}

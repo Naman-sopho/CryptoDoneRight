@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.3
 qtype: dev
-image: /static_files/NewDevLogo.png
+image: /static_files/common/NewDevLogo.png
 note: "Examples on properly integrating TLSv1.3 into your application, with source code snippets in C and python."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
 alerts:
@@ -28,7 +28,7 @@ related-articles:
 <p id="nocryptoroll">
   <div class="col-md-12 col-sm-12 col-xs-12">
 
-<h2> <img src="/static_files/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
+<h2> <img src="/static_files/common/patch.png " style="width:100px;height:100px;" /> Upgrade/Patch Management </h2>
 
 <font size="4"><strong>Concept:</strong></font>  DO NOT roll your own Crypto! Use standard services and libraries. <br />
 

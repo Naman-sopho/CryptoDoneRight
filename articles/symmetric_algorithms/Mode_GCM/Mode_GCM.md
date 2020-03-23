@@ -3,7 +3,7 @@ layout: page
 title: "Mode: GCM"
 type: symmetric_algorithms
 update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
-permalink: "articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html"
+permalink: /articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html
 alerts:
   - id: 1
     type: success

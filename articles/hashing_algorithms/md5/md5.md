@@ -3,7 +3,7 @@ layout: page
 title: MD5
 type: hashing_algorithms
 update: Last Updated Fri, 3 May 2019 19:37:01 -0400
-permalink: "articles/hashing_algorithms/MD5.html"
+permalink: /articles/hashing_algorithms/MD5.html
 alerts:
   - id: 1
     type: danger

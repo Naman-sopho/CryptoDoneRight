@@ -3,6 +3,7 @@ layout: quickstart
 title: "Manager's QuickStart"
 type: MD5
 qtype: manager
+upper-link: /articles/hashing_algorithms/MD5.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

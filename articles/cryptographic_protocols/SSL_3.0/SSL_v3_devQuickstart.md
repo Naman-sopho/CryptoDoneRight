@@ -3,6 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: SSL 3.0
 qtype: dev
+upper-link: /articles/cryptographic_protocols/SSL_v3.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

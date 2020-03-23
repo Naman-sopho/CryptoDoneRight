@@ -3,7 +3,7 @@ layout: page
 title: TLS 1.2
 type: cryptographic_protocols
 update: Last Updated Thu, 12 Dev 2018 12:00:01 -0400
-permalink: "articles/cryptographic_protocols/tls/tls_1_2.html"
+permalink: /articles/cryptographic_protocols/tls/tls_1_2.html
 alerts:
   - id: 1
     type: danger

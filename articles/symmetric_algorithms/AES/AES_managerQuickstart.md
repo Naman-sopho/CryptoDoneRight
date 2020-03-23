@@ -3,6 +3,7 @@ layout: quickstart
 title: Manager's QuickStart
 type: AES
 qtype: manager
+upper-link: /articles/symmetric_algorithms/AES/AES.html
 image: /static_files/common/manager.png
 note: "A guide to the use of AES encryption in your organization including a discussion of standards."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

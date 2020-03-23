@@ -1,24 +1,16 @@
 <div class="breadcrumbs cdr-title-bc">
   <div class="container">
-  <div id="contentScroller">
-    <div id="devtitle">
-          <strong style="font-size:3rem;">{{page.title}}</strong>
+    <div id="contentScroller">
+      <div id="devtitle">
+        <strong style="font-size:3rem;">{{page.title}}</strong>
+      </div>
     </div>
-  </div>
-  <ol class="breadcrumb cdr-breadcrumb">
-    {% assign URL = page.url | split:'/' %}
-    {% for a in URL %}
-      {% if a == "" %}
-        <li class="breadcrumb-item level"><a href="/index.html">Home</a></li>
-      {% elsif a != "" %}
-        {% for b in site.pages %}
-          {% if b.title == a %}
-          <li class="breadcrumb-item level"><a href="{{b.url}}">{{a}}</a></li>
-          {% endif %}
-        {% endfor %}
-     {% endif %}
-     {% endfor %}
-     <li class="breadcrumb-item level">{{page.title}}</li>
-   </ol>
+    <ol class="breadcrumb cdr-breadcrumb">
+      <li class="breadcrumb-item level"><a href="/index.html">Home</a></li>
+      {% if {{page.upper-link}} %}
+        <li class="breadcrumb-item level"><a href="{{page.upper-link}}">{{page.type}}</a></li>
+      {% endif %}
+      <li class="breadcrumb-item level">{{page.title}}</li>
+    </ol>
    </div>
 </div>

@@ -3,6 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: AES-CBC
 qtype: dev
+upper-link: /articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

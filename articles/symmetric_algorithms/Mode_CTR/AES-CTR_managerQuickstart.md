@@ -3,6 +3,7 @@ layout: quickstart
 title: Manager's QuickStart
 type: AES-CTR
 qtype: manager
+upper-link: /articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html
 image: /static_files/common/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

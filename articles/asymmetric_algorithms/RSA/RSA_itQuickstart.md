@@ -3,7 +3,7 @@ layout: quickstart
 title: IT Admin's QuickStart
 type: RSA
 qtype: it
-url: /quickstarts/it/RSA
+upper-link: /articles/asymmetric_algorithms/RSA/RSA.html
 image: /static_files/common/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

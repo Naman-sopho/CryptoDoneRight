@@ -3,7 +3,7 @@ layout: quickstart
 title: Manager's QuickStart
 type: RSA
 qtype: manager
-url: /quickstarts/manager/RSA
+upper-link: /articles/asymmetric_algorithms/RSA/RSA.html
 image: /static_files/common/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

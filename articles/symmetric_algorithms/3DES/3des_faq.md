@@ -2,7 +2,7 @@
 layout: FAQ
 title: FAQ
 type: 3DES
-upper-link: /articles/symmetric_algorithms/3DES/3DES.html
+upper-link: /articles/symmetric_algorithms/3des/3des.html
 ---
 <p>
   <img src="/static_files/common/faqs.jpg" style="width:500px;height:100px;" class="center" />

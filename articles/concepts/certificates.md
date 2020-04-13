@@ -3,7 +3,7 @@ layout: page
 title: Certificates
 type: concepts
 update: Last Updated Sat, 8 Feb 2020 12:00:01 -0400
-permalink: "articles/concepts/certificates/certificates.html"
+permalink: /articles/concepts/certificates/certificates.html
 alerts:
   - id: 1
     type: danger

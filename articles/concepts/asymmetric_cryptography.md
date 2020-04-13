@@ -3,7 +3,7 @@ layout: page1
 title: Asymmetric Cryptography
 type: concepts
 update: Last Updated Fri,  6 Dec 2019 04:01:43 +0000
-permalink: "articles/concepts/asymmetric_cryptography.html"
+permalink: /articles/concepts/asymmetric_cryptography.html
 alerts:
 
 further-reading:

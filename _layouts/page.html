@@ -2,11 +2,8 @@
 layout: default
 ---
 {% include path.html %}
-
 {% include page_nav.html %}
-
 {% include alerts.html %}
-
 
 <div class="container-fluid cdr-page-container">
   <div class="row">
@@ -16,9 +13,9 @@ layout: default
       </div>
       <div class="description">
         <p>
-        <a name="Overview"></a>
-        <h2>Overview:</h2>
-            {{ content }}
+          <a name="Overview"></a>
+          <h2>Overview:</h2>
+          {{ content }}
         </p>
       </div>
     </div>
@@ -27,23 +24,20 @@ layout: default
     <div id="topic">
     <a name="GettingStarted"></a>
     <h2> Getting Started:</h2>
-    {% include pack2.html %}
+    {% include pack.html %}
     </div>
   </div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <h2>More Useful Information:</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <a name="MoreUsefulInfo"></a>
+        <h2>More Useful Information:</h2>
+      </div>
     </div>
+    {% include best_practices.html %}
+    {% include attacks.html %}
   </div>
-
-  {% include best_practices.html %}
-
-  {% include attacks.html %}
-
 </div>
-</div>
-
 
 <div class="row" style="margin-top:5vw;border-top:1px solid #4f4f4f;">
       {% include further_reading.html %}

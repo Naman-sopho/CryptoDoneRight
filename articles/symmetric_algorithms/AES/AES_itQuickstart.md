@@ -3,7 +3,7 @@ layout: quickstart
 title: IT Admin's QuickStart
 type: AES
 qtype: it
-upper-link: /articles/symmetric_algorithms/AES/AES.html
+upper-link: /articles/symmetric_algorithms/aes/aes.html
 image: /static_files/common/pc-administrator.png
 note: "An overview of where and how AES is often used in common IT applications such as the TLS module in Apache server and IPSec."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

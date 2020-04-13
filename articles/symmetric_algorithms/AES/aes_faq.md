@@ -2,6 +2,7 @@
 layout: FAQ
 title: FAQ
 type: AES
+upper-link: /articles/symmetric_algorithms/aes/aes.html
 ---
 <p>
 <img src="/static_files/common/faqs.jpg" style="width:500px;height:100px;" class="center" />

@@ -3,7 +3,7 @@ layout: page1
 title: Block Cipher Modes of Operation
 type: concepts
 update: Last Updated Fri,  6 Dec 2019 04:01:43 +0000
-permalink: "articles/concepts/block_cipher_modes.html"
+permalink: /articles/concepts/block_cipher_modes.html
 alerts:
 
 further-reading:
@@ -22,7 +22,7 @@ best_practices:
 
 #### Introduction: Block Ciphers
 
-There are many encryption algorithms that encrypt data in fixed-size chunks called "blocks." Because they encrypt one block at a time, they are called "block ciphers." One of the most well-known block ciphers is [AES](/articles/symmetric_algorithms/AES/AES.html).
+There are many encryption algorithms that encrypt data in fixed-size chunks called "blocks." Because they encrypt one block at a time, they are called "block ciphers." One of the most well-known block ciphers is [AES](/articles/symmetric_algorithms/aes/aes.html).
 
 The size of a block is relatively small. AES's block size, for example, is just 16 bytes.
 

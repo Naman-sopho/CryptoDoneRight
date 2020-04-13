@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: 3DES
 qtype: dev
-upper-link: /articles/symmetric_algorithms/3DES.html
+upper-link: /articles/symmetric_algorithms/3des/3des.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

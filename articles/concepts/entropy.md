@@ -3,7 +3,7 @@ layout: page1
 title: Entropy
 type: concepts
 update: Last Updated Mon, 7 Oct 2019 21:27:01 -0400
-permalink: "articles/concepts/entropy.html"
+permalink: /articles/concepts/entropy.html
 alerts:
 
 further-reading:

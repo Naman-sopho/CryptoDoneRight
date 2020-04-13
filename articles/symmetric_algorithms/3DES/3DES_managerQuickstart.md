@@ -3,7 +3,7 @@ layout: quickstart
 title: Manager's QuickStart
 type: 3DES
 qtype: manager
-upper-link: /articles/symmetric_algorithms/3DES.html
+upper-link: /articles/symmetric_algorithms/3des/3des.html
 image: /static_files/common/manager.png
 note: "Are you a Manager? Get started with best practice setup details above."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

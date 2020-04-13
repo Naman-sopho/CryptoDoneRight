@@ -1,10 +1,22 @@
-
-<strong style="font-size:2vw;">Content</strong>
-      {% for a in site.pages %}
-        {% if a.type== page.title %}
-        <ul>
-          <a href="{{a.url}}"><li>
-            {{a.title}}
-          </li></a>
-        {% endif %}
-        {% endfor %}
+<div class="quickstart_table">
+  {% for a in site.pages %}
+    {% if a.type== page.title and a.title != "FAQ"%}
+      {% comment %}
+      <div class="{{a.col}}">
+        <a href="{{a.url}}" class="btn btn-warning "> <img class="logos" src="{{a.image}}" />{{a.title}}</a>
+        <div class="blockNotes">
+        </div>
+      </div>
+      {% endcomment %}
+      <div class="quickstart_row">
+        <div class="quickstart_cell">
+          <a href="{{a.url}}" class="btn btn-warning "> <img class="logos" src="{{a.image}}" />{{a.title}}</a>
+        </div>
+        <div class="quickstart_cell">
+          {{a.note}}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+  

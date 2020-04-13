@@ -3,7 +3,7 @@ layout: quickstart
 title: IT Admin's QuickStart
 type: 3DES
 qtype: it
-upper-link: /articles/symmetric_algorithms/3DES.html
+upper-link: /articles/symmetric_algorithms/3des/3des.html
 image: /static_files/common/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
@@ -42,7 +42,7 @@ In case of scenarios where client VPN solutions (non HTTPS based) are used, life
 
 VPN lifetime changes:- <br />
 For data storage, 3DES is considered to be strong enough for now. But it is still a recommendation to refresh the keys that AES uses every once in a while. The refresh rate should be dependent on how sensitive your information is. <br /> <br />
-To read more about the attack, follow the link: https://www.synopsys.com/blogs/software-security/sweet32-retire-3des/
+To read more about the attack, follow the link: <a href="https://www.synopsys.com/blogs/software-security/sweet32-retire-3des/">https://www.synopsys.com/blogs/software-security/sweet32-retire-3des/</a>
 <br /> <br />
 </p>
 

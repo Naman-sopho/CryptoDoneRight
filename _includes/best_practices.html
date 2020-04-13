@@ -1,43 +1,39 @@
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
-  <OL>
-    {%  if page.vulnerabilities %}
+  <ol>
+    {% if page.vulnerabilities %}
     <h3>Vulnerabilities</h3>
       {% for item in page.vulnerabilities %}
-        <LI> <u>{{item.name}}</u>:
+        <li><u>{{item.name}}</u>:
         {{item.description}}
         {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
         {% endif %}
-
       {% endfor %}
     {% endif %}
-    {%  if page.warnings %}
+    {% if page.warnings %}
     <h3>Warnings:</h3>
       {% for item in page.warnings %}
-        <li> <u>{{item.name}}</u>:
+        <li><u>{{item.name}}</u>:
         {{item.description}}
         {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
         {% endif %}
-
       {% endfor %}
     {% endif %}
     {% if page.best_practices %}
     <h3>Best Practices</h3>
       {% for item in page.best_practices %}
-      <li><u>{{item.name}}</u>: <br/>
-      {{item.description}}
-      {% if item.link != "" %}
+        <li><u>{{item.name}}</u>: <br/>
+        {{item.description}}
+        {% if item.link != "" %}
           <a href = "{{item.link}}">{{item.link}}</a>
         {% endif %}
-
       {% endfor %}
     {% endif %}
-
-     </OL>
-     <p>
-     For more details check <A HREF="FAQ.html">the FAQ</A> for this algorithm.
-    </p>
+  </ol>
+  <p>
+    For more details check <a href="{{ page.permalink | split:'/' | last | remove: '.html'}}_faq.html">the FAQ</a> for this algorithm.
+  </p>
   </div>
 </div>

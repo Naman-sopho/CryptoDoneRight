@@ -3,7 +3,7 @@ layout: quickstart
 title: "IT Admin's QuickStart"
 type: TLS 1.3
 qtype: it
-upper-link: /articles/cryptographic_protocols/tls/tls_1_3.html
+upper-link: /articles/cryptographic_protocols/tls_1_3.html
 image: /static_files/common/NewDevLogo.png
 note: "An introduction to where TLS is leveraged in an IT ecosystem, including where configuration files and pertinent security controls live on a system."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
@@ -35,7 +35,7 @@ related-articles:
 
 <font size="4"><strong>What to expect:</strong></font><br /> <br />
 
-<font size="4"><strong>Concept:</strong></font> TLSv1.3 is new. As discussed on the <a href="tls/articles/cryptographic_protocols/tls/tls_1_3.html">landing page </a>, vulnerable security measures have been removed from the protocol. There are no known vulnerabilities that exists with the current version. We however recommend that you go through the following page in order to understand why and when to upgrade?
+<font size="4"><strong>Concept:</strong></font> TLSv1.3 is new. As discussed on the <a href="tls/articles/cryptographic_protocols/tls_1_3.html">landing page </a>, vulnerable security measures have been removed from the protocol. There are no known vulnerabilities that exists with the current version. We however recommend that you go through the following page in order to understand why and when to upgrade?
 <br /> <br />
 
 <font size="3"><strong>Examples for Enabling TLSv1.3:</strong></font> <br />

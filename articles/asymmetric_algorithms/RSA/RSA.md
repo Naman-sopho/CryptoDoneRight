@@ -36,7 +36,7 @@ best_practices:
     description: "Although there are no known attacks against PKCSv1.5 for signatures, it is recommended to use the PSS padding scheme."
 
 ---
-RSA is an asymmetric algorithm (a refresher on asymmetric cryptography can be found [here](https:://cryptodoneight.org/articles/concepts/asymmetric_cryptography.html)) named for Rivest, Shamir, and Adleman, the three cryptographers that publicly presented about the system in 1977. RSA was one of the first asymmetric algorithms described and is still one of the most widely used. Nevertheless, more modern algorithms are often recommended for both performance and security reasons.
+RSA is an asymmetric algorithm (a refresher on asymmetric cryptography can be found [here](/articles/concepts/asymmetric_cryptography.html)) named for Rivest, Shamir, and Adleman, the three cryptographers that publicly presented about the system in 1977. RSA was one of the first asymmetric algorithms described and is still one of the most widely used. Nevertheless, more modern algorithms are often recommended for both performance and security reasons.
 
 Unlike many asymmetric algorithms, RSA can actually be used to encrypt small messages. In particular, what is encrypted with the public key can be decrypted with the private key, and what is encrypted with the private key can be decrypted with the public key.
 

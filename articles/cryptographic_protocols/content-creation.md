@@ -21,7 +21,7 @@ title: Content Creation Guidelines
     <br />
     <li>If possible, the content should also be created such that it follows a Concept and Example/Explanation type of model. As seen in this <a href="/articles/cryptographic_protocols/tls_1_3/tls_1_3_devQuickstart.html">page</a>.</li>
     <br />
-    <li>If vulnerabilities or attacks are described, the pages can also be constructed to follow the <span class="green">PIC (Protocol, Implementation or Configuration) model</span>. Please visit this <a href="/flaw-categories.html">page</a> to for more information of the PIC model.</li>
+    <li>If vulnerabilities or attacks are described, the pages can also be constructed to follow the <span class="green">PIC (Protocol, Implementation or Configuration) model</span>. Please visit this <a href="/flaw_categories.html">page</a> to for more information of the PIC model.</li>
     <br />
     <li>Each Protocol, Implementation and Configuration is associated to a particular image. Associating your concept with the model and the image helps drive the model further for the readers.</li>  <br />
     <li>Try to accompany every concept with examples that are not specific to a particular vendor. Try to choose the example to be as simple and close to the concept you are trying to explain.</li>  <br />

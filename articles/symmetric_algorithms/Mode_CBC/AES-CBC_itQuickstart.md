@@ -12,7 +12,7 @@ alerts:
   - id: 1
     type: warning
     description: "Background Reading: Understanding Different Types of Problems in Crypto."
-    link: "/flaw-categories.html"
+    link: "/flaw_categories.html"
 ---
 
 <p id="GeneralAESInfo">

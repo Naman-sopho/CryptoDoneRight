@@ -14,7 +14,7 @@ permalink: /view_all.html
       <li><font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/CONTRIBUTING-template.md">Contribution Guide</a></strong></font></li>
       <li><font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/.github/ISSUE_TEMPLATE/pull_request_template.md">Pull Request Guide</a></strong></font></li>
       <li><font size="4"><strong><a href="https://github.com/jhu-information-security-institute/CryptoDoneRight/blob/master/.github/ISSUE_TEMPLATE/issue_template.md">Issue Template Guide</a></strong></font></li>
-      <li><font size="4"><strong><a href="/flaw-categories.html">Generic Steps for Understanding Flaws</a></strong></font></li>
+      <li><font size="4"><strong><a href="/flaw_categories.html">Generic Steps for Understanding Flaws</a></strong></font></li>
     </ul>
   </div>
   <div class="col-sm-6">

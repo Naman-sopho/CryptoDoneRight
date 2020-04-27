@@ -3,7 +3,7 @@ layout: quickstart
 title: "Manager's QuickStart"
 type: TLS 1.3
 qtype: manager
-upper-link: /articles/cryptographic_protocols/tls_1_3.html
+upper-link: /articles/cryptographic_protocols/tls_1_3/tls_1_3.html
 image: /static_files/common/NewDevLogo.png
 note: "A guide to adoption and use of TLSv1.3 in your projects and organization."
 col: col-md-8 col-sm-8 col-xs-8 infoBlocks

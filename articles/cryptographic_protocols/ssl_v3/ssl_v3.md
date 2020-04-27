@@ -3,7 +3,7 @@ layout: page
 title: SSL 3.0
 type: cryptographic_protocols
 update: Last Updated Fri, 3 May 2019 19:45:00 -0400
-permalink: /articles/cryptographic_protocols/SSL_v3.html
+permalink: /articles/cryptographic_protocols/ssl_v3.html
 alerts:
   - id: 1
     type: danger

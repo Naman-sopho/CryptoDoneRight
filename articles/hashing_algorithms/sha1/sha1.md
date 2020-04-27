@@ -8,15 +8,15 @@ alerts:
   - id: 1
     type: danger
     description: "Warning: This technology is obsolete!"
-    link: articles/hashing_algorithms/sha1/sha1-broken
+    link: /articles/hashing_algorithms/sha1/sha1_broken
   - id: 2
     type: recommended
     description: "Migration plan: moving from SHA-1 to SHA-2."
-    link: articles/hashing_algorithms/sha1/sha1-migration
+    link: /articles/hashing_algorithms/sha1/sha1_migration
   - id: 3
     type: warning
     description: Click to judge how much time do you have for migration.
-    link: /articles/hashing_algorithms/sha1/sha1-itQuickstart.html
+    link: /articles/hashing_algorithms/sha1/sha1_itQuickstart.html
 further-reading:
   - name: History of Hash Functions
     link: https://www.esat.kuleuven.be/cosic/publications/article-1532.pdf

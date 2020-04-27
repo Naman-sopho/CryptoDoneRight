@@ -3,7 +3,7 @@ layout: page
 title: DES
 type: symmetric_algorithms
 update: Last Updated Fri, 3 May 2019 15:13:00 -0400
-permalink: /articles/symmetric_algorithms/DES.html
+permalink: /articles/symmetric_algorithms/des.html
 alerts:
   - id: 1
     type: danger

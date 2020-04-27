@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.3
 qtype: dev
-upper-link: /articles/cryptographic_protocols/tls_1_3.html
+upper-link: /articles/cryptographic_protocols/tls_1_3/tls_1_3.html
 image: /static_files/common/NewDevLogo.png
 note: "Examples on properly integrating TLSv1.3 into your application, with source code snippets in C and python."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
@@ -11,7 +11,7 @@ alerts:
   - id: 1
     type: warning
     description: "Background Reading: Understanding Different Types of Problems in Crypto."
-    link: "/flaw-categories.html"
+    link: "/flaw_categories.html"
 further-reading:
   - name: "Python SSL/TLS Library"
     link: https://docs.python.org/2/library/ssl.html

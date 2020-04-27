@@ -11,7 +11,7 @@ alerts:
   - id: 1
     type: warning
     description: "Background Reading: Understanding Different Types of Problems in Crypto. warning"
-    link: "/flaw-categories.html"
+    link: "/flaw_categories.html"
   - id: 2
     type: danger
     description: This is the NOT the recommended standard.

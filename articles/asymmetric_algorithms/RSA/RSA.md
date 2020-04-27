@@ -3,7 +3,7 @@ layout: page
 title: RSA
 type: asymmetric_algorithms
 update: Last Updated Thu, 12 Dec 2018 12:00:01 -0400
-permalink: /articles/asymmetric_algorithms/RSA/RSA.html
+permalink: /articles/asymmetric_algorithms/rsa/rsa.html
 alerts:
   - id: 1
     type: success

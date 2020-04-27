@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: TLS 1.2
 qtype: dev
-upper-link: /articles/cryptographic_protocols/tls_1_2.html
+upper-link: /articles/cryptographic_protocols/tls_1_2/tls_1_2.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

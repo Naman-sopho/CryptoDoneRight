@@ -1,7 +1,7 @@
 ---
 layout: quickstart
 title: Guide
-permalink: /flaw-categories.html
+permalink: /flaw_categories.html
 further-reading:
   - name: DROWN attack
     link: "https://blog.cryptographyengineering.com/2016/03/01/attack-of-week-drown/"

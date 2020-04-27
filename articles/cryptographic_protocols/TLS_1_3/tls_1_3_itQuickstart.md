@@ -3,7 +3,7 @@ layout: quickstart
 title: "IT Admin's QuickStart"
 type: TLS 1.3
 qtype: it
-upper-link: /articles/cryptographic_protocols/tls_1_3.html
+upper-link: /articles/cryptographic_protocols/tls_1_3/tls_1_3.html
 image: /static_files/common/NewDevLogo.png
 note: "An introduction to where TLS is leveraged in an IT ecosystem, including where configuration files and pertinent security controls live on a system."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
@@ -11,7 +11,7 @@ alerts:
   - id: 1
     type: warning
     description: "Background Reading: Understanding Different Types of Problems in Crypto."
-    link: "/flaw-categories.html"
+    link: "/flaw_categories.html"
 further-reading:
   - name: "Python SSL/TLS Library"
     link: https://docs.python.org/2/library/ssl.html
@@ -35,7 +35,7 @@ related-articles:
 
 <font size="4"><strong>What to expect:</strong></font><br /> <br />
 
-<font size="4"><strong>Concept:</strong></font> TLSv1.3 is new. As discussed on the <a href="tls/articles/cryptographic_protocols/tls_1_3.html">landing page </a>, vulnerable security measures have been removed from the protocol. There are no known vulnerabilities that exists with the current version. We however recommend that you go through the following page in order to understand why and when to upgrade?
+<font size="4"><strong>Concept:</strong></font> TLSv1.3 is new. As discussed on the <a href="/articles/cryptographic_protocols/tls_1_3/tls_1_3.html">landing page </a>, vulnerable security measures have been removed from the protocol. There are no known vulnerabilities that exists with the current version. We however recommend that you go through the following page in order to understand why and when to upgrade?
 <br /> <br />
 
 <font size="3"><strong>Examples for Enabling TLSv1.3:</strong></font> <br />
@@ -83,7 +83,7 @@ $sudo service nginx restart
 <li>
 <strong>Firefox Nightly</strong> <br />
 <ul>
-<li>Install and run Firefox nightly: https://nightly.mozilla.org/</li>
+<li>Install and run Firefox nightly: <a href="https://nightly.mozilla.org/">https://nightly.mozilla.org/</a></li>
 <li>Enter "about:config" in the address bar</li>
 <li>Set security.tls.version.max from 3 to 4</li>
 <li>Restart the browser</li>
@@ -93,14 +93,14 @@ $sudo service nginx restart
 <li>
 <strong>Chrome Canary</strong> <br />
 <ul>
-<li>Install and run Chrome Canary: https://www.google.com/chrome/browser/canary.html </li>
+<li>Install and run Chrome Canary: <a href="https://www.google.com/chrome/browser/canary.html">https://www.google.com/chrome/browser/canary.html</a></li>
 <li>Enter "chrome://flags/" in the address bar </li>
 <li>Go to "Maximum TLS version enabled." and select "TLS 1.3" </li>
 <li>Restart the browser </li>
 </ul>
 </li> <br /> <br />
 
-In order to test if a domain is TLSv1.3 compatible: https://www.ssllabs.com/ssltest/
+In order to test if a domain is TLSv1.3 compatible: <a href=" https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a>
 
 <br />
 

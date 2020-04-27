@@ -8,7 +8,7 @@ title: Content Creation Guidelines
   <h1>Content Creation Guidelines!</h1>
   Hello, Security Enthusiasts. We appreciate you taking the time and are considering helping us expand this knowledge base.
   <br /> <br />
-  This website aims on a few specific aspects that we will go over through the course of this document. Please follow through the document to get an understanding of our <a href="get-started.html">website</a> and then instructions about how to present document.
+  This website aims on a few specific aspects that we will go over through the course of this document. Please follow through the document to get an understanding of our website and then instructions about how to present document.
   <br /> <br />
   <font size="3"><strong>Note:</strong></font> <span class="red">This is not a comprehensive list of steps or to do items. It is more of a guide to help structure the content or data to the idealogy that website aims to portray. And the guidelines are generic and try to include as much topics as possible. </span>
   <br /> <br /> <br />
@@ -19,9 +19,9 @@ title: Content Creation Guidelines
     <br />
     <li>Almost, all pages must have <span class="green">"Actionable takeways!"</span> or banners that possibly summarize the gist of the page and idea that you would like to convey. The motive is that any type of reader (mainly: Manager, IT professional or a Developer) have a thought or idea about security that "sticks". </li>
     <br />
-    <li>If possible, the content should also be created such that it follows a Concept and Example/Explanation type of model. As seen in this <a href="/articles/cryptographic_protocols/TLS/TLS_1_3/tls_1_3_devQuickstart.html">page</a>.</li>
+    <li>If possible, the content should also be created such that it follows a Concept and Example/Explanation type of model. As seen in this <a href="/articles/cryptographic_protocols/tls_1_3/tls_1_3_devQuickstart.html">page</a>.</li>
     <br />
-    <li>If vulnerabilities or attacks are described, the pages can also be constructed to follow the <span class="green">PIC (Protocol, Implementation or Configuration) model</span>. Please visit this <a href="/flaw-categories.html">page</a> to for more information of the PIC model.</li>
+    <li>If vulnerabilities or attacks are described, the pages can also be constructed to follow the <span class="green">PIC (Protocol, Implementation or Configuration) model</span>. Please visit this <a href="/flaw_categories.html">page</a> to for more information of the PIC model.</li>
     <br />
     <li>Each Protocol, Implementation and Configuration is associated to a particular image. Associating your concept with the model and the image helps drive the model further for the readers.</li>  <br />
     <li>Try to accompany every concept with examples that are not specific to a particular vendor. Try to choose the example to be as simple and close to the concept you are trying to explain.</li>  <br />

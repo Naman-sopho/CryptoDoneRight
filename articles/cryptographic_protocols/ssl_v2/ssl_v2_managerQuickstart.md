@@ -1,12 +1,12 @@
 ---
 layout: quickstart
-title: "Developer's QuickStart"
-type: SSL 3.0
-qtype: dev
-upper-link: /articles/cryptographic_protocols/SSL_v3.html
+title: "Manager's QuickStart"
+type: SSL 2.0
+qtype: manager
+upper-link: /articles/cryptographic_protocols/ssl_v2.html
 image: /static_files/common/NewDevLogo.png
-note: "Are you a developer? Get started with crucial implementation details above."
-col: col-md-4 col-sm-4 col-xs-4 infoBlocks
+note: "Are you a Manager? Get started with best practice setup details above."
+col: col-md-8 col-sm-8 col-xs-8 infoBlocks
 alerts:
 
 further-reading:

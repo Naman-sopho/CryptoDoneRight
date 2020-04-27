@@ -3,7 +3,7 @@ layout: page
 title: SSL 2.0
 type: cryptographic_protocols
 update: Last Updated Fri, 3 May 2019 19:37:01 -0400
-permalink: /articles/cryptographic_protocols/SSL_v2.html
+permalink: /articles/cryptographic_protocols/ssl_v2.html
 alerts:
   - id: 1
     type: danger

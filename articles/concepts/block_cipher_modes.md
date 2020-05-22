@@ -52,9 +52,9 @@ _[Source: Wikipedia "Block cipher mode of operation"]_
 
 There are a number of modes of operation that, if used correctly, will adequately protect data. Here are some modes of operation that can be safely used if used correctly:
 
-1. [Galois Counter Mode (GCM)](/articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html)
-1. [Counter Mode (CTR)](/articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html)
-1. [Cipher-Block-Chaining Mode (CBC)](/articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html)
+1. [Galois Counter Mode (GCM)](/articles/symmetric_algorithms/mode_gcm/mode_gcm.html)
+1. [Counter Mode (CTR)](/articles/symmetric_algorithms/mode_ctr/mode_ctr.html)
+1. [Cipher-Block-Chaining Mode (CBC)](/articles/symmetric_algorithms/mode_cbc/mode_cbc.html)
 
 These modes of operation are not limited to any specific cipher but rather can be applied to the common block ciphers in use today such as AES, Twofish, and Serpent. They are also used with legacy ciphers (that are no longer safe and should not be used) such as DES. The common naming scheme is to use the name of the cipher followed by the name of the mode of operation like, for example, AES-CBC, Twofish-GCM, etc.
 

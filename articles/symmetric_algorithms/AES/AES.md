@@ -36,8 +36,8 @@ In terms of configuration, the proper use of AES must be configured with a key s
 
 AES also requires selecting a [mode of operation](/articles/concepts/block_cipher_modes.html). Common AES modes include:
 
-* [AES GCM](/articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html)
-* [AES CTR](/articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html)
-* [AES CBC](/articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html)
+* [AES GCM](/articles/symmetric_algorithms/mode_gcm/mode_gcm.html)
+* [AES CTR](/articles/symmetric_algorithms/mode_ctr/mode_ctr.html)
+* [AES CBC](/articles/symmetric_algorithms/mode_cbc/mode_cbc.html)
 
 AES-GCM is a combined mode of operation, or authenticated encryption. Authenticated encryption should be used whenever possible.

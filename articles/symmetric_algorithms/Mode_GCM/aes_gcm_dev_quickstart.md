@@ -3,7 +3,7 @@ layout: quickstart
 title: "Developer's QuickStart"
 type: AES-GCM
 qtype: dev
-upper-link: /articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html
+upper-link: /articles/symmetric_algorithms/mode_gcm/mode_gcm.html
 image: /static_files/common/NewDevLogo.png
 note: "Are you a developer? Get started with crucial implementation details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks

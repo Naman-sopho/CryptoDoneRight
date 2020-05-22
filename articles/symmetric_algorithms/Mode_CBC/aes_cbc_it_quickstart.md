@@ -3,7 +3,7 @@ layout: quickstart
 title: IT Admin's QuickStart
 type: AES-CBC
 qtype: it
-upper-link: /articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html
+upper-link: /articles/symmetric_algorithms/mode_cbc/mode_cbc.html
 image: /static_files/common/pc-administrator.png
 note: "Are you an IT administrator? Get started with best practice setup details above."
 col: col-md-4 col-sm-4 col-xs-4 infoBlocks
@@ -102,7 +102,7 @@ ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+A
 </pre> <br /> <br />
 </ul>
 <font size="3"><strong>VPN: </strong><font size="3"> <br />
-We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="articles/cryptographic_protocols/TLS/TLS_1_2">here</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
+We use the examples of TLSv1.2 and TLSv1.1 as our VPN protocols in the following examples here since they are the most secure at the moment. You can read more about why they are recommended here <a href="articles/cryptographic_protocols/tls/tls_1_2.md">here</a>. TLS uses AES to encrypt data post the handshake completion. <br /> <br />
 
 <strong>Guide to reading cipher from configuration files: </strong><br /> <br />
 One of the most popular formats look like this: <br />

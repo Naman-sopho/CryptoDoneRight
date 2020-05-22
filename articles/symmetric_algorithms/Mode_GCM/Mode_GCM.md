@@ -3,7 +3,7 @@ layout: page
 title: "Mode: GCM"
 type: symmetric_algorithms
 update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
-permalink: /articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html
+permalink: /articles/symmetric_algorithms/mode_gcm/mode_gcm.html
 alerts:
   - id: 1
     type: success
@@ -22,7 +22,7 @@ warnings:
 
 Galois/Counter mode (Galois is pronounced "GAL-wah") encryption (“GCM mode”) is a [block cipher mode of operation](/articles/concepts/block_cipher_modes.html) that combines _confidentiality_ **and** _data authentication_. This means that the encrypted data cannot be undetectably altered.
 
-GCM mode builds on the concepts introduced in [CTR mode](/articles/symmetric_algorithms/Mode_CTR/Mode-CTR.html) and CTR mode should be reviewed first in order to understand GCM. As with CTR mode, GCM uses an IV/nonce and encrypts increasing counter values. But GCM extends the CTR operations to include a Message Authentication Code (MAC) calculation as a built-in part of the operation. The MAC, called a "tag" in GCM jargon, is verified during decryption. If it does not match the data must be discarded.
+GCM mode builds on the concepts introduced in [CTR mode](/articles/symmetric_algorithms/mode_ctr/mode_ctr.html) and CTR mode should be reviewed first in order to understand GCM. As with CTR mode, GCM uses an IV/nonce and encrypts increasing counter values. But GCM extends the CTR operations to include a Message Authentication Code (MAC) calculation as a built-in part of the operation. The MAC, called a "tag" in GCM jargon, is verified during decryption. If it does not match the data must be discarded.
 
 As with CTR mode, the encryption process is can be performed in parallel, but the calculation of the GCM tag can also be calculated in parallel. Thus, AES-GCM is typically faster than AES-CTR combined with a serial MAC calculation like, for example, HMAC.
 

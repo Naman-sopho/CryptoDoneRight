@@ -10,8 +10,8 @@ html {
 body {
 	font-family: 14px normal helvetica, sans-serif;
 	font-weight: 300;
-	min-height: 100%;
-	position:relative;
+  min-height: 100%;
+  position: relative;
 }
 
 h4 {
@@ -37,7 +37,6 @@ border-left: 3px solid #619644;
 }
 
 .row {
-	width:70vw;
 	margin:0 auto;
 	position:relative;
 }
@@ -49,12 +48,13 @@ border-left: 3px solid #619644;
   margin-bottom: 0;
   z-index: 9999999;
   background-image: url('/static_files/crypto3.jpg');
+  overflow: hidden;
 }
 
 .breadcrumb {
-    padding: 2px 15px 8px;
+  text-align: right !important;
     list-style: none;
-    background-color: white;
+    background-color: white !important;
     border-radius: 4px;
 }
 .breadcrumb, .alert {
@@ -124,8 +124,7 @@ border-left: 3px solid #619644;
     width: 50%;
 }
 
-#relatedArticles {
-}
+
 
 .footerfix{height:7em;}
 .footer {
@@ -160,11 +159,7 @@ border-left: 3px solid #619644;
 	margin:2vw;
 }
 
-.breadcrumb > li {
-
-}
-.breadcrumb>li+li:before {
-    padding: 0 5px;
+.cdr-breadcrumb>li+li:before {
     color: #000;
     content: ">";
 }
@@ -210,25 +205,16 @@ border-left: 3px solid #619644;
 
 .cdr-breadcrumb {
 	text-align: right;
-	padding-top: 18px;
-	font-weight: 400;
-	height: 60px;
 	width: auto;
-	color: rgb(51,51,51);
+  color: rgb(51,51,51);
+  background-color: white;
 }
 
 .cdr-breadcrumb a {
 	color: rgb(51,51,51);
 }
 
-#contentScroller {
-	padding:6px 15px 8px 0px;
-	text-align:right;
-	width: auto;
-	float: left;
-	font-size:0.75vw;
-	max-height: 40px;
-}
+
 #contentScroller ul {
   list-style: none;
   padding: 0;
@@ -836,7 +822,6 @@ border-left: 3px solid #619644;
 .quickstarts-col {
 	border: 2px solid gray;
 	border-radius: 8px;
-	margin-left: 2%;
 	padding-bottom: 16px;
 }
 

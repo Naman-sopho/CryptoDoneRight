@@ -3,7 +3,7 @@ layout: page
 title: "Mode: CBC"
 type: symmetric_algorithms
 update: Last Updated Tues, 27 Aug 2019 12:00:01 -0400
-permalink: /articles/symmetric_algorithms/Mode_CBC/Mode-CBC.html
+permalink: /articles/symmetric_algorithms/mode_cbc/mode_cbc.html
 alerts:
   - id: 1
     type: warning

@@ -1,12 +1,12 @@
 ---
 layout: quickstart
-title: IT Admin's QuickStart
-type: "AES-GCM"
-qtype: it
-upper-link: /articles/symmetric_algorithms/Mode_GCM/Mode-GCM.html
-image: /static_files/common/pc-administrator.png
-note: "Are you an IT administrator? Get started with best practice setup details above."
-col: col-md-4 col-sm-4 col-xs-4 infoBlocks
+title: Manager's QuickStart
+type: AES-GCM
+qtype: manager
+upper-link: /articles/symmetric_algorithms/mode_gcm/mode_gcm.html
+image: /static_files/common/manager.png
+note: "Are you a Manager? Get started with best practice setup details above."
+col: col-md-8 col-sm-8 col-xs-8 infoBlocks
 ---
 
 Hi there! This page is currently under construction. If you would like to share your expertise relating to this topic with us , please <a href="CONTRIBUTING-template.md">click here!</a>

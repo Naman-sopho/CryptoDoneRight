@@ -1,11 +1,13 @@
-<ul id="id03">
-  {% for a in site.pages %}
-  <div class="item">
-    {% if a.layout == "page" and a.type == "asymmetric_algorithms" %}
-      <li><font size="4"><strong><a href="{{a.url}}">{{a.title}}</a></strong></font></li>
-    {% endif %}
-  </div>
-  {% endfor %}
-</ul>
+<div class="col-md-12">
+  <ul id="id03">
+    {% for a in site.pages %}
+    <div class="item">
+      {% if a.layout == "page" and a.type == "asymmetric_algorithms" %}
+        <li><font size="4"><strong><a href="{{a.url}}">{{a.title}}</a></strong></font></li>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </ul>
+</div>
 {% include sort.html %}
 <script>sortList("id03");</script>

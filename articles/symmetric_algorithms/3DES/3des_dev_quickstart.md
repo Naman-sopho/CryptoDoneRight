@@ -72,7 +72,6 @@ You can get much more information with the version -a option.
 <br /><br /><br /><br />
 
 ## Usage of Cryptography in Programming Languages
-<br />
 ### **Concept**
 It is again advised to not roll out your own cryptography while developing software. There are popular libraries in almost all programming languages that can readily be used to perform cryptographic operations.
 <br /><br />

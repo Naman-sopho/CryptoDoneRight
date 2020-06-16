@@ -161,6 +161,8 @@ border-left: 3px solid #619644;
 
 .cdr-breadcrumb>li+li:before {
     color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
     content: ">";
 }
 
